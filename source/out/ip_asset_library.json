@@ -1,0 +1,3833 @@
+{
+ "asset_summary": {
+  "ai_assisted": 22,
+  "approved": 22,
+  "assets": 22,
+  "by_kind": {
+   "costume": 2,
+   "expression": 8,
+   "prop": 4,
+   "scene": 2,
+   "turnaround": 6
+  },
+  "characters": [
+   "CHR-HUO",
+   "CHR-MU"
+  ]
+ },
+ "assets": [
+  {
+   "asset_id": "VA-MU-TURN-FRONT",
+   "character_id": "CHR-MU",
+   "checksum": "fcabd6070b273d631805b20f103e198c80ee15ea9a80b6a3146fb7376faa2a5d",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "turnaround",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       214.0,
+       412.0,
+       214.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "front"
+  },
+  {
+   "asset_id": "VA-MU-TURN-SIDE",
+   "character_id": "CHR-MU",
+   "checksum": "bc1616c5aeafb52cc3962edd952feecbc6d1835a9c37f18477baa72823f1da14",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "turnaround",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       120.0,
+       900.0,
+       648.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       574.0,
+       604.0,
+       352.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       640.0,
+       856.0,
+       256.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       618.0,
+       372.0,
+       642.0,
+       700.0,
+       536.0,
+       664.0,
+       472.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       86.0,
+       384.0,
+       862.0
+      ],
+      "layer_id": "profile",
+      "opacity_bp": 2500,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "side"
+  },
+  {
+   "asset_id": "VA-MU-TURN-BACK",
+   "character_id": "CHR-MU",
+   "checksum": "631975760a4b6258056f46a69d46e89b2fe51de15d50145479c503f129ff37fb",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "turnaround",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       164.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       86.0,
+       384.0,
+       862.0
+      ],
+      "layer_id": "profile",
+      "opacity_bp": 2500,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "back"
+  },
+  {
+   "asset_id": "VA-MU-EXPR-NEUTRAL",
+   "character_id": "CHR-MU",
+   "checksum": "71317caf2ef6463234482edec8e95c2a2d8ab7954ac29260781db41cd5f31e2f",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       214.0,
+       412.0,
+       214.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "neutral"
+  },
+  {
+   "asset_id": "VA-MU-EXPR-WARM",
+   "character_id": "CHR-MU",
+   "checksum": "f0dcc7124770dbee8ff03a753dfa5ae75a3286c6e380e29e4d6900c8fce6188c",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       158.0,
+       13.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       158.0,
+       13.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       222.0,
+       412.0,
+       222.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "warm"
+  },
+  {
+   "asset_id": "VA-MU-EXPR-ALARMED",
+   "character_id": "CHR-MU",
+   "checksum": "e08d48c336ee43aed228bc6225d364a9332c63a3747e5ee912770999fcac0081",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       148.0,
+       14.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       148.0,
+       14.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       200.0,
+       412.0,
+       200.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "alarmed"
+  },
+  {
+   "asset_id": "VA-MU-EXPR-DETERMINED",
+   "character_id": "CHR-MU",
+   "checksum": "875ce57efa5c43bf8da25896d47f247f15b07f053b9821f76310ad89c28ad13b",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       208.0,
+       412.0,
+       208.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "determined"
+  },
+  {
+   "asset_id": "VA-MU-PROP-PRIMARY",
+   "character_id": "CHR-MU",
+   "checksum": "0c766ae8bbc873d01f005f30b6d77d12ed1275614f6ec2cfcea7f050dd640145",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "prop",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       884.0,
+       210.0,
+       40.0
+      ],
+      "layer_id": "shadow",
+      "opacity_bp": 3500,
+      "shape": "ellipse",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       224.0,
+       340.0,
+       320.0,
+       440.0
+      ],
+      "layer_id": "body",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       256.0,
+       384.0,
+       256.0,
+       140.0
+      ],
+      "layer_id": "inset",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       232.0,
+       494.0,
+       292.0,
+       438.0,
+       352.0,
+       494.0,
+       412.0,
+       438.0,
+       472.0,
+       494.0,
+       532.0,
+       438.0
+      ],
+      "layer_id": "motif",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       300.0,
+       384.0,
+       344.0
+      ],
+      "layer_id": "grip",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 10
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       264.0,
+       780.0,
+       240.0,
+       40.0
+      ],
+      "layer_id": "base",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "primary"
+  },
+  {
+   "asset_id": "VA-MU-PROP-SECONDARY",
+   "character_id": "CHR-MU",
+   "checksum": "49db93155f639ea3eb110c1bc22b93fcea2b9e8b2b82e3aff92065a45a985f0a",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "prop",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       884.0,
+       210.0,
+       40.0
+      ],
+      "layer_id": "shadow",
+      "opacity_bp": 3500,
+      "shape": "ellipse",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       224.0,
+       340.0,
+       320.0,
+       440.0
+      ],
+      "layer_id": "body",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       256.0,
+       384.0,
+       256.0,
+       140.0
+      ],
+      "layer_id": "inset",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       232.0,
+       500.0,
+       292.0,
+       444.0,
+       352.0,
+       500.0,
+       412.0,
+       444.0,
+       472.0,
+       500.0,
+       532.0,
+       444.0
+      ],
+      "layer_id": "motif",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       300.0,
+       384.0,
+       344.0
+      ],
+      "layer_id": "grip",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 10
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       264.0,
+       780.0,
+       240.0,
+       40.0
+      ],
+      "layer_id": "base",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "secondary"
+  },
+  {
+   "asset_id": "VA-MU-COSTUME-ROBE",
+   "character_id": "CHR-MU",
+   "checksum": "85055069d756b92ebdce014e7d92997d6b1fcf2e3bbe368fad2510adfa84f375",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "costume",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       384.0,
+       180.0,
+       700.0,
+       940.0,
+       68.0,
+       940.0
+      ],
+      "layer_id": "robe",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       384.0,
+       200.0,
+       74.0
+      ],
+      "layer_id": "collar",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       100.0,
+       900.0,
+       568.0,
+       40.0
+      ],
+      "layer_id": "hem_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       140.0,
+       420.0,
+       488.0,
+       28.0
+      ],
+      "layer_id": "trim_1",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       140.0,
+       540.0,
+       488.0,
+       28.0
+      ],
+      "layer_id": "trim_2",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       140.0,
+       660.0,
+       488.0,
+       28.0
+      ],
+      "layer_id": "trim_3",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       280.0,
+       384.0,
+       880.0
+      ],
+      "layer_id": "crease",
+      "opacity_bp": 3000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "robe"
+  },
+  {
+   "asset_id": "VA-HUO-TURN-FRONT",
+   "character_id": "CHR-HUO",
+   "checksum": "b445b60a7e97bbacf8569d947fe2e3d38318296d14883165d5d6e233022a57b2",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "turnaround",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       214.0,
+       412.0,
+       214.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "front"
+  },
+  {
+   "asset_id": "VA-HUO-TURN-SIDE",
+   "character_id": "CHR-HUO",
+   "checksum": "e0edd5dc45adf55e5234f86d7d0c4910863fb8ae90f16f7957fee66fd45a0e97",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "turnaround",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       120.0,
+       900.0,
+       648.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       574.0,
+       604.0,
+       352.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       640.0,
+       856.0,
+       256.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       618.0,
+       372.0,
+       642.0,
+       700.0,
+       536.0,
+       664.0,
+       472.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       86.0,
+       384.0,
+       862.0
+      ],
+      "layer_id": "profile",
+      "opacity_bp": 2500,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "side"
+  },
+  {
+   "asset_id": "VA-HUO-TURN-BACK",
+   "character_id": "CHR-HUO",
+   "checksum": "56c57aeab74c27e2b25993b7de35376b375b7b6daf1f95b7dc0bda3341df08fa",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "turnaround",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       164.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       86.0,
+       384.0,
+       862.0
+      ],
+      "layer_id": "profile",
+      "opacity_bp": 2500,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "back"
+  },
+  {
+   "asset_id": "VA-HUO-EXPR-NEUTRAL",
+   "character_id": "CHR-HUO",
+   "checksum": "2c97a9ab7c77f133c076715627b88dff62d9e5aced558208ec35443469180ae2",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       214.0,
+       412.0,
+       214.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "neutral"
+  },
+  {
+   "asset_id": "VA-HUO-EXPR-WARM",
+   "character_id": "CHR-HUO",
+   "checksum": "f7520c3ce9f78b171973861c9e7ed83e7dac1701e3797fd670e6b12a2948a888",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       158.0,
+       13.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       158.0,
+       13.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       222.0,
+       412.0,
+       222.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "warm"
+  },
+  {
+   "asset_id": "VA-HUO-EXPR-ALARMED",
+   "character_id": "CHR-HUO",
+   "checksum": "18f7e23c5ab391206299d84d27dcd84321918e7fbca09f4b4f1a76a5ce2ac027",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       148.0,
+       14.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       148.0,
+       14.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       200.0,
+       412.0,
+       200.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "alarmed"
+  },
+  {
+   "asset_id": "VA-HUO-EXPR-DETERMINED",
+   "character_id": "CHR-HUO",
+   "checksum": "bf0847721a3b3e80ebee2f9071cb27d38f933e8c5b956e425715b24778323967",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "expression",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       0.0,
+       880.0,
+       768.0,
+       144.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       226.0,
+       648.0,
+       900.0,
+       120.0,
+       900.0
+      ],
+      "layer_id": "cloak",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       336.0,
+       226.0,
+       72.0
+      ],
+      "layer_id": "shoulders",
+      "opacity_bp": 10000,
+      "shape": "ellipse",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       384.0,
+       168.0,
+       80.0
+      ],
+      "layer_id": "head",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       176.0,
+       604.0,
+       416.0,
+       56.0
+      ],
+      "layer_id": "motif_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       128.0,
+       856.0,
+       512.0,
+       44.0
+      ],
+      "layer_id": "hem",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       150.0,
+       372.0,
+       126.0,
+       700.0,
+       232.0,
+       664.0,
+       296.0,
+       420.0
+      ],
+      "layer_id": "sleeve",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#E7D8B8",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       348.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_left",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#1F2A44",
+      "geometry": [
+       420.0,
+       154.0,
+       12.0
+      ],
+      "layer_id": "eye_right",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 0
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       356.0,
+       208.0,
+       412.0,
+       208.0
+      ],
+      "layer_id": "mouth",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "determined"
+  },
+  {
+   "asset_id": "VA-HUO-PROP-PRIMARY",
+   "character_id": "CHR-HUO",
+   "checksum": "64f6b7958c6265d74cec411d3113ebfd71eaa285b1a2c8ab2cb209eef0cb43b8",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "prop",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       884.0,
+       210.0,
+       40.0
+      ],
+      "layer_id": "shadow",
+      "opacity_bp": 3500,
+      "shape": "ellipse",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       224.0,
+       340.0,
+       320.0,
+       440.0
+      ],
+      "layer_id": "body",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       256.0,
+       384.0,
+       256.0,
+       140.0
+      ],
+      "layer_id": "inset",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       232.0,
+       494.0,
+       292.0,
+       438.0,
+       352.0,
+       494.0,
+       412.0,
+       438.0,
+       472.0,
+       494.0,
+       532.0,
+       438.0
+      ],
+      "layer_id": "motif",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       300.0,
+       384.0,
+       344.0
+      ],
+      "layer_id": "grip",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 10
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       264.0,
+       780.0,
+       240.0,
+       40.0
+      ],
+      "layer_id": "base",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "primary"
+  },
+  {
+   "asset_id": "VA-HUO-PROP-SECONDARY",
+   "character_id": "CHR-HUO",
+   "checksum": "9f2c8a27e16d90cc49e17c04e7b04807c99b16337e6d4b8c23a3233a9afe6dcf",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "prop",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       384.0,
+       884.0,
+       210.0,
+       40.0
+      ],
+      "layer_id": "shadow",
+      "opacity_bp": 3500,
+      "shape": "ellipse",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       224.0,
+       340.0,
+       320.0,
+       440.0
+      ],
+      "layer_id": "body",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#E7D8B8",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       256.0,
+       384.0,
+       256.0,
+       140.0
+      ],
+      "layer_id": "inset",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       232.0,
+       500.0,
+       292.0,
+       444.0,
+       352.0,
+       500.0,
+       412.0,
+       444.0,
+       472.0,
+       500.0,
+       532.0,
+       444.0
+      ],
+      "layer_id": "motif",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       300.0,
+       384.0,
+       344.0
+      ],
+      "layer_id": "grip",
+      "opacity_bp": 10000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 10
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       264.0,
+       780.0,
+       240.0,
+       40.0
+      ],
+      "layer_id": "base",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "secondary"
+  },
+  {
+   "asset_id": "VA-HUO-COSTUME-ROBE",
+   "character_id": "CHR-HUO",
+   "checksum": "c3fea5a5119de4e34052e1e5ab8666dadf75d646da73698bb5e5774eb50f56e9",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "costume",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F7F3EA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "paper",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F7F3EA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       384.0,
+       180.0,
+       700.0,
+       940.0,
+       68.0,
+       940.0
+      ],
+      "layer_id": "robe",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 6
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       384.0,
+       200.0,
+       74.0
+      ],
+      "layer_id": "collar",
+      "opacity_bp": 10000,
+      "shape": "circle",
+      "stroke": "#1F2A44",
+      "stroke_width": 4
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       100.0,
+       900.0,
+       568.0,
+       40.0
+      ],
+      "layer_id": "hem_band",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       140.0,
+       420.0,
+       488.0,
+       28.0
+      ],
+      "layer_id": "trim_1",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       140.0,
+       540.0,
+       488.0,
+       28.0
+      ],
+      "layer_id": "trim_2",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#2B2B2B",
+      "geometry": [
+       140.0,
+       660.0,
+       488.0,
+       28.0
+      ],
+      "layer_id": "trim_3",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": false,
+      "fill": "#1F2A44",
+      "geometry": [
+       384.0,
+       280.0,
+       384.0,
+       880.0
+      ],
+      "layer_id": "crease",
+      "opacity_bp": 3000,
+      "shape": "line",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "robe"
+  },
+  {
+   "asset_id": "VA-SCENE-FOREST-EDGE",
+   "character_id": "CHR-MU",
+   "checksum": "1c9e8c35a01d396b01c6cc073a693b498f3125002d01f5f357bb1fee121ab961",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "scene",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#DCE6DA",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "sky",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#DCE6DA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       610.0,
+       238.0,
+       92.0
+      ],
+      "layer_id": "sun",
+      "opacity_bp": 8000,
+      "shape": "circle",
+      "stroke": "#DCE6DA",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       0.0,
+       620.0,
+       240.0,
+       470.0,
+       520.0,
+       640.0,
+       768.0,
+       520.0,
+       768.0,
+       1024.0,
+       0.0,
+       1024.0
+      ],
+      "layer_id": "far_hill",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#8C6A3F",
+      "geometry": [
+       0.0,
+       760.0,
+       300.0,
+       650.0,
+       620.0,
+       780.0,
+       768.0,
+       720.0,
+       768.0,
+       1024.0,
+       0.0,
+       1024.0
+      ],
+      "layer_id": "near_hill",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#3F5B43",
+      "geometry": [
+       0.0,
+       860.0,
+       768.0,
+       164.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#E7D8B8",
+      "geometry": [
+       300.0,
+       1024.0,
+       360.0,
+       860.0,
+       420.0,
+       860.0,
+       460.0,
+       1024.0
+      ],
+      "layer_id": "path",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "forest_edge"
+  },
+  {
+   "asset_id": "VA-SCENE-KILN-MOUTH",
+   "character_id": "CHR-HUO",
+   "checksum": "c190d9e8d43c0faa514df405a8e918387592e56ec0b949dd205ad24de46e6f85",
+   "created_at": "2026-10-18T00:00:00Z",
+   "kind": "scene",
+   "recipe": {
+    "background": "#F7F3EA",
+    "layers": [
+     {
+      "closed": true,
+      "fill": "#F3DFC4",
+      "geometry": [
+       0.0,
+       0.0,
+       768.0,
+       1024.0
+      ],
+      "layer_id": "sky",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#F3DFC4",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#C9A227",
+      "geometry": [
+       180.0,
+       238.0,
+       92.0
+      ],
+      "layer_id": "sun",
+      "opacity_bp": 8000,
+      "shape": "circle",
+      "stroke": "#F3DFC4",
+      "stroke_width": 0
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       0.0,
+       620.0,
+       240.0,
+       470.0,
+       520.0,
+       640.0,
+       768.0,
+       520.0,
+       768.0,
+       1024.0,
+       0.0,
+       1024.0
+      ],
+      "layer_id": "far_hill",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#D9822B",
+      "geometry": [
+       0.0,
+       760.0,
+       300.0,
+       650.0,
+       620.0,
+       780.0,
+       768.0,
+       720.0,
+       768.0,
+       1024.0,
+       0.0,
+       1024.0
+      ],
+      "layer_id": "near_hill",
+      "opacity_bp": 10000,
+      "shape": "polygon",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     },
+     {
+      "closed": true,
+      "fill": "#8E3B2F",
+      "geometry": [
+       0.0,
+       860.0,
+       768.0,
+       164.0
+      ],
+      "layer_id": "ground",
+      "opacity_bp": 10000,
+      "shape": "rect",
+      "stroke": "#1F2A44",
+      "stroke_width": 2
+     },
+     {
+      "closed": true,
+      "fill": "#F2C14E",
+      "geometry": [
+       300.0,
+       1024.0,
+       360.0,
+       860.0,
+       420.0,
+       860.0,
+       460.0,
+       1024.0
+      ],
+      "layer_id": "path",
+      "opacity_bp": 10000,
+      "shape": "path",
+      "stroke": "#1F2A44",
+      "stroke_width": 3
+     }
+    ]
+   },
+   "resolution": {
+    "height": 1024,
+    "width": 768
+   },
+   "review": {
+    "reviewed_at": "2026-10-18T00:00:00Z",
+    "reviewer": "Content review desk",
+    "status": "approved"
+   },
+   "source": {
+    "ai_assisted": true,
+    "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)"
+    ],
+    "sourcing": "self_produced"
+   },
+   "view_or_name": "kiln_mouth"
+  }
+ ],
+ "version": "1.0.0"
+}

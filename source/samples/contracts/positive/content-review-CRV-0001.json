@@ -1,0 +1,65 @@
+{
+ "authenticity": {
+  "ai_generated": true,
+  "disclosure_required": true,
+  "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+  "model_refs": [
+   "qwen-image-3.0 (offline stub in the repository)",
+   "qwen3.7-flash (offline stub in the repository)"
+  ]
+ },
+ "checklist": [
+  {
+   "item_id": "heritage_non_exclusive",
+   "note": "Mortise-and-tenon joinery and the cloud scroll are cited as shared regional techniques, never claimed as private property.",
+   "requirement": "Heritage references are cited without an exclusive claim",
+   "verdict": "pass"
+  },
+  {
+   "item_id": "original_design",
+   "requirement": "Silhouette, palette and props are original combinations, not copies of a protected image",
+   "verdict": "pass"
+  },
+  {
+   "item_id": "ai_disclosure",
+   "requirement": "AI assisted drafts carry an explicit authenticity label",
+   "verdict": "pass"
+  },
+  {
+   "item_id": "canon_consistency",
+   "requirement": "Motifs, taboos and props match the character record",
+   "verdict": "pass"
+  },
+  {
+   "item_id": "no_ritual_object",
+   "requirement": "No protected ritual object is reproduced",
+   "verdict": "pass"
+  },
+  {
+   "item_id": "craft_review",
+   "requirement": "A craft advisor signed the silhouette for manufacturability",
+   "verdict": "pass"
+  }
+ ],
+ "heritage_check": {
+  "exclusive_claim": false,
+  "note": "Mortise-and-tenon joinery and the cloud scroll are cited as shared regional techniques, never claimed as private property.",
+  "traditional_prototypes_referenced": [
+   "regional mortise-and-tenon joinery technique",
+   "local kiln-fire glaze technique",
+   "peony roundel as a shared decorative motif"
+  ]
+ },
+ "review_id": "CRV-0001",
+ "reviewed_at": "2026-10-20T00:00:00Z",
+ "reviewer": {
+  "name": "Content review desk",
+  "reviewer_id": "REV-IP-01",
+  "role": "content_reviewer"
+ },
+ "subject": {
+  "kind": "character_bible",
+  "ref": "CHR-MU"
+ },
+ "verdict": "approved"
+}

@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "note": "Defect taxonomy and sampling plans for the quality gate. A failing inspection must name a major or critical defect, which is what makes a dispute reference a record rather than a sentence.",
+  "defect_codes": [
+    { "code": "dim_out_of_tolerance", "severity": "major", "label": { "zh": "尺寸超差", "en": "Dimension out of tolerance" } },
+    { "code": "wall_below_spec", "severity": "critical", "label": { "zh": "壁厚低于规格", "en": "Wall below specification" } },
+    { "code": "surface_scratch", "severity": "minor", "label": { "zh": "表面划痕", "en": "Surface scratch" } },
+    { "code": "setting_loose", "severity": "critical", "label": { "zh": "镶口松动", "en": "Setting loose" } },
+    { "code": "joint_gap", "severity": "major", "label": { "zh": "榫缝过大", "en": "Joint gap" } },
+    { "code": "moisture_out_of_range", "severity": "major", "label": { "zh": "含水率超标", "en": "Moisture out of range" } },
+    { "code": "finish_defect", "severity": "minor", "label": { "zh": "涂装缺陷", "en": "Finish defect" } },
+    { "code": "hallmark_missing", "severity": "major", "label": { "zh": "缺少印记", "en": "Hallmark missing" } }
+  ],
+  "sampling_plans": {
+    "default": { "plan_id": "aql_2_5", "aql": "2.5", "critical": false },
+    "critical": { "plan_id": "c_zero", "aql": "0", "critical": true }
+  },
+  "checkpoint_plans": {
+    "QC-01": "default",
+    "QC-02": "critical",
+    "QC-03": "default"
+  },
+  "measurement_tolerance_bp": 1000,
+  "note_measurement": "Measurement limits are derived from the concept facts with a +/- 10 percent tolerance, so an inspection can be regenerated deterministically from the work order."
+}

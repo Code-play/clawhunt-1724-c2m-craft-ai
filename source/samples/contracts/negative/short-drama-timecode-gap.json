@@ -1,0 +1,574 @@
+{
+ "bible_ref": "IPB-0001",
+ "created_at": "2026-10-19T00:00:00Z",
+ "cut": {
+  "edl": [
+   {
+    "frame_id": "SB-001",
+    "in_tc": "00:00:00",
+    "order": 1,
+    "out_tc": "00:00:06",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-002",
+    "in_tc": "00:00:06",
+    "order": 2,
+    "out_tc": "00:00:13",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-003",
+    "in_tc": "00:00:13",
+    "order": 3,
+    "out_tc": "00:00:21",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-004",
+    "in_tc": "00:00:21",
+    "order": 4,
+    "out_tc": "00:00:27",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-005",
+    "in_tc": "00:00:27",
+    "order": 5,
+    "out_tc": "00:00:34",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-006",
+    "in_tc": "00:00:34",
+    "order": 6,
+    "out_tc": "00:00:39",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-007",
+    "in_tc": "00:00:39",
+    "order": 7,
+    "out_tc": "00:00:45",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-008",
+    "in_tc": "00:00:45",
+    "order": 8,
+    "out_tc": "00:00:52",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-009",
+    "in_tc": "00:00:52",
+    "order": 9,
+    "out_tc": "00:01:00",
+    "transition": "cut"
+   },
+   {
+    "frame_id": "SB-010",
+    "in_tc": "00:00:59",
+    "order": 10,
+    "out_tc": "00:01:07",
+    "transition": "fade"
+   }
+  ],
+  "timecode_format": "HH:MM:SS",
+  "total_seconds": 67,
+  "tracks": [
+   {
+    "gain_db": 0,
+    "kind": "video",
+    "source": "out/sample_reel.html (vector frame compilation)"
+   },
+   {
+    "gain_db": -3,
+    "kind": "voice",
+    "source": "bilingual voice take, synthetic placeholder"
+   },
+   {
+    "gain_db": -18,
+    "kind": "music",
+    "source": "original motif score, synthetic placeholder"
+   },
+   {
+    "gain_db": 0,
+    "kind": "subtitle",
+    "source": "subtitle track en"
+   }
+  ]
+ },
+ "drama_id": "SDR-0001",
+ "genre": "mythic_short",
+ "logline": "When the kiln guardian lets the fire die, the wood guardian must carry a half-carved panel across a silent village, and the two learn that their crafts were always one bench.",
+ "review": {
+  "authenticity_label": "AI-assisted script and storyboard draft, human reviewed; synthetic characters.",
+  "content_review_ref": "CRV-0003",
+  "issues": [],
+  "reviewer": "Content review desk",
+  "status": "approved"
+ },
+ "script": {
+  "scenes": [
+   {
+    "assets": [
+     "VA-MU-EXPR-ALARMED",
+     "VA-MU-EXPR-WARM",
+     "VA-MU-TURN-FRONT",
+     "VA-SCENE-FOREST-EDGE"
+    ],
+    "beats": [
+     {
+      "beat_id": "BT-01",
+      "dialogue": [
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "The street is quieter than it should be.",
+         "zh": "这条街比平时安静。"
+        }
+       }
+      ],
+      "duration_seconds": 6,
+      "summary": "A-Mu walks the lane and finds the workshop street still dark at first light."
+     },
+     {
+      "beat_id": "BT-02",
+      "dialogue": [
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "A-Huo did not light the kiln. That is not forgetfulness.",
+         "zh": "阿火没有点窑。这不是忘记了。"
+        }
+       }
+      ],
+      "duration_seconds": 7,
+      "summary": "The kiln door stands cold and open, and A-Mu reads the silence as a refusal."
+     }
+    ],
+    "characters": [
+     "CHR-MU"
+    ],
+    "duration_seconds": 13,
+    "heading": {
+     "int_ext": "EXT",
+     "location": "Craft village lane",
+     "time_of_day": "dawn"
+    },
+    "scene_id": "SC-01"
+   },
+   {
+    "assets": [
+     "VA-HUO-EXPR-DETERMINED",
+     "VA-HUO-EXPR-NEUTRAL",
+     "VA-HUO-PROP-PRIMARY",
+     "VA-HUO-TURN-FRONT",
+     "VA-SCENE-KILN-MOUTH"
+    ],
+    "beats": [
+     {
+      "beat_id": "BT-03",
+      "dialogue": [
+       {
+        "character_id": "CHR-HUO",
+        "line": {
+         "en": "If the fire rests, the trees on the mountain live one more season.",
+         "zh": "火一停，山上的树就能多活一季。"
+        }
+       }
+      ],
+      "duration_seconds": 8,
+      "summary": "A-Huo sits with a cold kiln and a single surviving test tile."
+     },
+     {
+      "beat_id": "BT-04",
+      "dialogue": [
+       {
+        "character_id": "CHR-HUO",
+        "line": {
+         "en": "The kiln does not argue; it answers in colour.",
+         "zh": "窑不说话，它用颜色回答。"
+        }
+       }
+      ],
+      "duration_seconds": 6,
+      "summary": "A-Huo turns the test tile and sees a crackle no one has fired before."
+     }
+    ],
+    "characters": [
+     "CHR-HUO"
+    ],
+    "duration_seconds": 14,
+    "heading": {
+     "int_ext": "INT",
+     "location": "Kiln workshop",
+     "time_of_day": "night"
+    },
+    "scene_id": "SC-02"
+   },
+   {
+    "assets": [
+     "VA-MU-COSTUME-ROBE",
+     "VA-MU-EXPR-DETERMINED",
+     "VA-MU-PROP-PRIMARY"
+    ],
+    "beats": [
+     {
+      "beat_id": "BT-05",
+      "dialogue": [
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "Without fire this panel is only wood.",
+         "zh": "这块板子，没有火就只是木头。"
+        }
+       }
+      ],
+      "duration_seconds": 7,
+      "summary": "A-Mu sets down a commissioned panel that needs fire to finish the inlay."
+     },
+     {
+      "beat_id": "BT-06",
+      "dialogue": [
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "Measure twice, and let the wood keep the second measure.",
+         "zh": "量两次，然后让木头保留第二次。"
+        }
+       }
+      ],
+      "duration_seconds": 5,
+      "summary": "The buyer leaves without the commission; A-Mu lets the grain stay unfinished."
+     }
+    ],
+    "characters": [
+     "CHR-MU"
+    ],
+    "duration_seconds": 12,
+    "heading": {
+     "int_ext": "INT",
+     "location": "Woodworking bench",
+     "time_of_day": "night"
+    },
+    "scene_id": "SC-03"
+   },
+   {
+    "assets": [
+     "VA-HUO-PROP-SECONDARY",
+     "VA-HUO-TURN-SIDE",
+     "VA-MU-TURN-SIDE"
+    ],
+    "beats": [
+     {
+      "beat_id": "BT-07",
+      "dialogue": [
+       {
+        "character_id": "CHR-HUO",
+        "line": {
+         "en": "I brought the fire. I will not argue.",
+         "zh": "我把火带来了，不吵。"
+        }
+       }
+      ],
+      "duration_seconds": 6,
+      "summary": "A-Huo carries the kiln fire to the wood bench instead of asking for permission."
+     },
+     {
+      "beat_id": "BT-08",
+      "dialogue": [
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "Then one bench, two pairs of hands.",
+         "zh": "那就一条案子，两双手。"
+        }
+       },
+       {
+        "character_id": "CHR-HUO",
+        "line": {
+         "en": "The fire waits for the wood, the wood waits for the fire.",
+         "zh": "火等木头，木头等火。"
+        }
+       }
+      ],
+      "duration_seconds": 7,
+      "summary": "The two guardians set one bench where carving and glazing share the same surface."
+     }
+    ],
+    "characters": [
+     "CHR-MU",
+     "CHR-HUO"
+    ],
+    "duration_seconds": 13,
+    "heading": {
+     "int_ext": "INT",
+     "location": "Shared bench",
+     "time_of_day": "dawn"
+    },
+    "scene_id": "SC-04"
+   },
+   {
+    "assets": [
+     "VA-HUO-EXPR-WARM",
+     "VA-MU-EXPR-WARM",
+     "VA-MU-PROP-SECONDARY"
+    ],
+    "beats": [
+     {
+      "beat_id": "BT-09",
+      "dialogue": [
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "The grain survived, and the colour stayed.",
+         "zh": "纹理还在，颜色也留下了。"
+        }
+       }
+      ],
+      "duration_seconds": 8,
+      "summary": "The first fired panel comes out of the kiln with the wood grain still visible."
+     },
+     {
+      "beat_id": "BT-10",
+      "dialogue": [
+       {
+        "character_id": "CHR-HUO",
+        "line": {
+         "en": "Keep the student, keep the craft.",
+         "zh": "学的人留下，手艺就留下。"
+        }
+       },
+       {
+        "character_id": "CHR-MU",
+        "line": {
+         "en": "Two streets, one village.",
+         "zh": "两条街，一个村子。"
+        }
+       }
+      ],
+      "duration_seconds": 7,
+      "summary": "The two guardians teach the finishing step to the village apprentices together."
+     }
+    ],
+    "characters": [
+     "CHR-MU",
+     "CHR-HUO"
+    ],
+    "duration_seconds": 15,
+    "heading": {
+     "int_ext": "EXT",
+     "location": "Village courtyard",
+     "time_of_day": "dusk"
+    },
+    "scene_id": "SC-05"
+   }
+  ]
+ },
+ "storyboard": {
+  "frames": [
+   {
+    "asset_ids": [
+     "VA-SCENE-FOREST-EDGE",
+     "VA-MU-TURN-FRONT"
+    ],
+    "camera": "static",
+    "duration_seconds": 6,
+    "frame_id": "SB-001",
+    "scene_id": "SC-01",
+    "shot": "wide",
+    "subtitle": "The street is quieter than it should be.",
+    "visual_cue": "Empty lane at first light, workshop doors still closed"
+   },
+   {
+    "asset_ids": [
+     "VA-SCENE-FOREST-EDGE",
+     "VA-MU-EXPR-ALARMED"
+    ],
+    "camera": "pan",
+    "duration_seconds": 7,
+    "frame_id": "SB-002",
+    "scene_id": "SC-01",
+    "shot": "medium",
+    "subtitle": "A-Huo did not light the kiln. That is not forgetfulness.",
+    "visual_cue": "Cold kiln door, hooded guardian in the doorway"
+   },
+   {
+    "asset_ids": [
+     "VA-SCENE-KILN-MOUTH",
+     "VA-HUO-EXPR-NEUTRAL"
+    ],
+    "camera": "static",
+    "duration_seconds": 8,
+    "frame_id": "SB-003",
+    "scene_id": "SC-02",
+    "shot": "close",
+    "subtitle": "If the fire rests, the trees on the mountain live one more season.",
+    "visual_cue": "Crackled test tile in a gloved hand beside the cold kiln"
+   },
+   {
+    "asset_ids": [
+     "VA-HUO-PROP-PRIMARY",
+     "VA-HUO-EXPR-DETERMINED"
+    ],
+    "camera": "push_in",
+    "duration_seconds": 6,
+    "frame_id": "SB-004",
+    "scene_id": "SC-02",
+    "shot": "insert",
+    "subtitle": "The kiln does not argue; it answers in colour.",
+    "visual_cue": "The crackle pattern catching the last ember light"
+   },
+   {
+    "asset_ids": [
+     "VA-MU-COSTUME-ROBE",
+     "VA-MU-PROP-PRIMARY"
+    ],
+    "camera": "static",
+    "duration_seconds": 7,
+    "frame_id": "SB-005",
+    "scene_id": "SC-03",
+    "shot": "medium",
+    "subtitle": "Without fire this panel is only wood.",
+    "visual_cue": "Half-carved panel on the bench, chisel set down"
+   },
+   {
+    "asset_ids": [
+     "VA-MU-EXPR-DETERMINED",
+     "VA-MU-PROP-PRIMARY"
+    ],
+    "camera": "handheld",
+    "duration_seconds": 5,
+    "frame_id": "SB-006",
+    "scene_id": "SC-03",
+    "shot": "close",
+    "subtitle": "Measure twice, and let the wood keep the second measure.",
+    "visual_cue": "Guardian's hand flat on the unfinished grain, buyer out of frame"
+   },
+   {
+    "asset_ids": [
+     "VA-HUO-TURN-SIDE",
+     "VA-HUO-PROP-SECONDARY"
+    ],
+    "camera": "pan",
+    "duration_seconds": 6,
+    "frame_id": "SB-007",
+    "scene_id": "SC-04",
+    "shot": "wide",
+    "subtitle": "I brought the fire. I will not argue.",
+    "visual_cue": "Fire guardian crossing the empty street carrying a bellows pipe"
+   },
+   {
+    "asset_ids": [
+     "VA-MU-TURN-SIDE",
+     "VA-HUO-TURN-SIDE"
+    ],
+    "camera": "static",
+    "duration_seconds": 7,
+    "frame_id": "SB-008",
+    "scene_id": "SC-04",
+    "shot": "medium",
+    "subtitle": "Then one bench, two pairs of hands.",
+    "visual_cue": "Two silhouettes at one bench, tools on the shared surface"
+   },
+   {
+    "asset_ids": [
+     "VA-MU-PROP-SECONDARY",
+     "VA-MU-EXPR-WARM"
+    ],
+    "camera": "push_in",
+    "duration_seconds": 8,
+    "frame_id": "SB-009",
+    "scene_id": "SC-05",
+    "shot": "insert",
+    "subtitle": "The grain survived, and the colour stayed.",
+    "visual_cue": "Fired panel lifted from the kiln, grain visible under the glaze"
+   },
+   {
+    "asset_ids": [
+     "VA-HUO-EXPR-WARM",
+     "VA-MU-EXPR-WARM"
+    ],
+    "camera": "orbit",
+    "duration_seconds": 7,
+    "frame_id": "SB-010",
+    "scene_id": "SC-05",
+    "shot": "wide",
+    "subtitle": "Keep the student, keep the craft.",
+    "visual_cue": "Apprentices around the bench, two guardians teaching the finishing step"
+   }
+  ]
+ },
+ "subtitles": {
+  "format": "vtt",
+  "language": "en",
+  "lines": [
+   {
+    "in_tc": "00:00:00",
+    "out_tc": "00:00:06",
+    "text": "The street is quieter than it should be."
+   },
+   {
+    "in_tc": "00:00:06",
+    "out_tc": "00:00:13",
+    "text": "A-Huo did not light the kiln. That is not forgetfulness."
+   },
+   {
+    "in_tc": "00:00:13",
+    "out_tc": "00:00:21",
+    "text": "If the fire rests, the trees on the mountain live one more season."
+   },
+   {
+    "in_tc": "00:00:21",
+    "out_tc": "00:00:27",
+    "text": "The kiln does not argue; it answers in colour."
+   },
+   {
+    "in_tc": "00:00:27",
+    "out_tc": "00:00:34",
+    "text": "Without fire this panel is only wood."
+   },
+   {
+    "in_tc": "00:00:34",
+    "out_tc": "00:00:39",
+    "text": "Measure twice, and let the wood keep the second measure."
+   },
+   {
+    "in_tc": "00:00:39",
+    "out_tc": "00:00:45",
+    "text": "I brought the fire. I will not argue."
+   },
+   {
+    "in_tc": "00:00:45",
+    "out_tc": "00:00:48",
+    "text": "Then one bench, two pairs of hands."
+   },
+   {
+    "in_tc": "00:00:48",
+    "out_tc": "00:00:52",
+    "text": "The fire waits for the wood, the wood waits for the fire."
+   },
+   {
+    "in_tc": "00:00:52",
+    "out_tc": "00:01:00",
+    "text": "The grain survived, and the colour stayed."
+   },
+   {
+    "in_tc": "00:01:00",
+    "out_tc": "00:01:03",
+    "text": "Keep the student, keep the craft."
+   },
+   {
+    "in_tc": "00:01:03",
+    "out_tc": "00:01:07",
+    "text": "Two streets, one village."
+   }
+  ]
+ },
+ "title": {
+  "en": "Waking the Kiln",
+  "zh": "醒窑"
+ }
+}

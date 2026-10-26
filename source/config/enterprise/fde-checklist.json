@@ -1,0 +1,42 @@
+{
+ "version": "1.0.0",
+ "note": "FDE on-site delivery checklist. Each item names its phase, owner, required evidence and current status; the enterprise report renders readiness from this file, so a deployment cannot claim go-live while a blocking item is open.",
+ "phases": [
+  {
+   "phase_id": "discover",
+   "title": {"zh": "访谈与现状盘点", "en": "Discover and baseline"},
+   "items": [
+    {"item_id": "interview_signed", "title": {"zh": "六行业访谈记录经客户签字确认", "en": "Interview notes for the industries signed off by the client"}, "owner": "FDE", "evidence": "docs/fde-handbook.md#discover", "status": "done", "blocking": true},
+    {"item_id": "rules_reviewed", "title": {"zh": "工艺规则逐条由匠人校对", "en": "Craft rules proofread by the craftsperson"}, "owner": "FDE + artisan", "evidence": "docs/rule-authoring-form.md", "status": "done", "blocking": true},
+    {"item_id": "data_boundary_map", "title": {"zh": "数据边界图与跨境清单确认", "en": "Data boundary map and cross-border list confirmed"}, "owner": "FDE + legal", "evidence": "docs/fde-handbook.md#data-boundary-map", "status": "done", "blocking": true}
+   ]
+  },
+  {
+   "phase_id": "configure",
+   "title": {"zh": "组件配置与站点生成", "en": "Configure components and generate the site"},
+   "items": [
+    {"item_id": "profile_populated", "title": {"zh": "一企一档按组件注册表填满", "en": "Enterprise profile fully populated from the component registry"}, "owner": "FDE", "evidence": "config/enterprise/profiles/EP-0001.json", "status": "done", "blocking": true},
+    {"item_id": "site_reviewed", "title": {"zh": "多语页面与 SEO 审计经客户确认", "en": "Multilingual pages and the SEO audit accepted by the client"}, "owner": "FDE + marketing", "evidence": "out/growth_report.json", "status": "done", "blocking": false},
+    {"item_id": "licence_list", "title": {"zh": "纹样资产授权清单与到期提醒就位", "en": "Pattern licence list and expiry reminders in place"}, "owner": "FDE", "evidence": "out/library_snapshot.json", "status": "done", "blocking": true}
+   ]
+  },
+  {
+   "phase_id": "pilot",
+   "title": {"zh": "试运行与培训", "en": "Pilot and training"},
+   "items": [
+    {"item_id": "crm_rehearsed", "title": {"zh": "询盘到 CRM 闭环与外贸部门演练", "en": "Inquiry to CRM loop rehearsed with the export desk"}, "owner": "FDE", "evidence": "out/growth_report.json", "status": "done", "blocking": true},
+    {"item_id": "operator_training", "title": {"zh": "操作员与管理员分级培训完成", "en": "Operator and administrator training tiers delivered"}, "owner": "FDE", "evidence": "docs/fde-handbook.md#training-tiers", "status": "open", "blocking": true},
+    {"item_id": "order_reconciliation", "title": {"zh": "订单台账与财务对账签字", "en": "Order ledger reconciled and signed by finance"}, "owner": "FDE + finance", "evidence": "out/settlement_report.md", "status": "done", "blocking": true}
+   ]
+  },
+  {
+   "phase_id": "go_live",
+   "title": {"zh": "上线与交接", "en": "Go-live and handover"},
+   "items": [
+    {"item_id": "auth_gate_enabled", "title": {"zh": "部署认证栅栏与访问审计开启", "en": "Deployment auth gate and access audit enabled"}, "owner": "FDE + ops", "evidence": "docs/fde-handbook.md#go-live", "status": "done", "blocking": true},
+    {"item_id": "backup_restore_drill", "title": {"zh": "备份与恢复演练留档", "en": "Backup and restore drill recorded"}, "owner": "FDE + ops", "evidence": "docs/fde-handbook.md#go-live", "status": "open", "blocking": true},
+    {"item_id": "handover_signed", "title": {"zh": "交接单与遗留问题清单签署", "en": "Handover note and open issue list signed"}, "owner": "FDE + client", "evidence": "docs/fde-handbook.md#handover", "status": "open", "blocking": false}
+   ]
+  }
+ ]
+}

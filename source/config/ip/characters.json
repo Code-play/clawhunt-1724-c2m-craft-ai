@@ -1,0 +1,110 @@
+{
+ "version": "1.0.0",
+ "bible_id": "IPB-0001",
+ "title": {"zh": "山海双守", "en": "The Two Guardians of the Craft Village"},
+ "world": {
+  "premise": "A craft village lives by two promises: the forest gives the wood, the kiln gives the colour. Two guardians keep the promises, and when one of them stops listening the village loses half of what it knows.",
+  "setting": {
+   "zh": "群山与海湾之间的一个手艺村。白天，木作与首饰工坊共用一条街；夜里，窑火与山风轮流守着村子。传说有两位守护者，一个守着木材与纹理，一个守着窑火与釉色。",
+   "en": "A craft village between a mountain range and a bay. By day the woodworking and jewellery workshops share one street; by night the kiln fire and the mountain wind take turns watching over the village. Two guardians are said to keep it: one of timber and grain, one of kiln fire and glaze."
+  },
+  "era": "timeless",
+  "rules": [
+   "A guardian may borrow a motif from the village, but may never claim a traditional prototype as private property.",
+   "Every piece made under a guardian's name carries the name of the craftsperson who finished it.",
+   "When a guardian takes, the guardian must also teach; craft knowledge never leaves the village without a student."
+  ],
+  "conflict": "The kiln guardian has let the fire grow cold to protect the forest, and the wood guardian reads that silence as betrayal; the village loses its glaze and the two stop speaking.",
+  "resolution_theme": "The two crafts are one practice: the wood needs the fire to finish it, and the fire needs the wood to be worth burning."
+ },
+ "characters": [
+  {
+   "character_id": "CHR-MU",
+   "name": {"zh": "阿木", "en": "A-Mu"},
+   "role": "guardian of grain and timber",
+   "element": "wood",
+   "archetype": "patient steward who measures twice",
+   "personality": {
+    "axes": [
+     {"axis": "warmth", "value_bp": 7800},
+     {"axis": "order", "value_bp": 8800},
+     {"axis": "energy", "value_bp": 4200},
+     {"axis": "candour", "value_bp": 6100}
+    ]
+   },
+   "silhouette": "A tall hooded figure with square shoulders, a long apron of carved panels and a hem that widens like a tree root.",
+   "palette": ["#3F5B43", "#8C6A3F", "#E7D8B8", "#C9A227", "#1F2A44"],
+   "motifs": ["mortise-and-tenon lattice", "rice ear", "cloud scroll"],
+   "taboos": [
+    "never cuts a living tree for a commission",
+    "never signs a piece that a craftsperson did not finish"
+   ],
+   "props": ["brass try square", "linen measure cord"],
+   "voice": {
+    "register": "warm",
+    "pace": "measured",
+    "signature_line": "Measure twice, and let the wood keep the second measure."
+   },
+   "relationships": [
+    {"to_character_id": "CHR-HUO", "kind": "sibling", "note": "Raised in the same workshop street; they disagree like two hands of the same craft."}
+   ],
+   "story_arc": [
+    {"beat": "the silent kiln", "summary": "A-Mu finds the kiln cold for the first time in living memory and assumes the fire guardian has abandoned the village."},
+    {"beat": "the unfinished panel", "summary": "A-Mu refuses to finish a commissioned panel because the grain needs fire to set the inlay; the buyer walks away."},
+    {"beat": "the shared bench", "summary": "A-Mu walks to the kiln with a half-carved panel, and the two guardians build one bench where wood and fire are finished together."}
+   ],
+   "licence_safe_sourcing": "self_produced",
+   "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+   "content_review_ref": "CRV-0001"
+  },
+  {
+   "character_id": "CHR-HUO",
+   "name": {"zh": "阿火", "en": "A-Huo"},
+   "role": "guardian of kiln fire and glaze",
+   "element": "fire",
+   "archetype": "restless maker who listens to the kiln",
+   "personality": {
+    "axes": [
+     {"axis": "warmth", "value_bp": 6400},
+     {"axis": "order", "value_bp": 4800},
+     {"axis": "energy", "value_bp": 9100},
+     {"axis": "candour", "value_bp": 8800}
+    ]
+   },
+   "silhouette": "A compact figure wrapped in a cracked-glaze mantle, with one sleeve wider than the other and a small flame-shaped collar.",
+   "palette": ["#8E3B2F", "#D9822B", "#F2C14E", "#2B2B2B", "#E7D8B8"],
+   "motifs": ["crackle glaze", "flame wave", "peony roundel"],
+   "taboos": [
+    "never fires a glaze that copies a protected ritual object",
+    "never sells a second firing without telling the buyer"
+   ],
+   "props": ["glaze test tile", "long bellows pipe"],
+   "voice": {
+    "register": "crisp",
+    "pace": "brisk",
+    "signature_line": "The kiln does not argue; it answers in colour."
+   },
+   "relationships": [
+    {"to_character_id": "CHR-MU", "kind": "sibling", "note": "Trusts the wood guardian's patience but not the silence that came with it."}
+   ],
+   "story_arc": [
+    {"beat": "the cold kiln", "summary": "A-Huo let the fire die to keep the forest from being cut for a season, and cannot explain the choice without sounding like a refusal."},
+    {"beat": "the crackled test", "summary": "A single test tile survives the cold kiln with a crackle no one has seen; A-Huo realises the village glaze was waiting for this."},
+    {"beat": "one bench", "summary": "A-Huo carries the kiln fire to the wood bench and teaches the finishing step to the village apprentices, finishing A-Mu's half-carved panel."}
+   ],
+   "licence_safe_sourcing": "self_produced",
+   "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+   "content_review_ref": "CRV-0002"
+  }
+ ],
+ "heritage_refs": [
+  {"name": "regional mortise-and-tenon joinery technique", "exclusive_claimed": false},
+  {"name": "local kiln-fire glaze technique", "exclusive_claimed": false},
+  {"name": "peony roundel as a shared decorative motif", "exclusive_claimed": false}
+ ],
+ "usage_plan": {
+  "formats": ["short_drama", "merchandise", "exhibition", "social"],
+  "territories": ["CN", "EU", "US"]
+ },
+ "created_at": "2026-10-18T00:00:00Z"
+}

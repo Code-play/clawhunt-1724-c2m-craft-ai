@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:common",
+  "title": "Common value objects",
+  "description": "Shared scalar and envelope definitions referenced by the other nine contracts.",
+  "$defs": {
+    "i18n_text": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "type": "string", "minLength": 1, "maxLength": 400 },
+        "en": { "type": "string", "minLength": 1, "maxLength": 400 }
+      },
+      "additionalProperties": false
+    },
+    "long_i18n_text": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "en": { "type": "string", "minLength": 1, "maxLength": 2000 }
+      },
+      "additionalProperties": false
+    },
+    "money": {
+      "type": "object",
+      "required": ["amount_cents", "currency"],
+      "properties": {
+        "amount_cents": { "type": "integer", "minimum": 0 },
+        "currency": { "type": "string", "enum": ["USD"] }
+      },
+      "additionalProperties": false
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "actor": {
+      "type": "object",
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["buyer", "designer", "factory", "artisan", "platform", "system"]
+        },
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]{2,40}$" }
+      },
+      "additionalProperties": false
+    },
+    "hex_color": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
+    "rate_bp": { "type": "integer", "minimum": 0, "maximum": 10000 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_]{2,32}$" },
+    "semver": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "sha256_hex": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "industry": {
+      "type": "string",
+      "enum": ["jewelry", "hardwood", "footwear", "apparel", "medical", "carving", "heritage"]
+    }
+  }
+}

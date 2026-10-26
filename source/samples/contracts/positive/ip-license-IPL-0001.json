@@ -1,0 +1,206 @@
+{
+ "characters": [
+  {
+   "name": {
+    "en": "A-Mu",
+    "zh": "阿木"
+   },
+   "role": "guardian of grain and timber",
+   "traits": [
+    "mortise-and-tenon lattice",
+    "rice ear",
+    "cloud scroll"
+   ]
+  },
+  {
+   "name": {
+    "en": "A-Huo",
+    "zh": "阿火"
+   },
+   "role": "guardian of kiln fire and glaze",
+   "traits": [
+    "crackle glaze",
+    "flame wave",
+    "peony roundel"
+   ]
+  }
+ ],
+ "content_review": {
+  "authenticity_label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are s",
+  "reviewer": "Content review desk",
+  "status": "approved"
+ },
+ "contract_template_ref": "docs/licensing-templates.md#template-set",
+ "created_at": "2026-10-20T00:00:00Z",
+ "documents": [
+  {
+   "checksum": "35ad18d7a61ba7a4a58f21eb28493e418158dd651647e51e6f4155cf370299ef",
+   "derivative_categories": [
+    "jewelry_pendant",
+    "apparel_collab",
+    "wood_carving_collectible",
+    "cultural_gift"
+   ],
+   "document_id": "LICDOC-0001",
+   "file_ref": "docs/licensing-templates.md#character-licence",
+   "kind": "character_licence",
+   "signatories": [
+    {
+     "name": "Craft Village IP Office (synthetic)",
+     "party": "licensor",
+     "signed_at": "2026-10-20T00:00:00Z"
+    },
+    {
+     "name": "Harbour Jewellery Works (synthetic)",
+     "party": "licensee",
+     "signed_at": "2026-10-20T01:00:00Z"
+    },
+    {
+     "name": "Regional craft association (synthetic)",
+     "party": "witness",
+     "signed_at": "2026-10-20T02:00:00Z"
+    }
+   ],
+   "status": "signed"
+  },
+  {
+   "checksum": "00e66dd0050f37cc09bdb64c3c10b8dbd9eab4cc74ddcce0f4f8f2d727fd3254",
+   "derivative_categories": [
+    "jewelry_pendant",
+    "apparel_collab",
+    "wood_carving_collectible",
+    "cultural_gift"
+   ],
+   "document_id": "LICDOC-0002",
+   "file_ref": "docs/licensing-templates.md#derivative-licence",
+   "kind": "derivative_licence",
+   "signatories": [
+    {
+     "name": "Craft Village IP Office (synthetic)",
+     "party": "licensor",
+     "signed_at": "2026-10-20T00:00:00Z"
+    },
+    {
+     "name": "Harbour Jewellery Works (synthetic)",
+     "party": "licensee",
+     "signed_at": "2026-10-20T01:00:00Z"
+    }
+   ],
+   "status": "signed"
+  },
+  {
+   "checksum": "07a43fbb4f7bdf1083d344a4df381015ee02ec09717da2867828497de648b793",
+   "derivative_categories": [
+    "jewelry_pendant",
+    "cultural_gift"
+   ],
+   "document_id": "LICDOC-0003",
+   "file_ref": "docs/licensing-templates.md#merchandising",
+   "kind": "merchandising",
+   "signatories": [
+    {
+     "name": "Craft Village IP Office (synthetic)",
+     "party": "licensor",
+     "signed_at": "2026-10-20T00:00:00Z"
+    },
+    {
+     "name": "Harbour Jewellery Works (synthetic)",
+     "party": "licensee",
+     "signed_at": "2026-10-21T00:00:00Z"
+    }
+   ],
+   "status": "signed"
+  },
+  {
+   "checksum": "843e3e2cbd46af4f6e4850ee9274842fead3297fa740c7a628ee16f0b81c65e6",
+   "derivative_categories": [
+    "apparel_collab",
+    "wood_carving_collectible"
+   ],
+   "document_id": "LICDOC-0004",
+   "file_ref": "docs/licensing-templates.md#territorial-addendum",
+   "kind": "territorial_addendum",
+   "signatories": [
+    {
+     "name": "Craft Village IP Office (synthetic)",
+     "party": "licensor",
+     "signed_at": "2026-10-20T00:00:00Z"
+    },
+    {
+     "name": "Harbour Jewellery Works (synthetic)",
+     "party": "licensee",
+     "signed_at": "2026-10-21T00:00:00Z"
+    }
+   ],
+   "status": "signed"
+  },
+  {
+   "checksum": "5127652aacc0bd17faf1ac4ec39f5035a7c3f45244643f1e50fbb4187e6df4e7",
+   "derivative_categories": [
+    "jewelry_pendant",
+    "apparel_collab",
+    "wood_carving_collectible",
+    "cultural_gift"
+   ],
+   "document_id": "LICDOC-0005",
+   "file_ref": "docs/licensing-templates.md#extended-markets",
+   "kind": "character_licence",
+   "signatories": [
+    {
+     "name": "Craft Village IP Office (synthetic)",
+     "party": "licensor",
+     "signed_at": "2026-10-22T00:00:00Z"
+    }
+   ],
+   "status": "draft"
+  }
+ ],
+ "license_id": "IPL-0001",
+ "merch_spec_refs": [
+  "MS-0001",
+  "MS-0002",
+  "MS-0003",
+  "MS-0004"
+ ],
+ "quality_spec": {
+  "inspection_points": [
+   "authenticity label present and legible",
+   "licence number matches the signed document",
+   "character motif matches the approved visual asset",
+   "finish matches the specification",
+   "packaging band matches the product"
+  ],
+  "material_standard": "Recycled precious metal, FSC certified hardwood and OEKO-TEX textiles; every material declares its sourcing class in the specification.",
+  "packaging": "Kraft or FSC card box with a paper band; the authenticity label and the licence number are printed on the band, never on the piece."
+ },
+ "traditional_prototype_refs": [
+  {
+   "exclusive_claimed": false,
+   "name": "regional mortise-and-tenon joinery technique"
+  },
+  {
+   "exclusive_claimed": false,
+   "name": "local kiln-fire glaze technique"
+  },
+  {
+   "exclusive_claimed": false,
+   "name": "peony roundel as a shared decorative motif"
+  }
+ ],
+ "usage": {
+  "derivative_categories": [
+   "jewelry_pendant",
+   "apparel_collab",
+   "wood_carving_collectible",
+   "cultural_gift"
+  ],
+  "exclusivity": false,
+  "royalty_rate_bp": 800,
+  "term_months": 36,
+  "territory": [
+   "CN",
+   "EU",
+   "US"
+  ]
+ }
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C2M craft co-creation prototype</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1 id="app-title" data-i18n="app.title">C2M craft co-creation prototype</h1>
+    <p id="app-tagline" data-i18n="app.tagline">Regional specialty industry AI empowerment, phase 1, milestone 1</p>
+  </div>
+  <div class="chips">
+    <span class="chip" id="chip-asof"></span>
+    <span class="chip warn" id="chip-offline"></span>
+    <span class="chip" id="chip-version"></span>
+    <label class="lang">
+      <span>UI</span>
+      <select id="lang">
+        <option value="en">EN</option>
+        <option value="zh">中文</option>
+      </select>
+    </label>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab is-active" data-tab="workstation">Creative workstation</button>
+  <button class="tab" data-tab="library">Pattern library</button>
+  <button class="tab" data-tab="presale">Pre-sale orders</button>
+  <button class="tab" data-tab="dispatch">Factory dispatch</button>
+  <button class="tab" data-tab="contracts">Contracts and rules</button>
+  <button class="tab" data-tab="enterprise">Enterprise</button>
+  <button class="tab" data-tab="ipstudio">IP studio</button>
+</nav>
+
+<main>
+  <section class="panel is-active" id="panel-workstation">
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="workstation.brief">Design brief</h2>
+        <textarea id="ws-text" rows="4"></textarea>
+        <div class="row">
+          <label class="field">
+            <span data-i18n="workstation.industry">Industry</span>
+            <select id="ws-industry"></select>
+          </label>
+          <label class="field">
+            <span data-i18n="workstation.style">Style</span>
+            <select id="ws-style"></select>
+          </label>
+          <label class="field narrow">
+            <span data-i18n="workstation.count">Candidates</span>
+            <select id="ws-count">
+              <option value="2">2</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label class="field grow">
+            <span data-i18n="workstation.reference">Reference image</span>
+            <input type="file" id="ws-image" accept="image/*">
+            <small class="hint" data-i18n="workstation.reference_hint"></small>
+          </label>
+        </div>
+        <div class="swatches" id="ws-reference"></div>
+        <div class="actions">
+          <button class="primary" id="ws-generate">Generate concepts</button>
+        </div>
+        <p class="stub" data-i18n="workstation.stub"></p>
+        <div id="model-status" class="model-status"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="workstation.assessment">Manufacturability</h2>
+        <div id="ws-assessment" class="stack">
+          <p class="muted" data-i18n="workstation.pick"></p>
+        </div>
+        <div id="ws-review" class="stack"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="workstation.concepts">Concept candidates</h2>
+      <div id="ws-concepts" class="cards"></div>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="workstation.series">Series SKUs</h2>
+      <div id="ws-series" class="cards"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-library">
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="library.search">Search the library</h2>
+        <div class="row">
+          <label class="field grow">
+            <span data-i18n="library.query">Text</span>
+            <input type="text" id="lib-q" placeholder="interlace, fret, coastal">
+          </label>
+          <label class="field">
+            <span data-i18n="library.tags">Tags</span>
+            <input type="text" id="lib-tags" placeholder="floral,coastal">
+          </label>
+          <label class="field">
+            <span data-i18n="library.palette">Palette</span>
+            <input type="text" id="lib-palette" placeholder="#C9A227,#1F2A44">
+          </label>
+        </div>
+        <div class="row">
+          <label class="field">
+            <span data-i18n="library.family">Motif family</span>
+            <select id="lib-family">
+              <option value=""></option>
+              <option value="geometric">geometric</option>
+              <option value="floral">floral</option>
+              <option value="wave">wave</option>
+              <option value="organic">organic</option>
+              <option value="inlay">inlay</option>
+              <option value="relief">relief</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="library.symmetry">Symmetry</span>
+            <select id="lib-symmetry">
+              <option value=""></option>
+              <option value="translational">translational</option>
+              <option value="bilateral">bilateral</option>
+              <option value="radial">radial</option>
+              <option value="none">none</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="library.weight">Line weight</span>
+            <select id="lib-weight">
+              <option value=""></option>
+              <option value="fine">fine</option>
+              <option value="medium">medium</option>
+              <option value="bold">bold</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button class="primary" id="lib-search">Search</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="library.ingest">Ingest an asset</h2>
+        <p class="hint" data-i18n="library.ingest_hint"></p>
+        <textarea id="lib-json" rows="10" spellcheck="false"></textarea>
+        <div class="actions">
+          <button id="lib-load-sample">Load a rejection sample</button>
+          <button class="primary" id="lib-ingest">Submit for ingestion</button>
+        </div>
+        <div id="lib-ingest-result" class="stack"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="library.results">Results</h2>
+      <div id="lib-results" class="cards"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-presale">
+    <div class="card">
+      <h2 data-i18n="presale.create">Create order</h2>
+      <div class="row">
+        <label class="field grow">
+          <span data-i18n="presale.concept">Concept</span>
+          <select id="order-concept"></select>
+        </label>
+        <label class="field">
+          <span data-i18n="presale.model">Transaction model</span>
+          <select id="order-model">
+            <option value="designer_presale">designer pre-sale</option>
+            <option value="participatory_customization">participatory customisation</option>
+            <option value="artist_manufacturer">artist x manufacturer</option>
+          </select>
+        </label>
+        <div class="field narrow actions">
+          <button class="primary" id="order-create">Create order</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="presale.orders">Orders</h2>
+        <div id="order-list" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="presale.timeline">Timeline</h2>
+        <div id="order-detail" class="stack">
+          <p class="muted" data-i18n="presale.none"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="custom.title">Participatory customisation</h2>
+        <div class="row">
+          <label class="field grow">
+            <span data-i18n="presale.concept">Concept</span>
+            <select id="custom-concept"></select>
+          </label>
+          <label class="field">
+            <span data-i18n="custom.industry">Industry</span>
+            <select id="custom-industry"></select>
+          </label>
+        </div>
+        <div id="custom-options" class="option-grid"></div>
+        <div class="actions">
+          <button id="custom-preview" data-i18n="custom.preview">Preview price and verdict</button>
+          <button class="primary" id="custom-create" data-i18n="custom.create">Create customised order</button>
+        </div>
+        <div id="custom-result" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="edition.title">Limited editions</h2>
+        <div class="row">
+          <label class="field grow">
+            <span data-i18n="presale.concept">Concept</span>
+            <select id="edition-concept"></select>
+          </label>
+          <label class="field narrow">
+            <span data-i18n="edition.size">Size</span>
+            <input type="text" id="edition-size" value="5">
+          </label>
+          <div class="field actions">
+            <button id="edition-create" data-i18n="edition.create">Open an edition</button>
+          </div>
+        </div>
+        <div id="edition-list" class="stack"></div>
+        <h3 data-i18n="edition.archive">Collector archive</h3>
+        <div id="collector-archive" class="stack"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-dispatch">
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="capacity.title">Capacity board</h2>
+        <div id="capacity-board" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="quality.title">Quality records</h2>
+        <div id="quality-records" class="stack"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="dispatch.board">Dispatch board</h2>
+      <div id="dispatch-board" class="stack"></div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="dispatch.work_order">Work order</h2>
+      <div id="dispatch-detail" class="stack">
+        <p class="muted" data-i18n="dispatch.none"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-contracts">
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="contracts.list">Data contracts</h2>
+        <div id="contracts-list" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="contracts.rules">Craft rules</h2>
+        <div id="rules-list" class="stack"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="contracts.artifacts">Verification artifacts</h2>
+      <p class="hint" data-i18n="contracts.note"></p>
+      <pre class="code" id="contracts-artifacts"></pre>
+      <h3 data-i18n="contracts.commands">Reproduce</h3>
+      <pre class="code" id="contracts-commands"></pre>
+    </div>
+    <div class="card">
+      <h2>Review queue</h2>
+      <div id="review-queue" class="stack"></div>
+    </div>
+  </section>
+  <section class="panel" id="panel-enterprise">
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="enterprise.switch">Industry switch</h2>
+        <p class="hint" data-i18n="enterprise.switch_hint"></p>
+        <div id="ent-switch" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="enterprise.components">Component registry</h2>
+        <div id="ent-components" class="stack"></div>
+      </div>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="enterprise.profile">Enterprise profile</h2>
+        <div id="ent-profile" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="enterprise.fde">FDE readiness</h2>
+        <div id="ent-fde" class="stack"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="enterprise.site">Multilingual site</h2>
+      <div class="row">
+        <a class="button" href="/en" target="_blank" rel="noopener" data-i18n="enterprise.open_site">Open the generated site</a>
+        <a class="button" href="/sitemap.xml" target="_blank" rel="noopener" data-i18n="enterprise.open_sitemap">sitemap.xml</a>
+        <button id="ent-refresh-site" data-i18n="enterprise.refresh">Refresh</button>
+        <span class="chip" id="ent-seo-score"></span>
+      </div>
+      <div id="ent-site" class="stack"></div>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="enterprise.inquiry">Inquiry form</h2>
+        <form id="inq-form" class="stack">
+          <label class="field"><span data-i18n="enterprise.inquiry">Inquiry form</span>
+            <input type="text" name="contact_name" placeholder="Anna Weber" required>
+          </label>
+          <label class="field"><span>Email</span>
+            <input type="email" name="email" placeholder="buyer@example.com" required>
+          </label>
+          <label class="field"><span>Company</span>
+            <input type="text" name="company" placeholder="Nordlicht Retail">
+          </label>
+          <label class="field"><span>Country</span>
+            <input type="text" name="country" placeholder="DE" required>
+          </label>
+          <label class="field"><span>Intent</span>
+            <select name="intent">
+              <option value="bulk_quote">bulk quote</option>
+              <option value="sample_request">sample request</option>
+              <option value="oem">OEM</option>
+              <option value="partnership">partnership</option>
+              <option value="information">information</option>
+            </select>
+          </label>
+          <label class="field"><span>Message</span>
+            <textarea name="message" rows="3" required>We need 200 pcs of the pendant for the spring season.</textarea>
+          </label>
+          <div class="actions">
+            <button class="primary" type="submit" data-i18n="enterprise.submit">Send the inquiry</button>
+          </div>
+        </form>
+        <div id="inq-result" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="enterprise.crm">CRM pipeline</h2>
+        <div id="crm-board" class="stack"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-ipstudio">
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="ip.bible">Character bible</h2>
+        <div id="ip-bible" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="ip.assets">Visual asset library</h2>
+        <div id="ip-assets" class="asset-grid"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="ip.drama">Short drama</h2>
+      <div class="row">
+        <a class="button" href="/reel" target="_blank" rel="noopener" data-i18n="ip.open_reel">Open the sample reel</a>
+        <span class="chip" id="ip-drama-chip"></span>
+      </div>
+      <div id="ip-frames" class="frames-strip"></div>
+      <div id="ip-drama" class="stack"></div>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h2 data-i18n="ip.licensing">Licensing documents</h2>
+        <div id="ip-license" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="ip.merch">Derivative specifications</h2>
+        <div id="ip-merch" class="stack"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="ip.reviews">Content reviews</h2>
+      <div id="ip-reviews" class="stack"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span id="footer-text"></span>
+</footer>
+<div id="toast" class="toast hidden"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

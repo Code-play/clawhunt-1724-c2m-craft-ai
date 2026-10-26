@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "note": "Style transfer is parameter-level in M1. Each style changes palette weighting, texture and geometry factors; it does not synthesise pixels. The UI states this explicitly.",
+  "styles": [
+    {
+      "style_id": "coastal_minimal",
+      "title": { "zh": "海岸极简", "en": "Coastal minimal" },
+      "texture": "brushed",
+      "geometry_factor": 0.95,
+      "detail_factor": 0.6,
+      "palette_shift": 0,
+      "gradient_angle_deg": 135
+    },
+    {
+      "style_id": "heritage_ornate",
+      "title": { "zh": "传统繁复", "en": "Heritage ornate" },
+      "texture": "polished",
+      "geometry_factor": 1.1,
+      "detail_factor": 1.6,
+      "palette_shift": 2,
+      "gradient_angle_deg": 45
+    },
+    {
+      "style_id": "kiln_earth",
+      "title": { "zh": "窑土", "en": "Kiln earth" },
+      "texture": "matte",
+      "geometry_factor": 1.02,
+      "detail_factor": 0.9,
+      "palette_shift": 1,
+      "gradient_angle_deg": 90
+    },
+    {
+      "style_id": "court_contrast",
+      "title": { "zh": "宫廷对比", "en": "Court contrast" },
+      "texture": "polished",
+      "geometry_factor": 1.05,
+      "detail_factor": 1.3,
+      "palette_shift": 3,
+      "gradient_angle_deg": 160
+    },
+    {
+      "style_id": "workshop_raw",
+      "title": { "zh": "工坊素坯", "en": "Workshop raw" },
+      "texture": "carved",
+      "geometry_factor": 1.0,
+      "detail_factor": 0.5,
+      "palette_shift": 4,
+      "gradient_angle_deg": 20
+    }
+  ]
+}

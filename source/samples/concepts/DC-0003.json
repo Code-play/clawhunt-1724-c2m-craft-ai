@@ -1,0 +1,92 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0003",
+ "craft_facts": {
+  "alloy": "18k_gold",
+  "chain_link_mm": 0,
+  "enamel": false,
+  "enamel_firing_c": 0,
+  "engraving_depth_mm": 0.3,
+  "hollow_cast": true,
+  "max_dimension_mm": 42,
+  "min_wall_thickness_mm": 0.7,
+  "prong_count": 0,
+  "prong_thickness_mm": 0,
+  "recessed_area": true,
+  "ring_size_mm": 0,
+  "setting_type": "none",
+  "stone_count": 0,
+  "stone_size_mm": 0,
+  "surface_finish": "polished",
+  "undercut": true
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "pendant",
+  "dimensions_mm": {
+   "x": 36.75,
+   "y": 42.0,
+   "z": 2.89
+  },
+  "variant": "relief_disc"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "jewelry",
+ "material": {
+  "finish": "polished",
+  "name": "18k_gold"
+ },
+ "motif_ids": [
+  "MOT-JW-02"
+ ],
+ "palette": [
+  {
+   "hex": "#0F1A1F",
+   "weight": 55
+  },
+  {
+   "hex": "#2E6F7E",
+   "weight": 20
+  },
+  {
+   "hex": "#C9A227",
+   "weight": 12
+  },
+  {
+   "hex": "#D8DEE2",
+   "weight": 6
+  },
+  {
+   "hex": "#5B3A22",
+   "weight": 4
+  },
+  {
+   "hex": "#EFEAE1",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 90,
+  "motif_style": "fret",
+  "texture": "matte"
+ },
+ "prompt": {
+  "en": "A hollow-cast pendant with a 0.7 mm wall and an undercut pattern.",
+  "zh": "0.7 mm 壁厚的空心铸造吊坠，带倒扣纹样。"
+ },
+ "seed": "2befcf56fcf2124e",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "kiln_earth"
+ },
+ "title": {
+  "en": "Thin hollow pendant with undercut",
+  "zh": "薄壁空心倒扣吊坠"
+ }
+}

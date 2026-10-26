@@ -1,0 +1,66 @@
+{
+ "characters": [
+  {
+   "name": {
+    "en": "Far-sighted guardian",
+    "zh": "千里眼"
+   },
+   "role": "lead",
+   "traits": [
+    "sees distant ships",
+    "keeps watch at the harbour mouth"
+   ]
+  },
+  {
+   "name": {
+    "en": "Far-hearing guardian",
+    "zh": "顺风耳"
+   },
+   "role": "support",
+   "traits": [
+    "hears the wind change",
+    "listens for returning crews"
+   ]
+  }
+ ],
+ "content_review": {
+  "authenticity_label": "original dual-character design derived from maritime folk belief",
+  "reviewer": "CR-IP-01",
+  "status": "approved"
+ },
+ "contract_template_ref": "templates/ip-license-template.md (M4)",
+ "created_at": "2026-09-30T00:00:00Z",
+ "license_id": "IPL-0001",
+ "quality_spec": {
+  "inspection_points": [
+   "surface finish matches the approved sample",
+   "authenticity label attached",
+   "no traditional prototype claimed as exclusive"
+  ],
+  "material_standard": "18K gold or 925 silver, nickel free, hallmarked",
+  "packaging": "recycled board box with authenticity label and review record reference"
+ },
+ "traditional_prototype_refs": [
+  {
+   "exclusive_claimed": true,
+   "name": "Mazu temple guardian statues"
+  },
+  {
+   "exclusive_claimed": false,
+   "name": "traditional maritime festival costumes"
+  }
+ ],
+ "usage": {
+  "derivative_categories": [
+   "jewelry_pendant",
+   "apparel_collab",
+   "cultural_gift"
+  ],
+  "exclusivity": false,
+  "royalty_rate_bp": 800,
+  "term_months": 24,
+  "territory": [
+   "CN"
+  ]
+ }
+}

@@ -1,0 +1,538 @@
+{
+  "industry": "jewelry",
+  "version": "1.0.0",
+  "as_of": "2026-10-23T00:00:00Z",
+  "facts_schema": {
+    "min_wall_thickness_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0.1, "max": 8,
+      "description": { "zh": "铸件最薄处壁厚", "en": "Thinnest cast wall" }
+    },
+    "max_dimension_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 1, "max": 600,
+      "description": { "zh": "最大外形尺寸", "en": "Largest outside dimension" }
+    },
+    "stone_count": {
+      "type": "integer", "required": true, "min": 0, "max": 200,
+      "description": { "zh": "宝石数量", "en": "Number of stones" }
+    },
+    "stone_size_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 30,
+      "description": { "zh": "最大宝石直径", "en": "Largest stone diameter" }
+    },
+    "setting_type": {
+      "type": "string", "required": true,
+      "enum": ["none", "prong", "bezel", "pave", "channel"],
+      "description": { "zh": "镶口形式", "en": "Setting type" }
+    },
+    "prong_count": {
+      "type": "integer", "required": true, "min": 0, "max": 12,
+      "description": { "zh": "镶爪数量", "en": "Prong count" }
+    },
+    "prong_thickness_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 3,
+      "description": { "zh": "镶爪根部厚度", "en": "Prong root thickness" }
+    },
+    "undercut": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否存在倒扣结构", "en": "Undercut present" }
+    },
+    "hollow_cast": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否空心铸造", "en": "Hollow casting" }
+    },
+    "enamel": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否有珐琅工艺", "en": "Enamel present" }
+    },
+    "enamel_firing_c": {
+      "type": "number", "required": true, "unit": "C", "min": 0, "max": 1200,
+      "description": { "zh": "珐琅烧成温度", "en": "Enamel firing temperature" }
+    },
+    "engraving_depth_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 5,
+      "description": { "zh": "錾刻深度", "en": "Chasing depth" }
+    },
+    "surface_finish": {
+      "type": "string", "required": true,
+      "enum": ["polished", "brushed", "sandblasted", "mirror"],
+      "description": { "zh": "表面处理", "en": "Surface finish" }
+    },
+    "ring_size_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 80,
+      "description": { "zh": "戒圈内周长，0 表示非戒指", "en": "Ring inner circumference, 0 for non-rings" }
+    },
+    "alloy": {
+      "type": "string", "required": true,
+      "enum": ["18k_gold", "22k_gold", "925_silver", "pt950"],
+      "description": { "zh": "合金牌号", "en": "Alloy" }
+    },
+    "chain_link_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 20,
+      "description": { "zh": "链节线径，0 表示无链", "en": "Chain link gauge, 0 for no chain" }
+    },
+    "recessed_area": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否存在深凹面", "en": "Recessed area present" }
+    }
+  },
+  "rules": [
+    {
+      "id": "JW-CAST-001",
+      "industry": "jewelry",
+      "process": "casting",
+      "severity": "blocker",
+      "title": { "zh": "壁厚低于可铸下限", "en": "Wall below the castable limit" },
+      "when": { "all": [{ "fact": "min_wall_thickness_mm", "op": "lt", "value": 0.55 }] },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "最小壁厚 {min_wall_thickness_mm} mm 低于手工铸造的 0.55 mm 下限，熔液会在薄壁处提前凝固。",
+        "en": "A {min_wall_thickness_mm} mm wall is below the 0.55 mm manual-casting limit; the melt freezes before the cavity fills."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "把最薄处加到 0.8 mm 以上，或把该处改为镂空。", "en": "Thicken the thinnest section to 0.8 mm or turn it into an opening." },
+          "suggested_change": { "min_wall_thickness_mm": 0.8 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-01", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#casting"]
+    },
+    {
+      "id": "JW-CAST-002",
+      "industry": "jewelry",
+      "process": "casting",
+      "severity": "cost",
+      "title": { "zh": "空心铸造壁厚偏薄", "en": "Thin wall on a hollow casting" },
+      "when": {
+        "all": [
+          { "fact": "hollow_cast", "op": "eq", "value": true },
+          { "fact": "min_wall_thickness_mm", "op": "lt", "value": 0.8 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "空心铸造配 {min_wall_thickness_mm} mm 壁厚需要内芯支撑，良率下降并延长交期。",
+        "en": "Hollow casting at {min_wall_thickness_mm} mm needs a core support; yield drops and lead time grows."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "壁厚加到 0.8 mm，或改为实心铸造后掏空。", "en": "Take the wall to 0.8 mm, or cast solid and hollow out afterwards." },
+          "suggested_change": { "min_wall_thickness_mm": 0.8 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-01", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#casting"]
+    },
+    {
+      "id": "JW-SET-001",
+      "industry": "jewelry",
+      "process": "setting",
+      "severity": "blocker",
+      "title": { "zh": "大石无镶口", "en": "Large stone without a setting" },
+      "when": {
+        "all": [
+          { "fact": "stone_size_mm", "op": "gt", "value": 8 },
+          { "fact": "setting_type", "op": "in", "value": ["none"] }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "{stone_size_mm} mm 的石头没有声明镶口形式，无法固定也无法通过拉拔测试。",
+        "en": "A {stone_size_mm} mm stone has no declared setting; it cannot be fixed or pass a pull test."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "增加包镶或四爪镶口，并在 craft_facts 里声明 setting_type。", "en": "Add a bezel or four-prong setting and declare setting_type in craft_facts." },
+          "suggested_change": { "setting_type": "bezel" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#setting"]
+    },
+    {
+      "id": "JW-SET-002",
+      "industry": "jewelry",
+      "process": "setting",
+      "severity": "blocker",
+      "title": { "zh": "镶爪过细", "en": "Prong too thin" },
+      "when": {
+        "all": [
+          { "fact": "prong_thickness_mm", "op": "gt", "value": 0 },
+          { "fact": "prong_thickness_mm", "op": "lt", "value": 0.5 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "镶爪根部 {prong_thickness_mm} mm 低于 0.5 mm，抛光时会磨穿，佩戴后容易断爪。",
+        "en": "A {prong_thickness_mm} mm prong root is under 0.5 mm; polishing wears through and the prong snaps in wear."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "爪厚加到 0.6 mm，并减少爪数保持视觉比例。", "en": "Take the prong root to 0.6 mm and reduce the prong count to keep the proportions." },
+          "suggested_change": { "prong_thickness_mm": 0.6 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#setting"]
+    },
+    {
+      "id": "JW-SET-003",
+      "industry": "jewelry",
+      "process": "setting",
+      "severity": "blocker",
+      "title": { "zh": "碎钻过小无法密镶", "en": "Stone too small for pavé" },
+      "when": {
+        "all": [
+          { "fact": "setting_type", "op": "eq", "value": "pave" },
+          { "fact": "stone_size_mm", "op": "lt", "value": 1.2 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "密镶要求单石 1.2 mm 以上，来料 {stone_size_mm} mm 的镶口壁会比石头还薄。",
+        "en": "Pavé needs stones of at least 1.2 mm; at {stone_size_mm} mm the bead walls are thinner than the stone."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用 1.3 mm 以上石头，或改为槽镶。", "en": "Use stones of 1.3 mm or more, or switch to channel setting." },
+          "suggested_change": { "setting_type": "channel" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#setting"]
+    },
+    {
+      "id": "JW-CHASE-001",
+      "industry": "jewelry",
+      "process": "chasing",
+      "severity": "cost",
+      "title": { "zh": "錾刻深度超单次行程", "en": "Chasing deeper than one pass" },
+      "when": { "all": [{ "fact": "engraving_depth_mm", "op": "gt", "value": 0.35 }] },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "錾刻深度 {engraving_depth_mm} mm 超过单次行程 0.35 mm，需要退火分次，工时和变形风险都上升。",
+        "en": "A {engraving_depth_mm} mm engraving exceeds the 0.35 mm single pass; it needs annealing and multiple passes, raising hours and distortion risk."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "降到 0.3 mm 以内，或改用激光雕刻保留浅浮雕。", "en": "Reduce below 0.3 mm, or use laser engraving for a shallow relief." },
+          "suggested_change": { "engraving_depth_mm": 0.3 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-03", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#chasing"]
+    },
+    {
+      "id": "JW-CHASE-002",
+      "industry": "jewelry",
+      "process": "chasing",
+      "severity": "cost",
+      "title": { "zh": "倒扣结构需分模", "en": "Undercut needs a split mould" },
+      "when": { "all": [{ "fact": "undercut", "op": "eq", "value": true }] },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "存在倒扣结构，单件模具无法脱模，需要三件分模或改铸造方向，报价与交期都要加。",
+        "en": "The undercut cannot release from a single mould; it needs a three-part mould or a casting re-orientation, adding cost and lead time."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "把倒扣改成可脱模的斜角，或接受分模成本。", "en": "Turn the undercut into a releasable draft angle, or accept the split-mould cost." },
+          "suggested_change": { "undercut": false }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-03", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#chasing"]
+    },
+    {
+      "id": "JW-SURF-001",
+      "industry": "jewelry",
+      "process": "surface",
+      "severity": "cost",
+      "title": { "zh": "镜面处理无法进入凹面", "en": "Mirror polish cannot reach the recess" },
+      "when": {
+        "all": [
+          { "fact": "surface_finish", "op": "eq", "value": "mirror" },
+          { "fact": "recessed_area", "op": "eq", "value": true }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "镜面抛光要求布轮可达，深凹面无法进入，只能局部改为哑光或喷砂。",
+        "en": "Mirror polishing needs the buff to reach the surface; a deep recess can only be finished matte or sandblasted."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "凹面改哑光，或把凹面做成可拆件后单独抛光。", "en": "Finish the recess matte, or make it a removable part polished separately." },
+          "suggested_change": { "surface_finish": "brushed" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-04", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#surface"]
+    },
+    {
+      "id": "JW-SURF-002",
+      "industry": "jewelry",
+      "process": "surface",
+      "severity": "cost",
+      "title": { "zh": "珐琅烧成温度偏高", "en": "Enamel firing runs hot" },
+      "when": {
+        "all": [
+          { "fact": "enamel", "op": "eq", "value": true },
+          { "fact": "enamel_firing_c", "op": "gt", "value": 780 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "烧成温度 {enamel_firing_c} 摄氏度高于常规透明珐琅 780 摄氏度，金属基体会退火变软。",
+        "en": "A firing temperature of {enamel_firing_c} C is above the 780 C used for transparent enamel; the metal substrate anneals and softens."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用 760 摄氏度低温珐琅，或把珐琅件与承力件分开。", "en": "Use a 760 C low-fire enamel, or separate the enamelled part from the load-bearing part." },
+          "suggested_change": { "enamel_firing_c": 760 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-04", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#surface"]
+    },
+    {
+      "id": "JW-FORM-001",
+      "industry": "jewelry",
+      "process": "forming",
+      "severity": "cost",
+      "title": { "zh": "手寸偏小需定制撑圈", "en": "Small ring size needs a custom mandrel" },
+      "when": {
+        "all": [
+          { "fact": "ring_size_mm", "op": "gt", "value": 0 },
+          { "fact": "ring_size_mm", "op": "lt", "value": 45 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "手寸 {ring_size_mm} mm 小于常规模具 45 mm，需要单独车制撑圈，多一道准备工时。",
+        "en": "A {ring_size_mm} mm size is below the 45 mm standard mandrel and needs a custom-turned one, adding set-up hours."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "调整到 46 mm 以上，或接受定制撑圈成本。", "en": "Adjust to at least 46 mm, or accept the custom mandrel cost." },
+          "suggested_change": { "ring_size_mm": 46 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-01", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#forming"]
+    },
+    {
+      "id": "JW-FORM-002",
+      "industry": "jewelry",
+      "process": "forming",
+      "severity": "blocker",
+      "title": { "zh": "链节过细", "en": "Chain link too thin" },
+      "when": {
+        "all": [
+          { "fact": "chain_link_mm", "op": "gt", "value": 0 },
+          { "fact": "chain_link_mm", "op": "lt", "value": 1.0 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "链节线径 {chain_link_mm} mm 低于 1.0 mm，铸造无法保证焊点强度，拉力测试会断。",
+        "en": "A {chain_link_mm} mm gauge is under the 1.0 mm casting floor; weld strength cannot be guaranteed and the pull test fails."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "加到 1.2 mm，或改用机制链现场配链。", "en": "Take the gauge to 1.2 mm, or use a machine-made chain assembled on site." },
+          "suggested_change": { "chain_link_mm": 1.2 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-01", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#forming"]
+    },
+    {
+      "id": "JW-MAT-001",
+      "industry": "jewelry",
+      "process": "material",
+      "severity": "cost",
+      "title": { "zh": "铂金薄壁难成型", "en": "Thin platinum is hard to form" },
+      "when": {
+        "all": [
+          { "fact": "alloy", "op": "eq", "value": "pt950" },
+          { "fact": "min_wall_thickness_mm", "op": "lt", "value": 1.0 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "pt950 在 {min_wall_thickness_mm} mm 壁厚下成型窗口很窄，需要多次退火并接受更高废品率。",
+        "en": "pt950 at {min_wall_thickness_mm} mm has a narrow forming window; it needs repeated annealing and a higher scrap rate."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "壁厚加到 1.2 mm，或改用 18k 金。", "en": "Take the wall to 1.2 mm, or switch to 18k gold." },
+          "suggested_change": { "min_wall_thickness_mm": 1.2 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-01", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#material"]
+    },
+    {
+      "id": "JW-MAT-002",
+      "industry": "jewelry",
+      "process": "material",
+      "severity": "cost",
+      "title": { "zh": "高金合金爪易变形", "en": "High-karat prongs deform" },
+      "when": {
+        "all": [
+          { "fact": "alloy", "op": "eq", "value": "22k_gold" },
+          { "fact": "prong_thickness_mm", "op": "gt", "value": 0 },
+          { "fact": "prong_thickness_mm", "op": "lt", "value": 0.8 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "22k 金硬度低，{prong_thickness_mm} mm 的爪在佩戴中容易变形松石。",
+        "en": "22k gold is soft; a {prong_thickness_mm} mm prong deforms in wear and the stone loosens."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "爪厚加到 0.9 mm，或镶口改用 18k 金。", "en": "Take the prong to 0.9 mm, or make the setting in 18k gold." },
+          "suggested_change": { "prong_thickness_mm": 0.9 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#material"]
+    },
+    {
+      "id": "JW-ASM-001",
+      "industry": "jewelry",
+      "process": "assembly",
+      "severity": "blocker",
+      "title": { "zh": "槽镶需要更厚的侧壁", "en": "Channel setting needs thicker walls" },
+      "when": {
+        "all": [
+          { "fact": "setting_type", "op": "eq", "value": "channel" },
+          { "fact": "min_wall_thickness_mm", "op": "lt", "value": 1.0 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "槽镶要在侧壁开槽并压边，{min_wall_thickness_mm} mm 侧壁开槽后会失去支撑。",
+        "en": "Channel setting cuts a groove and presses the edge; a {min_wall_thickness_mm} mm wall loses its support once grooved."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "侧壁加到 1.2 mm，或改用包镶。", "en": "Take the wall to 1.2 mm, or switch to a bezel." },
+          "suggested_change": { "min_wall_thickness_mm": 1.2 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#assembly"]
+    },
+    {
+      "id": "JW-ASM-002",
+      "industry": "jewelry",
+      "process": "assembly",
+      "severity": "blocker",
+      "title": { "zh": "空心件无法上珐琅", "en": "Hollow body cannot take enamel" },
+      "when": {
+        "all": [
+          { "fact": "hollow_cast", "op": "eq", "value": true },
+          { "fact": "enamel", "op": "eq", "value": true }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "空心件进窑烧珐琅会因为内腔气压塌陷，必须改实心或后装珐琅片。",
+        "en": "A hollow body collapses in the kiln because the inner cavity pressurises; it must be cast solid or take an applique enamel plate."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改为实心铸造，或把珐琅做成独立片后镶嵌。", "en": "Cast solid, or make the enamel as a separate plaque and set it." },
+          "suggested_change": { "hollow_cast": false }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-04", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#assembly"]
+    },
+    {
+      "id": "JW-SET-004",
+      "industry": "jewelry",
+      "process": "setting",
+      "severity": "cost",
+      "title": { "zh": "密钉数量过多", "en": "Stone count drives setting hours" },
+      "when": { "all": [{ "fact": "stone_count", "op": "gt", "value": 40 }] },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "{stone_count} 颗石需要逐颗找平，单件镶嵌工时超过 8 小时，交期要按两班排。",
+        "en": "{stone_count} stones need individual levelling; setting runs past eight hours per piece and needs a two-shift schedule."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "把数量压到 40 颗以内，或改为预先排好的蜡镶模块。", "en": "Cut the count below 40, or use a pre-set wax module." },
+          "suggested_change": { "stone_count": 40 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "low", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#setting"]
+    },
+    {
+      "id": "JW-SET-005",
+      "industry": "jewelry",
+      "process": "setting",
+      "severity": "blocker",
+      "title": { "zh": "爪数不足以固定大石", "en": "Too few prongs for the stone" },
+      "when": {
+        "all": [
+          { "fact": "prong_count", "op": "gt", "value": 0 },
+          { "fact": "prong_count", "op": "lt", "value": 3 },
+          { "fact": "stone_size_mm", "op": "gt", "value": 4 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "{stone_size_mm} mm 的石头只给了 {prong_count} 个爪，三点支撑不足，拉拔测试必然掉石。",
+        "en": "A {stone_size_mm} mm stone with only {prong_count} prongs has no stable three-point support; the pull test drops the stone."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "四面爪或六爪，或改为包镶。", "en": "Use four or six prongs, or switch to a bezel." },
+          "suggested_change": { "prong_count": 4 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "JW-ARTISAN-02", "captured_at": "2026-10-10T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#setting"]
+    }
+  ]
+}

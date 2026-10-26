@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "note": "Series expansion from one concept into three SKUs. Dimensions scale, palette rotates by one slot and the price multiplier is expressed in basis points so the derived prices stay integer cents.",
+  "sizes": [
+    { "sku_index": 1, "label": { "zh": "小号", "en": "Small" }, "dimension_factor": 0.88, "price_multiplier_bp": 9000 },
+    { "sku_index": 2, "label": { "zh": "标准", "en": "Standard" }, "dimension_factor": 1.0, "price_multiplier_bp": 10000 },
+    { "sku_index": 3, "label": { "zh": "大号", "en": "Large" }, "dimension_factor": 1.14, "price_multiplier_bp": 11500 }
+  ],
+  "palette_rotation": 1,
+  "dimension_backed_facts": ["max_dimension_mm", "span_mm", "panel_thickness_mm", "min_wall_thickness_mm"]
+}

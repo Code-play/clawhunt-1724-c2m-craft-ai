@@ -1,0 +1,238 @@
+{
+  "version": "1.0.0",
+  "note": "Option catalogue for participatory customisation. Every option resolves to integer cents against the base unit price; fact_changes are applied to the concept before the manufacturability gate runs again, so an option cannot smuggle in an unmakeable design.",
+  "industries": {
+    "jewelry": {
+      "groups": [
+        {
+          "group_id": "alloy",
+          "label": { "zh": "合金", "en": "Alloy" },
+          "options": [
+            {
+              "option_id": "alloy_18k",
+              "label": { "zh": "18K 金", "en": "18K gold" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "alloy": "18k_gold" }
+            },
+            {
+              "option_id": "alloy_22k",
+              "label": { "zh": "22K 金", "en": "22K gold" },
+              "price_delta_bp": 1200,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "alloy": "22k_gold" }
+            },
+            {
+              "option_id": "alloy_silver",
+              "label": { "zh": "925 银", "en": "925 silver" },
+              "price_delta_bp": -1800,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "alloy": "925_silver" }
+            },
+            {
+              "option_id": "alloy_platinum",
+              "label": { "zh": "pt950", "en": "pt950 platinum" },
+              "price_delta_bp": 4500,
+              "lead_time_delta_days": 4,
+              "fact_changes": { "alloy": "pt950" }
+            }
+          ]
+        },
+        {
+          "group_id": "finish",
+          "label": { "zh": "表面处理", "en": "Finish" },
+          "options": [
+            {
+              "option_id": "finish_brushed",
+              "label": { "zh": "拉丝", "en": "Brushed" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "surface_finish": "brushed", "finish": "matte" }
+            },
+            {
+              "option_id": "finish_mirror",
+              "label": { "zh": "镜面", "en": "Mirror" },
+              "price_delta_bp": 600,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "surface_finish": "mirror", "finish": "high_gloss" }
+            },
+            {
+              "option_id": "finish_sandblasted",
+              "label": { "zh": "喷砂", "en": "Sandblasted" },
+              "price_delta_bp": 300,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "surface_finish": "sandblasted", "finish": "matte" }
+            }
+          ]
+        },
+        {
+          "group_id": "stone",
+          "label": { "zh": "宝石", "en": "Stone" },
+          "options": [
+            {
+              "option_id": "stone_none",
+              "label": { "zh": "无石", "en": "No stone" },
+              "price_delta_bp": -800,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "stone_count": 0, "stone_size_mm": 0, "setting_type": "none", "prong_count": 0, "prong_thickness_mm": 0 }
+            },
+            {
+              "option_id": "stone_4mm",
+              "label": { "zh": "4 mm 主石", "en": "4 mm centre stone" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "stone_count": 1, "stone_size_mm": 4.2, "setting_type": "prong", "prong_count": 4, "prong_thickness_mm": 0.7 }
+            },
+            {
+              "option_id": "stone_9mm",
+              "label": { "zh": "9 mm 主石", "en": "9 mm centre stone" },
+              "price_delta_bp": 3800,
+              "lead_time_delta_days": 2,
+              "fact_changes": { "stone_count": 1, "stone_size_mm": 9.0, "setting_type": "bezel", "prong_count": 0, "prong_thickness_mm": 0 }
+            }
+          ]
+        },
+        {
+          "group_id": "engraving",
+          "label": { "zh": "錾刻", "en": "Engraving" },
+          "options": [
+            {
+              "option_id": "engraving_none",
+              "label": { "zh": "不錾刻", "en": "No engraving" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "engraving_depth_mm": 0 }
+            },
+            {
+              "option_id": "engraving_light",
+              "label": { "zh": "浅錾（0.2 mm）", "en": "Light engraving (0.2 mm)" },
+              "price_delta_bp": 500,
+              "lead_time_delta_days": 1,
+              "fact_changes": { "engraving_depth_mm": 0.2 }
+            },
+            {
+              "option_id": "engraving_deep",
+              "label": { "zh": "深錾（0.45 mm）", "en": "Deep engraving (0.45 mm)" },
+              "price_delta_bp": 1400,
+              "lead_time_delta_days": 2,
+              "fact_changes": { "engraving_depth_mm": 0.45 }
+            }
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "a": { "group_id": "alloy", "option_id": "alloy_silver" },
+          "b": { "group_id": "stone", "option_id": "stone_9mm" },
+          "reason": {
+            "zh": "9 mm 主石配 925 银爪在承重与耐磨上都不达标，改 18K 金或缩小主石。",
+            "en": "A 9 mm stone on 925 silver prongs fails both load and wear requirements; use 18K gold or a smaller stone."
+          }
+        },
+        {
+          "a": { "group_id": "finish", "option_id": "finish_mirror" },
+          "b": { "group_id": "engraving", "option_id": "engraving_deep" },
+          "reason": {
+            "zh": "镜面配深錾会在凹槽里留下抛不掉的痕迹，改拉丝或浅錾。",
+            "en": "Mirror polish over deep engraving leaves unpolishable marks in the groove; use brushed or light engraving."
+          }
+        }
+      ]
+    },
+    "hardwood": {
+      "groups": [
+        {
+          "group_id": "species",
+          "label": { "zh": "材种", "en": "Species" },
+          "options": [
+            {
+              "option_id": "species_walnut",
+              "label": { "zh": "胡桃木", "en": "Walnut" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "species": "walnut" }
+            },
+            {
+              "option_id": "species_oak",
+              "label": { "zh": "橡木", "en": "Oak" },
+              "price_delta_bp": -600,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "species": "oak" }
+            },
+            {
+              "option_id": "species_teak",
+              "label": { "zh": "柚木", "en": "Teak" },
+              "price_delta_bp": 2600,
+              "lead_time_delta_days": 5,
+              "fact_changes": { "species": "teak" }
+            }
+          ]
+        },
+        {
+          "group_id": "finish",
+          "label": { "zh": "涂装", "en": "Finish" },
+          "options": [
+            {
+              "option_id": "finish_oil",
+              "label": { "zh": "木蜡油", "en": "Hardwax oil" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "finish": "oil" }
+            },
+            {
+              "option_id": "finish_lacquer",
+              "label": { "zh": "漆面", "en": "Lacquer" },
+              "price_delta_bp": 700,
+              "lead_time_delta_days": 2,
+              "fact_changes": { "finish": "lacquer" }
+            },
+            {
+              "option_id": "finish_high_gloss",
+              "label": { "zh": "高光", "en": "High gloss" },
+              "price_delta_bp": 1100,
+              "lead_time_delta_days": 3,
+              "fact_changes": { "finish": "high_gloss" }
+            }
+          ]
+        },
+        {
+          "group_id": "carving",
+          "label": { "zh": "雕刻", "en": "Carving" },
+          "options": [
+            {
+              "option_id": "carving_none",
+              "label": { "zh": "素面", "en": "Plain" },
+              "price_delta_bp": 0,
+              "lead_time_delta_days": 0,
+              "fact_changes": { "carve_depth_mm": 0 }
+            },
+            {
+              "option_id": "carving_relief",
+              "label": { "zh": "浅浮雕（6 mm）", "en": "Relief (6 mm)" },
+              "price_delta_bp": 900,
+              "lead_time_delta_days": 3,
+              "fact_changes": { "carve_depth_mm": 6 }
+            },
+            {
+              "option_id": "carving_deep",
+              "label": { "zh": "深雕（10 mm）", "en": "Deep carving (10 mm)" },
+              "price_delta_bp": 2200,
+              "lead_time_delta_days": 6,
+              "fact_changes": { "carve_depth_mm": 10 }
+            }
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "a": { "group_id": "species", "option_id": "species_teak" },
+          "b": { "group_id": "finish", "option_id": "finish_high_gloss" },
+          "reason": {
+            "zh": "柚木油脂会顶起高光漆膜，改木蜡油或换材种。",
+            "en": "Teak oils lift a high-gloss film; use hardwax oil or another species."
+          }
+        }
+      ]
+    }
+  }
+}

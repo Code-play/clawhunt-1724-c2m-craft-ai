@@ -1,0 +1,7702 @@
+{
+ "agreement": {
+  "auto_matched": 20,
+  "total": 20
+ },
+ "assessments": [
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0001",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 22,
+    "verdict": "manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0001",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.15,
+    "hollow_cast": false,
+    "max_dimension_mm": 24,
+    "min_wall_thickness_mm": 1.3,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "final_verdict": "manufacturable",
+   "fixes": [],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "3b18bc24b05ec71c031666ae3cbefca074fb285da901b56899609d3fb68985b5",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Below this workshop's castable wall",
+      "zh": "低于本厂可铸最小壁厚"
+     },
+     "rule_id": "CAP-JW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-A-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-A-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this kiln's temperature",
+      "zh": "超出本厂珐琅窑温度"
+     },
+     "rule_id": "CAP-JW-A-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0002",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 22,
+    "verdict": "manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0001",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.15,
+    "hollow_cast": false,
+    "max_dimension_mm": 24,
+    "min_wall_thickness_mm": 1.3,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "final_verdict": "manufacturable",
+   "fixes": [],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "3b18bc24b05ec71c031666ae3cbefca074fb285da901b56899609d3fb68985b5",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Below this workshop's castable wall",
+      "zh": "低于本厂可铸最小壁厚"
+     },
+     "rule_id": "CAP-JW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-B-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-B-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this furnace's temperature",
+      "zh": "超出本厂珐琅炉温度"
+     },
+     "rule_id": "CAP-JW-B-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": "2026-10-23T00:00:00Z",
+    "decision_verdict": "not_manufacturable",
+    "notes": "Confirmed: 0.3 mm wall plus an unset 8.5 mm stone cannot be produced at this workshop.",
+    "queue_id": "AR-0001",
+    "required": true,
+    "reviewer": "ART-JW-01",
+    "status": "confirmed"
+   },
+   "assessment_id": "MA-0003",
+   "auto": {
+    "blocking_rules": [
+     "CAP-JW-A-01",
+     "JW-CAST-001",
+     "JW-SET-001"
+    ],
+    "evaluated_rules": 20,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-JW-A-01",
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "concept_id": "DC-0002",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0,
+    "hollow_cast": false,
+    "max_dimension_mm": 40,
+    "min_wall_thickness_mm": 0.3,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": false,
+    "ring_size_mm": 0,
+    "setting_type": "none",
+    "stone_count": 1,
+    "stone_size_mm": 8.5,
+    "surface_finish": "polished",
+    "undercut": false
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-JW-A-01",
+     "suggested_change": {
+      "min_wall_thickness_mm": 0.8
+     },
+     "text": {
+      "en": "Raise the minimum wall to 0.8 mm or switch to hollow casting with internal supports.",
+      "zh": "把最小壁厚提到 0.8 mm 以上，或改为空心铸造并加内支撑。"
+     }
+    },
+    {
+     "rule_id": "JW-CAST-001",
+     "suggested_change": {
+      "min_wall_thickness_mm": 0.8
+     },
+     "text": {
+      "en": "Thicken the thinnest section to 0.8 mm or turn it into an opening.",
+      "zh": "把最薄处加到 0.8 mm 以上，或把该处改为镂空。"
+     }
+    },
+    {
+     "rule_id": "JW-SET-001",
+     "suggested_change": {
+      "setting_type": "bezel"
+     },
+     "text": {
+      "en": "Add a bezel or four-prong setting and declare setting_type in craft_facts.",
+      "zh": "增加包镶或四爪镶口，并在 craft_facts 里声明 setting_type。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "2fe8d918dc446982cb91eed80aa27146a9848b8ae381929d71dd8c311bd3eedd",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "This workshop casts down to 0.6 mm; the submitted 0.3 mm will not fill the mould.",
+      "zh": "本厂铸造最小壁厚 0.6 mm，来料 0.3 mm 无法充满型腔。"
+     },
+     "rule_id": "CAP-JW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-A-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-A-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this kiln's temperature",
+      "zh": "超出本厂珐琅窑温度"
+     },
+     "rule_id": "CAP-JW-A-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "A 0.3 mm wall is below the 0.55 mm manual-casting limit; the melt freezes before the cavity fills.",
+      "zh": "最小壁厚 0.3 mm 低于手工铸造的 0.55 mm 下限，熔液会在薄壁处提前凝固。"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "A 8.5 mm stone has no declared setting; it cannot be fixed or pass a pull test.",
+      "zh": "8.5 mm 的石头没有声明镶口形式，无法固定也无法通过拉拔测试。"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": "AR-0002",
+    "required": true,
+    "reviewer": null,
+    "status": "pending"
+   },
+   "assessment_id": "MA-0004",
+   "auto": {
+    "blocking_rules": [
+     "CAP-JW-B-01",
+     "CAP-JW-B-02",
+     "JW-CAST-001",
+     "JW-SET-001"
+    ],
+    "evaluated_rules": 20,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-JW-B-01",
+    "CAP-JW-B-02",
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "concept_id": "DC-0002",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0,
+    "hollow_cast": false,
+    "max_dimension_mm": 40,
+    "min_wall_thickness_mm": 0.3,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": false,
+    "ring_size_mm": 0,
+    "setting_type": "none",
+    "stone_count": 1,
+    "stone_size_mm": 8.5,
+    "surface_finish": "polished",
+    "undercut": false
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-JW-B-01",
+     "suggested_change": {
+      "min_wall_thickness_mm": 1.0
+     },
+     "text": {
+      "en": "Thicken to 0.9 mm or route to the vacuum caster at WS-JW-A.",
+      "zh": "加厚到 0.9 mm 以上，或转一厂真空铸造。"
+     }
+    },
+    {
+     "rule_id": "CAP-JW-B-02",
+     "suggested_change": {
+      "max_dimension_mm": 30
+     },
+     "text": {
+      "en": "Reduce below 30 mm, or move to WS-JW-A.",
+      "zh": "缩到 30 mm 以内，或转一厂。"
+     }
+    },
+    {
+     "rule_id": "JW-CAST-001",
+     "suggested_change": {
+      "min_wall_thickness_mm": 0.8
+     },
+     "text": {
+      "en": "Thicken the thinnest section to 0.8 mm or turn it into an opening.",
+      "zh": "把最薄处加到 0.8 mm 以上，或把该处改为镂空。"
+     }
+    },
+    {
+     "rule_id": "JW-SET-001",
+     "suggested_change": {
+      "setting_type": "bezel"
+     },
+     "text": {
+      "en": "Add a bezel or four-prong setting and declare setting_type in craft_facts.",
+      "zh": "增加包镶或四爪镶口，并在 craft_facts 里声明 setting_type。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "2fe8d918dc446982cb91eed80aa27146a9848b8ae381929d71dd8c311bd3eedd",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Centrifugal casting needs 0.9 mm; 0.3 mm will not fill.",
+      "zh": "二厂离心铸造最小壁厚 0.9 mm，来料 0.3 mm 无法充满。"
+     },
+     "rule_id": "CAP-JW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "The envelope is 30 mm; 40 mm needs another workshop.",
+      "zh": "二厂最大铸件尺寸 30 mm，来料 40 mm 需要转厂。"
+     },
+     "rule_id": "CAP-JW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-B-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-B-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this furnace's temperature",
+      "zh": "超出本厂珐琅炉温度"
+     },
+     "rule_id": "CAP-JW-B-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "A 0.3 mm wall is below the 0.55 mm manual-casting limit; the melt freezes before the cavity fills.",
+      "zh": "最小壁厚 0.3 mm 低于手工铸造的 0.55 mm 下限，熔液会在薄壁处提前凝固。"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "A 8.5 mm stone has no declared setting; it cannot be fixed or pass a pull test.",
+      "zh": "8.5 mm 的石头没有声明镶口形式，无法固定也无法通过拉拔测试。"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": "AR-0003",
+    "required": true,
+    "reviewer": null,
+    "status": "pending"
+   },
+   "assessment_id": "MA-0005",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 20,
+    "verdict": "conditionally_manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0003",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.3,
+    "hollow_cast": true,
+    "max_dimension_mm": 42,
+    "min_wall_thickness_mm": 0.7,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": true,
+    "ring_size_mm": 0,
+    "setting_type": "none",
+    "stone_count": 0,
+    "stone_size_mm": 0,
+    "surface_finish": "polished",
+    "undercut": true
+   },
+   "final_verdict": "conditionally_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "JW-CAST-002",
+     "suggested_change": {
+      "min_wall_thickness_mm": 0.8
+     },
+     "text": {
+      "en": "Take the wall to 0.8 mm, or cast solid and hollow out afterwards.",
+      "zh": "壁厚加到 0.8 mm，或改为实心铸造后掏空。"
+     }
+    },
+    {
+     "rule_id": "JW-CHASE-002",
+     "suggested_change": {
+      "undercut": false
+     },
+     "text": {
+      "en": "Turn the undercut into a releasable draft angle, or accept the split-mould cost.",
+      "zh": "把倒扣改成可脱模的斜角，或接受分模成本。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "16c6b8164ecb882376f8916bf73948441e740d3fd3ce23305f4e4afcfb545c64",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Below this workshop's castable wall",
+      "zh": "低于本厂可铸最小壁厚"
+     },
+     "rule_id": "CAP-JW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-A-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-A-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this kiln's temperature",
+      "zh": "超出本厂珐琅窑温度"
+     },
+     "rule_id": "CAP-JW-A-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Hollow casting at 0.7 mm needs a core support; yield drops and lead time grows.",
+      "zh": "空心铸造配 0.7 mm 壁厚需要内芯支撑，良率下降并延长交期。"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "The undercut cannot release from a single mould; it needs a three-part mould or a casting re-orientation, adding cost and lead time.",
+      "zh": "存在倒扣结构，单件模具无法脱模，需要三件分模或改铸造方向，报价与交期都要加。"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": "2026-10-23T00:00:00Z",
+    "decision_verdict": "conditionally_manufacturable",
+    "notes": "Workshop B will route the casting to the vacuum caster of workshop A inside the same order; the reviewer accepts the 0.7 mm wall with a core support and a re-inspection after casting.",
+    "queue_id": "AR-0004",
+    "required": true,
+    "reviewer": "ART-JW-01",
+    "status": "overridden"
+   },
+   "assessment_id": "MA-0006",
+   "auto": {
+    "blocking_rules": [
+     "CAP-JW-B-01",
+     "CAP-JW-B-02"
+    ],
+    "evaluated_rules": 20,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-JW-B-01",
+    "CAP-JW-B-02"
+   ],
+   "concept_id": "DC-0003",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.3,
+    "hollow_cast": true,
+    "max_dimension_mm": 42,
+    "min_wall_thickness_mm": 0.7,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": true,
+    "ring_size_mm": 0,
+    "setting_type": "none",
+    "stone_count": 0,
+    "stone_size_mm": 0,
+    "surface_finish": "polished",
+    "undercut": true
+   },
+   "final_verdict": "conditionally_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-JW-B-01",
+     "suggested_change": {
+      "min_wall_thickness_mm": 1.0
+     },
+     "text": {
+      "en": "Thicken to 0.9 mm or route to the vacuum caster at WS-JW-A.",
+      "zh": "加厚到 0.9 mm 以上，或转一厂真空铸造。"
+     }
+    },
+    {
+     "rule_id": "CAP-JW-B-02",
+     "suggested_change": {
+      "max_dimension_mm": 30
+     },
+     "text": {
+      "en": "Reduce below 30 mm, or move to WS-JW-A.",
+      "zh": "缩到 30 mm 以内，或转一厂。"
+     }
+    },
+    {
+     "rule_id": "JW-CAST-002",
+     "suggested_change": {
+      "min_wall_thickness_mm": 0.8
+     },
+     "text": {
+      "en": "Take the wall to 0.8 mm, or cast solid and hollow out afterwards.",
+      "zh": "壁厚加到 0.8 mm，或改为实心铸造后掏空。"
+     }
+    },
+    {
+     "rule_id": "JW-CHASE-002",
+     "suggested_change": {
+      "undercut": false
+     },
+     "text": {
+      "en": "Turn the undercut into a releasable draft angle, or accept the split-mould cost.",
+      "zh": "把倒扣改成可脱模的斜角，或接受分模成本。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "16c6b8164ecb882376f8916bf73948441e740d3fd3ce23305f4e4afcfb545c64",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Centrifugal casting needs 0.9 mm; 0.7 mm will not fill.",
+      "zh": "二厂离心铸造最小壁厚 0.9 mm，来料 0.7 mm 无法充满。"
+     },
+     "rule_id": "CAP-JW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "The envelope is 30 mm; 42 mm needs another workshop.",
+      "zh": "二厂最大铸件尺寸 30 mm，来料 42 mm 需要转厂。"
+     },
+     "rule_id": "CAP-JW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-B-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-B-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this furnace's temperature",
+      "zh": "超出本厂珐琅炉温度"
+     },
+     "rule_id": "CAP-JW-B-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Hollow casting at 0.7 mm needs a core support; yield drops and lead time grows.",
+      "zh": "空心铸造配 0.7 mm 壁厚需要内芯支撑，良率下降并延长交期。"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "The undercut cannot release from a single mould; it needs a three-part mould or a casting re-orientation, adding cost and lead time.",
+      "zh": "存在倒扣结构，单件模具无法脱模，需要三件分模或改铸造方向，报价与交期都要加。"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0007",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 21,
+    "verdict": "conditionally_manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0004",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "925_silver",
+    "chain_link_mm": 0,
+    "enamel": true,
+    "enamel_firing_c": 800,
+    "engraving_depth_mm": 0.45,
+    "hollow_cast": false,
+    "max_dimension_mm": 38,
+    "min_wall_thickness_mm": 1.4,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": false,
+    "ring_size_mm": 0,
+    "setting_type": "pave",
+    "stone_count": 6,
+    "stone_size_mm": 1.5,
+    "surface_finish": "polished",
+    "undercut": false
+   },
+   "final_verdict": "conditionally_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "JW-CHASE-001",
+     "suggested_change": {
+      "engraving_depth_mm": 0.3
+     },
+     "text": {
+      "en": "Reduce below 0.3 mm, or use laser engraving for a shallow relief.",
+      "zh": "降到 0.3 mm 以内，或改用激光雕刻保留浅浮雕。"
+     }
+    },
+    {
+     "rule_id": "JW-SURF-002",
+     "suggested_change": {
+      "enamel_firing_c": 760
+     },
+     "text": {
+      "en": "Use a 760 C low-fire enamel, or separate the enamelled part from the load-bearing part.",
+      "zh": "改用 760 摄氏度低温珐琅，或把珐琅件与承力件分开。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "2a558b95d719f06f62e7fca1ca7ff7a161e2f011a84b2de889e6c5b654dfa662",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Below this workshop's castable wall",
+      "zh": "低于本厂可铸最小壁厚"
+     },
+     "rule_id": "CAP-JW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-A-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-A-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this kiln's temperature",
+      "zh": "超出本厂珐琅窑温度"
+     },
+     "rule_id": "CAP-JW-A-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "A 0.45 mm engraving exceeds the 0.35 mm single pass; it needs annealing and multiple passes, raising hours and distortion risk.",
+      "zh": "錾刻深度 0.45 mm 超过单次行程 0.35 mm，需要退火分次，工时和变形风险都上升。"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "A firing temperature of 800 C is above the 780 C used for transparent enamel; the metal substrate anneals and softens.",
+      "zh": "烧成温度 800 摄氏度高于常规透明珐琅 780 摄氏度，金属基体会退火变软。"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0008",
+   "auto": {
+    "blocking_rules": [
+     "CAP-JW-B-02",
+     "CAP-JW-B-06"
+    ],
+    "evaluated_rules": 21,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-JW-B-02",
+    "CAP-JW-B-06"
+   ],
+   "concept_id": "DC-0004",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "925_silver",
+    "chain_link_mm": 0,
+    "enamel": true,
+    "enamel_firing_c": 800,
+    "engraving_depth_mm": 0.45,
+    "hollow_cast": false,
+    "max_dimension_mm": 38,
+    "min_wall_thickness_mm": 1.4,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": false,
+    "ring_size_mm": 0,
+    "setting_type": "pave",
+    "stone_count": 6,
+    "stone_size_mm": 1.5,
+    "surface_finish": "polished",
+    "undercut": false
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-JW-B-02",
+     "suggested_change": {
+      "max_dimension_mm": 30
+     },
+     "text": {
+      "en": "Reduce below 30 mm, or move to WS-JW-A.",
+      "zh": "缩到 30 mm 以内，或转一厂。"
+     }
+    },
+    {
+     "rule_id": "CAP-JW-B-06",
+     "suggested_change": {
+      "enamel_firing_c": 730
+     },
+     "text": {
+      "en": "Use an enamel below 750 C, or use WS-JW-A.",
+      "zh": "改用 750 摄氏度以下低温珐琅，或转一厂。"
+     }
+    },
+    {
+     "rule_id": "JW-CHASE-001",
+     "suggested_change": {
+      "engraving_depth_mm": 0.3
+     },
+     "text": {
+      "en": "Reduce below 0.3 mm, or use laser engraving for a shallow relief.",
+      "zh": "降到 0.3 mm 以内，或改用激光雕刻保留浅浮雕。"
+     }
+    },
+    {
+     "rule_id": "JW-SURF-002",
+     "suggested_change": {
+      "enamel_firing_c": 760
+     },
+     "text": {
+      "en": "Use a 760 C low-fire enamel, or separate the enamelled part from the load-bearing part.",
+      "zh": "改用 760 摄氏度低温珐琅，或把珐琅件与承力件分开。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "2a558b95d719f06f62e7fca1ca7ff7a161e2f011a84b2de889e6c5b654dfa662",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Below this workshop's castable wall",
+      "zh": "低于本厂可铸最小壁厚"
+     },
+     "rule_id": "CAP-JW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "The envelope is 30 mm; 38 mm needs another workshop.",
+      "zh": "二厂最大铸件尺寸 30 mm，来料 38 mm 需要转厂。"
+     },
+     "rule_id": "CAP-JW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-B-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-B-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "The furnace tops out at 750 C; the submitted firing temperature is 800 C.",
+      "zh": "二厂珐琅炉上限 750 摄氏度，来料烧成温度 800 摄氏度超限。"
+     },
+     "rule_id": "CAP-JW-B-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "A 0.45 mm engraving exceeds the 0.35 mm single pass; it needs annealing and multiple passes, raising hours and distortion risk.",
+      "zh": "錾刻深度 0.45 mm 超过单次行程 0.35 mm，需要退火分次，工时和变形风险都上升。"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polish cannot reach the recess",
+      "zh": "镜面处理无法进入凹面"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "A firing temperature of 800 C is above the 780 C used for transparent enamel; the metal substrate anneals and softens.",
+      "zh": "烧成温度 800 摄氏度高于常规透明珐琅 780 摄氏度，金属基体会退火变软。"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0009",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 18,
+    "verdict": "manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0005",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 5,
+    "curve_radius_mm": 0,
+    "finish": "oil",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "mortise_tenon",
+     "dovetail"
+    ],
+    "leg_count": 4,
+    "load_kg": 110,
+    "max_dimension_mm": 900.0,
+    "outdoor": false,
+    "panel_thickness_mm": 22,
+    "span_mm": 450,
+    "species": "walnut",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 10
+   },
+   "final_verdict": "manufacturable",
+   "fixes": [],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "3272e052a3ec29366a01220a95b6daa14d289b686cfbc7df3416ac9d717e21e7",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0010",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 18,
+    "verdict": "manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0005",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 5,
+    "curve_radius_mm": 0,
+    "finish": "oil",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "mortise_tenon",
+     "dovetail"
+    ],
+    "leg_count": 4,
+    "load_kg": 110,
+    "max_dimension_mm": 900.0,
+    "outdoor": false,
+    "panel_thickness_mm": 22,
+    "span_mm": 450,
+    "species": "walnut",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 10
+   },
+   "final_verdict": "manufacturable",
+   "fixes": [],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "3272e052a3ec29366a01220a95b6daa14d289b686cfbc7df3416ac9d717e21e7",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": "AR-0005",
+    "required": true,
+    "reviewer": null,
+    "status": "pending"
+   },
+   "assessment_id": "MA-0011",
+   "auto": {
+    "blocking_rules": [
+     "CAP-HW-A-02",
+     "HW-FORM-001",
+     "HW-JOIN-003"
+    ],
+    "evaluated_rules": 18,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-HW-A-02",
+    "HW-FORM-001",
+    "HW-JOIN-003"
+   ],
+   "concept_id": "DC-0006",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": true,
+    "carve_depth_mm": 0,
+    "curve_radius_mm": 0,
+    "finish": "lacquer",
+    "hardware_included": false,
+    "humidity_zone": "dry",
+    "joint_types": [
+     "screw"
+    ],
+    "leg_count": 2,
+    "load_kg": 30,
+    "max_dimension_mm": 1400.0,
+    "outdoor": false,
+    "panel_thickness_mm": 3,
+    "span_mm": 1500,
+    "species": "oak",
+    "tolerance_mm": 0.5,
+    "undercut": false,
+    "wood_moisture_pct": 9
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-HW-A-02",
+     "suggested_change": {
+      "span_mm": 1200
+     },
+     "text": {
+      "en": "Split into two sections for site assembly, or add longitudinal support.",
+      "zh": "分为两段并在现场拼装，或改用纵向支撑。"
+     }
+    },
+    {
+     "rule_id": "HW-JOIN-003",
+     "suggested_change": {
+      "panel_thickness_mm": 22
+     },
+     "text": {
+      "en": "Take the panel to 22 mm or add a centre rail and cut the span below 900 mm.",
+      "zh": "板厚加到 22 mm 以上，或增加中撑把跨度降到 900 mm 以内。"
+     }
+    },
+    {
+     "rule_id": "HW-FORM-001",
+     "suggested_change": {
+      "cantilever": false
+     },
+     "text": {
+      "en": "Add a front leg or diagonal brace so the effective span drops below 1200 mm.",
+      "zh": "加一条前腿或斜撑，把有效跨度降到 1200 mm 以内。"
+     }
+    },
+    {
+     "rule_id": "HW-FORM-002",
+     "suggested_change": {
+      "panel_thickness_mm": 18
+     },
+     "text": {
+      "en": "Take the panel to 18 mm, or add a frame.",
+      "zh": "板厚加到 18 mm，或加边框约束。"
+     }
+    }
+   ],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "f9eca5b923f6b8a4f23334897941246d8bdafa35bd8a89d5d51d0e9f2a0f0a13",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Kiln and clamps support a 1200 mm span; 1500 mm needs segmentation.",
+      "zh": "本厂干燥窑与夹具支持 1200 mm 跨度，来料 1500 mm 需要分段。"
+     },
+     "rule_id": "CAP-HW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "A 1500 mm span on a 3 mm panel deflects past 2 mm; the 1.5x static load test will fail.",
+      "zh": "1500 mm 跨度配 3 mm 板厚，跨中挠度会超过 2 mm，静载 1.5 倍测试必然失效。"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "A 1500 mm cantilever has no front support; tip sag accumulates over time and needs a leg or brace.",
+      "zh": "悬臂 1500 mm 没有前支撑，端部下垂会随时间累积，必须加腿或斜撑。"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "A 3 mm panel is under the 16 mm norm; it needs a frame or veneer build-up, adding hours.",
+      "zh": "3 mm 板厚低于 16 mm 的常规范围，需加边框或贴面稳定，工时上升。"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": "AR-0006",
+    "required": true,
+    "reviewer": null,
+    "status": "pending"
+   },
+   "assessment_id": "MA-0012",
+   "auto": {
+    "blocking_rules": [
+     "CAP-HW-B-02",
+     "HW-FORM-001",
+     "HW-JOIN-003"
+    ],
+    "evaluated_rules": 18,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-HW-B-02",
+    "HW-FORM-001",
+    "HW-JOIN-003"
+   ],
+   "concept_id": "DC-0006",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": true,
+    "carve_depth_mm": 0,
+    "curve_radius_mm": 0,
+    "finish": "lacquer",
+    "hardware_included": false,
+    "humidity_zone": "dry",
+    "joint_types": [
+     "screw"
+    ],
+    "leg_count": 2,
+    "load_kg": 30,
+    "max_dimension_mm": 1400.0,
+    "outdoor": false,
+    "panel_thickness_mm": 3,
+    "span_mm": 1500,
+    "species": "oak",
+    "tolerance_mm": 0.5,
+    "undercut": false,
+    "wood_moisture_pct": 9
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-HW-B-02",
+     "suggested_change": {
+      "span_mm": 900
+     },
+     "text": {
+      "en": "Shorten to 900 mm or route to woodworking works A.",
+      "zh": "缩短到 900 mm 以内，或转木作一厂。"
+     }
+    },
+    {
+     "rule_id": "HW-JOIN-003",
+     "suggested_change": {
+      "panel_thickness_mm": 22
+     },
+     "text": {
+      "en": "Take the panel to 22 mm or add a centre rail and cut the span below 900 mm.",
+      "zh": "板厚加到 22 mm 以上，或增加中撑把跨度降到 900 mm 以内。"
+     }
+    },
+    {
+     "rule_id": "HW-FORM-001",
+     "suggested_change": {
+      "cantilever": false
+     },
+     "text": {
+      "en": "Add a front leg or diagonal brace so the effective span drops below 1200 mm.",
+      "zh": "加一条前腿或斜撑，把有效跨度降到 1200 mm 以内。"
+     }
+    },
+    {
+     "rule_id": "HW-FORM-002",
+     "suggested_change": {
+      "panel_thickness_mm": 18
+     },
+     "text": {
+      "en": "Take the panel to 18 mm, or add a frame.",
+      "zh": "板厚加到 18 mm，或加边框约束。"
+     }
+    }
+   ],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "f9eca5b923f6b8a4f23334897941246d8bdafa35bd8a89d5d51d0e9f2a0f0a13",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Clamps support a 900 mm span; 1500 mm needs another workshop.",
+      "zh": "本厂夹具支持 900 mm 跨度，来料 1500 mm 需要转厂。"
+     },
+     "rule_id": "CAP-HW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "A 1500 mm span on a 3 mm panel deflects past 2 mm; the 1.5x static load test will fail.",
+      "zh": "1500 mm 跨度配 3 mm 板厚，跨中挠度会超过 2 mm，静载 1.5 倍测试必然失效。"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "A 1500 mm cantilever has no front support; tip sag accumulates over time and needs a leg or brace.",
+      "zh": "悬臂 1500 mm 没有前支撑，端部下垂会随时间累积，必须加腿或斜撑。"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "A 3 mm panel is under the 16 mm norm; it needs a frame or veneer build-up, adding hours.",
+      "zh": "3 mm 板厚低于 16 mm 的常规范围，需加边框或贴面稳定，工时上升。"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0013",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 18,
+    "verdict": "conditionally_manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0007",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 10,
+    "curve_radius_mm": 50,
+    "finish": "high_gloss",
+    "hardware_included": true,
+    "humidity_zone": "coastal",
+    "joint_types": [
+     "dovetail"
+    ],
+    "leg_count": 4,
+    "load_kg": 20,
+    "max_dimension_mm": 1800.0,
+    "outdoor": false,
+    "panel_thickness_mm": 25,
+    "span_mm": 600,
+    "species": "elm",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 10
+   },
+   "final_verdict": "conditionally_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "HW-CARVE-002",
+     "suggested_change": {
+      "curve_radius_mm": 70
+     },
+     "text": {
+      "en": "Open the radius to 70 mm, or cut that area back to 6 mm deep.",
+      "zh": "曲率放大到 70 mm 以上，或把该处雕深降到 6 mm。"
+     }
+    },
+    {
+     "rule_id": "HW-SURF-001",
+     "suggested_change": {
+      "finish": "matte"
+     },
+     "text": {
+      "en": "Switch to matte or hardwax oil and state the maintenance interval in the care note.",
+      "zh": "改哑光或硬蜡油，并在使用说明里写保养周期。"
+     }
+    }
+   ],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "61c265df5486080854c3767ce647e386671392a953018a2905f448ca74a328f2",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "A 50 mm radius with 10 mm of carve depth causes tool interference and chipping, needing hand repair.",
+      "zh": "曲率半径 50 mm 配 10 mm 雕深，刀路干涉导致崩边，需要手工修。"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "In coastal humidity a high-gloss film hazes and loses sheen within six months, driving complaints.",
+      "zh": "沿海高湿环境下高光漆面半年内会起雾失光，客户投诉率高。"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0014",
+   "auto": {
+    "blocking_rules": [
+     "CAP-HW-B-01"
+    ],
+    "evaluated_rules": 18,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-HW-B-01"
+   ],
+   "concept_id": "DC-0007",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 10,
+    "curve_radius_mm": 50,
+    "finish": "high_gloss",
+    "hardware_included": true,
+    "humidity_zone": "coastal",
+    "joint_types": [
+     "dovetail"
+    ],
+    "leg_count": 4,
+    "load_kg": 20,
+    "max_dimension_mm": 1800.0,
+    "outdoor": false,
+    "panel_thickness_mm": 25,
+    "span_mm": 600,
+    "species": "elm",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 10
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-HW-B-01",
+     "suggested_change": {
+      "carve_depth_mm": 6
+     },
+     "text": {
+      "en": "Reduce carve depth below 6 mm, or route to woodworking works A.",
+      "zh": "把雕深降到 6 mm 以内，或转木作一厂。"
+     }
+    },
+    {
+     "rule_id": "HW-CARVE-002",
+     "suggested_change": {
+      "curve_radius_mm": 70
+     },
+     "text": {
+      "en": "Open the radius to 70 mm, or cut that area back to 6 mm deep.",
+      "zh": "曲率放大到 70 mm 以上，或把该处雕深降到 6 mm。"
+     }
+    },
+    {
+     "rule_id": "HW-SURF-001",
+     "suggested_change": {
+      "finish": "matte"
+     },
+     "text": {
+      "en": "Switch to matte or hardwax oil and state the maintenance interval in the care note.",
+      "zh": "改哑光或硬蜡油，并在使用说明里写保养周期。"
+     }
+    }
+   ],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "61c265df5486080854c3767ce647e386671392a953018a2905f448ca74a328f2",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "The three-axis centre carves to 8 mm; the submitted 10 mm exceeds it.",
+      "zh": "三轴雕刻机最大雕深 8 mm，来料 10 mm 超限。"
+     },
+     "rule_id": "CAP-HW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "A 50 mm radius with 10 mm of carve depth causes tool interference and chipping, needing hand repair.",
+      "zh": "曲率半径 50 mm 配 10 mm 雕深，刀路干涉导致崩边，需要手工修。"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "In coastal humidity a high-gloss film hazes and loses sheen within six months, driving complaints.",
+      "zh": "沿海高湿环境下高光漆面半年内会起雾失光，客户投诉率高。"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": "AR-0007",
+    "required": true,
+    "reviewer": null,
+    "status": "pending"
+   },
+   "assessment_id": "MA-0015",
+   "auto": {
+    "blocking_rules": [
+     "HW-JOIN-002",
+     "HW-SURF-002"
+    ],
+    "evaluated_rules": 18,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "concept_id": "DC-0008",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 0,
+    "curve_radius_mm": 0,
+    "finish": "lacquer",
+    "hardware_included": false,
+    "humidity_zone": "coastal",
+    "joint_types": [
+     "screw"
+    ],
+    "leg_count": 4,
+    "load_kg": 70,
+    "max_dimension_mm": 900.0,
+    "outdoor": true,
+    "panel_thickness_mm": 20,
+    "span_mm": 900,
+    "species": "pine",
+    "tolerance_mm": 0.4,
+    "undercut": false,
+    "wood_moisture_pct": 14
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "HW-JOIN-002",
+     "suggested_change": {
+      "joint_types": [
+       "mortise_tenon",
+       "screw"
+      ]
+     },
+     "text": {
+      "en": "Convert the critical joints to mortise-and-tenon or dowels, or derate below 40 kg.",
+      "zh": "关键节点改为榫卯或加定位销，或把载荷降到 40 kg 以下。"
+     }
+    },
+    {
+     "rule_id": "HW-SURF-002",
+     "suggested_change": {
+      "species": "teak"
+     },
+     "text": {
+      "en": "Use teak or robinia with an outdoor-grade oil.",
+      "zh": "改用柚木或刺槐，并配户外级木蜡油。"
+     }
+    },
+    {
+     "rule_id": "HW-SURF-003",
+     "suggested_change": {
+      "finish": "oil"
+     },
+     "text": {
+      "en": "Switch to an outdoor hardwax oil and specify a twelve-month care cycle.",
+      "zh": "改用户外级木蜡油，并写明每 12 个月保养。"
+     }
+    },
+    {
+     "rule_id": "HW-MAT-001",
+     "suggested_change": {
+      "species": "oak"
+     },
+     "text": {
+      "en": "Switch to walnut or oak, or increase the section at the joints.",
+      "zh": "改用胡桃木或橡木，或加大连接件截面。"
+     }
+    },
+    {
+     "rule_id": "HW-SAFE-001",
+     "suggested_change": {
+      "hardware_included": true
+     },
+     "text": {
+      "en": "Ship load-rated hardware and an installation sheet with the piece.",
+      "zh": "随机附带承重五金与安装说明。"
+     }
+    }
+   ],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "50f8fc03a599239a255bb38d652b58dc9815528ab2bd5315a7da54dd1eb8e5bf",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "The structure is screw-only yet rated at 70 kg; screws creep in timber year on year and the static load test fails.",
+      "zh": "结构只有螺丝固定却按 70 kg 设计载荷，螺丝在木材里会逐年松动，静载测试过不了。"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine outdoors cracks and rots within two rainy seasons; no film thickness makes it meet an outdoor warranty.",
+      "zh": "松木户外使用会在两个雨季内开裂腐朽，无论涂装多厚都不满足户外质保。"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "An outdoor lacquer film cracks as the timber moves; it needs annual sanding and recoating, costing more than oil.",
+      "zh": "漆膜户外会随木材涨缩开裂，需要每年打磨重涂，维护成本高于木蜡油。"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine has low compression strength along the grain; at 70 kg the section must grow or the species must change.",
+      "zh": "松木顺纹抗压强度低，70 kg 载荷下需要加大截面或改材种。"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "The 70 kg rating assumes hardware that is not included; on-site fixing is uncontrolled and aftersales risk is high.",
+      "zh": "设计载荷 70 kg 但未包含承重五金，现场安装方式不受控，售后风险高。"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    }
+   ],
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": "AR-0008",
+    "required": true,
+    "reviewer": null,
+    "status": "pending"
+   },
+   "assessment_id": "MA-0016",
+   "auto": {
+    "blocking_rules": [
+     "CAP-HW-B-03",
+     "HW-JOIN-002",
+     "HW-SURF-002"
+    ],
+    "evaluated_rules": 18,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-HW-B-03",
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "concept_id": "DC-0008",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 0,
+    "curve_radius_mm": 0,
+    "finish": "lacquer",
+    "hardware_included": false,
+    "humidity_zone": "coastal",
+    "joint_types": [
+     "screw"
+    ],
+    "leg_count": 4,
+    "load_kg": 70,
+    "max_dimension_mm": 900.0,
+    "outdoor": true,
+    "panel_thickness_mm": 20,
+    "span_mm": 900,
+    "species": "pine",
+    "tolerance_mm": 0.4,
+    "undercut": false,
+    "wood_moisture_pct": 14
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-HW-B-03",
+     "suggested_change": {
+      "wood_moisture_pct": 10
+     },
+     "text": {
+      "en": "Supply blanks at or below 12% moisture.",
+      "zh": "改用含水率 12% 以下的坯料。"
+     }
+    },
+    {
+     "rule_id": "HW-JOIN-002",
+     "suggested_change": {
+      "joint_types": [
+       "mortise_tenon",
+       "screw"
+      ]
+     },
+     "text": {
+      "en": "Convert the critical joints to mortise-and-tenon or dowels, or derate below 40 kg.",
+      "zh": "关键节点改为榫卯或加定位销，或把载荷降到 40 kg 以下。"
+     }
+    },
+    {
+     "rule_id": "HW-SURF-002",
+     "suggested_change": {
+      "species": "teak"
+     },
+     "text": {
+      "en": "Use teak or robinia with an outdoor-grade oil.",
+      "zh": "改用柚木或刺槐，并配户外级木蜡油。"
+     }
+    },
+    {
+     "rule_id": "HW-SURF-003",
+     "suggested_change": {
+      "finish": "oil"
+     },
+     "text": {
+      "en": "Switch to an outdoor hardwax oil and specify a twelve-month care cycle.",
+      "zh": "改用户外级木蜡油，并写明每 12 个月保养。"
+     }
+    },
+    {
+     "rule_id": "HW-MAT-001",
+     "suggested_change": {
+      "species": "oak"
+     },
+     "text": {
+      "en": "Switch to walnut or oak, or increase the section at the joints.",
+      "zh": "改用胡桃木或橡木，或加大连接件截面。"
+     }
+    },
+    {
+     "rule_id": "HW-SAFE-001",
+     "suggested_change": {
+      "hardware_included": true
+     },
+     "text": {
+      "en": "Ship load-rated hardware and an installation sheet with the piece.",
+      "zh": "随机附带承重五金与安装说明。"
+     }
+    }
+   ],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "50f8fc03a599239a255bb38d652b58dc9815528ab2bd5315a7da54dd1eb8e5bf",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "The kiln stabilises at 12%; 14% is too risky.",
+      "zh": "本厂干燥窑只能稳定到 12%，来料 14% 风险过高。"
+     },
+     "rule_id": "CAP-HW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "The structure is screw-only yet rated at 70 kg; screws creep in timber year on year and the static load test fails.",
+      "zh": "结构只有螺丝固定却按 70 kg 设计载荷，螺丝在木材里会逐年松动，静载测试过不了。"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine outdoors cracks and rots within two rainy seasons; no film thickness makes it meet an outdoor warranty.",
+      "zh": "松木户外使用会在两个雨季内开裂腐朽，无论涂装多厚都不满足户外质保。"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "An outdoor lacquer film cracks as the timber moves; it needs annual sanding and recoating, costing more than oil.",
+      "zh": "漆膜户外会随木材涨缩开裂，需要每年打磨重涂，维护成本高于木蜡油。"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine has low compression strength along the grain; at 70 kg the section must grow or the species must change.",
+      "zh": "松木顺纹抗压强度低，70 kg 载荷下需要加大截面或改材种。"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "The 70 kg rating assumes hardware that is not included; on-site fixing is uncontrolled and aftersales risk is high.",
+      "zh": "设计载荷 70 kg 但未包含承重五金，现场安装方式不受控，售后风险高。"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    }
+   ],
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0017",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 18,
+    "verdict": "manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0009",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 6,
+    "curve_radius_mm": 18,
+    "finish": "wax",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "dowel"
+    ],
+    "leg_count": 0,
+    "load_kg": 2,
+    "max_dimension_mm": 1800.0,
+    "outdoor": false,
+    "panel_thickness_mm": 20,
+    "span_mm": 45,
+    "species": "walnut",
+    "tolerance_mm": 0.15,
+    "undercut": true,
+    "wood_moisture_pct": 9
+   },
+   "final_verdict": "manufacturable",
+   "fixes": [],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "536f0237d89c93705e23432779fdba434efa16c89b6c445579153a46bed5a5fb",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0018",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 18,
+    "verdict": "manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0009",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "cantilever": false,
+    "carve_depth_mm": 6,
+    "curve_radius_mm": 18,
+    "finish": "wax",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "dowel"
+    ],
+    "leg_count": 0,
+    "load_kg": 2,
+    "max_dimension_mm": 1800.0,
+    "outdoor": false,
+    "panel_thickness_mm": 20,
+    "span_mm": 45,
+    "species": "walnut",
+    "tolerance_mm": 0.15,
+    "undercut": true,
+    "wood_moisture_pct": 9
+   },
+   "final_verdict": "manufacturable",
+   "fixes": [],
+   "industry": "hardwood",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "536f0237d89c93705e23432779fdba434efa16c89b6c445579153a46bed5a5fb",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "carve_depth_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's carving travel",
+      "zh": "超出本厂雕刻行程"
+     },
+     "rule_id": "CAP-HW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's span limit",
+      "zh": "超出本厂跨度上限"
+     },
+     "rule_id": "CAP-HW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "Moisture above this workshop's kiln",
+      "zh": "含水率超出本厂干燥能力"
+     },
+     "rule_id": "CAP-HW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "tolerance_mm"
+     ],
+     "reason": {
+      "en": "Joinery tolerance too loose",
+      "zh": "榫卯公差过大"
+     },
+     "rule_id": "HW-JOIN-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Screw-only structure over the load limit",
+      "zh": "仅螺丝固定承载超限"
+     },
+     "rule_id": "HW-JOIN-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Long span on a thin panel sags",
+      "zh": "大跨薄板会下挠"
+     },
+     "rule_id": "HW-JOIN-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "wood_moisture_pct"
+     ],
+     "reason": {
+      "en": "High moisture into a mortise joint",
+      "zh": "含水率偏高进榫卯"
+     },
+     "rule_id": "HW-JOIN-004",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "joint_types",
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Dovetail in a thin panel",
+      "zh": "薄板开燕尾槽"
+     },
+     "rule_id": "HW-JOIN-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut carving needs a second setup",
+      "zh": "倒扣雕饰需翻面"
+     },
+     "rule_id": "HW-CARVE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "carve_depth_mm",
+      "curve_radius_mm"
+     ],
+     "reason": {
+      "en": "Deep carve on a tight curve chips",
+      "zh": "小曲率深雕易崩边"
+     },
+     "rule_id": "HW-CARVE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "humidity_zone"
+     ],
+     "reason": {
+      "en": "No high gloss in a coastal climate",
+      "zh": "沿海环境不建议高光"
+     },
+     "rule_id": "HW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "outdoor",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine is not an outdoor species",
+      "zh": "松木不能户外"
+     },
+     "rule_id": "HW-SURF-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "finish",
+      "outdoor"
+     ],
+     "reason": {
+      "en": "Outdoor lacquer should be oil",
+      "zh": "户外用漆需改油"
+     },
+     "rule_id": "HW-SURF-003",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "cantilever",
+      "span_mm"
+     ],
+     "reason": {
+      "en": "Cantilever span over the limit",
+      "zh": "悬臂跨度超限"
+     },
+     "rule_id": "HW-FORM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "panel_thickness_mm"
+     ],
+     "reason": {
+      "en": "Panel thinner than preferred",
+      "zh": "板厚偏薄"
+     },
+     "rule_id": "HW-FORM-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "load_kg",
+      "species"
+     ],
+     "reason": {
+      "en": "Pine carries less load",
+      "zh": "松木承载偏低"
+     },
+     "rule_id": "HW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "leg_count",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "High load without enough supports",
+      "zh": "高载荷缺少支撑"
+     },
+     "rule_id": "HW-MAT-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hardware_included",
+      "load_kg"
+     ],
+     "reason": {
+      "en": "Load-rated hardware missing",
+      "zh": "缺承重五金"
+     },
+     "rule_id": "HW-SAFE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0019",
+   "auto": {
+    "blocking_rules": [],
+    "evaluated_rules": 20,
+    "verdict": "conditionally_manufacturable"
+   },
+   "blockers": [],
+   "concept_id": "DC-0010",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.2,
+    "hollow_cast": false,
+    "max_dimension_mm": 30,
+    "min_wall_thickness_mm": 0.8,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": true,
+    "ring_size_mm": 0,
+    "setting_type": "bezel",
+    "stone_count": 3,
+    "stone_size_mm": 2.0,
+    "surface_finish": "mirror",
+    "undercut": false
+   },
+   "final_verdict": "conditionally_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "JW-SURF-001",
+     "suggested_change": {
+      "surface_finish": "brushed"
+     },
+     "text": {
+      "en": "Finish the recess matte, or make it a removable part polished separately.",
+      "zh": "凹面改哑光，或把凹面做成可拆件后单独抛光。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "f3d8ccd8341ff4b36889fb1774ac88e82dfdf5f4c2e04477b900714c9292e090",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Below this workshop's castable wall",
+      "zh": "低于本厂可铸最小壁厚"
+     },
+     "rule_id": "CAP-JW-A-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-A-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-A-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-A-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-A-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this kiln's temperature",
+      "zh": "超出本厂珐琅窑温度"
+     },
+     "rule_id": "CAP-JW-A-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polishing needs the buff to reach the surface; a deep recess can only be finished matte or sandblasted.",
+      "zh": "镜面抛光要求布轮可达，深凹面无法进入，只能局部改为哑光或喷砂。"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "artisan": {
+    "decided_at": null,
+    "decision_verdict": null,
+    "notes": null,
+    "queue_id": null,
+    "required": false,
+    "reviewer": null,
+    "status": "not_required"
+   },
+   "assessment_id": "MA-0020",
+   "auto": {
+    "blocking_rules": [
+     "CAP-JW-B-01"
+    ],
+    "evaluated_rules": 20,
+    "verdict": "not_manufacturable"
+   },
+   "blockers": [
+    "CAP-JW-B-01"
+   ],
+   "concept_id": "DC-0010",
+   "created_at": "2026-10-23T00:00:00Z",
+   "facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.2,
+    "hollow_cast": false,
+    "max_dimension_mm": 30,
+    "min_wall_thickness_mm": 0.8,
+    "prong_count": 0,
+    "prong_thickness_mm": 0,
+    "recessed_area": true,
+    "ring_size_mm": 0,
+    "setting_type": "bezel",
+    "stone_count": 3,
+    "stone_size_mm": 2.0,
+    "surface_finish": "mirror",
+    "undercut": false
+   },
+   "final_verdict": "not_manufacturable",
+   "fixes": [
+    {
+     "rule_id": "CAP-JW-B-01",
+     "suggested_change": {
+      "min_wall_thickness_mm": 1.0
+     },
+     "text": {
+      "en": "Thicken to 0.9 mm or route to the vacuum caster at WS-JW-A.",
+      "zh": "加厚到 0.9 mm 以上，或转一厂真空铸造。"
+     }
+    },
+    {
+     "rule_id": "JW-SURF-001",
+     "suggested_change": {
+      "surface_finish": "brushed"
+     },
+     "text": {
+      "en": "Finish the recess matte, or make it a removable part polished separately.",
+      "zh": "凹面改哑光，或把凹面做成可拆件后单独抛光。"
+     }
+    }
+   ],
+   "industry": "jewelry",
+   "missing_facts": [],
+   "reproducibility": {
+    "facts_hash": "f3d8ccd8341ff4b36889fb1774ac88e82dfdf5f4c2e04477b900714c9292e090",
+    "rules_version": "1.0.0"
+   },
+   "rule_evaluations": [
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Centrifugal casting needs 0.9 mm; 0.8 mm will not fill.",
+      "zh": "二厂离心铸造最小壁厚 0.9 mm，来料 0.8 mm 无法充满。"
+     },
+     "rule_id": "CAP-JW-B-01",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "max_dimension_mm"
+     ],
+     "reason": {
+      "en": "Above this workshop's casting envelope",
+      "zh": "超出本厂铸造尺寸"
+     },
+     "rule_id": "CAP-JW-B-02",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy"
+     ],
+     "reason": {
+      "en": "Alloy not handled here",
+      "zh": "本厂不处理该合金"
+     },
+     "rule_id": "CAP-JW-B-03",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring below the smallest mandrel",
+      "zh": "戒圈小于本厂最小手寸"
+     },
+     "rule_id": "CAP-JW-B-04",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Ring above the largest mandrel",
+      "zh": "戒圈大于本厂最大手寸"
+     },
+     "rule_id": "CAP-JW-B-05",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Above this furnace's temperature",
+      "zh": "超出本厂珐琅炉温度"
+     },
+     "rule_id": "CAP-JW-B-06",
+     "severity": "blocker",
+     "source": "capability",
+     "status": "na"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Wall below the castable limit",
+      "zh": "壁厚低于可铸下限"
+     },
+     "rule_id": "JW-CAST-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "hollow_cast",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin wall on a hollow casting",
+      "zh": "空心铸造壁厚偏薄"
+     },
+     "rule_id": "JW-CAST-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Large stone without a setting",
+      "zh": "大石无镶口"
+     },
+     "rule_id": "JW-SET-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "Prong too thin",
+      "zh": "镶爪过细"
+     },
+     "rule_id": "JW-SET-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "setting_type",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Stone too small for pavé",
+      "zh": "碎钻过小无法密镶"
+     },
+     "rule_id": "JW-SET-003",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "engraving_depth_mm"
+     ],
+     "reason": {
+      "en": "Chasing deeper than one pass",
+      "zh": "錾刻深度超单次行程"
+     },
+     "rule_id": "JW-CHASE-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "undercut"
+     ],
+     "reason": {
+      "en": "Undercut needs a split mould",
+      "zh": "倒扣结构需分模"
+     },
+     "rule_id": "JW-CHASE-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "recessed_area",
+      "surface_finish"
+     ],
+     "reason": {
+      "en": "Mirror polishing needs the buff to reach the surface; a deep recess can only be finished matte or sandblasted.",
+      "zh": "镜面抛光要求布轮可达，深凹面无法进入，只能局部改为哑光或喷砂。"
+     },
+     "rule_id": "JW-SURF-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "fail"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "enamel_firing_c"
+     ],
+     "reason": {
+      "en": "Enamel firing runs hot",
+      "zh": "珐琅烧成温度偏高"
+     },
+     "rule_id": "JW-SURF-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "ring_size_mm"
+     ],
+     "reason": {
+      "en": "Small ring size needs a custom mandrel",
+      "zh": "手寸偏小需定制撑圈"
+     },
+     "rule_id": "JW-FORM-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "chain_link_mm"
+     ],
+     "reason": {
+      "en": "Chain link too thin",
+      "zh": "链节过细"
+     },
+     "rule_id": "JW-FORM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "min_wall_thickness_mm"
+     ],
+     "reason": {
+      "en": "Thin platinum is hard to form",
+      "zh": "铂金薄壁难成型"
+     },
+     "rule_id": "JW-MAT-001",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "alloy",
+      "prong_thickness_mm"
+     ],
+     "reason": {
+      "en": "High-karat prongs deform",
+      "zh": "高金合金爪易变形"
+     },
+     "rule_id": "JW-MAT-002",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "min_wall_thickness_mm",
+      "setting_type"
+     ],
+     "reason": {
+      "en": "Channel setting needs thicker walls",
+      "zh": "槽镶需要更厚的侧壁"
+     },
+     "rule_id": "JW-ASM-001",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "enamel",
+      "hollow_cast"
+     ],
+     "reason": {
+      "en": "Hollow body cannot take enamel",
+      "zh": "空心件无法上珐琅"
+     },
+     "rule_id": "JW-ASM-002",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "stone_count"
+     ],
+     "reason": {
+      "en": "Stone count drives setting hours",
+      "zh": "密钉数量过多"
+     },
+     "rule_id": "JW-SET-004",
+     "severity": "cost",
+     "source": "rule",
+     "status": "pass"
+    },
+    {
+     "facts_used": [
+      "prong_count",
+      "stone_size_mm"
+     ],
+     "reason": {
+      "en": "Too few prongs for the stone",
+      "zh": "爪数不足以固定大石"
+     },
+     "rule_id": "JW-SET-005",
+     "severity": "blocker",
+     "source": "rule",
+     "status": "pass"
+    }
+   ],
+   "workshop_id": "WS-JW-B"
+  }
+ ],
+ "counterexamples": [
+  {
+   "blockers": [
+    "CAP-JW-A-01",
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "concept_id": "DC-0002",
+   "first_fix": {
+    "en": "Raise the minimum wall to 0.8 mm or switch to hollow casting with internal supports.",
+    "zh": "把最小壁厚提到 0.8 mm 以上，或改为空心铸造并加内支撑。"
+   },
+   "fix_count": 3,
+   "missing_facts": [],
+   "verdict": "not_manufacturable",
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "blockers": [
+    "CAP-JW-B-01",
+    "CAP-JW-B-02",
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "concept_id": "DC-0002",
+   "first_fix": {
+    "en": "Thicken to 0.9 mm or route to the vacuum caster at WS-JW-A.",
+    "zh": "加厚到 0.9 mm 以上，或转一厂真空铸造。"
+   },
+   "fix_count": 4,
+   "missing_facts": [],
+   "verdict": "not_manufacturable",
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "blockers": [
+    "CAP-HW-A-02",
+    "HW-FORM-001",
+    "HW-JOIN-003"
+   ],
+   "concept_id": "DC-0006",
+   "first_fix": {
+    "en": "Split into two sections for site assembly, or add longitudinal support.",
+    "zh": "分为两段并在现场拼装，或改用纵向支撑。"
+   },
+   "fix_count": 4,
+   "missing_facts": [],
+   "verdict": "not_manufacturable",
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "blockers": [
+    "CAP-HW-B-02",
+    "HW-FORM-001",
+    "HW-JOIN-003"
+   ],
+   "concept_id": "DC-0006",
+   "first_fix": {
+    "en": "Shorten to 900 mm or route to woodworking works A.",
+    "zh": "缩短到 900 mm 以内，或转木作一厂。"
+   },
+   "fix_count": 4,
+   "missing_facts": [],
+   "verdict": "not_manufacturable",
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "blockers": [
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "concept_id": "DC-0008",
+   "first_fix": {
+    "en": "Convert the critical joints to mortise-and-tenon or dowels, or derate below 40 kg.",
+    "zh": "关键节点改为榫卯或加定位销，或把载荷降到 40 kg 以下。"
+   },
+   "fix_count": 5,
+   "missing_facts": [],
+   "verdict": "not_manufacturable",
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "blockers": [
+    "CAP-HW-B-03",
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "concept_id": "DC-0008",
+   "first_fix": {
+    "en": "Supply blanks at or below 12% moisture.",
+    "zh": "改用含水率 12% 以下的坯料。"
+   },
+   "fix_count": 6,
+   "missing_facts": [],
+   "verdict": "not_manufacturable",
+   "workshop_id": "WS-HW-B"
+  }
+ ],
+ "decisions": [
+  {
+   "concept_id": "DC-0002",
+   "decision_verdict": "not_manufacturable",
+   "notes": "Confirmed: 0.3 mm wall plus an unset 8.5 mm stone cannot be produced at this workshop.",
+   "queue_id": "AR-0001",
+   "reviewer": "ART-JW-01",
+   "status": "confirmed",
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "concept_id": "DC-0003",
+   "decision_verdict": "conditionally_manufacturable",
+   "notes": "Workshop B will route the casting to the vacuum caster of workshop A inside the same order; the reviewer accepts the 0.7 mm wall with a core support and a re-inspection after casting.",
+   "queue_id": "AR-0004",
+   "reviewer": "ART-JW-01",
+   "status": "overridden",
+   "workshop_id": "WS-JW-B"
+  }
+ ],
+ "reviews": [
+  {
+   "assessment_id": "MA-0003",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0002",
+   "decision": {
+    "decided_at": "2026-10-23T00:00:00Z",
+    "reason": "Confirmed: 0.3 mm wall plus an unset 8.5 mm stone cannot be produced at this workshop.",
+    "verdict": "not_manufacturable"
+   },
+   "queue_id": "AR-0001",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-JW-01",
+    "name": "Jewelry craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "sla_hours": 24,
+   "status": "confirmed"
+  },
+  {
+   "assessment_id": "MA-0004",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0002",
+   "decision": null,
+   "queue_id": "AR-0002",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-JW-01",
+    "name": "Jewelry craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "sla_hours": 24,
+   "status": "pending"
+  },
+  {
+   "assessment_id": "MA-0005",
+   "auto_verdict": "conditionally_manufacturable",
+   "concept_id": "DC-0003",
+   "decision": null,
+   "queue_id": "AR-0003",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-JW-01",
+    "name": "Jewelry craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "JW-CAST-002",
+    "JW-CHASE-002"
+   ],
+   "sla_hours": 24,
+   "status": "pending"
+  },
+  {
+   "assessment_id": "MA-0006",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0003",
+   "decision": {
+    "decided_at": "2026-10-23T00:00:00Z",
+    "reason": "Workshop B will route the casting to the vacuum caster of workshop A inside the same order; the reviewer accepts the 0.7 mm wall with a core support and a re-inspection after casting.",
+    "verdict": "conditionally_manufacturable"
+   },
+   "queue_id": "AR-0004",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-JW-01",
+    "name": "Jewelry craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "JW-CAST-002",
+    "JW-CHASE-002"
+   ],
+   "sla_hours": 24,
+   "status": "overridden"
+  },
+  {
+   "assessment_id": "MA-0011",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0006",
+   "decision": null,
+   "queue_id": "AR-0005",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-HW-01",
+    "name": "Woodworking craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "HW-FORM-001",
+    "HW-JOIN-003"
+   ],
+   "sla_hours": 24,
+   "status": "pending"
+  },
+  {
+   "assessment_id": "MA-0012",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0006",
+   "decision": null,
+   "queue_id": "AR-0006",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-HW-01",
+    "name": "Woodworking craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "HW-FORM-001",
+    "HW-JOIN-003"
+   ],
+   "sla_hours": 24,
+   "status": "pending"
+  },
+  {
+   "assessment_id": "MA-0015",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0008",
+   "decision": null,
+   "queue_id": "AR-0007",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-HW-01",
+    "name": "Woodworking craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "sla_hours": 24,
+   "status": "pending"
+  },
+  {
+   "assessment_id": "MA-0016",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0008",
+   "decision": null,
+   "queue_id": "AR-0008",
+   "requested_at": "2026-10-23T00:00:00Z",
+   "reviewer": {
+    "artisan_id": "ART-HW-01",
+    "name": "Woodworking craft reviewer (synthetic)"
+   },
+   "rule_ids": [
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "sla_hours": 24,
+   "status": "pending"
+  }
+ ],
+ "rows": [
+  {
+   "assessment_id": "MA-0001",
+   "auto_verdict": "manufacturable",
+   "concept_id": "DC-0001",
+   "expected_blockers": [],
+   "expected_verdict": "manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "assessment_id": "MA-0002",
+   "auto_verdict": "manufacturable",
+   "concept_id": "DC-0001",
+   "expected_blockers": [],
+   "expected_verdict": "manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "assessment_id": "MA-0003",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0002",
+   "expected_blockers": [
+    "CAP-JW-A-01",
+    "JW-CAST-001",
+    "JW-SET-001"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "final_verdict": "not_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "review": {
+    "decision_verdict": "not_manufacturable",
+    "notes": "Confirmed: 0.3 mm wall plus an unset 8.5 mm stone cannot be produced at this workshop.",
+    "queue_id": "AR-0001",
+    "reviewer": "ART-JW-01",
+    "status": "confirmed"
+   },
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "assessment_id": "MA-0004",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0002",
+   "expected_blockers": [
+    "CAP-JW-B-01",
+    "CAP-JW-B-02"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "assessment_id": "MA-0005",
+   "auto_verdict": "conditionally_manufacturable",
+   "concept_id": "DC-0003",
+   "expected_blockers": [],
+   "expected_verdict": "conditionally_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "assessment_id": "MA-0006",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0003",
+   "expected_blockers": [
+    "CAP-JW-B-01"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "final_verdict": "conditionally_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "review": {
+    "decision_verdict": "conditionally_manufacturable",
+    "notes": "Workshop B will route the casting to the vacuum caster of workshop A inside the same order; the reviewer accepts the 0.7 mm wall with a core support and a re-inspection after casting.",
+    "queue_id": "AR-0004",
+    "reviewer": "ART-JW-01",
+    "status": "overridden"
+   },
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "assessment_id": "MA-0007",
+   "auto_verdict": "conditionally_manufacturable",
+   "concept_id": "DC-0004",
+   "expected_blockers": [],
+   "expected_verdict": "conditionally_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "assessment_id": "MA-0008",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0004",
+   "expected_blockers": [
+    "CAP-JW-B-06"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-B"
+  },
+  {
+   "assessment_id": "MA-0009",
+   "auto_verdict": "manufacturable",
+   "concept_id": "DC-0005",
+   "expected_blockers": [],
+   "expected_verdict": "manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "assessment_id": "MA-0010",
+   "auto_verdict": "manufacturable",
+   "concept_id": "DC-0005",
+   "expected_blockers": [],
+   "expected_verdict": "manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "assessment_id": "MA-0011",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0006",
+   "expected_blockers": [
+    "CAP-HW-A-02",
+    "HW-JOIN-003",
+    "HW-FORM-001"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "assessment_id": "MA-0012",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0006",
+   "expected_blockers": [
+    "CAP-HW-B-02",
+    "HW-JOIN-003",
+    "HW-FORM-001"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "assessment_id": "MA-0013",
+   "auto_verdict": "conditionally_manufacturable",
+   "concept_id": "DC-0007",
+   "expected_blockers": [],
+   "expected_verdict": "conditionally_manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "assessment_id": "MA-0014",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0007",
+   "expected_blockers": [
+    "CAP-HW-B-01"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "assessment_id": "MA-0015",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0008",
+   "expected_blockers": [
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "assessment_id": "MA-0016",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0008",
+   "expected_blockers": [
+    "CAP-HW-B-03",
+    "HW-JOIN-002",
+    "HW-SURF-002"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "assessment_id": "MA-0017",
+   "auto_verdict": "manufacturable",
+   "concept_id": "DC-0009",
+   "expected_blockers": [],
+   "expected_verdict": "manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "assessment_id": "MA-0018",
+   "auto_verdict": "manufacturable",
+   "concept_id": "DC-0009",
+   "expected_blockers": [],
+   "expected_verdict": "manufacturable",
+   "industry": "hardwood",
+   "match": true,
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "assessment_id": "MA-0019",
+   "auto_verdict": "conditionally_manufacturable",
+   "concept_id": "DC-0010",
+   "expected_blockers": [],
+   "expected_verdict": "conditionally_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "assessment_id": "MA-0020",
+   "auto_verdict": "not_manufacturable",
+   "concept_id": "DC-0010",
+   "expected_blockers": [
+    "CAP-JW-B-01"
+   ],
+   "expected_verdict": "not_manufacturable",
+   "industry": "jewelry",
+   "match": true,
+   "workshop_id": "WS-JW-B"
+  }
+ ],
+ "rules": {
+  "hardwood": {
+   "by_severity": {
+    "blocker": 7,
+    "cost": 8
+   },
+   "facts": 16,
+   "industry": "hardwood",
+   "required_facts": 16,
+   "rules": 15,
+   "version": "1.0.0"
+  },
+  "jewelry": {
+   "by_severity": {
+    "blocker": 8,
+    "cost": 9
+   },
+   "facts": 17,
+   "industry": "jewelry",
+   "required_facts": 17,
+   "rules": 17,
+   "version": "1.0.0"
+  }
+ }
+}

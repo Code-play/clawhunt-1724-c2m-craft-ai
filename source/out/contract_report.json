@@ -1,0 +1,1205 @@
+{
+ "negatives": [
+  {
+   "contract": "character_bible",
+   "errors": [
+    {
+     "invariant": "INV-CHAR-01",
+     "keyword": "x-invariants",
+     "message": "heritage references must stay non-exclusive",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-CHAR-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "character-bible-heritage-exclusive.json"
+  },
+  {
+   "contract": "collector_record",
+   "errors": [
+    {
+     "invariant": "INV-EDITION-02",
+     "keyword": "x-invariants",
+     "message": "provenance entry 1 does not continue the chain",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-EDITION-02",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "collector-chain-break.json"
+  },
+  {
+   "contract": "content_review",
+   "errors": [
+    {
+     "invariant": "INV-CONTENT-01",
+     "keyword": "x-invariants",
+     "message": "an approved review cannot carry a failed checklist item",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-CONTENT-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "content-review-approved-with-fail.json"
+  },
+  {
+   "contract": "customization_choice",
+   "errors": [
+    {
+     "invariant": "INV-CUSTOM-01",
+     "keyword": "x-invariants",
+     "message": "unit price 28080 != base 24000 + delta 4180",
+     "path": "$"
+    },
+    {
+     "invariant": "INV-CUSTOM-01",
+     "keyword": "x-invariants",
+     "message": "selection deltas sum to 4080, amounts declare 4180",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-CUSTOM-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "customization-choice-delta-mismatch.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [
+    {
+     "keyword": "pattern",
+     "message": "does not match pattern ^[a-f0-9]{16}$",
+     "path": "$.seed"
+    }
+   ],
+   "expected": {
+    "invariant": null,
+    "keyword": "pattern",
+    "path_prefix": "$.seed"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "design-concept-bad-seed.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [
+    {
+     "keyword": "required",
+     "message": "missing required property 'craft_facts'",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": null,
+    "keyword": "required",
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "design-concept-missing-facts.json"
+  },
+  {
+   "contract": "edition",
+   "errors": [
+    {
+     "invariant": "INV-EDITION-01",
+     "keyword": "x-invariants",
+     "message": "issued numbers must be unique",
+     "path": "$"
+    },
+    {
+     "invariant": "INV-EDITION-01",
+     "keyword": "x-invariants",
+     "message": "each issued number needs a distinct collector record",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-EDITION-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "edition-duplicate-number.json"
+  },
+  {
+   "contract": "enterprise_profile",
+   "errors": [
+    {
+     "invariant": "INV-ENT-01",
+     "keyword": "x-invariants",
+     "message": "channels.crm=true needs an enabled crm component",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-ENT-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "enterprise-profile-crm-channel-missing.json"
+  },
+  {
+   "contract": "growth_site",
+   "errors": [
+    {
+     "invariant": "INV-SEO-01",
+     "keyword": "x-invariants",
+     "message": "page home hreflang does not cover every site language",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-SEO-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "growth-site-hreflang-gap.json"
+  },
+  {
+   "contract": "growth_site",
+   "errors": [
+    {
+     "invariant": "INV-SEO-01",
+     "keyword": "x-invariants",
+     "message": "page home title length 11 outside 12..70",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-SEO-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "growth-site-title-too-short.json"
+  },
+  {
+   "contract": "inquiry_lead",
+   "errors": [
+    {
+     "invariant": "INV-LEAD-01",
+     "keyword": "x-invariants",
+     "message": "lead score 78 != clamped sum of its factors 68",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-LEAD-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "inquiry-lead-score-mismatch.json"
+  },
+  {
+   "contract": "ip_license",
+   "errors": [
+    {
+     "invariant": "INV-IP-02",
+     "keyword": "x-invariants",
+     "message": "derivative categories without a signed document: ['jewelry_pendant', 'apparel_collab', 'wood_carving_collectible', 'cultural_gift']",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-IP-02",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "ip-license-draft-only-coverage.json"
+  },
+  {
+   "contract": "ip_license",
+   "errors": [
+    {
+     "invariant": "INV-IP-01",
+     "keyword": "x-invariants",
+     "message": "traditional prototype 'Mazu temple guardian statues' must keep exclusive_claimed=false",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-IP-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "ip-license-exclusive-heritage.json"
+  },
+  {
+   "contract": "merch_spec",
+   "errors": [
+    {
+     "invariant": "INV-MERCH-01",
+     "keyword": "x-invariants",
+     "message": "the packaging or inspection plan must carry the authenticity label",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-MERCH-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "merch-spec-missing-authenticity-label.json"
+  },
+  {
+   "contract": "c2m_order",
+   "errors": [
+    {
+     "invariant": "INV-DISPUTE-01",
+     "keyword": "x-invariants",
+     "message": "a resolved dispute needs a resolution note",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-DISPUTE-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "order-dispute-resolved-without-note.json"
+  },
+  {
+   "contract": "c2m_order",
+   "errors": [
+    {
+     "keyword": "minimum",
+     "message": "-1 < minimum 0",
+     "path": "$.amounts.platform_fee_cents"
+    }
+   ],
+   "expected": {
+    "invariant": null,
+    "keyword": "minimum",
+    "path_prefix": "$.amounts.platform_fee_cents"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "order-negative-amount.json"
+  },
+  {
+   "contract": "c2m_order",
+   "errors": [
+    {
+     "invariant": "INV-ORDER-01",
+     "keyword": "x-invariants",
+     "message": "revenue shares sum to 30100 cents, total is 30000",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-ORDER-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "order-share-mismatch.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [
+    {
+     "keyword": "pattern",
+     "message": "does not match pattern ^#[0-9A-F]{6}$",
+     "path": "$.palette[0]"
+    }
+   ],
+   "expected": {
+    "invariant": null,
+    "keyword": "pattern",
+    "path_prefix": "$.palette[0]"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "pattern-asset-bad-hex.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [
+    {
+     "invariant": "INV-LIC-02",
+     "keyword": "x-invariants",
+     "message": "license.usage_scope must list at least one permitted scope",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-LIC-02",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "pattern-asset-empty-scope.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [
+    {
+     "invariant": "INV-LIC-03",
+     "keyword": "x-invariants",
+     "message": "a traditional cultural prototype cannot be claimed as an exclusive right",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-LIC-03",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "pattern-asset-exclusive-heritage.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [
+    {
+     "invariant": "INV-LIC-04",
+     "keyword": "x-invariants",
+     "message": "license.valid_from must be earlier than license.valid_to",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-LIC-04",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "pattern-asset-inverted-window.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [
+    {
+     "keyword": "required",
+     "message": "missing required property 'source_type'",
+     "path": "$.license"
+    }
+   ],
+   "expected": {
+    "invariant": null,
+    "keyword": "required",
+    "path_prefix": "$.license"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "pattern-asset-missing-source.json"
+  },
+  {
+   "contract": "qc_record",
+   "errors": [
+    {
+     "invariant": "INV-QC-01",
+     "keyword": "x-invariants",
+     "message": "a pass cannot carry a critical defect",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-QC-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "qc-pass-with-critical.json"
+  },
+  {
+   "contract": "artisan_review",
+   "errors": [
+    {
+     "invariant": "INV-REVIEW-01",
+     "keyword": "x-invariants",
+     "message": "status=confirmed contradicts a different decision.verdict",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-REVIEW-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "review-confirmed-contradiction.json"
+  },
+  {
+   "contract": "artisan_review",
+   "errors": [
+    {
+     "invariant": "INV-REVIEW-01",
+     "keyword": "x-invariants",
+     "message": "an override needs a decision.reason of at least 8 characters",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-REVIEW-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "review-override-no-reason.json"
+  },
+  {
+   "contract": "service_component",
+   "errors": [
+    {
+     "invariant": "INV-COMP-01",
+     "keyword": "x-invariants",
+     "message": "a component cannot depend on itself",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-COMP-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "service-component-self-dependency.json"
+  },
+  {
+   "contract": "settlement",
+   "errors": [
+    {
+     "invariant": "INV-MONEY-01",
+     "keyword": "x-invariants",
+     "message": "split policy rates sum to 9500 bp, expected 10000",
+     "path": "$"
+    },
+    {
+     "invariant": "INV-MONEY-01",
+     "keyword": "x-invariants",
+     "message": "payout rate for designer (1500) differs from the policy (1000)",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-MONEY-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "settlement-rate-mismatch.json"
+  },
+  {
+   "contract": "settlement",
+   "errors": [
+    {
+     "invariant": "INV-ROYALTY-01",
+     "keyword": "x-invariants",
+     "message": "royalty lines sum to 3050 but the IP share is 3000",
+     "path": "$"
+    },
+    {
+     "invariant": "INV-ROYALTY-01",
+     "keyword": "x-invariants",
+     "message": "royalty for PA-JW-0001 exceeds the whole IP share",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-ROYALTY-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "settlement-royalty-mismatch.json"
+  },
+  {
+   "contract": "short_drama",
+   "errors": [
+    {
+     "invariant": "INV-DRAMA-01",
+     "keyword": "x-invariants",
+     "message": "edit decision list row 9 does not start where the previous one ended",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-DRAMA-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "short-drama-timecode-gap.json"
+  },
+  {
+   "contract": "visual_asset",
+   "errors": [
+    {
+     "invariant": "INV-ASSET-01",
+     "keyword": "x-invariants",
+     "message": "the checksum does not recompute from the recipe",
+     "path": "$"
+    }
+   ],
+   "expected": {
+    "invariant": "INV-ASSET-01",
+    "keyword": null,
+    "path_prefix": "$"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "visual-asset-checksum-mismatch.json"
+  },
+  {
+   "contract": "craft_work_order",
+   "errors": [
+    {
+     "keyword": "minItems",
+     "message": "0 item(s) < minItems 1",
+     "path": "$.bom"
+    }
+   ],
+   "expected": {
+    "invariant": null,
+    "keyword": "minItems",
+    "path_prefix": "$.bom"
+   },
+   "matched_expected": true,
+   "rejected": true,
+   "sample": "work-order-empty-bom.json"
+  }
+ ],
+ "positives": [
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-JW-0001",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-JW-0002",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-JW-0003",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-JW-0004",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-HW-0001",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-HW-0002",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-HW-0003",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "pattern_asset",
+   "errors": [],
+   "id": "PA-HW-0004",
+   "ok": true,
+   "source": "samples/library/assets.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0001",
+   "ok": true,
+   "source": "samples/concepts/DC-0001.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0002",
+   "ok": true,
+   "source": "samples/concepts/DC-0002.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0003",
+   "ok": true,
+   "source": "samples/concepts/DC-0003.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0004",
+   "ok": true,
+   "source": "samples/concepts/DC-0004.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0005",
+   "ok": true,
+   "source": "samples/concepts/DC-0005.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0006",
+   "ok": true,
+   "source": "samples/concepts/DC-0006.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0007",
+   "ok": true,
+   "source": "samples/concepts/DC-0007.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0008",
+   "ok": true,
+   "source": "samples/concepts/DC-0008.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0009",
+   "ok": true,
+   "source": "samples/concepts/DC-0009.json"
+  },
+  {
+   "contract": "design_concept",
+   "errors": [],
+   "id": "DC-0010",
+   "ok": true,
+   "source": "samples/concepts/DC-0010.json"
+  },
+  {
+   "contract": "artisan_review",
+   "errors": [],
+   "id": "artisan-review-AR-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/artisan-review-AR-0001.json"
+  },
+  {
+   "contract": "artisan_review",
+   "errors": [],
+   "id": "artisan-review-AR-0002",
+   "ok": true,
+   "source": "samples/contracts/positive/artisan-review-AR-0002.json"
+  },
+  {
+   "contract": "manufacturability_assessment",
+   "errors": [],
+   "id": "assessment-dc0001-ws-jw-a",
+   "ok": true,
+   "source": "samples/contracts/positive/assessment-dc0001-ws-jw-a.json"
+  },
+  {
+   "contract": "manufacturability_assessment",
+   "errors": [],
+   "id": "assessment-dc0002-ws-jw-b",
+   "ok": true,
+   "source": "samples/contracts/positive/assessment-dc0002-ws-jw-b.json"
+  },
+  {
+   "contract": "manufacturability_assessment",
+   "errors": [],
+   "id": "assessment-dc0003-ws-jw-a",
+   "ok": true,
+   "source": "samples/contracts/positive/assessment-dc0003-ws-jw-a.json"
+  },
+  {
+   "contract": "character_bible",
+   "errors": [],
+   "id": "character-bible-IPB-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/character-bible-IPB-0001.json"
+  },
+  {
+   "contract": "collector_record",
+   "errors": [],
+   "id": "collector-record-COL-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/collector-record-COL-0001.json"
+  },
+  {
+   "contract": "content_review",
+   "errors": [],
+   "id": "content-review-CRV-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/content-review-CRV-0001.json"
+  },
+  {
+   "contract": "customization_choice",
+   "errors": [],
+   "id": "customization-choice-CUS-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/customization-choice-CUS-0001.json"
+  },
+  {
+   "contract": "edition",
+   "errors": [],
+   "id": "edition-ED-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/edition-ED-0001.json"
+  },
+  {
+   "contract": "enterprise_profile",
+   "errors": [],
+   "id": "enterprise-profile-EP-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/enterprise-profile-EP-0001.json"
+  },
+  {
+   "contract": "growth_site",
+   "errors": [],
+   "id": "growth-site-SITE-JW-01",
+   "ok": true,
+   "source": "samples/contracts/positive/growth-site-SITE-JW-01.json"
+  },
+  {
+   "contract": "inquiry_lead",
+   "errors": [],
+   "id": "inquiry-lead-INQ-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/inquiry-lead-INQ-0001.json"
+  },
+  {
+   "contract": "ip_license",
+   "errors": [],
+   "id": "ip-license-IPL-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/ip-license-IPL-0001.json"
+  },
+  {
+   "contract": "merch_spec",
+   "errors": [],
+   "id": "merch-spec-MS-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/merch-spec-MS-0001.json"
+  },
+  {
+   "contract": "c2m_order",
+   "errors": [],
+   "id": "order-ORD-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/order-ORD-0001.json"
+  },
+  {
+   "contract": "c2m_order",
+   "errors": [],
+   "id": "order-ORD-0002",
+   "ok": true,
+   "source": "samples/contracts/positive/order-ORD-0002.json"
+  },
+  {
+   "contract": "production_schedule",
+   "errors": [],
+   "id": "production-schedule-SCH-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/production-schedule-SCH-0001.json"
+  },
+  {
+   "contract": "qc_record",
+   "errors": [],
+   "id": "qc-record-QCR-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/qc-record-QCR-0001.json"
+  },
+  {
+   "contract": "service_component",
+   "errors": [],
+   "id": "service-component-kb-craft",
+   "ok": true,
+   "source": "samples/contracts/positive/service-component-kb-craft.json"
+  },
+  {
+   "contract": "settlement",
+   "errors": [],
+   "id": "settlement-ST-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/settlement-ST-0001.json"
+  },
+  {
+   "contract": "short_drama",
+   "errors": [],
+   "id": "short-drama-SDR-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/short-drama-SDR-0001.json"
+  },
+  {
+   "contract": "visual_asset",
+   "errors": [],
+   "id": "visual-asset-VA-MU-TURN-FRONT",
+   "ok": true,
+   "source": "samples/contracts/positive/visual-asset-VA-MU-TURN-FRONT.json"
+  },
+  {
+   "contract": "craft_work_order",
+   "errors": [],
+   "id": "work-order-WO-0001",
+   "ok": true,
+   "source": "samples/contracts/positive/work-order-WO-0001.json"
+  }
+ ],
+ "registry": {
+  "contracts": [
+   {
+    "id": "common",
+    "invariants": [],
+    "requirements": [
+     "E5"
+    ],
+    "urn": "urn:c2m:contract:common",
+    "version": "1.0.0"
+   },
+   {
+    "id": "pattern_asset",
+    "invariants": [
+     "INV-LIC-01",
+     "INV-LIC-02",
+     "INV-LIC-03",
+     "INV-LIC-04"
+    ],
+    "requirements": [
+     "A2.1",
+     "A2.2",
+     "E2",
+     "E4"
+    ],
+    "urn": "urn:c2m:contract:pattern-asset",
+    "version": "1.1.0"
+   },
+   {
+    "id": "design_concept",
+    "invariants": [],
+    "requirements": [
+     "A1.1",
+     "A1.3",
+     "A1.4",
+     "A3.2",
+     "E2"
+    ],
+    "urn": "urn:c2m:contract:design-concept",
+    "version": "1.1.0"
+   },
+   {
+    "id": "manufacturability_assessment",
+    "invariants": [],
+    "requirements": [
+     "A5.3",
+     "A5.4",
+     "E3"
+    ],
+    "urn": "urn:c2m:contract:manufacturability-assessment",
+    "version": "1.0.0"
+   },
+   {
+    "id": "craft_work_order",
+    "invariants": [],
+    "requirements": [
+     "A4.1",
+     "A4.4"
+    ],
+    "urn": "urn:c2m:contract:craft-work-order",
+    "version": "1.0.0"
+   },
+   {
+    "id": "c2m_order",
+    "invariants": [
+     "INV-ORDER-01",
+     "INV-PROMISE-01",
+     "INV-DISPUTE-01"
+    ],
+    "requirements": [
+     "A3.1",
+     "A4.1",
+     "A4.2",
+     "A4.3",
+     "A4.4"
+    ],
+    "urn": "urn:c2m:contract:c2m-order",
+    "version": "1.2.0"
+   },
+   {
+    "id": "settlement",
+    "invariants": [
+     "INV-MONEY-01",
+     "INV-ROYALTY-01"
+    ],
+    "requirements": [
+     "A4.1",
+     "A4.3",
+     "A2.2"
+    ],
+    "urn": "urn:c2m:contract:settlement",
+    "version": "1.1.0"
+   },
+   {
+    "id": "artisan_review",
+    "invariants": [
+     "INV-REVIEW-01"
+    ],
+    "requirements": [
+     "A5.4"
+    ],
+    "urn": "urn:c2m:contract:artisan-review",
+    "version": "1.0.0"
+   },
+   {
+    "id": "enterprise_profile",
+    "invariants": [
+     "INV-ENT-01"
+    ],
+    "requirements": [
+     "B1",
+     "B2",
+     "B4",
+     "B5",
+     "I3"
+    ],
+    "urn": "urn:c2m:contract:enterprise-profile",
+    "version": "1.1.0"
+   },
+   {
+    "id": "ip_license",
+    "invariants": [
+     "INV-IP-01",
+     "INV-IP-02"
+    ],
+    "requirements": [
+     "C5",
+     "C6",
+     "C7",
+     "E4",
+     "I4"
+    ],
+    "urn": "urn:c2m:contract:ip-license",
+    "version": "1.1.0"
+   },
+   {
+    "id": "customization_choice",
+    "invariants": [
+     "INV-CUSTOM-01"
+    ],
+    "requirements": [
+     "A3.2"
+    ],
+    "urn": "urn:c2m:contract:customization-choice",
+    "version": "1.0.0"
+   },
+   {
+    "id": "edition",
+    "invariants": [
+     "INV-EDITION-01"
+    ],
+    "requirements": [
+     "A3.3"
+    ],
+    "urn": "urn:c2m:contract:edition",
+    "version": "1.0.0"
+   },
+   {
+    "id": "collector_record",
+    "invariants": [
+     "INV-EDITION-02"
+    ],
+    "requirements": [
+     "A3.3"
+    ],
+    "urn": "urn:c2m:contract:collector-record",
+    "version": "1.0.0"
+   },
+   {
+    "id": "qc_record",
+    "invariants": [
+     "INV-QC-01"
+    ],
+    "requirements": [
+     "A4.4"
+    ],
+    "urn": "urn:c2m:contract:qc-record",
+    "version": "1.0.0"
+   },
+   {
+    "id": "production_schedule",
+    "invariants": [],
+    "requirements": [
+     "A4.2"
+    ],
+    "urn": "urn:c2m:contract:production-schedule",
+    "version": "1.0.0"
+   },
+   {
+    "id": "service_component",
+    "invariants": [
+     "INV-COMP-01"
+    ],
+    "requirements": [
+     "B1",
+     "B2",
+     "I3"
+    ],
+    "urn": "urn:c2m:contract:service-component",
+    "version": "1.0.0"
+   },
+   {
+    "id": "growth_site",
+    "invariants": [
+     "INV-SEO-01"
+    ],
+    "requirements": [
+     "B3",
+     "I3"
+    ],
+    "urn": "urn:c2m:contract:growth-site",
+    "version": "1.0.0"
+   },
+   {
+    "id": "inquiry_lead",
+    "invariants": [
+     "INV-LEAD-01"
+    ],
+    "requirements": [
+     "B3",
+     "I3"
+    ],
+    "urn": "urn:c2m:contract:inquiry-lead",
+    "version": "1.0.0"
+   },
+   {
+    "id": "character_bible",
+    "invariants": [
+     "INV-CHAR-01"
+    ],
+    "requirements": [
+     "C1",
+     "C2",
+     "I4"
+    ],
+    "urn": "urn:c2m:contract:character-bible",
+    "version": "1.0.0"
+   },
+   {
+    "id": "visual_asset",
+    "invariants": [
+     "INV-ASSET-01"
+    ],
+    "requirements": [
+     "C2",
+     "E4",
+     "I4"
+    ],
+    "urn": "urn:c2m:contract:visual-asset",
+    "version": "1.0.0"
+   },
+   {
+    "id": "short_drama",
+    "invariants": [
+     "INV-DRAMA-01"
+    ],
+    "requirements": [
+     "C3",
+     "C4",
+     "I4"
+    ],
+    "urn": "urn:c2m:contract:short-drama",
+    "version": "1.0.0"
+   },
+   {
+    "id": "content_review",
+    "invariants": [
+     "INV-CONTENT-01"
+    ],
+    "requirements": [
+     "C4",
+     "E4",
+     "I4"
+    ],
+    "urn": "urn:c2m:contract:content-review",
+    "version": "1.0.0"
+   },
+   {
+    "id": "merch_spec",
+    "invariants": [
+     "INV-MERCH-01"
+    ],
+    "requirements": [
+     "C6",
+     "I4"
+    ],
+    "urn": "urn:c2m:contract:merch-spec",
+    "version": "1.0.0"
+   }
+  ],
+  "version": "2.0.0"
+ },
+ "summary": {
+  "contracts": 23,
+  "negatives": 31,
+  "ok": true,
+  "positives": 42
+ }
+}

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:customization-choice",
+  "title": "Participatory customisation choice",
+  "description": "The buyer's option selections for one concept. Price deltas are resolved to integer cents when the choice is built, so the total can be reconciled without replaying the catalogue. A choice is only applied when the derived concept still passes the manufacturability gate.",
+  "type": "object",
+  "required": [
+    "customization_id",
+    "base_concept_id",
+    "industry",
+    "selections",
+    "amounts",
+    "status",
+    "feasibility",
+    "created_at"
+  ],
+  "properties": {
+    "customization_id": { "type": "string", "pattern": "^CUS-[0-9]{4}$" },
+    "base_concept_id": { "type": "string", "pattern": "^DC-[0-9]{4}$" },
+    "result_concept_id": { "type": ["string", "null"] },
+    "industry": { "$ref": "urn:c2m:contract:common#/$defs/industry" },
+    "selections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "group_id",
+          "option_id",
+          "label",
+          "price_delta_cents",
+          "lead_time_delta_days",
+          "fact_changes"
+        ],
+        "properties": {
+          "group_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+          "option_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+          "label": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+          "price_delta_cents": { "type": "integer" },
+          "lead_time_delta_days": { "type": "integer", "minimum": 0, "maximum": 60 },
+          "fact_changes": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "amounts": {
+      "type": "object",
+      "required": ["base_unit_price_cents", "delta_cents", "unit_price_cents"],
+      "properties": {
+        "base_unit_price_cents": { "type": "integer", "minimum": 0 },
+        "delta_cents": { "type": "integer" },
+        "unit_price_cents": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "feasible", "infeasible", "applied"]
+    },
+    "feasibility": {
+      "type": "object",
+      "required": ["ok", "assessment_id", "blockers"],
+      "properties": {
+        "ok": { "type": "boolean" },
+        "assessment_id": { "type": ["string", "null"] },
+        "blockers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+    "confirmed_at": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-CUSTOM-01"]
+}

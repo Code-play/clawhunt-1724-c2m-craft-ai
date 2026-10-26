@@ -1,0 +1,140 @@
+{
+ "certificate": {
+  "certificate_hash": "0bd0489e6f6b168d97219f5ba6905808e39113d30030ef4b2ab9e0634308055c",
+  "certificate_id": "CERT-ED-0001-0001",
+  "created_at": "2026-10-23T00:50:00Z",
+  "edition_id": "ED-0001",
+  "edition_number": 1,
+  "owner": {
+   "display_name": "Collector Two",
+   "owner_id": "OWNER-C2"
+  },
+  "provenance": [
+   {
+    "at": "2026-10-23T00:50:00Z",
+    "from": null,
+    "kind": "issue",
+    "note": "issued with the settled order",
+    "to": "OWNER-BUYER-07"
+   },
+   {
+    "at": "2026-10-23T00:51:00Z",
+    "from": "OWNER-BUYER-07",
+    "kind": "transfer",
+    "note": "private sale with the certificate handed over",
+    "to": "OWNER-C2"
+   }
+  ],
+  "record_id": "COL-0001"
+ },
+ "certificate_summary": {
+  "certificate_hash": "0bd0489e6f6b168d97219f5ba6905808e39113d30030ef4b2ab9e0634308055c",
+  "certificate_id": "CERT-ED-0001-0001",
+  "edition_id": "ED-0001",
+  "edition_number": 1,
+  "owner": {
+   "display_name": "Collector Two",
+   "owner_id": "OWNER-C2"
+  },
+  "provenance": [
+   {
+    "at": "2026-10-23T00:50:00Z",
+    "from": null,
+    "kind": "issue",
+    "note": "issued with the settled order",
+    "to": "OWNER-BUYER-07"
+   },
+   {
+    "at": "2026-10-23T00:51:00Z",
+    "from": "OWNER-BUYER-07",
+    "kind": "transfer",
+    "note": "private sale with the certificate handed over",
+    "to": "OWNER-C2"
+   }
+  ],
+  "record_id": "COL-0001"
+ },
+ "collector_records": [
+  {
+   "certificate_hash": "0bd0489e6f6b168d97219f5ba6905808e39113d30030ef4b2ab9e0634308055c",
+   "certificate_id": "CERT-ED-0001-0001",
+   "edition_id": "ED-0001",
+   "edition_number": 1,
+   "owner": {
+    "display_name": "Collector Two",
+    "owner_id": "OWNER-C2"
+   },
+   "provenance_count": 2,
+   "record_id": "COL-0001"
+  }
+ ],
+ "counts": {
+  "certificates": 1,
+  "collector_records": 1,
+  "editions": 1
+ },
+ "edition_detail": {
+  "artist": {
+   "artist_id": "ARTIST-01",
+   "name": "Studio Lin (synthetic)",
+   "royalty_rate_bp": 800
+  },
+  "certificate": {
+   "hash_algorithm": "sha256",
+   "prefix": "CERT-ED",
+   "template_ref": "docs/data-contracts.md#collector-record"
+  },
+  "concept_id": "DC-0009",
+  "created_at": "2026-10-23T00:42:00Z",
+  "edition_id": "ED-0001",
+  "manufacturer": {
+   "name": "Woodworking works A (large format)",
+   "workshop_id": "WS-HW-A"
+  },
+  "numbering": {
+   "issued": [
+    {
+     "certificate_id": "CERT-ED-0001-0001",
+     "collector_id": "COL-0001",
+     "issued_at": "2026-10-23T00:50:00Z",
+     "number": 1,
+     "order_id": "ORD-0007"
+    }
+   ],
+   "policy": "sequential",
+   "reserved": []
+  },
+  "size": 5,
+  "status": "open",
+  "title": {
+   "en": "Wooden pendant concept",
+   "zh": "木质嵌坠概念"
+  }
+ },
+ "editions": [
+  {
+   "artist": {
+    "artist_id": "ARTIST-01",
+    "name": "Studio Lin (synthetic)",
+    "royalty_rate_bp": 800
+   },
+   "concept_id": "DC-0009",
+   "edition_id": "ED-0001",
+   "issued": 1,
+   "issued_numbers": [
+    1
+   ],
+   "manufacturer": {
+    "name": "Woodworking works A (large format)",
+    "workshop_id": "WS-HW-A"
+   },
+   "reserved": [],
+   "size": 5,
+   "status": "open",
+   "title": {
+    "en": "Wooden pendant concept",
+    "zh": "木质嵌坠概念"
+   }
+  }
+ ]
+}

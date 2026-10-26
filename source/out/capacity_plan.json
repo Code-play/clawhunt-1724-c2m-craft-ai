@@ -1,0 +1,423 @@
+{
+ "as_of": "2026-10-23T00:00:00Z",
+ "capacity": {
+  "fallback_lead_time_bonus_days": 5,
+  "horizon_days": 60,
+  "note": "Deterministic capacity model. A working day offers capacity_per_day_minutes; setup_time is charged once per order. Existing work orders book their minutes backwards from their promised delivery, so a new quote fills the remaining capacity forwards.",
+  "ready_time": "18:00:00",
+  "request_lead_time_days": 10,
+  "version": "1.0.0",
+  "workshops": {
+   "WS-HW-A": {
+    "capacity_per_day_minutes": 480,
+    "setup_minutes": 90,
+    "working_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "WS-HW-B": {
+    "capacity_per_day_minutes": 420,
+    "setup_minutes": 60,
+    "working_days": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "WS-JW-A": {
+    "capacity_per_day_minutes": 420,
+    "setup_minutes": 45,
+    "working_days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "WS-JW-B": {
+    "capacity_per_day_minutes": 360,
+    "setup_minutes": 30,
+    "working_days": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  }
+ },
+ "schedules": [
+  {
+   "capacity_per_day_minutes": 480,
+   "generated_at": "2026-10-23T01:01:00Z",
+   "horizon": {
+    "from": "2026-10-23T18:00:00Z",
+    "to": "2026-12-22T18:00:00Z"
+   },
+   "schedule_id": "SCH-0001",
+   "slots": [
+    {
+     "end": "2026-11-02T18:00:00Z",
+     "minutes": 473,
+     "order_id": "ORD-0007",
+     "process": "joinery",
+     "slot_id": "SLOT-0001",
+     "start": "2026-10-23T18:00:00Z",
+     "work_order_id": "WO-0005"
+    }
+   ],
+   "utilization": [
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-10-23"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-10-26"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-10-27"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-10-28"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-10-29"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-10-30"
+    },
+    {
+     "booked_minutes": 473,
+     "capacity_minutes": 480,
+     "date": "2026-11-02"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-11-03"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-11-04"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 480,
+     "date": "2026-11-05"
+    }
+   ],
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "capacity_per_day_minutes": 420,
+   "generated_at": "2026-10-23T01:01:00Z",
+   "horizon": {
+    "from": "2026-10-23T18:00:00Z",
+    "to": "2026-12-22T18:00:00Z"
+   },
+   "schedule_id": "SCH-0002",
+   "slots": [],
+   "utilization": [
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-23"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-24"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-26"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-27"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-28"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-29"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-30"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-31"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-11-02"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-11-03"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-11-04"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-11-05"
+    }
+   ],
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "capacity_per_day_minutes": 420,
+   "generated_at": "2026-10-23T01:01:00Z",
+   "horizon": {
+    "from": "2026-10-23T18:00:00Z",
+    "to": "2026-12-22T18:00:00Z"
+   },
+   "schedule_id": "SCH-0003",
+   "slots": [
+    {
+     "end": "2026-11-02T18:00:00Z",
+     "minutes": 229,
+     "order_id": "ORD-0001",
+     "process": "design_review",
+     "slot_id": "SLOT-0001",
+     "start": "2026-10-23T18:00:00Z",
+     "work_order_id": "WO-0001"
+    },
+    {
+     "end": "2026-11-02T18:00:00Z",
+     "minutes": 331,
+     "order_id": "ORD-0003",
+     "process": "design_review",
+     "slot_id": "SLOT-0002",
+     "start": "2026-10-23T18:00:00Z",
+     "work_order_id": "WO-0002"
+    },
+    {
+     "end": "2026-11-02T18:00:00Z",
+     "minutes": 264,
+     "order_id": "ORD-0006",
+     "process": "design_review",
+     "slot_id": "SLOT-0003",
+     "start": "2026-10-23T18:00:00Z",
+     "work_order_id": "WO-0004"
+    },
+    {
+     "end": "2026-11-02T18:00:00Z",
+     "minutes": 331,
+     "order_id": "ORD-0008",
+     "process": "design_review",
+     "slot_id": "SLOT-0004",
+     "start": "2026-10-23T18:00:00Z",
+     "work_order_id": "WO-0006"
+    },
+    {
+     "end": "2026-11-03T18:00:00Z",
+     "minutes": 234,
+     "order_id": "ORD-0005",
+     "process": "design_review",
+     "slot_id": "SLOT-0005",
+     "start": "2026-10-23T18:00:00Z",
+     "work_order_id": "WO-0003"
+    }
+   ],
+   "utilization": [
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-23"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-26"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-27"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-10-28"
+    },
+    {
+     "booked_minutes": 315,
+     "capacity_minutes": 420,
+     "date": "2026-10-29"
+    },
+    {
+     "booked_minutes": 420,
+     "capacity_minutes": 420,
+     "date": "2026-10-30"
+    },
+    {
+     "booked_minutes": 420,
+     "capacity_minutes": 420,
+     "date": "2026-11-02"
+    },
+    {
+     "booked_minutes": 234,
+     "capacity_minutes": 420,
+     "date": "2026-11-03"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-11-04"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 420,
+     "date": "2026-11-05"
+    }
+   ],
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "capacity_per_day_minutes": 360,
+   "generated_at": "2026-10-23T01:01:00Z",
+   "horizon": {
+    "from": "2026-10-23T18:00:00Z",
+    "to": "2026-12-22T18:00:00Z"
+   },
+   "schedule_id": "SCH-0004",
+   "slots": [],
+   "utilization": [
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-23"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-24"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-26"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-27"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-28"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-29"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-30"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-10-31"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-11-02"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-11-03"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-11-04"
+    },
+    {
+     "booked_minutes": 0,
+     "capacity_minutes": 360,
+     "date": "2026-11-05"
+    }
+   ],
+   "workshop_id": "WS-JW-B"
+  }
+ ],
+ "summary": [
+  {
+   "booked_minutes": 473,
+   "capacity_per_day_minutes": 480,
+   "days_listed": 10,
+   "peak_utilization_bp": 9854,
+   "slots": 1,
+   "workshop_id": "WS-HW-A"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_per_day_minutes": 420,
+   "days_listed": 12,
+   "peak_utilization_bp": 0,
+   "slots": 0,
+   "workshop_id": "WS-HW-B"
+  },
+  {
+   "booked_minutes": 1389,
+   "capacity_per_day_minutes": 420,
+   "days_listed": 10,
+   "peak_utilization_bp": 10000,
+   "slots": 5,
+   "workshop_id": "WS-JW-A"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_per_day_minutes": 360,
+   "days_listed": 12,
+   "peak_utilization_bp": 0,
+   "slots": 0,
+   "workshop_id": "WS-JW-B"
+  }
+ ]
+}

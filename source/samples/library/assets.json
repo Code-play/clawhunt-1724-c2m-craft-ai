@@ -1,0 +1,421 @@
+{
+ "assets": [
+  {
+   "asset_id": "PA-JW-0001",
+   "created_at": "2026-09-30T00:00:00Z",
+   "industries": [
+    "jewelry"
+   ],
+   "license": {
+    "attribution_required": true,
+    "exclusive": false,
+    "license_id": "LIC-SYN-0007",
+    "licensor": "Regional Crafts Archive (synthetic)",
+    "royalty_rate_bp": 300,
+    "source_type": "licensed",
+    "territory": [
+     "CN",
+     "global"
+    ],
+    "usage_scope": [
+     "commercial_product",
+     "derivative_work"
+    ],
+    "valid_from": "2026-01-01T00:00:00Z",
+    "valid_to": "2028-12-31T00:00:00Z"
+   },
+   "medium": "pattern",
+   "palette": [
+    "#C9A227",
+    "#1F2A44",
+    "#F2EFE9"
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "interlace",
+    "texture": "polished"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "derivative",
+    "reviewed_at": "2026-09-30T00:00:00Z",
+    "reviewed_by": "CR-01",
+    "status": "content_reviewed"
+   },
+   "tags": [
+    "floral",
+    "interlace",
+    "licensed"
+   ],
+   "title": {
+    "en": "Licensed interlace pattern",
+    "zh": "缠枝授权纹样"
+   },
+   "traditional_prototype": false
+  },
+  {
+   "asset_id": "PA-JW-0002",
+   "created_at": "2026-06-01T00:00:00Z",
+   "industries": [
+    "jewelry"
+   ],
+   "license": {
+    "attribution_required": false,
+    "exclusive": true,
+    "royalty_rate_bp": 0,
+    "source_type": "self_produced",
+    "territory": [
+     "global"
+    ],
+    "usage_scope": [
+     "commercial_product",
+     "advertising",
+     "export"
+    ],
+    "valid_from": "2026-06-01T00:00:00Z",
+    "valid_to": "2031-06-01T00:00:00Z"
+   },
+   "medium": "form",
+   "palette": [
+    "#2E6F7E",
+    "#D8DEE2",
+    "#0F1A1F"
+   ],
+   "preview": {
+    "gradient_angle_deg": 90,
+    "motif_style": "wave",
+    "texture": "brushed"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "original_design",
+    "reviewed_at": "2026-06-10T00:00:00Z",
+    "reviewed_by": "ART-JW-01",
+    "status": "artisan_reviewed"
+   },
+   "tags": [
+    "wave",
+    "minimal",
+    "in-house"
+   ],
+   "title": {
+    "en": "In-house tide line",
+    "zh": "自研潮汐线"
+   },
+   "traditional_prototype": false
+  },
+  {
+   "asset_id": "PA-JW-0003",
+   "created_at": "2026-08-01T00:00:00Z",
+   "industries": [
+    "jewelry",
+    "carving",
+    "heritage"
+   ],
+   "license": {
+    "attribution_required": true,
+    "exclusive": false,
+    "license_id": "LIC-SYN-HER-01",
+    "licensor": "Public heritage registry (synthetic)",
+    "royalty_rate_bp": 0,
+    "source_type": "traditional_heritage",
+    "territory": [
+     "CN"
+    ],
+    "usage_scope": [
+     "commercial_product",
+     "derivative_work"
+    ],
+    "valid_from": "2026-01-01T00:00:00Z",
+    "valid_to": "2030-01-01T00:00:00Z"
+   },
+   "medium": "pattern",
+   "palette": [
+    "#1F2A44",
+    "#C9A227",
+    "#E8E4DA"
+   ],
+   "preview": {
+    "gradient_angle_deg": 45,
+    "motif_style": "fret",
+    "texture": "carved"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "traditional_reference",
+    "reviewed_at": "2026-08-01T00:00:00Z",
+    "reviewed_by": "CR-02",
+    "status": "content_reviewed"
+   },
+   "tags": [
+    "traditional",
+    "fret",
+    "heritage"
+   ],
+   "title": {
+    "en": "Traditional cloud-thunder motif",
+    "zh": "传统云雷纹样"
+   },
+   "traditional_prototype": true
+  },
+  {
+   "asset_id": "PA-JW-0004",
+   "created_at": "2026-08-15T00:00:00Z",
+   "industries": [
+    "jewelry",
+    "heritage"
+   ],
+   "license": {
+    "attribution_required": false,
+    "exclusive": false,
+    "royalty_rate_bp": 0,
+    "source_type": "public_domain",
+    "territory": [
+     "CN"
+    ],
+    "usage_scope": [
+     "internal_demo",
+     "derivative_work"
+    ],
+    "valid_from": "2026-01-01T00:00:00Z",
+    "valid_to": "2036-01-01T00:00:00Z"
+   },
+   "medium": "pattern",
+   "palette": [
+    "#8C1C2B",
+    "#C9A227",
+    "#F6EDE3"
+   ],
+   "preview": {
+    "gradient_angle_deg": 20,
+    "motif_style": "granule",
+    "texture": "polished"
+   },
+   "religious_site_names": [
+    "Mazu temple (synthetic name)"
+   ],
+   "review": {
+    "authenticity_label": "traditional_reference",
+    "reviewed_at": "2026-08-15T00:00:00Z",
+    "reviewed_by": "CR-03",
+    "status": "content_reviewed"
+   },
+   "tags": [
+    "temple",
+    "reference",
+    "non-exclusive"
+   ],
+   "title": {
+    "en": "Temple pattern reference",
+    "zh": "庙宇纹样参考"
+   },
+   "traditional_prototype": true
+  },
+  {
+   "asset_id": "PA-HW-0001",
+   "created_at": "2026-07-01T00:00:00Z",
+   "industries": [
+    "hardwood"
+   ],
+   "license": {
+    "attribution_required": false,
+    "exclusive": false,
+    "license_id": "LIC-SYN-0011",
+    "licensor": "Woodcraft design studio (synthetic)",
+    "royalty_rate_bp": 450,
+    "source_type": "licensed",
+    "territory": [
+     "CN",
+     "EU"
+    ],
+    "usage_scope": [
+     "commercial_product"
+    ],
+    "valid_from": "2025-06-01T00:00:00Z",
+    "valid_to": "2027-06-01T00:00:00Z"
+   },
+   "medium": "form",
+   "palette": [
+    "#5B3A22",
+    "#C9A227",
+    "#EADFCF"
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "fret",
+    "texture": "carved"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "derivative",
+    "reviewed_at": "2026-07-01T00:00:00Z",
+    "reviewed_by": "CR-04",
+    "status": "content_reviewed"
+   },
+   "tags": [
+    "fret",
+    "apron",
+    "joinery"
+   ],
+   "title": {
+    "en": "Licensed fret apron",
+    "zh": "授权回纹牙板"
+   },
+   "traditional_prototype": false
+  },
+  {
+   "asset_id": "PA-HW-0002",
+   "created_at": "2026-06-20T00:00:00Z",
+   "industries": [
+    "hardwood"
+   ],
+   "license": {
+    "attribution_required": false,
+    "exclusive": false,
+    "royalty_rate_bp": 0,
+    "source_type": "public_domain",
+    "territory": [
+     "global"
+    ],
+    "usage_scope": [
+     "commercial_product",
+     "advertising"
+    ],
+    "valid_from": "2020-01-01T00:00:00Z",
+    "valid_to": "2040-01-01T00:00:00Z"
+   },
+   "medium": "pattern",
+   "palette": [
+    "#4A2E1B",
+    "#A8794A",
+    "#EFE6D6"
+   ],
+   "preview": {
+    "gradient_angle_deg": 45,
+    "motif_style": "interlace",
+    "texture": "carved"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "traditional_reference",
+    "reviewed_at": "2026-06-20T00:00:00Z",
+    "reviewed_by": "CR-05",
+    "status": "content_reviewed"
+   },
+   "tags": [
+    "interlace",
+    "spandrel",
+    "public-domain"
+   ],
+   "title": {
+    "en": "Public-domain interlace spandrel",
+    "zh": "公版缠枝挂落"
+   },
+   "traditional_prototype": true
+  },
+  {
+   "asset_id": "PA-HW-0003",
+   "created_at": "2025-01-01T00:00:00Z",
+   "industries": [
+    "hardwood"
+   ],
+   "license": {
+    "attribution_required": false,
+    "exclusive": false,
+    "license_id": "LIC-SYN-0021",
+    "licensor": "Inlay workshop (synthetic)",
+    "royalty_rate_bp": 200,
+    "source_type": "licensed",
+    "territory": [
+     "CN"
+    ],
+    "usage_scope": [
+     "internal_demo"
+    ],
+    "valid_from": "2025-01-01T00:00:00Z",
+    "valid_to": "2026-09-30T00:00:00Z"
+   },
+   "medium": "material",
+   "palette": [
+    "#2E6F7E",
+    "#D9C9A6",
+    "#1B2A2E"
+   ],
+   "preview": {
+    "gradient_angle_deg": 90,
+    "motif_style": "inlay",
+    "texture": "polished"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "derivative",
+    "reviewed_at": "2025-01-05T00:00:00Z",
+    "reviewed_by": "CR-06",
+    "status": "auto_checked"
+   },
+   "tags": [
+    "inlay",
+    "coastal",
+    "expired"
+   ],
+   "title": {
+    "en": "Expired licensed tide inlay",
+    "zh": "到期授权潮线嵌"
+   },
+   "traditional_prototype": false
+  },
+  {
+   "asset_id": "PA-HW-0004",
+   "created_at": "2026-05-01T00:00:00Z",
+   "industries": [
+    "hardwood",
+    "carving"
+   ],
+   "license": {
+    "attribution_required": false,
+    "exclusive": true,
+    "royalty_rate_bp": 0,
+    "source_type": "self_produced",
+    "territory": [
+     "global"
+    ],
+    "usage_scope": [
+     "commercial_product",
+     "derivative_work",
+     "advertising"
+    ],
+    "valid_from": "2026-05-01T00:00:00Z",
+    "valid_to": "2031-05-01T00:00:00Z"
+   },
+   "medium": "pattern",
+   "palette": [
+    "#3E2A1A",
+    "#8C6A45",
+    "#E7DAC6"
+   ],
+   "preview": {
+    "gradient_angle_deg": 160,
+    "motif_style": "relief",
+    "texture": "carved"
+   },
+   "religious_site_names": [],
+   "review": {
+    "authenticity_label": "original_design",
+    "reviewed_at": "2026-05-05T00:00:00Z",
+    "reviewed_by": "ART-HW-01",
+    "status": "artisan_reviewed"
+   },
+   "tags": [
+    "relief",
+    "vine",
+    "in-house"
+   ],
+   "title": {
+    "en": "In-house vine shadow carving",
+    "zh": "自研藤影雕花"
+   },
+   "traditional_prototype": false
+  }
+ ],
+ "version": "1.0.0"
+}

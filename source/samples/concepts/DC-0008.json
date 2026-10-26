@@ -1,0 +1,93 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0008",
+ "craft_facts": {
+  "cantilever": false,
+  "carve_depth_mm": 0,
+  "curve_radius_mm": 0,
+  "finish": "lacquer",
+  "hardware_included": false,
+  "humidity_zone": "coastal",
+  "joint_types": [
+   "screw"
+  ],
+  "leg_count": 4,
+  "load_kg": 70,
+  "outdoor": true,
+  "panel_thickness_mm": 20,
+  "span_mm": 900,
+  "species": "pine",
+  "tolerance_mm": 0.4,
+  "undercut": false,
+  "wood_moisture_pct": 14
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "chair",
+  "dimensions_mm": {
+   "x": 480,
+   "y": 520,
+   "z": 900
+  },
+  "variant": "armchair"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "hardwood",
+ "material": {
+  "finish": "lacquer",
+  "name": "pine"
+ },
+ "motif_ids": [
+  "MOT-HW-02"
+ ],
+ "palette": [
+  {
+   "hex": "#141414",
+   "weight": 55
+  },
+  {
+   "hex": "#C9A227",
+   "weight": 20
+  },
+  {
+   "hex": "#B3423A",
+   "weight": 12
+  },
+  {
+   "hex": "#3B3B3B",
+   "weight": 6
+  },
+  {
+   "hex": "#E8E4DA",
+   "weight": 4
+  },
+  {
+   "hex": "#6E5B3E",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 20,
+  "motif_style": "interlace",
+  "texture": "carved"
+ },
+ "prompt": {
+  "en": "An outdoor pine chair fixed with screws only, rated for 70 kg.",
+  "zh": "松木、仅螺丝固定、70 kg 载荷的户外椅。"
+ },
+ "seed": "6d0bb4d698dd32d7",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "workshop_raw"
+ },
+ "title": {
+  "en": "Outdoor pine screw-only chair",
+  "zh": "户外松木螺丝椅"
+ }
+}

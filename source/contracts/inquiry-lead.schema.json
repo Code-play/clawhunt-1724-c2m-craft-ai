@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:inquiry-lead",
+  "title": "Inquiry and CRM lead",
+  "description": "One inquiry captured by the multilingual site, the lead it becomes and the closed loop around it: deterministic scoring, SLA, owner routing, follow-up tasks, a quote draft and the pipeline events. The stage is a function of the events, which is what makes the loop testable end to end instead of a form that drops mail into an inbox.",
+  "type": "object",
+  "required": [
+    "inquiry_id",
+    "site_id",
+    "language",
+    "submitted_at",
+    "contact",
+    "message",
+    "intent",
+    "product_interest",
+    "lead",
+    "follow_ups",
+    "crm_events",
+    "created_at"
+  ],
+  "properties": {
+    "inquiry_id": { "type": "string", "pattern": "^INQ-[0-9]{4}$" },
+    "site_id": { "type": "string", "pattern": "^SITE-[A-Z0-9-]{3,24}$" },
+    "language": { "type": "string", "enum": ["zh", "en", "de", "ja", "ar"] },
+    "submitted_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+    "contact": {
+      "type": "object",
+      "required": ["name", "email", "country", "channel"],
+      "properties": {
+        "name": { "type": "string", "minLength": 2, "maxLength": 60 },
+        "email": { "type": "string", "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,12}$" },
+        "company": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "channel": {
+          "type": "string",
+          "enum": ["site_form", "email", "whatsapp", "trade_show"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "message": { "type": "string", "minLength": 10, "maxLength": 2000 },
+    "intent": {
+      "type": "string",
+      "enum": ["sample_request", "bulk_quote", "oem", "partnership", "information"]
+    },
+    "product_interest": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 2, "maxLength": 60 }
+    },
+    "lead": {
+      "type": "object",
+      "required": ["lead_id", "stage", "score", "score_breakdown", "owner", "sla_due_at", "first_response_at"],
+      "properties": {
+        "lead_id": { "type": "string", "pattern": "^LEAD-[0-9]{4}$" },
+        "stage": {
+          "type": "string",
+          "enum": ["new", "qualified", "contacted", "quoted", "won", "lost"]
+        },
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "score_breakdown": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["factor", "points"],
+            "properties": {
+              "factor": { "type": "string", "pattern": "^[a-z][a-z0-9_]{2,32}$" },
+              "points": { "type": "integer", "minimum": -20, "maximum": 40 },
+              "evidence": { "type": "string", "minLength": 1, "maxLength": 120 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "owner": {
+          "type": "object",
+          "required": ["owner_id", "name"],
+          "properties": {
+            "owner_id": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]{2,40}$" },
+            "name": { "type": "string", "minLength": 2, "maxLength": 40 }
+          },
+          "additionalProperties": false
+        },
+        "sla_due_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+        "first_response_at": {
+          "anyOf": [
+            { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+            { "type": "null" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "follow_ups": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["follow_up_id", "due_at", "channel", "template_id", "status"],
+        "properties": {
+          "follow_up_id": { "type": "string", "pattern": "^FU-[0-9]{4}$" },
+          "due_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+          "channel": { "type": "string", "enum": ["email", "phone", "whatsapp", "meeting"] },
+          "template_id": { "type": "string", "pattern": "^[a-z][a-z0-9_]{2,24}$" },
+          "status": { "type": "string", "enum": ["scheduled", "done", "cancelled"] },
+          "done_at": {
+            "anyOf": [
+              { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+              { "type": "null" }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "quote": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": ["quote_id", "amount_cents", "currency", "valid_until", "incoterm"],
+          "properties": {
+            "quote_id": { "type": "string", "pattern": "^QTE-[0-9]{4}$" },
+            "amount_cents": { "type": "integer", "minimum": 0 },
+            "currency": { "type": "string", "enum": ["USD"] },
+            "valid_until": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+            "incoterm": { "type": "string", "enum": ["FOB", "CIF", "EXW", "DDP"] }
+          },
+          "additionalProperties": false
+        },
+        { "type": "null" }
+      ]
+    },
+    "crm_events": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["at", "type", "actor", "note"],
+        "properties": {
+          "at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+          "type": {
+            "type": "string",
+            "enum": ["received", "scored", "routed", "contacted", "quoted", "won", "lost", "snoozed"]
+          },
+          "actor": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]{2,40}$" },
+          "note": { "type": "string", "minLength": 3, "maxLength": 220 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-LEAD-01"]
+}

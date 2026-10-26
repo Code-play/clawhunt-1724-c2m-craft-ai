@@ -1,0 +1,93 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0009",
+ "craft_facts": {
+  "cantilever": false,
+  "carve_depth_mm": 6,
+  "curve_radius_mm": 18,
+  "finish": "wax",
+  "hardware_included": true,
+  "humidity_zone": "temperate",
+  "joint_types": [
+   "dowel"
+  ],
+  "leg_count": 0,
+  "load_kg": 2,
+  "outdoor": false,
+  "panel_thickness_mm": 20,
+  "span_mm": 45,
+  "species": "walnut",
+  "tolerance_mm": 0.15,
+  "undercut": true,
+  "wood_moisture_pct": 9
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "cabinet",
+  "dimensions_mm": {
+   "x": 900,
+   "y": 420,
+   "z": 1800
+  },
+  "variant": "two_door"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "hardwood",
+ "material": {
+  "finish": "wax",
+  "name": "walnut"
+ },
+ "motif_ids": [
+  "MOT-HW-04"
+ ],
+ "palette": [
+  {
+   "hex": "#C9A227",
+   "weight": 55
+  },
+  {
+   "hex": "#1F2A44",
+   "weight": 20
+  },
+  {
+   "hex": "#F2EFE9",
+   "weight": 12
+  },
+  {
+   "hex": "#8C6A45",
+   "weight": 6
+  },
+  {
+   "hex": "#2E6F7E",
+   "weight": 4
+  },
+  {
+   "hex": "#E8E4DA",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 135,
+  "motif_style": "inlay",
+  "texture": "brushed"
+ },
+ "prompt": {
+  "en": "The same motif in timber: a small walnut pendant, 6 mm carving, 18 mm radius.",
+  "zh": "同一纹样的木作版本：胡桃木小坠，雕深 6 mm，曲率 18 mm。"
+ },
+ "seed": "915eb73c0fb0674d",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "coastal_minimal"
+ },
+ "title": {
+  "en": "Wooden pendant concept",
+  "zh": "木质嵌坠概念"
+ }
+}

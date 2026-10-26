@@ -1,0 +1,67 @@
+{
+ "created_at": "2026-10-23T00:08:00Z",
+ "currency": "USD",
+ "order_id": "ORD-0001",
+ "payout_lines": [
+  {
+   "amount_cents": 4500,
+   "party": "designer",
+   "party_id": "designer-01",
+   "rate_bp": 1500
+  },
+  {
+   "amount_cents": 18000,
+   "party": "factory",
+   "party_id": "workshop-01",
+   "rate_bp": 6000
+  },
+  {
+   "amount_cents": 3000,
+   "party": "ip_licensor",
+   "party_id": "licensor-01",
+   "rate_bp": 1000
+  },
+  {
+   "amount_cents": 4500,
+   "party": "platform",
+   "party_id": "platform",
+   "rate_bp": 1500
+  }
+ ],
+ "posted_at": "2026-10-23T00:08:00Z",
+ "reconciliation": {
+  "delta_cents": 0,
+  "sum_payouts_cents": 30000
+ },
+ "refunds": [],
+ "remainder_cents": 0,
+ "reversals": [],
+ "settlement_id": "ST-0001",
+ "split_policy": {
+  "lines": [
+   {
+    "party": "designer",
+    "party_id": "designer-01",
+    "rate_bp": 1500
+   },
+   {
+    "party": "factory",
+    "party_id": "workshop-01",
+    "rate_bp": 6000
+   },
+   {
+    "party": "ip_licensor",
+    "party_id": "licensor-01",
+    "rate_bp": 1000
+   },
+   {
+    "party": "platform",
+    "party_id": "platform",
+    "rate_bp": 1500
+   }
+  ],
+  "policy_id": "c2m_default"
+ },
+ "status": "posted",
+ "total_cents": 30000
+}

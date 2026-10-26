@@ -1,0 +1,70 @@
+{
+ "amounts": {
+  "customization_fee_cents": 6000,
+  "deposit_cents": 9000,
+  "designer_share_cents": 4500,
+  "factory_share_cents": 18000,
+  "ip_share_cents": 3000,
+  "platform_fee_cents": 4500,
+  "subtotal_cents": 24000,
+  "total_cents": 30000
+ },
+ "buyer": {
+  "id": "buyer-01",
+  "locale": "en"
+ },
+ "created_at": "2026-10-23T00:00:00Z",
+ "currency": "USD",
+ "deadline_at": "2026-11-22T00:00:00Z",
+ "dispute": {
+  "opened_at": "2026-10-23T00:00:00Z",
+  "qc_record_ids": [
+   "QCR-0001"
+  ],
+  "reason": "The enamel colour is two shades off the approved sample.",
+  "resolution_note": null,
+  "resolved_at": "2026-10-23T00:08:00Z",
+  "status": "resolved_rework"
+ },
+ "items": [
+  {
+   "asset_license_ids": [],
+   "concept_id": "DC-0001",
+   "customization_id": null,
+   "customizations": [],
+   "edition_id": null,
+   "edition_number": null,
+   "item_id": "ITM-0001",
+   "quantity": 1,
+   "title": {
+    "en": "Sea mist interlace ring",
+    "zh": "海雾缠枝戒"
+   },
+   "unit_price_cents": 24000,
+   "work_order_id": "WO-0001"
+  }
+ ],
+ "model": "designer_presale",
+ "order_id": "ORD-0001",
+ "promise": {
+  "alternatives": [
+   {
+    "promised_delivery_at": "2026-11-02T18:00:00Z",
+    "workshop_id": "WS-JW-B"
+   }
+  ],
+  "promised_delivery_at": "2026-11-02T18:00:00Z",
+  "slot_id": "SLOT-0001",
+  "working_minutes": 184,
+  "workshop_id": "WS-JW-A"
+ },
+ "refund": {
+  "amount_cents": 0,
+  "decided_at": null,
+  "reason": null,
+  "requested_at": null,
+  "status": "none"
+ },
+ "status": "settled",
+ "updated_at": "2026-10-23T00:08:00Z"
+}

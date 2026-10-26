@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:growth-site",
+  "title": "Multilingual growth site",
+  "description": "Generated multilingual site for one enterprise profile: every page carries its SEO metadata, canonical path, hreflang alternates and structured data. The generator writes the pages from this record, and the auditor scores the result against the declared SEO rules, so the site cannot drift from what was signed off.",
+  "type": "object",
+  "required": [
+    "site_id",
+    "profile_id",
+    "brand",
+    "languages",
+    "primary_language",
+    "pages",
+    "seo",
+    "inquiry_form",
+    "created_at"
+  ],
+  "properties": {
+    "site_id": { "type": "string", "pattern": "^SITE-[A-Z0-9-]{3,24}$" },
+    "profile_id": { "type": "string", "pattern": "^EP-[0-9]{4}$" },
+    "brand": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+    "languages": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["zh", "en", "de", "ja", "ar"] }
+    },
+    "primary_language": { "type": "string", "enum": ["zh", "en", "de", "ja", "ar"] },
+    "pages": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "page_id",
+          "path",
+          "language",
+          "title",
+          "meta_description",
+          "h1",
+          "canonical_path",
+          "hreflang",
+          "keywords",
+          "json_ld",
+          "sections",
+          "status"
+        ],
+        "properties": {
+          "page_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+          "path": { "type": "string", "pattern": "^/(zh|en|de|ja|ar)$|^/(zh|en|de|ja|ar)/[a-z0-9-]+$" },
+          "language": { "type": "string", "enum": ["zh", "en", "de", "ja", "ar"] },
+          "title": { "type": "string", "minLength": 8, "maxLength": 120 },
+          "meta_description": { "type": "string", "minLength": 40, "maxLength": 220 },
+          "h1": { "type": "string", "minLength": 4, "maxLength": 120 },
+          "canonical_path": { "type": "string", "pattern": "^/(zh|en|de|ja|ar)$|^/(zh|en|de|ja|ar)/[a-z0-9-]+$" },
+          "hreflang": {
+            "type": "array",
+            "minItems": 2,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "required": ["lang", "path"],
+              "properties": {
+                "lang": { "type": "string", "enum": ["zh", "en", "de", "ja", "ar"] },
+                "path": { "type": "string", "pattern": "^/(zh|en|de|ja|ar)$|^/(zh|en|de|ja|ar)/[a-z0-9-]+$" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "keywords": {
+            "type": "array",
+            "minItems": 3,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 2, "maxLength": 40 }
+          },
+          "json_ld": { "type": "object", "minProperties": 1 },
+          "sections": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "required": ["section_id", "heading", "body"],
+              "properties": {
+                "section_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+                "heading": { "type": "string", "minLength": 4, "maxLength": 120 },
+                "body": { "type": "string", "minLength": 20, "maxLength": 900 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "status": { "type": "string", "enum": ["draft", "generated", "reviewed"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "seo": {
+      "type": "object",
+      "required": ["audited", "score_bp", "issues", "checked_at", "rules"],
+      "properties": {
+        "audited": { "type": "boolean" },
+        "score_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "page_id", "severity", "detail"],
+            "properties": {
+              "code": { "type": "string", "pattern": "^[a-z][a-z0-9_]{2,32}$" },
+              "page_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+              "severity": { "type": "string", "enum": ["info", "minor", "major"] },
+              "detail": { "type": "string", "minLength": 3, "maxLength": 200 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "checked_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+        "rules": {
+          "type": "object",
+          "required": ["title_min", "title_max", "description_min", "description_max"],
+          "properties": {
+            "title_min": { "type": "integer", "minimum": 10, "maximum": 80 },
+            "title_max": { "type": "integer", "minimum": 40, "maximum": 120 },
+            "description_min": { "type": "integer", "minimum": 30, "maximum": 120 },
+            "description_max": { "type": "integer", "minimum": 120, "maximum": 240 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "inquiry_form": {
+      "type": "object",
+      "required": ["form_id", "endpoint", "fields"],
+      "properties": {
+        "form_id": { "type": "string", "pattern": "^FORM-[A-Z0-9-]{2,12}$" },
+        "endpoint": { "type": "string", "pattern": "^/api/[a-z0-9/_-]+$" },
+        "fields": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["name", "type", "required", "label"],
+            "properties": {
+              "name": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+              "type": { "type": "string", "enum": ["text", "email", "tel", "select", "textarea"] },
+              "required": { "type": "boolean" },
+              "label": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+              "options": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": { "type": "string", "minLength": 2, "maxLength": 40 }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-SEO-01"]
+}

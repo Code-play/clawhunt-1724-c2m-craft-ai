@@ -1,0 +1,94 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0005",
+ "craft_facts": {
+  "cantilever": false,
+  "carve_depth_mm": 5,
+  "curve_radius_mm": 0,
+  "finish": "oil",
+  "hardware_included": true,
+  "humidity_zone": "temperate",
+  "joint_types": [
+   "mortise_tenon",
+   "dovetail"
+  ],
+  "leg_count": 4,
+  "load_kg": 110,
+  "outdoor": false,
+  "panel_thickness_mm": 22,
+  "span_mm": 450,
+  "species": "walnut",
+  "tolerance_mm": 0.2,
+  "undercut": false,
+  "wood_moisture_pct": 10
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "chair",
+  "dimensions_mm": {
+   "x": 480,
+   "y": 520,
+   "z": 900
+  },
+  "variant": "armchair"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "hardwood",
+ "material": {
+  "finish": "oil",
+  "name": "walnut"
+ },
+ "motif_ids": [
+  "MOT-HW-01"
+ ],
+ "palette": [
+  {
+   "hex": "#8C5A1E",
+   "weight": 55
+  },
+  {
+   "hex": "#E0B25C",
+   "weight": 20
+  },
+  {
+   "hex": "#F6EDE3",
+   "weight": 12
+  },
+  {
+   "hex": "#3E2A1A",
+   "weight": 6
+  },
+  {
+   "hex": "#A8794A",
+   "weight": 4
+  },
+  {
+   "hex": "#D9C9A6",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 45,
+  "motif_style": "fret",
+  "texture": "polished"
+ },
+ "prompt": {
+  "en": "A mortise-and-tenon walnut armchair rated for 110 kg.",
+  "zh": "榫卯结构、胡桃木、设计载荷 110 kg 的扶手椅。"
+ },
+ "seed": "0d95bf82f79fce1c",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "heritage_ornate"
+ },
+ "title": {
+  "en": "Walnut fret armchair",
+  "zh": "胡桃木回纹扶手椅"
+ }
+}

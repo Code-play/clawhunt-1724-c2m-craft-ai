@@ -1,0 +1,1075 @@
+{
+ "adapter": {
+  "deterministic": true,
+  "limitation": "curated vocabulary and parameter-level transforms; a generative model plugs in at the ConceptModelAdapter boundary in M2",
+  "name": "offline_lexicon",
+  "version": "1.0.0"
+ },
+ "briefs": [
+  {
+   "brief_id": "brief-jewelry",
+   "count": 4,
+   "industry": "jewelry",
+   "style_id": "coastal_minimal",
+   "text": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+  },
+  {
+   "brief_id": "brief-hardwood",
+   "count": 4,
+   "industry": "hardwood",
+   "style_id": "heritage_ornate",
+   "text": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs"
+  }
+ ],
+ "concepts": [
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0011",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 22.01,
+    "min_wall_thickness_mm": 1.25,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 22.01,
+     "y": 22.01,
+     "z": 1.74
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-05"
+   ],
+   "palette": [
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    },
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    },
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    },
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "openwork",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "33fdb22ce77ab669",
+   "source": "text",
+   "style": {
+    "intensity": 42,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Cloud fret sea breeze vine ring",
+    "zh": "云雷海风藤ring"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0012",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 22.27,
+    "min_wall_thickness_mm": 1.25,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 22.27,
+     "y": 22.27,
+     "z": 1.76
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-04"
+   ],
+   "palette": [
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    },
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    },
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    },
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "granule",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "ce2e775469beb985",
+   "source": "text",
+   "style": {
+    "intensity": 45,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Vine shadow pomegranate seed ring",
+    "zh": "藤影石榴籽ring"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0013",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 23.85,
+    "min_wall_thickness_mm": 1.3,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 23.85,
+     "y": 23.85,
+     "z": 1.89
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-03"
+   ],
+   "palette": [
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    },
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    },
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    },
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "wave",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "ecdb65024fa4b78b",
+   "source": "text",
+   "style": {
+    "intensity": 43,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Sea mist tide curve ring",
+    "zh": "海雾潮汐曲线ring"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0014",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 23.1,
+    "min_wall_thickness_mm": 1.28,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 23.1,
+     "y": 23.1,
+     "z": 1.83
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-04"
+   ],
+   "palette": [
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    },
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    },
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    },
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "granule",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "b680d12b8f734676",
+   "source": "text",
+   "style": {
+    "intensity": 50,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Far sail pomegranate seed ring",
+    "zh": "远帆石榴籽ring"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0015",
+   "craft_facts": {
+    "cantilever": false,
+    "carve_depth_mm": 0.0,
+    "curve_radius_mm": 0,
+    "finish": "matte",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "mortise_tenon"
+    ],
+    "leg_count": 4,
+    "load_kg": 90,
+    "outdoor": false,
+    "panel_thickness_mm": 40,
+    "span_mm": 1248.16,
+    "species": "oak",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 9
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "table",
+    "dimensions_mm": {
+     "x": 1588.57,
+     "y": 907.75,
+     "z": 851.02
+    },
+    "variant": "console"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "hardwood",
+   "material": {
+    "finish": "matte",
+    "name": "oak"
+   },
+   "motif_ids": [
+    "MOT-HW-01"
+   ],
+   "palette": [
+    {
+     "hex": "#0F1A1F",
+     "weight": 55
+    },
+    {
+     "hex": "#2E6F7E",
+     "weight": 20
+    },
+    {
+     "hex": "#C9A227",
+     "weight": 12
+    },
+    {
+     "hex": "#D8DEE2",
+     "weight": 6
+    },
+    {
+     "hex": "#5B3A22",
+     "weight": 4
+    },
+    {
+     "hex": "#EFEAE1",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 45,
+    "motif_style": "fret",
+    "texture": "polished"
+   },
+   "prompt": {
+    "en": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs",
+    "zh": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs"
+   },
+   "seed": "4786e02fce65fb5b",
+   "source": "text",
+   "style": {
+    "intensity": 51,
+    "style_id": "heritage_ornate"
+   },
+   "title": {
+    "en": "Tide line fret apron table",
+    "zh": "潮汐回纹牙板table"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0016",
+   "craft_facts": {
+    "cantilever": false,
+    "carve_depth_mm": 0.0,
+    "curve_radius_mm": 0,
+    "finish": "matte",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "mortise_tenon"
+    ],
+    "leg_count": 4,
+    "load_kg": 90,
+    "outdoor": false,
+    "panel_thickness_mm": 40,
+    "span_mm": 1255.02,
+    "species": "oak",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 9
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "table",
+    "dimensions_mm": {
+     "x": 1597.3,
+     "y": 912.74,
+     "z": 855.7
+    },
+    "variant": "console"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "hardwood",
+   "material": {
+    "finish": "matte",
+    "name": "oak"
+   },
+   "motif_ids": [
+    "MOT-HW-03"
+   ],
+   "palette": [
+    {
+     "hex": "#0F1A1F",
+     "weight": 55
+    },
+    {
+     "hex": "#2E6F7E",
+     "weight": 20
+    },
+    {
+     "hex": "#C9A227",
+     "weight": 12
+    },
+    {
+     "hex": "#D8DEE2",
+     "weight": 6
+    },
+    {
+     "hex": "#5B3A22",
+     "weight": 4
+    },
+    {
+     "hex": "#EFEAE1",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 45,
+    "motif_style": "wave",
+    "texture": "polished"
+   },
+   "prompt": {
+    "en": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs",
+    "zh": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs"
+   },
+   "seed": "5227210c8e55a832",
+   "source": "text",
+   "style": {
+    "intensity": 88,
+    "style_id": "heritage_ornate"
+   },
+   "title": {
+    "en": "Moon harbour cloud moulding table",
+    "zh": "月港云头线脚table"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0017",
+   "craft_facts": {
+    "cantilever": false,
+    "carve_depth_mm": 12.8,
+    "curve_radius_mm": 0,
+    "finish": "wax",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "mortise_tenon",
+     "dovetail"
+    ],
+    "leg_count": 4,
+    "load_kg": 60,
+    "outdoor": false,
+    "panel_thickness_mm": 25,
+    "span_mm": 798.26,
+    "species": "elm",
+    "tolerance_mm": 0.25,
+    "undercut": false,
+    "wood_moisture_pct": 11
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "cabinet",
+    "dimensions_mm": {
+     "x": 1026.34,
+     "y": 478.96,
+     "z": 2052.68
+    },
+    "variant": "two_door"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "hardwood",
+   "material": {
+    "finish": "wax",
+    "name": "elm"
+   },
+   "motif_ids": [
+    "MOT-HW-03"
+   ],
+   "palette": [
+    {
+     "hex": "#0F1A1F",
+     "weight": 55
+    },
+    {
+     "hex": "#2E6F7E",
+     "weight": 20
+    },
+    {
+     "hex": "#C9A227",
+     "weight": 12
+    },
+    {
+     "hex": "#D8DEE2",
+     "weight": 6
+    },
+    {
+     "hex": "#5B3A22",
+     "weight": 4
+    },
+    {
+     "hex": "#EFEAE1",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 45,
+    "motif_style": "wave",
+    "texture": "polished"
+   },
+   "prompt": {
+    "en": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs",
+    "zh": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs"
+   },
+   "seed": "7f8acd6bce2f601f",
+   "source": "text",
+   "style": {
+    "intensity": 76,
+    "style_id": "heritage_ornate"
+   },
+   "title": {
+    "en": "Tide line cloud moulding cabinet",
+    "zh": "潮汐云头线脚cabinet"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0018",
+   "craft_facts": {
+    "cantilever": false,
+    "carve_depth_mm": 0.0,
+    "curve_radius_mm": 0,
+    "finish": "matte",
+    "hardware_included": true,
+    "humidity_zone": "temperate",
+    "joint_types": [
+     "mortise_tenon"
+    ],
+    "leg_count": 4,
+    "load_kg": 90,
+    "outdoor": false,
+    "panel_thickness_mm": 40,
+    "span_mm": 1235.99,
+    "species": "oak",
+    "tolerance_mm": 0.2,
+    "undercut": false,
+    "wood_moisture_pct": 9
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "table",
+    "dimensions_mm": {
+     "x": 1573.08,
+     "y": 898.9,
+     "z": 842.72
+    },
+    "variant": "console"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "hardwood",
+   "material": {
+    "finish": "matte",
+    "name": "oak"
+   },
+   "motif_ids": [
+    "MOT-HW-02"
+   ],
+   "palette": [
+    {
+     "hex": "#0F1A1F",
+     "weight": 55
+    },
+    {
+     "hex": "#2E6F7E",
+     "weight": 20
+    },
+    {
+     "hex": "#C9A227",
+     "weight": 12
+    },
+    {
+     "hex": "#D8DEE2",
+     "weight": 6
+    },
+    {
+     "hex": "#5B3A22",
+     "weight": 4
+    },
+    {
+     "hex": "#EFEAE1",
+     "weight": 3
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 45,
+    "motif_style": "interlace",
+    "texture": "polished"
+   },
+   "prompt": {
+    "en": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs",
+    "zh": "a carved hardwood console for a boutique hotel lobby, tide and vine motifs"
+   },
+   "seed": "cfa6470eb1e748b5",
+   "source": "text",
+   "style": {
+    "intensity": 52,
+    "style_id": "heritage_ornate"
+   },
+   "title": {
+    "en": "Far sail interlace spandrel table",
+    "zh": "远帆缠枝挂落table"
+   }
+  }
+ ],
+ "counts": {
+  "concepts": 8,
+  "series_skus": 3
+ },
+ "generated_by_brief": {
+  "brief-hardwood": [
+   "DC-0015",
+   "DC-0016",
+   "DC-0017",
+   "DC-0018"
+  ],
+  "brief-jewelry": [
+   "DC-0011",
+   "DC-0012",
+   "DC-0013",
+   "DC-0014"
+  ]
+ },
+ "series": [
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0019",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 19.37,
+    "min_wall_thickness_mm": 1.1,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 19.37,
+     "y": 19.37,
+     "z": 1.53
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-05"
+   ],
+   "palette": [
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    },
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    },
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    },
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "openwork",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "33fdb22ce77ab669",
+   "series": {
+    "series_id": "series_dc_0011",
+    "sku_index": 1
+   },
+   "source": "text",
+   "style": {
+    "intensity": 42,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Cloud fret sea breeze vine ring (Small)",
+    "zh": "云雷海风藤ring·小号"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0020",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 22.01,
+    "min_wall_thickness_mm": 1.25,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 22.01,
+     "y": 22.01,
+     "z": 1.74
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-05"
+   ],
+   "palette": [
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    },
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    },
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    },
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "openwork",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "33fdb22ce77ab669",
+   "series": {
+    "series_id": "series_dc_0011",
+    "sku_index": 2
+   },
+   "source": "text",
+   "style": {
+    "intensity": 42,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Cloud fret sea breeze vine ring (Standard)",
+    "zh": "云雷海风藤ring·标准"
+   }
+  },
+  {
+   "asset_refs": [],
+   "concept_id": "DC-0021",
+   "craft_facts": {
+    "alloy": "18k_gold",
+    "chain_link_mm": 0,
+    "enamel": false,
+    "enamel_firing_c": 0,
+    "engraving_depth_mm": 0.09,
+    "hollow_cast": false,
+    "max_dimension_mm": 25.09,
+    "min_wall_thickness_mm": 1.42,
+    "prong_count": 4,
+    "prong_thickness_mm": 0.7,
+    "recessed_area": false,
+    "ring_size_mm": 54,
+    "setting_type": "prong",
+    "stone_count": 1,
+    "stone_size_mm": 4.2,
+    "surface_finish": "brushed",
+    "undercut": false
+   },
+   "created_at": "2026-10-23T00:00:00Z",
+   "created_by": "designer-01",
+   "form": {
+    "category": "ring",
+    "dimensions_mm": {
+     "x": 25.09,
+     "y": 25.09,
+     "z": 1.98
+    },
+    "variant": "solitaire"
+   },
+   "generator": {
+    "adapter": "offline_lexicon",
+    "deterministic": true,
+    "version": "1.0.0"
+   },
+   "industry": "jewelry",
+   "material": {
+    "finish": "brushed",
+    "name": "18k_gold"
+   },
+   "motif_ids": [
+    "MOT-JW-05"
+   ],
+   "palette": [
+    {
+     "hex": "#3E2A1A",
+     "weight": 6
+    },
+    {
+     "hex": "#A8794A",
+     "weight": 4
+    },
+    {
+     "hex": "#D9C9A6",
+     "weight": 3
+    },
+    {
+     "hex": "#8C5A1E",
+     "weight": 55
+    },
+    {
+     "hex": "#E0B25C",
+     "weight": 20
+    },
+    {
+     "hex": "#F6EDE3",
+     "weight": 12
+    }
+   ],
+   "preview": {
+    "gradient_angle_deg": 135,
+    "motif_style": "openwork",
+    "texture": "brushed"
+   },
+   "prompt": {
+    "en": "a coastal heritage pendant series for duty free retail, interlace and fret motifs",
+    "zh": "a coastal heritage pendant series for duty free retail, interlace and fret motifs"
+   },
+   "seed": "33fdb22ce77ab669",
+   "series": {
+    "series_id": "series_dc_0011",
+    "sku_index": 3
+   },
+   "source": "text",
+   "style": {
+    "intensity": 42,
+    "style_id": "coastal_minimal"
+   },
+   "title": {
+    "en": "Cloud fret sea breeze vine ring (Large)",
+    "zh": "云雷海风藤ring·大号"
+   }
+  }
+ ]
+}

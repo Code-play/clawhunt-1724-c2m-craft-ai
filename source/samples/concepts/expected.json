@@ -1,0 +1,211 @@
+{
+ "as_of": "2026-10-23T00:00:00Z",
+ "concepts": {
+  "DC-0001": {
+   "industry": "jewelry",
+   "title": {
+    "en": "Sea mist interlace ring",
+    "zh": "海雾缠枝戒"
+   },
+   "workshops": {
+    "WS-JW-A": {
+     "must_fail": [],
+     "verdict": "manufacturable"
+    },
+    "WS-JW-B": {
+     "must_fail": [],
+     "verdict": "manufacturable"
+    }
+   }
+  },
+  "DC-0002": {
+   "industry": "jewelry",
+   "title": {
+    "en": "Thin-wall large-stone pendant",
+    "zh": "薄壁大石吊坠"
+   },
+   "workshops": {
+    "WS-JW-A": {
+     "must_fail": [
+      "CAP-JW-A-01",
+      "JW-CAST-001",
+      "JW-SET-001"
+     ],
+     "verdict": "not_manufacturable"
+    },
+    "WS-JW-B": {
+     "must_fail": [
+      "CAP-JW-B-01",
+      "CAP-JW-B-02"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  },
+  "DC-0003": {
+   "industry": "jewelry",
+   "title": {
+    "en": "Thin hollow pendant with undercut",
+    "zh": "薄壁空心倒扣吊坠"
+   },
+   "workshops": {
+    "WS-JW-A": {
+     "must_fail": [],
+     "verdict": "conditionally_manufacturable"
+    },
+    "WS-JW-B": {
+     "must_fail": [
+      "CAP-JW-B-01"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  },
+  "DC-0004": {
+   "industry": "jewelry",
+   "title": {
+    "en": "Deep-chased enamel brooch",
+    "zh": "深錾珐琅胸针"
+   },
+   "workshops": {
+    "WS-JW-A": {
+     "must_fail": [],
+     "verdict": "conditionally_manufacturable"
+    },
+    "WS-JW-B": {
+     "must_fail": [
+      "CAP-JW-B-06"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  },
+  "DC-0005": {
+   "industry": "hardwood",
+   "title": {
+    "en": "Walnut fret armchair",
+    "zh": "胡桃木回纹扶手椅"
+   },
+   "workshops": {
+    "WS-HW-A": {
+     "must_fail": [],
+     "verdict": "manufacturable"
+    },
+    "WS-HW-B": {
+     "must_fail": [],
+     "verdict": "manufacturable"
+    }
+   }
+  },
+  "DC-0006": {
+   "industry": "hardwood",
+   "title": {
+    "en": "Three-millimetre cantilever shelf",
+    "zh": "三毫米悬臂板"
+   },
+   "workshops": {
+    "WS-HW-A": {
+     "must_fail": [
+      "CAP-HW-A-02",
+      "HW-JOIN-003",
+      "HW-FORM-001"
+     ],
+     "verdict": "not_manufacturable"
+    },
+    "WS-HW-B": {
+     "must_fail": [
+      "CAP-HW-B-02",
+      "HW-JOIN-003",
+      "HW-FORM-001"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  },
+  "DC-0007": {
+   "industry": "hardwood",
+   "title": {
+    "en": "Coastal high-gloss carved cabinet",
+    "zh": "沿海高光深雕柜"
+   },
+   "workshops": {
+    "WS-HW-A": {
+     "must_fail": [],
+     "verdict": "conditionally_manufacturable"
+    },
+    "WS-HW-B": {
+     "must_fail": [
+      "CAP-HW-B-01"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  },
+  "DC-0008": {
+   "industry": "hardwood",
+   "title": {
+    "en": "Outdoor pine screw-only chair",
+    "zh": "户外松木螺丝椅"
+   },
+   "workshops": {
+    "WS-HW-A": {
+     "must_fail": [
+      "HW-JOIN-002",
+      "HW-SURF-002"
+     ],
+     "verdict": "not_manufacturable"
+    },
+    "WS-HW-B": {
+     "must_fail": [
+      "CAP-HW-B-03",
+      "HW-JOIN-002",
+      "HW-SURF-002"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  },
+  "DC-0009": {
+   "industry": "hardwood",
+   "title": {
+    "en": "Wooden pendant concept",
+    "zh": "木质嵌坠概念"
+   },
+   "workshops": {
+    "WS-HW-A": {
+     "must_fail": [],
+     "verdict": "manufacturable"
+    },
+    "WS-HW-B": {
+     "must_fail": [],
+     "verdict": "manufacturable"
+    }
+   }
+  },
+  "DC-0010": {
+   "industry": "jewelry",
+   "title": {
+    "en": "The pendant in metal",
+    "zh": "木质嵌坠的金属版本"
+   },
+   "workshops": {
+    "WS-JW-A": {
+     "must_fail": [],
+     "verdict": "conditionally_manufacturable"
+    },
+    "WS-JW-B": {
+     "must_fail": [
+      "CAP-JW-B-01"
+     ],
+     "verdict": "not_manufacturable"
+    }
+   }
+  }
+ },
+ "counterexamples": [
+  "DC-0002",
+  "DC-0006",
+  "DC-0008"
+ ],
+ "note": "Expected verdicts were written by hand before running the engine; verification compares the engine output to this table."
+}

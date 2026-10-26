@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:edition",
+  "title": "Limited edition",
+  "description": "An artist x manufacturer collaboration: a fixed edition size, a numbering policy and the issued certificates. Closing an edition requires every number to be issued, so an edition cannot be silently over-sold.",
+  "type": "object",
+  "required": [
+    "edition_id",
+    "title",
+    "artist",
+    "manufacturer",
+    "concept_id",
+    "size",
+    "numbering",
+    "certificate",
+    "status",
+    "created_at"
+  ],
+  "properties": {
+    "edition_id": { "type": "string", "pattern": "^ED-[0-9]{4}$" },
+    "title": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+    "artist": {
+      "type": "object",
+      "required": ["artist_id", "name", "royalty_rate_bp"],
+      "properties": {
+        "artist_id": { "type": "string", "pattern": "^ARTIST-[A-Z0-9-]{2,20}$" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 60 },
+        "royalty_rate_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" }
+      },
+      "additionalProperties": false
+    },
+    "manufacturer": {
+      "type": "object",
+      "required": ["workshop_id", "name"],
+      "properties": {
+        "workshop_id": { "type": "string", "pattern": "^WS-[A-Z]{2}-[A-Z]$" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 80 }
+      },
+      "additionalProperties": false
+    },
+    "concept_id": { "type": "string", "pattern": "^DC-[0-9]{4}$" },
+    "size": { "type": "integer", "minimum": 1, "maximum": 999 },
+    "numbering": {
+      "type": "object",
+      "required": ["policy", "reserved", "issued"],
+      "properties": {
+        "policy": {
+          "type": "string",
+          "enum": ["sequential", "reserved_then_sequential"]
+        },
+        "reserved": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "integer", "minimum": 1, "maximum": 999 }
+        },
+        "issued": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["number", "collector_id", "order_id", "issued_at", "certificate_id"],
+            "properties": {
+              "number": { "type": "integer", "minimum": 1, "maximum": 999 },
+              "collector_id": { "type": "string", "pattern": "^COL-[0-9]{4}$" },
+              "order_id": { "type": "string", "pattern": "^ORD-[0-9]{4}$" },
+              "issued_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+              "certificate_id": { "type": "string", "minLength": 4, "maxLength": 60 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "certificate": {
+      "type": "object",
+      "required": ["template_ref", "hash_algorithm", "prefix"],
+      "properties": {
+        "template_ref": { "type": "string", "minLength": 3, "maxLength": 120 },
+        "hash_algorithm": { "type": "string", "enum": ["sha256"] },
+        "prefix": { "type": "string", "pattern": "^CERT-[A-Z0-9-]{2,20}$" }
+      },
+      "additionalProperties": false
+    },
+    "status": { "type": "string", "enum": ["draft", "open", "closed"] },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-EDITION-01"]
+}

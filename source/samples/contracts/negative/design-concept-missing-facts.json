@@ -1,0 +1,73 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0001",
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "ring",
+  "dimensions_mm": {
+   "x": 24.0,
+   "y": 24.0,
+   "z": 1.9
+  },
+  "variant": "solitaire"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "jewelry",
+ "material": {
+  "finish": "brushed",
+  "name": "18k_gold"
+ },
+ "motif_ids": [
+  "MOT-JW-01"
+ ],
+ "palette": [
+  {
+   "hex": "#C9A227",
+   "weight": 55
+  },
+  {
+   "hex": "#1F2A44",
+   "weight": 20
+  },
+  {
+   "hex": "#F2EFE9",
+   "weight": 12
+  },
+  {
+   "hex": "#8C6A45",
+   "weight": 6
+  },
+  {
+   "hex": "#2E6F7E",
+   "weight": 4
+  },
+  {
+   "hex": "#E8E4DA",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 135,
+  "motif_style": "interlace",
+  "texture": "brushed"
+ },
+ "prompt": {
+  "en": "An interlace-vine band ring for daily wear in 18K gold, made for the coastal industrial belt.",
+  "zh": "沿海产业带的缠枝纹素圈戒指，18K 金，日常佩戴。"
+ },
+ "seed": "7dbd30f371b50fb4",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "coastal_minimal"
+ },
+ "title": {
+  "en": "Sea mist interlace ring",
+  "zh": "海雾缠枝戒"
+ }
+}

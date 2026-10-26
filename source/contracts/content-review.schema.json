@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:content-review",
+  "title": "Content review record",
+  "description": "The review step every cultural IP artefact passes before it ships: a checklist with explicit verdicts, the reviewer and role, the authenticity block required by AIGC labelling, and the heritage check. The verdict is not free-form: the invariant ties it to the checklist, so an approval cannot hide a failed item.",
+  "type": "object",
+  "required": [
+    "review_id",
+    "subject",
+    "checklist",
+    "verdict",
+    "reviewer",
+    "authenticity",
+    "heritage_check",
+    "reviewed_at"
+  ],
+  "properties": {
+    "review_id": { "type": "string", "pattern": "^CRV-[0-9]{4}$" },
+    "subject": {
+      "type": "object",
+      "required": ["kind", "ref"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["character_bible", "visual_asset", "short_drama", "licence_document", "merch_spec", "site_page"]
+        },
+        "ref": { "type": "string", "minLength": 3, "maxLength": 60 }
+      },
+      "additionalProperties": false
+    },
+    "checklist": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["item_id", "requirement", "verdict"],
+        "properties": {
+          "item_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+          "requirement": { "type": "string", "minLength": 5, "maxLength": 200 },
+          "verdict": { "type": "string", "enum": ["pass", "fail", "not_applicable"] },
+          "note": { "type": "string", "minLength": 3, "maxLength": 220 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "verdict": { "type": "string", "enum": ["approved", "rejected", "changes_requested"] },
+    "reviewer": {
+      "type": "object",
+      "required": ["reviewer_id", "name", "role"],
+      "properties": {
+        "reviewer_id": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]{2,40}$" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 60 },
+        "role": { "type": "string", "enum": ["content_reviewer", "craft_advisor", "legal"] }
+      },
+      "additionalProperties": false
+    },
+    "authenticity": {
+      "type": "object",
+      "required": ["ai_generated", "label", "model_refs", "disclosure_required"],
+      "properties": {
+        "ai_generated": { "type": "boolean" },
+        "label": { "type": "string", "minLength": 5, "maxLength": 160 },
+        "model_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 3, "maxLength": 80 }
+        },
+        "disclosure_required": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "heritage_check": {
+      "type": "object",
+      "required": ["traditional_prototypes_referenced", "exclusive_claim", "note"],
+      "properties": {
+        "traditional_prototypes_referenced": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 3, "maxLength": 120 }
+        },
+        "exclusive_claim": { "type": "boolean" },
+        "note": { "type": "string", "minLength": 5, "maxLength": 240 }
+      },
+      "additionalProperties": false
+    },
+    "reviewed_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-CONTENT-01"]
+}

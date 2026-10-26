@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "note": "Three coordinated state machines. The main machine tracks the order pipeline; the refund and dispute machines are sub-states so a refund request never corrupts the production status. 'to' must be one of the declared states.",
+  "main": {
+    "initial": "draft",
+    "states": [
+      "draft",
+      "presale_open",
+      "paid",
+      "work_order_issued",
+      "dispatched",
+      "in_production",
+      "qc_passed",
+      "qc_failed",
+      "shipped",
+      "settled",
+      "disputed",
+      "refunded",
+      "closed"
+    ],
+    "terminal": ["settled", "refunded", "closed"],
+    "transitions": [
+      { "event": "presale_opened", "from": ["draft"], "to": "presale_open", "actors": ["designer", "system"] },
+      { "event": "payment_received", "from": ["presale_open"], "to": "paid", "actors": ["buyer", "system"] },
+      { "event": "work_order_issued", "from": ["paid"], "to": "work_order_issued", "actors": ["system", "factory"] },
+      { "event": "dispatched", "from": ["work_order_issued"], "to": "dispatched", "actors": ["factory", "system"] },
+      { "event": "production_started", "from": ["dispatched"], "to": "in_production", "actors": ["factory", "system"] },
+      { "event": "qc_passed", "from": ["in_production"], "to": "qc_passed", "actors": ["artisan", "factory", "system"] },
+      { "event": "qc_failed", "from": ["in_production"], "to": "qc_failed", "actors": ["artisan", "factory", "system"] },
+      { "event": "rework_started", "from": ["qc_failed", "disputed"], "to": "in_production", "actors": ["factory", "system"] },
+      { "event": "shipped", "from": ["qc_passed"], "to": "shipped", "actors": ["factory", "system"] },
+      { "event": "settled", "from": ["shipped"], "to": "settled", "actors": ["system", "platform"] },
+      { "event": "refunded", "from": ["paid", "work_order_issued", "dispatched", "in_production", "qc_failed", "qc_passed", "shipped"], "to": "refunded", "actors": ["system", "platform"] },
+      { "event": "dispute_opened", "from": ["paid", "work_order_issued", "dispatched", "in_production", "qc_passed", "qc_failed", "shipped"], "to": "disputed", "actors": ["buyer", "platform", "system"] },
+      { "event": "dispute_resolved_rework", "from": ["disputed"], "to": "in_production", "actors": ["platform", "system"] },
+      { "event": "dispute_resolved_refund", "from": ["disputed"], "to": "refunded", "actors": ["platform", "system"] },
+      { "event": "dispute_resolved_split", "from": ["disputed"], "to": "settled", "actors": ["platform", "system"] },
+      { "event": "closed", "from": ["settled"], "to": "closed", "actors": ["system", "platform"] }
+    ]
+  },
+  "refund": {
+    "initial": "none",
+    "states": ["none", "requested", "approved", "rejected", "refunded"],
+    "transitions": [
+      { "event": "refund_requested", "from": ["none"], "to": "requested", "actors": ["buyer", "system"] },
+      { "event": "refund_approved", "from": ["requested"], "to": "approved", "actors": ["platform", "system"] },
+      { "event": "refund_rejected", "from": ["requested"], "to": "rejected", "actors": ["platform", "system"] },
+      { "event": "refunded", "from": ["approved"], "to": "refunded", "actors": ["system", "platform"] }
+    ]
+  },
+  "dispute": {
+    "initial": "none",
+    "states": ["none", "open", "resolved_refund", "resolved_rework", "resolved_split"],
+    "transitions": [
+      { "event": "dispute_opened", "from": ["none"], "to": "open", "actors": ["buyer", "platform", "system"] },
+      { "event": "dispute_resolved_rework", "from": ["open"], "to": "resolved_rework", "actors": ["platform", "system"] },
+      { "event": "dispute_resolved_refund", "from": ["open"], "to": "resolved_refund", "actors": ["platform", "system"] },
+      { "event": "dispute_resolved_split", "from": ["open"], "to": "resolved_split", "actors": ["platform", "system"] }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0004",
+ "craft_facts": {
+  "alloy": "925_silver",
+  "chain_link_mm": 0,
+  "enamel": true,
+  "enamel_firing_c": 800,
+  "engraving_depth_mm": 0.45,
+  "hollow_cast": false,
+  "max_dimension_mm": 38,
+  "min_wall_thickness_mm": 1.4,
+  "prong_count": 0,
+  "prong_thickness_mm": 0,
+  "recessed_area": false,
+  "ring_size_mm": 0,
+  "setting_type": "pave",
+  "stone_count": 6,
+  "stone_size_mm": 1.5,
+  "surface_finish": "polished",
+  "undercut": false
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "brooch",
+  "dimensions_mm": {
+   "x": 38.0,
+   "y": 30.0,
+   "z": 3.0
+  },
+  "variant": "openwork"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "jewelry",
+ "material": {
+  "finish": "polished",
+  "name": "925_silver"
+ },
+ "motif_ids": [
+  "MOT-JW-05"
+ ],
+ "palette": [
+  {
+   "hex": "#3B5D50",
+   "weight": 55
+  },
+  {
+   "hex": "#8FA98C",
+   "weight": 20
+  },
+  {
+   "hex": "#EFEAE1",
+   "weight": 12
+  },
+  {
+   "hex": "#1B2A2E",
+   "weight": 6
+  },
+  {
+   "hex": "#6B4A2C",
+   "weight": 4
+  },
+  {
+   "hex": "#D8C7A8",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 160,
+  "motif_style": "openwork",
+  "texture": "polished"
+ },
+ "prompt": {
+  "en": "A silver brooch with 0.45 mm chasing and enamel fired at 800 C.",
+  "zh": "0.45 mm 錾刻配 800 摄氏度烧成珐琅的银胸针。"
+ },
+ "seed": "22a9ef870ab8f07c",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "court_contrast"
+ },
+ "title": {
+  "en": "Deep-chased enamel brooch",
+  "zh": "深錾珐琅胸针"
+ }
+}

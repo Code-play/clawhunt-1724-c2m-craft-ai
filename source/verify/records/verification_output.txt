@@ -1,0 +1,356 @@
+# Verification transcript
+
+- assertions: 289
+- passed: 289
+- failed: 0
+
+[verify] demo exit 0
+[verify] tests exit 0
+[verify] second demo exit 0
+
+== group A ==
+[A01] ok   twenty-three contracts registered
+[A02] ok   the registry is version 2.0.0 or later
+[A03] ok   every registry urn is loaded
+[A04] ok   all schema references resolve
+[A05] ok   reference count is substantial
+[A06] ok   all positive samples validate
+[A07] ok   positive sample count at least 42
+[A08] ok   every negative sample is rejected
+[A09] ok   negative rejection class matches expectation
+[A10] ok   negative sample count at least 31
+[A11] ok   declared invariants equal implemented ones
+[A12] ok   contract versions are semantic
+[A13] ok   registry covers every schema file
+[A14] ok   ledger event definition validates a well formed row
+
+== group B ==
+[B01] ok   missing licensing source is rejected
+[B02] ok   empty usage scope is rejected
+[B03] ok   exclusive claim on heritage is rejected
+[B04] ok   inverted licence window is rejected
+[B05] ok   expired licence window is rejected for a transaction
+[B06] ok   religious site exclusivity is rejected
+[B07] ok   invalid palette colour is rejected
+[B08] ok   a fully licensed asset is accepted
+[B09] ok   the accepted asset appears in the library
+[B10] ok   a duplicate asset is refused
+[B11] ok   expired asset reports an invalid licence state
+[B12] ok   all committed rejection payloads are refused
+
+== group C ==
+[C01] ok   jewelry rule count
+[C02] ok   hardwood rule count
+[C03] ok   total rule count
+[C04] ok   rule lint passes
+[C05] ok   rule lint has no errors
+[C06] ok   rule lint has no warnings
+[C07] ok   all twenty verdicts match the hand-written table
+[C08] ok   all expected blocking rules are present
+[C09] ok   every assessment validates against its contract
+[C10] ok   assessment count is twenty
+[C11] ok   three counterexamples are declared
+[C12] ok   each counterexample has at least one blocker
+[C13] ok   each counterexample has fix suggestions
+[C14] ok   every fix carries a machine readable change
+[C15] ok   every fix is bilingual
+[C16] ok   every rule id appears in the shipped rule documentation
+[C17] ok   workshop capability changes the verdict
+[C18] ok   the narrower workshop cites its capability rule
+[C19] ok   the same motif assessed in two industries differs
+[C20] ok   a concept with missing facts is not assessable
+[C21] ok   flagged failures request a craftsperson
+[C22] ok   an override with a short reason is refused
+[C23] ok   an override with a reason is recorded
+[C24] ok   the override changes the effective verdict
+[C25] ok   a confirmation keeps the verdict
+
+== group D ==
+[D01] ok   order total equals subtotal plus customisation fee
+[D02] ok   revenue shares sum to the total
+[D03] ok   deposit follows the configured rate
+[D04] ok   a new order validates against its contract
+[D05] ok   an illegal transition is refused
+[D06] ok   the happy path reaches settlement
+[D07] ok   a settlement exists for the settled order
+[D08] ok   settlement payouts sum to the settled total
+[D09] ok   settlement rates sum to 10000 basis points
+[D10] ok   settlement reconciliation delta is zero
+[D11] ok   payout amounts match an independent recomputation
+[D12] ok   a work order was issued
+[D13] ok   the work order has a bill of materials
+[D14] ok   the work order has a process route
+[D15] ok   the work order has quality checkpoints
+[D16] ok   the promised delivery is after creation
+[D17] ok   the work order validates against its contract
+[D18] ok   the ledger chain verifies
+[D19] ok   the settled order has nine ledger events
+[D20] ok   a concept that fails the rules cannot receive a work order
+[D21] ok   a non-manufacturable concept cannot even be quoted
+[D22] ok   a quality failure returns the order to qc_failed
+[D23] ok   rework moves the order back into production
+[D24] ok   a refund after payment is for the full amount
+[D25] ok   an executed refund closes the order as refunded
+[D26] ok   a refund after dispatch is capped at half
+[D27] ok   a dispute puts the order on hold
+[D28] ok   a split dispute settles the order
+[D29] ok   the split settlement only pays out the net amount
+[D30] ok   the split settlement records the refund
+[D31] ok   the dispatch board lists every order
+[D32] ok   the committed order trace has ledger events
+[D33] ok   the committed order trace covers three order ids
+
+== group E ==
+[E01] ok   the test command exits zero
+[E02] ok   the test run prints a summary line
+[E03] ok   all tests pass
+[E04] ok   the suite has at least one hundred tests
+[E05] ok   licensing validation is tested
+[E06] ok   manufacturability is tested
+[E07] ok   the order state machine is tested
+[E08] ok   revenue sharing is tested
+[E09] ok   the HTTP layer is tested
+
+== group F ==
+[F01] ok   every route appears in docs/api.md
+[F02] ok   the documented route count matches the live table
+[F03] ok   the README lists the five entry commands
+[F04] ok   every command named in the README exists
+[F05] ok   the README documents at least ten commands
+[F06] ok   the UI wires the optional model sidecar
+[F07] ok   the UI wires the text model
+[F08] ok   the README documents the model call record
+[F09] ok   the UI shows the model mode chip
+[F10] ok   the README documents the sidecar commands
+[F11] ok   no sidecar address leaks into the offline package
+[F12] ok   the UI wires the enterprise tab
+[F13] ok   the UI wires the IP studio tab
+[F14] ok   the UI draws visual assets from their recipes
+[F15] ok   the UI renders the CRM pipeline
+[F16] ok   the README documents milestones 3 and 4
+[F17] ok   the README lists the M3/M4 sample generator
+[F18] ok   the solution keeps the repository placeholder
+[F19] ok   the solution keeps the archive placeholder
+[F20] ok   the injected solution stays under the 10000 character limit
+[F21] ok   the injected solution is substantial
+[F22] ok   the delivery note covers every acceptance criterion
+[F23] ok   the architecture note maps every module
+[F24] ok   documentation exists: README.md
+[F25] ok   documentation exists: DELIVERY.md
+[F26] ok   documentation exists: SOLUTION.md
+[F27] ok   documentation exists: ARCHITECTURE.md
+[F28] ok   documentation exists: docs/data-contracts.md
+[F29] ok   documentation exists: docs/rule-modeling-plan.md
+[F30] ok   documentation exists: docs/rule-authoring-form.md
+[F31] ok   documentation exists: docs/requirements-matrix.md
+[F32] ok   documentation exists: docs/requirements-matrix.zh.md
+[F33] ok   documentation exists: docs/fde-handbook.md
+[F34] ok   documentation exists: docs/growth-playbook.md
+[F35] ok   documentation exists: docs/character-bible.md
+[F36] ok   documentation exists: docs/short-drama-workflow.md
+[F37] ok   documentation exists: docs/licensing-templates.md
+[F38] ok   documentation exists: docs/competition-ops-pack.md
+
+== group G ==
+[G01] ok   the demo command exits zero
+[G02] ok   two demo runs produce the same manifest
+[G03] ok   the manifest lists thirty-two artifacts plus itself
+[G04] ok   every manifest hash matches the committed artifact
+[G05] ok   the output directory holds twenty-two artifacts
+[G06] ok   the generated site holds nine pages and two crawler files
+[G07] ok   the generated pages cover three languages
+[G08] ok   every generated JSON artifact parses
+[G09] ok   the committed ledger verifies independently
+[G10] ok   the trace contains settled events
+[G11] ok   settled events carry payouts that sum to the settled amount
+[G12] ok   assessment facts hashes recompute independently
+[G13] ok   the assessment report still agrees with the expectation table
+[G14] ok   the trace covers refunds
+[G15] ok   the trace covers disputes
+[G16] ok   the package imports only the standard library
+[G17] ok   the package never reads the wall clock
+[G18] ok   the package has no network client
+[G19] ok   the delivery is marked as synthetic
+
+== group H ==
+[H01] ok   the requirement matrix is closed
+[H02] ok   the brief is decomposed into at least fifty items
+[H03] ok   every M1 item is implemented
+[H04] ok   entities are covered, partial and planned as expected
+[H05] ok   every M3 and M4 item is covered
+[H06] ok   all eleven acceptance criteria are declared
+[H07] ok   every acceptance criterion is referenced by an item
+[H08] ok   declared and computed acceptance coverage agree
+[H09] ok   the rendered matrix has one row per item
+[H10] ok   the Chinese matrix is rendered
+[H11] ok   every contract referenced by a requirement exists
+[H12] ok   every item points at a declared verification group
+[I01] ok   four workshops publish a capacity schedule
+[I02] ok   no day is booked beyond its capacity
+[I03] ok   every schedule validates against the contract
+[I04] ok   the candidate option catalogue covers both industries
+[I05] ok   the catalogue publishes options and conflicts
+[I06] ok   customisation deltas recompute from the catalogue
+[I07] ok   the applied choice is bound to a derived concept
+[I08] ok   the customisation choice validates against the contract
+[I09] ok   the edition issues no more numbers than its size
+[I10] ok   the certificate hash recomputes from the piece identity
+[I11] ok   the collector provenance chain is continuous
+[I12] ok   the collector record validates against the contract
+[I13] ok   every order carries a promise later than the order time
+[I14] ok   a settlement carries per-asset royalty lines
+[I15] ok   royalty lines sum to the IP share
+[I16] ok   each royalty line keeps its asset rate
+[I17] ok   the quality report holds both a pass and a failure
+[I18] ok   every recorded defect comes from the taxonomy
+[I19] ok   no pass carries a major or critical defect
+[I20] ok   measurement limits bracket their values
+[I21] ok   the dispute cites a quality record that exists
+[I22] ok   the dispute resolves with a note and keeps its evidence
+
+== group J ==
+[J01] ok   ten reusable components are registered
+[J02] ok   every registered component validates against its contract
+[J03] ok   every component configuration path exists
+[J04] ok   component dependencies are declared by id
+[J05] ok   two enterprise profiles are assembled
+[J06] ok   both assemblies are ready
+[J07] ok   every populated profile validates
+[J08] ok   the switch covers two industries on two profiles
+[J09] ok   the switch proves zero code changes
+[J10] ok   the profiles share at least fifteen capabilities
+[J11] ok   the FDE checklist has twelve items
+[J12] ok   readiness is derived from the checklist
+[J13] ok   blocking items keep the deployment in pilot
+[J14] ok   the profile maps its data boundaries
+[J15] ok   the profile declares its deployment posture
+[J16] ok   the site generates nine pages
+[J17] ok   the site covers three languages
+[J18] ok   the site validates against its contract
+[J19] ok   every page links every language
+[J20] ok   canonical paths follow the language
+[J21] ok   the SEO audit is clean
+[J22] ok   the auditor detects a stripped description
+[J23] ok   the demo writes nine pages plus two crawler files
+[J24] ok   the sitemap lists every page
+[J25] ok   the robots file points at the sitemap
+[J26] ok   the demo drives three inquiries
+[J27] ok   the pipeline has the six stages
+[J28] ok   the loop closes with won, contacted and lost leads
+[J29] ok   one lead carries a quote
+[J30] ok   the quoted value reconciles
+[J31] ok   every lead validates against its contract
+[J32] ok   lead scores recompute from their factors
+[J33] ok   no lead breaches its first response SLA
+[J34] ok   follow-ups are scheduled in due order
+[J35] ok   the last CRM event opens the current stage
+
+== group K ==
+[K01] ok   the character bible validates
+[K02] ok   the bible holds two guardians
+[K03] ok   the guardians use distinct elements
+[K04] ok   every guardian cites a content review
+[K05] ok   every guardian has a three beat arc
+[K06] ok   heritage references are never exclusive
+[K07] ok   the visual library holds twenty-two assets
+[K08] ok   the library covers every asset kind
+[K09] ok   every asset validates against its contract
+[K10] ok   every asset checksum recomputes from its recipe
+[K11] ok   every drawing layer carries valid geometry
+[K12] ok   every asset is labelled and approved
+[K13] ok   the short drama validates
+[K14] ok   the drama has five scenes and ten beats
+[K15] ok   the storyboard has one frame per beat
+[K16] ok   the cut is sixty-seven seconds
+[K17] ok   the edit decision list has continuous timecodes
+[K18] ok   the subtitle track has twelve lines
+[K19] ok   subtitles never overlap and stay inside the cut
+[K20] ok   the drama review is approved with a review reference
+[K21] ok   the licence package validates
+[K22] ok   the licence set holds five documents, four signed
+[K23] ok   every signed document has both parties
+[K24] ok   every derivative category has a signed document
+[K25] ok   every licence document carries a checksum
+[K26] ok   four merchandise specifications are delivered
+[K27] ok   every merchandise specification validates
+[K28] ok   the specifications cover the four derivative categories
+[K29] ok   every specification carries the authenticity label
+[K30] ok   nine content reviews are recorded
+[K31] ok   every content review validates
+[K32] ok   every review carries the AIGC authenticity block
+[K33] ok   approved reviews carry no failed checklist item
+[K34] ok   the sample reel holds one frame per storyboard frame
+[K35] ok   the reel is self contained
+[K36] ok   the reel carries the authenticity label
+[K37] ok   the reel shows the cut timecodes
+[K38] ok   the reel stays a reasonable artifact size
+[G20] ok   smoke: GET /api/health succeeds
+[G21] ok   smoke: GET /api/spec succeeds
+[G22] ok   smoke: GET /api/i18n succeeds
+[G23] ok   smoke: GET /api/industries succeeds
+[G24] ok   smoke: GET /api/rules succeeds
+[G25] ok   smoke: GET /api/rules/JW-CAST-001 succeeds
+[G26] ok   smoke: GET /api/library/search?q=interlace succeeds
+[G27] ok   smoke: GET /api/library/PA-JW-0001 succeeds
+[G28] ok   smoke: GET /api/concepts succeeds
+[G29] ok   smoke: GET /api/concepts/DC-0001 succeeds
+[G30] ok   smoke: GET /api/assessments succeeds
+[G31] ok   smoke: GET /api/reviews/queue succeeds
+[G32] ok   smoke: GET /api/orders succeeds
+[G33] ok   smoke: GET /api/dispatch/board succeeds
+[G34] ok   smoke: GET /api/enterprise succeeds
+[G35] ok   smoke: GET /api/enterprise/switch succeeds
+[G36] ok   smoke: GET /api/growth/site succeeds
+[G37] ok   smoke: GET /api/growth/crm succeeds
+[G38] ok   smoke: GET /api/ip succeeds
+[G39] ok   smoke: the prototype page is served
+[G40] ok   smoke: concept generation works over HTTP
+[G41] ok   smoke: assessment returns a blocked verdict
+[G42] ok   smoke: the licensing gate answers 422 over HTTP
+[G43] ok   smoke: an inquiry becomes a scored lead
+[G44] ok   smoke: the lead moves one stage
+[G45] ok   smoke: GET /en serves the generated artifact
+[G46] ok   smoke: GET /zh/collection serves the generated artifact
+[G47] ok   smoke: GET /reel serves the generated artifact
+[G48] ok   smoke: GET /sitemap.xml serves the generated artifact
+[G49] ok   smoke: an order can be created over HTTP
+[G50] ok   smoke: an illegal transition answers 409
+[G51] ok   smoke: the order ledger is readable
+
+== http smoke ==
+server ready on http://127.0.0.1:58688
+GET /api/health -> 200 ({"data": {"as_of": "2026-10-23T00:00:00Z", "status": "ok", ")
+GET /api/spec -> 200 ({"data": {"as_of": "2026-10-23T00:00:00Z", "client_materials)
+GET /api/i18n -> 200 ({"data": {"language": "en", "strings": {"en": {"app.asof": ")
+GET /api/industries -> 200 ({"data": {"industries": [{"categories": ["chair", "table", ")
+GET /api/rules -> 200 ({"data": {"count": 32, "rules": [{"has_fix": true, "industry)
+GET /api/rules/JW-CAST-001 -> 200 ({"data": {"condition": {"all": [{"fact": "min_wall_thickness)
+GET /api/library/search?q=interlace -> 200 ({"data": {"count": 2, "results": [{"asset": {"asset_id": "PA)
+GET /api/library/PA-JW-0001 -> 200 ({"data": {"asset": {"asset_id": "PA-JW-0001", "created_at": )
+GET /api/concepts -> 200 ({"data": {"concepts": [{"category": "ring", "concept_id": "D)
+GET /api/concepts/DC-0001 -> 200 ({"data": {"concept": {"asset_refs": [], "concept_id": "DC-00)
+GET /api/assessments -> 200 ({"data": {"assessments": [{"artisan": {"decided_at": null, ")
+GET /api/reviews/queue -> 200 ({"data": {"items": [{"assessment_id": "MA-0001", "auto_verdi)
+GET /api/orders -> 200 ({"data": {"orders": [{"amounts": {"customization_fee_cents":)
+GET /api/dispatch/board -> 200 ({"data": {"board": [{"concept_id": "DC-0001", "customization)
+GET /api/enterprise -> 200 ({"data": {"fde": {"blocking_open": [{"item_id": "operator_tr)
+GET /api/enterprise/switch -> 200 ({"data": {"capabilities_industry_specific": {"hardwood": [],)
+GET /api/growth/site -> 200 ({"data": {"site": {"brand": {"en": "Harbour Jewellery Studio)
+GET /api/growth/crm -> 200 ({"data": {"inquiries": [{"contact": {"channel": "site_form",)
+GET /api/ip -> 200 ({"data": {"asset_summary": {"ai_assisted": 22, "approved": 2)
+GET / -> 200
+POST /api/workstation/generate -> 200
+POST /api/assess -> 200
+POST /api/library/ingest (invalid) -> 422
+POST /api/growth/inquiry -> 200
+POST /api/growth/inquiries/INQ-0006/advance -> 200
+GET /en -> 200
+GET /zh/collection -> 200
+GET /reel -> 200
+GET /sitemap.xml -> 200
+POST /api/orders -> 200
+POST /api/orders/ORD-0006/advance presale_opened -> 200
+POST /api/orders/ORD-0006/advance payment_received -> 200
+POST /api/orders/ORD-0006/advance settled -> 409
+GET /api/orders/ORD-0006 -> 200
+server stopped

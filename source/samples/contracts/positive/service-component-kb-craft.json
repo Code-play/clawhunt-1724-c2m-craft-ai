@@ -1,0 +1,37 @@
+{
+ "capabilities": [
+  "rules.explain",
+  "library.search"
+ ],
+ "component_id": "kb_craft",
+ "config_ref": "config/craft_rules",
+ "contracts": [
+  "manufacturability_assessment",
+  "pattern_asset"
+ ],
+ "data_boundary": {
+  "cross_border": false,
+  "personal_data": false,
+  "retention_days": 0,
+  "stores": [
+   "craft_rules",
+   "library"
+  ]
+ },
+ "depends_on": [],
+ "enabled_by_default": true,
+ "industries": [
+  "jewelry",
+  "hardwood"
+ ],
+ "kind": "knowledge_base",
+ "maturity": "verified",
+ "name": {
+  "en": "Craft knowledge base",
+  "zh": "工艺知识库"
+ },
+ "summary": {
+  "en": "Searchable base of craft rules, workshop capability envelopes and licensed patterns for both industries; answers whether a design can be made, where it fails and what to change.",
+  "zh": "把珠宝与硬木两套工艺规则、设备能力包和已授权纹样库做成可检索的知识底座，回答“能不能做、哪里不能做、怎么改”。"
+ }
+}

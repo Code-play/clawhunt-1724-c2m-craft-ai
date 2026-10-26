@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:service-component",
+  "title": "Reusable service component",
+  "description": "One entry of the enterprise service layer component registry. A component declares the industries it serves, the capabilities it contributes, the contracts it reads, the components it depends on and the data it touches. Configuring an enterprise is then a matter of selecting components in an enterprise profile, not writing new code per industry.",
+  "type": "object",
+  "required": [
+    "component_id",
+    "name",
+    "kind",
+    "industries",
+    "capabilities",
+    "config_ref",
+    "contracts",
+    "depends_on",
+    "enabled_by_default",
+    "data_boundary",
+    "maturity",
+    "summary"
+  ],
+  "properties": {
+    "component_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+    "name": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "knowledge_base",
+        "agent",
+        "workflow",
+        "scenario_showcase",
+        "crm",
+        "growth",
+        "commerce",
+        "analytics"
+      ]
+    },
+    "industries": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "urn:c2m:contract:common#/$defs/industry" }
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9_.-]{2,48}$" }
+    },
+    "config_ref": { "type": "string", "pattern": "^config/[A-Za-z0-9_./-]+$" },
+    "contracts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]{2,40}$" }
+    },
+    "depends_on": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "urn:c2m:contract:common#/$defs/slug" }
+    },
+    "enabled_by_default": { "type": "boolean" },
+    "data_boundary": {
+      "type": "object",
+      "required": ["stores", "personal_data", "retention_days", "cross_border"],
+      "properties": {
+        "stores": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["library", "orders", "craft_rules", "media", "crm", "analytics", "content"]
+          }
+        },
+        "personal_data": { "type": "boolean" },
+        "retention_days": { "type": "integer", "minimum": 0, "maximum": 3650 },
+        "cross_border": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "maturity": { "type": "string", "enum": ["prototype", "configured", "verified"] },
+    "summary": { "$ref": "urn:c2m:contract:common#/$defs/long_i18n_text" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-COMP-01"]
+}

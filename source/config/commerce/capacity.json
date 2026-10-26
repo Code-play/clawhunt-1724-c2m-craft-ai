@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "horizon_days": 60,
+  "note": "Deterministic capacity model. A working day offers capacity_per_day_minutes; setup_time is charged once per order. Existing work orders book their minutes backwards from their promised delivery, so a new quote fills the remaining capacity forwards.",
+  "workshops": {
+    "WS-JW-A": { "capacity_per_day_minutes": 420, "working_days": [1, 2, 3, 4, 5], "setup_minutes": 45 },
+    "WS-JW-B": { "capacity_per_day_minutes": 360, "working_days": [1, 2, 3, 4, 5, 6], "setup_minutes": 30 },
+    "WS-HW-A": { "capacity_per_day_minutes": 480, "working_days": [1, 2, 3, 4, 5], "setup_minutes": 90 },
+    "WS-HW-B": { "capacity_per_day_minutes": 420, "working_days": [1, 2, 3, 4, 5, 6], "setup_minutes": 60 }
+  },
+  "ready_time": "18:00:00",
+  "request_lead_time_days": 10,
+  "fallback_lead_time_bonus_days": 5
+}

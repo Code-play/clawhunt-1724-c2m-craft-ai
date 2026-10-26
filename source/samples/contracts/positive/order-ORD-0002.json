@@ -1,0 +1,68 @@
+{
+ "amounts": {
+  "customization_fee_cents": 13000,
+  "deposit_cents": 19500,
+  "designer_share_cents": 9750,
+  "factory_share_cents": 39000,
+  "ip_share_cents": 6500,
+  "platform_fee_cents": 9750,
+  "subtotal_cents": 52000,
+  "total_cents": 65000
+ },
+ "buyer": {
+  "id": "buyer-01",
+  "locale": "en"
+ },
+ "created_at": "2026-10-23T00:09:00Z",
+ "currency": "USD",
+ "deadline_at": "2026-11-22T00:09:00Z",
+ "dispute": {
+  "opened_at": null,
+  "qc_record_ids": [],
+  "reason": null,
+  "resolution_note": null,
+  "resolved_at": null,
+  "status": "none"
+ },
+ "items": [
+  {
+   "asset_license_ids": [],
+   "concept_id": "DC-0005",
+   "customization_id": null,
+   "customizations": [],
+   "edition_id": null,
+   "edition_number": null,
+   "item_id": "ITM-0001",
+   "quantity": 1,
+   "title": {
+    "en": "Walnut fret armchair",
+    "zh": "胡桃木回纹扶手椅"
+   },
+   "unit_price_cents": 52000,
+   "work_order_id": null
+  }
+ ],
+ "model": "designer_presale",
+ "order_id": "ORD-0002",
+ "promise": {
+  "alternatives": [
+   {
+    "promised_delivery_at": "2026-11-02T18:00:00Z",
+    "workshop_id": "WS-HW-B"
+   }
+  ],
+  "promised_delivery_at": "2026-11-02T18:00:00Z",
+  "slot_id": "SLOT-0002",
+  "working_minutes": 446,
+  "workshop_id": "WS-HW-A"
+ },
+ "refund": {
+  "amount_cents": 65000,
+  "decided_at": "2026-10-23T00:14:00Z",
+  "reason": "The collector moved the commission to another quarter.",
+  "requested_at": "2026-10-23T00:12:00Z",
+  "status": "refunded"
+ },
+ "status": "refunded",
+ "updated_at": "2026-10-23T00:14:00Z"
+}

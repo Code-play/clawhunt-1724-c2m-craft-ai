@@ -1,0 +1,198 @@
+{
+ "asset_id": "VA-MU-TURN-FRONT",
+ "character_id": "CHR-MU",
+ "checksum": "fcabd6070b273d631805b20f103e198c80ee15ea9a80b6a3146fb7376faa2a5d",
+ "created_at": "2026-10-18T00:00:00Z",
+ "kind": "turnaround",
+ "recipe": {
+  "background": "#F7F3EA",
+  "layers": [
+   {
+    "closed": true,
+    "fill": "#F7F3EA",
+    "geometry": [
+     0.0,
+     0.0,
+     768.0,
+     1024.0
+    ],
+    "layer_id": "paper",
+    "opacity_bp": 10000,
+    "shape": "rect",
+    "stroke": "#F7F3EA",
+    "stroke_width": 0
+   },
+   {
+    "closed": true,
+    "fill": "#E7D8B8",
+    "geometry": [
+     0.0,
+     880.0,
+     768.0,
+     144.0
+    ],
+    "layer_id": "ground",
+    "opacity_bp": 10000,
+    "shape": "rect",
+    "stroke": "#F7F3EA",
+    "stroke_width": 0
+   },
+   {
+    "closed": true,
+    "fill": "#3F5B43",
+    "geometry": [
+     384.0,
+     226.0,
+     648.0,
+     900.0,
+     120.0,
+     900.0
+    ],
+    "layer_id": "cloak",
+    "opacity_bp": 10000,
+    "shape": "polygon",
+    "stroke": "#1F2A44",
+    "stroke_width": 6
+   },
+   {
+    "closed": true,
+    "fill": "#8C6A3F",
+    "geometry": [
+     384.0,
+     336.0,
+     226.0,
+     72.0
+    ],
+    "layer_id": "shoulders",
+    "opacity_bp": 10000,
+    "shape": "ellipse",
+    "stroke": "#1F2A44",
+    "stroke_width": 4
+   },
+   {
+    "closed": true,
+    "fill": "#E7D8B8",
+    "geometry": [
+     384.0,
+     168.0,
+     80.0
+    ],
+    "layer_id": "head",
+    "opacity_bp": 10000,
+    "shape": "circle",
+    "stroke": "#1F2A44",
+    "stroke_width": 4
+   },
+   {
+    "closed": true,
+    "fill": "#C9A227",
+    "geometry": [
+     176.0,
+     604.0,
+     416.0,
+     56.0
+    ],
+    "layer_id": "motif_band",
+    "opacity_bp": 10000,
+    "shape": "rect",
+    "stroke": "#1F2A44",
+    "stroke_width": 3
+   },
+   {
+    "closed": true,
+    "fill": "#1F2A44",
+    "geometry": [
+     128.0,
+     856.0,
+     512.0,
+     44.0
+    ],
+    "layer_id": "hem",
+    "opacity_bp": 10000,
+    "shape": "rect",
+    "stroke": "#1F2A44",
+    "stroke_width": 2
+   },
+   {
+    "closed": true,
+    "fill": "#3F5B43",
+    "geometry": [
+     150.0,
+     372.0,
+     126.0,
+     700.0,
+     232.0,
+     664.0,
+     296.0,
+     420.0
+    ],
+    "layer_id": "sleeve",
+    "opacity_bp": 10000,
+    "shape": "path",
+    "stroke": "#1F2A44",
+    "stroke_width": 4
+   },
+   {
+    "closed": true,
+    "fill": "#1F2A44",
+    "geometry": [
+     348.0,
+     154.0,
+     12.0
+    ],
+    "layer_id": "eye_left",
+    "opacity_bp": 10000,
+    "shape": "circle",
+    "stroke": "#1F2A44",
+    "stroke_width": 0
+   },
+   {
+    "closed": true,
+    "fill": "#1F2A44",
+    "geometry": [
+     420.0,
+     154.0,
+     12.0
+    ],
+    "layer_id": "eye_right",
+    "opacity_bp": 10000,
+    "shape": "circle",
+    "stroke": "#1F2A44",
+    "stroke_width": 0
+   },
+   {
+    "closed": false,
+    "fill": "#1F2A44",
+    "geometry": [
+     356.0,
+     214.0,
+     412.0,
+     214.0
+    ],
+    "layer_id": "mouth",
+    "opacity_bp": 10000,
+    "shape": "line",
+    "stroke": "#1F2A44",
+    "stroke_width": 4
+   }
+  ]
+ },
+ "resolution": {
+  "height": 1024,
+  "width": 768
+ },
+ "review": {
+  "reviewed_at": "2026-10-18T00:00:00Z",
+  "reviewer": "Content review desk",
+  "status": "approved"
+ },
+ "source": {
+  "ai_assisted": true,
+  "authenticity_label": "Original character, self-produced concept data, AI-assisted draft reviewed by a human content reviewer.",
+  "model_refs": [
+   "qwen-image-3.0 (offline stub in the repository)"
+  ],
+  "sourcing": "self_produced"
+ },
+ "view_or_name": "front"
+}

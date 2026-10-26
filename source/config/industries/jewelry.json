@@ -1,0 +1,75 @@
+{
+  "industry": "jewelry",
+  "version": "1.0.0",
+  "title": { "zh": "黄金珠宝", "en": "Gold and jewelry" },
+  "categories": ["ring", "pendant", "brooch"],
+  "default_workshop": "WS-JW-A",
+  "material_pool": ["18k_gold", "22k_gold", "925_silver", "pt950"],
+  "finish_pool": ["polished", "brushed", "sandblasted", "mirror"],
+  "bom": [
+    {
+      "material": "casting_grain",
+      "spec": "alloy grain matched to the declared karat",
+      "unit": "g",
+      "base": 1.8,
+      "driver": "max_dimension_mm",
+      "driver_rate": 0.11,
+      "unit_cost_cents": 5200
+    },
+    {
+      "material": "setting_labor",
+      "spec": "hand setting minutes including prong forming",
+      "unit": "piece",
+      "base": 0.0,
+      "driver": "stone_count",
+      "driver_rate": 1.0,
+      "unit_cost_cents": 900
+    },
+    {
+      "material": "finishing_compound",
+      "spec": "polishing and surface treatment",
+      "unit": "ml",
+      "base": 4.0,
+      "driver": "max_dimension_mm",
+      "driver_rate": 0.05,
+      "unit_cost_cents": 120
+    }
+  ],
+  "process_route": [
+    {
+      "process": "design_review",
+      "name": { "zh": "设计评审", "en": "Design review" },
+      "est_minutes": 30,
+      "driver": null,
+      "driver_rate": 0
+    },
+    {
+      "process": "casting",
+      "name": { "zh": "铸造", "en": "Casting" },
+      "est_minutes": 45,
+      "driver": "max_dimension_mm",
+      "driver_rate": 0.6
+    },
+    {
+      "process": "setting",
+      "name": { "zh": "镶嵌", "en": "Stone setting" },
+      "est_minutes": 20,
+      "driver": "stone_count",
+      "driver_rate": 12
+    },
+    {
+      "process": "chasing",
+      "name": { "zh": "錾刻", "en": "Chasing" },
+      "est_minutes": 15,
+      "driver": "engraving_depth_mm",
+      "driver_rate": 90
+    },
+    {
+      "process": "polishing",
+      "name": { "zh": "抛光", "en": "Polishing" },
+      "est_minutes": 25,
+      "driver": "max_dimension_mm",
+      "driver_rate": 0.4
+    }
+  ]
+}

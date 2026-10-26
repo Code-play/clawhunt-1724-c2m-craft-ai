@@ -1,0 +1,93 @@
+{
+  "workshop_id": "WS-HW-A",
+  "name": { "zh": "木作一厂（大件）", "en": "Woodworking works A (large format)" },
+  "industry": "hardwood",
+  "version": "1.0.0",
+  "lead_time_days": 35,
+  "equipment": [
+    { "equipment_id": "EQ-HW-JOIN-A", "name": { "zh": "榫卯加工中心", "en": "Joinery machining centre" }, "process": "joinery", "capacity_per_day": 12 },
+    { "equipment_id": "EQ-HW-CARVE-A", "name": { "zh": "五轴雕刻机", "en": "Five-axis carving centre" }, "process": "carving", "capacity_per_day": 6 },
+    { "equipment_id": "EQ-HW-ASM-A", "name": { "zh": "装配区", "en": "Assembly bay" }, "process": "assembly", "capacity_per_day": 8 },
+    { "equipment_id": "EQ-HW-SURF-A", "name": { "zh": "涂装房", "en": "Finishing room" }, "process": "surface_treatment", "capacity_per_day": 10 },
+    { "equipment_id": "EQ-HW-QC-A", "name": { "zh": "品控台", "en": "Quality bench" }, "process": "quality_check", "capacity_per_day": 15 }
+  ],
+  "capability_checks": [
+    {
+      "capability_id": "CAP-HW-A-01",
+      "fact": "carve_depth_mm",
+      "op": "gt",
+      "value": 12,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "超出本厂雕刻行程", "en": "Above this workshop's carving travel" },
+      "reason": {
+        "zh": "本厂主轴 Z 行程对应最大雕深 12 mm，来料 {carve_depth_mm} mm 超限。",
+        "en": "The spindle travel allows 12 mm of carve depth; the submitted {carve_depth_mm} mm exceeds it."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "把雕深降到 10 mm 以内，或改用拼雕分层做法。", "en": "Reduce carve depth below 10 mm, or carve in laminated layers." },
+          "suggested_change": { "carve_depth_mm": 10 }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-HW-A-02",
+      "fact": "span_mm",
+      "op": "gt",
+      "value": 1200,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "超出本厂跨度上限", "en": "Above this workshop's span limit" },
+      "reason": {
+        "zh": "本厂干燥窑与夹具支持 1200 mm 跨度，来料 {span_mm} mm 需要分段。",
+        "en": "Kiln and clamps support a 1200 mm span; {span_mm} mm needs segmentation."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "分为两段并在现场拼装，或改用纵向支撑。", "en": "Split into two sections for site assembly, or add longitudinal support." },
+          "suggested_change": { "span_mm": 1200 }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-HW-A-03",
+      "fact": "wood_moisture_pct",
+      "op": "gt",
+      "value": 14,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "含水率超出本厂干燥能力", "en": "Moisture above this workshop's kiln" },
+      "reason": {
+        "zh": "本厂二次干燥可降到 14% 以下，来料 {wood_moisture_pct}% 无法在交期内稳定。",
+        "en": "Secondary drying reaches 14%; {wood_moisture_pct}% cannot stabilise within the lead time."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用含水率 12% 以下的坯料，延长干燥期。", "en": "Supply blanks at or below 12% moisture and extend the drying window." },
+          "suggested_change": { "wood_moisture_pct": 10 }
+        }
+      ]
+    }
+  ],
+  "qc_checkpoints": [
+    {
+      "checkpoint_id": "QC-01",
+      "name": { "zh": "榫卯配合", "en": "Joinery fit" },
+      "method": "feeler gauge plus dry assembly",
+      "pass_criteria": "gap at or below the declared tolerance, no forced assembly"
+    },
+    {
+      "checkpoint_id": "QC-02",
+      "name": { "zh": "载荷与稳定性", "en": "Load and stability" },
+      "method": "static load test at 1.5x rated load for 24 hours",
+      "pass_criteria": "no permanent deflection above 2 mm, no creaking under load"
+    },
+    {
+      "checkpoint_id": "QC-03",
+      "name": { "zh": "含水率与涂装", "en": "Moisture and finish" },
+      "method": "pin meter at six points, visual finish inspection",
+      "pass_criteria": "8-12% moisture, uniform film thickness, no sanding marks"
+    }
+  ]
+}

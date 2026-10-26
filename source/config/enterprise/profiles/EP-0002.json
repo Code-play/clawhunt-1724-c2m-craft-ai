@@ -1,0 +1,57 @@
+{
+ "profile_id": "EP-0002",
+ "enterprise": {
+  "name": "Ridge Woodcraft Cooperative (synthetic)",
+  "industry": "hardwood",
+  "size": "small",
+  "region": "Inland mountain belt"
+ },
+ "components": [
+  {"component_id": "kb_craft", "kind": "knowledge_base", "enabled": true, "config": {"collections": ["craft_rules"], "language": "en"}},
+  {"component_id": "agent_quote", "kind": "agent", "enabled": true, "config": {"max_turns": 4, "tools": ["rules.explain"]}},
+  {"component_id": "wf_dispatch", "kind": "workflow", "enabled": true, "config": {"steps": ["assess", "issue_work_order"], "trigger": "order.paid"}},
+  {"component_id": "wf_capacity", "kind": "workflow", "enabled": false, "config": {"calendar": "off"}},
+  {"component_id": "wf_quality", "kind": "workflow", "enabled": true, "config": {"sampling": "aql", "dispute_evidence": true}},
+  {"component_id": "crm_leads", "kind": "crm", "enabled": true, "config": {"mode": "pilot", "retention_days": 365}},
+  {"component_id": "site_composer", "kind": "growth", "enabled": true, "config": {"site_id": "SITE-HW-01", "languages": ["en", "zh", "de"]}},
+  {"component_id": "seo_auditor", "kind": "growth", "enabled": true, "config": {"min_score_bp": 7500, "check_structured_data": true}},
+  {"component_id": "ip_studio", "kind": "scenario_showcase", "enabled": true, "config": {"bible_id": "IPB-0001", "drama_id": "SDR-0001"}},
+  {"component_id": "ip_licensing", "kind": "commerce", "enabled": true, "config": {"license_id": "IPL-0001", "derivative_categories": 2}}
+ ],
+ "locale": {"primary": "en", "secondary": ["zh", "de"]},
+ "channels": {"site": true, "seo": true, "crm": true},
+ "sla": {"first_response_hours": 12, "delivery_days": 35},
+ "fde": {
+  "fde_id": "FDE-HW-02",
+  "handbook_ref": "docs/fde-handbook.md#on-site-delivery",
+  "go_live_checklist": [
+   "interview notes signed off by the cooperative",
+   "woodworking rules reviewed by the lead craftsperson",
+   "licence list attached to every pattern asset",
+   "inquiry to CRM loop rehearsed with the cooperative desk",
+   "operator training delivered in the local language"
+  ]
+ },
+ "growth": {
+  "site_id": "SITE-HW-01",
+  "languages": ["en", "zh", "de"],
+  "crm_pipeline": ["new", "qualified", "contacted", "quoted", "won", "lost"]
+ },
+ "data_boundaries": {
+  "stores": [
+   {"store_id": "store_craft_rules", "kind": "craft_rules", "region": "CN", "personal_data": false},
+   {"store_id": "store_orders", "kind": "orders", "region": "CN", "personal_data": true},
+   {"store_id": "store_crm", "kind": "crm", "region": "CN", "personal_data": true},
+   {"store_id": "store_content", "kind": "content", "region": "CN", "personal_data": false}
+  ],
+  "cross_border": true,
+  "dpa_ref": "docs/fde-handbook.md#data-boundary-map"
+ },
+ "deployment": {
+  "mode": "private_cloud",
+  "region": "CN",
+  "auth_gate": true,
+  "backup_policy": "weekly logical backup, 30 day retention, restore drill before go-live"
+ },
+ "created_at": "2026-10-21T00:00:00Z"
+}

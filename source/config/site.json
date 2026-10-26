@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "as_of": "2026-10-23T00:00:00Z",
+  "currency": "USD",
+  "default_port": 8412,
+  "languages": ["en", "zh"],
+  "default_language": "en",
+  "data_provenance": "synthetic_baseline",
+  "client_materials_received": false,
+  "platform_note": "All factory, equipment, licence and order data in this repository is synthetic or anonymised. Field names follow the interview schema supplied by the client so that real data can be substituted without a code change.",
+  "limits": {
+    "max_prompt_length": 400,
+    "max_library_ingest_bytes": 20000,
+    "max_series_skus": 3
+  }
+}

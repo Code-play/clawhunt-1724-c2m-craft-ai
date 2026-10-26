@@ -1,0 +1,517 @@
+{
+ "applied": {
+  "choice": {
+   "amounts": {
+    "base_unit_price_cents": 24000,
+    "delta_cents": 4080,
+    "unit_price_cents": 28080
+   },
+   "base_concept_id": "DC-0001",
+   "confirmed_at": "2026-10-23T00:24:00Z",
+   "created_at": "2026-10-23T00:24:00Z",
+   "customization_id": "CUS-0002",
+   "feasibility": {
+    "assessment_id": null,
+    "blockers": [],
+    "ok": true
+   },
+   "industry": "jewelry",
+   "result_concept_id": "DC-0022",
+   "selections": [
+    {
+     "fact_changes": {
+      "alloy": "22k_gold"
+     },
+     "group_id": "alloy",
+     "label": {
+      "en": "22K gold",
+      "zh": "22K 金"
+     },
+     "lead_time_delta_days": 0,
+     "option_id": "alloy_22k",
+     "price_delta_cents": 2880
+    },
+    {
+     "fact_changes": {
+      "engraving_depth_mm": 0.2
+     },
+     "group_id": "engraving",
+     "label": {
+      "en": "Light engraving (0.2 mm)",
+      "zh": "浅錾（0.2 mm）"
+     },
+     "lead_time_delta_days": 1,
+     "option_id": "engraving_light",
+     "price_delta_cents": 1200
+    }
+   ],
+   "status": "applied"
+  },
+  "order_id": "ORD-0005"
+ },
+ "catalog": {
+  "hardwood": {
+   "conflicts": [
+    {
+     "a": {
+      "group_id": "species",
+      "option_id": "species_teak"
+     },
+     "b": {
+      "group_id": "finish",
+      "option_id": "finish_high_gloss"
+     },
+     "reason": {
+      "en": "Teak oils lift a high-gloss film; use hardwax oil or another species.",
+      "zh": "柚木油脂会顶起高光漆膜，改木蜡油或换材种。"
+     }
+    }
+   ],
+   "groups": [
+    {
+     "group_id": "species",
+     "label": {
+      "en": "Species",
+      "zh": "材种"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "species": "walnut"
+       },
+       "label": {
+        "en": "Walnut",
+        "zh": "胡桃木"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "species_walnut",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "species": "oak"
+       },
+       "label": {
+        "en": "Oak",
+        "zh": "橡木"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "species_oak",
+       "price_delta_bp": -600
+      },
+      {
+       "fact_changes": {
+        "species": "teak"
+       },
+       "label": {
+        "en": "Teak",
+        "zh": "柚木"
+       },
+       "lead_time_delta_days": 5,
+       "option_id": "species_teak",
+       "price_delta_bp": 2600
+      }
+     ]
+    },
+    {
+     "group_id": "finish",
+     "label": {
+      "en": "Finish",
+      "zh": "涂装"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "finish": "oil"
+       },
+       "label": {
+        "en": "Hardwax oil",
+        "zh": "木蜡油"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "finish_oil",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "finish": "lacquer"
+       },
+       "label": {
+        "en": "Lacquer",
+        "zh": "漆面"
+       },
+       "lead_time_delta_days": 2,
+       "option_id": "finish_lacquer",
+       "price_delta_bp": 700
+      },
+      {
+       "fact_changes": {
+        "finish": "high_gloss"
+       },
+       "label": {
+        "en": "High gloss",
+        "zh": "高光"
+       },
+       "lead_time_delta_days": 3,
+       "option_id": "finish_high_gloss",
+       "price_delta_bp": 1100
+      }
+     ]
+    },
+    {
+     "group_id": "carving",
+     "label": {
+      "en": "Carving",
+      "zh": "雕刻"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "carve_depth_mm": 0
+       },
+       "label": {
+        "en": "Plain",
+        "zh": "素面"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "carving_none",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "carve_depth_mm": 6
+       },
+       "label": {
+        "en": "Relief (6 mm)",
+        "zh": "浅浮雕（6 mm）"
+       },
+       "lead_time_delta_days": 3,
+       "option_id": "carving_relief",
+       "price_delta_bp": 900
+      },
+      {
+       "fact_changes": {
+        "carve_depth_mm": 10
+       },
+       "label": {
+        "en": "Deep carving (10 mm)",
+        "zh": "深雕（10 mm）"
+       },
+       "lead_time_delta_days": 6,
+       "option_id": "carving_deep",
+       "price_delta_bp": 2200
+      }
+     ]
+    }
+   ],
+   "industry": "hardwood"
+  },
+  "jewelry": {
+   "conflicts": [
+    {
+     "a": {
+      "group_id": "alloy",
+      "option_id": "alloy_silver"
+     },
+     "b": {
+      "group_id": "stone",
+      "option_id": "stone_9mm"
+     },
+     "reason": {
+      "en": "A 9 mm stone on 925 silver prongs fails both load and wear requirements; use 18K gold or a smaller stone.",
+      "zh": "9 mm 主石配 925 银爪在承重与耐磨上都不达标，改 18K 金或缩小主石。"
+     }
+    },
+    {
+     "a": {
+      "group_id": "finish",
+      "option_id": "finish_mirror"
+     },
+     "b": {
+      "group_id": "engraving",
+      "option_id": "engraving_deep"
+     },
+     "reason": {
+      "en": "Mirror polish over deep engraving leaves unpolishable marks in the groove; use brushed or light engraving.",
+      "zh": "镜面配深錾会在凹槽里留下抛不掉的痕迹，改拉丝或浅錾。"
+     }
+    }
+   ],
+   "groups": [
+    {
+     "group_id": "alloy",
+     "label": {
+      "en": "Alloy",
+      "zh": "合金"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "alloy": "18k_gold"
+       },
+       "label": {
+        "en": "18K gold",
+        "zh": "18K 金"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "alloy_18k",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "alloy": "22k_gold"
+       },
+       "label": {
+        "en": "22K gold",
+        "zh": "22K 金"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "alloy_22k",
+       "price_delta_bp": 1200
+      },
+      {
+       "fact_changes": {
+        "alloy": "925_silver"
+       },
+       "label": {
+        "en": "925 silver",
+        "zh": "925 银"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "alloy_silver",
+       "price_delta_bp": -1800
+      },
+      {
+       "fact_changes": {
+        "alloy": "pt950"
+       },
+       "label": {
+        "en": "pt950 platinum",
+        "zh": "pt950"
+       },
+       "lead_time_delta_days": 4,
+       "option_id": "alloy_platinum",
+       "price_delta_bp": 4500
+      }
+     ]
+    },
+    {
+     "group_id": "finish",
+     "label": {
+      "en": "Finish",
+      "zh": "表面处理"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "finish": "matte",
+        "surface_finish": "brushed"
+       },
+       "label": {
+        "en": "Brushed",
+        "zh": "拉丝"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "finish_brushed",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "finish": "high_gloss",
+        "surface_finish": "mirror"
+       },
+       "label": {
+        "en": "Mirror",
+        "zh": "镜面"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "finish_mirror",
+       "price_delta_bp": 600
+      },
+      {
+       "fact_changes": {
+        "finish": "matte",
+        "surface_finish": "sandblasted"
+       },
+       "label": {
+        "en": "Sandblasted",
+        "zh": "喷砂"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "finish_sandblasted",
+       "price_delta_bp": 300
+      }
+     ]
+    },
+    {
+     "group_id": "stone",
+     "label": {
+      "en": "Stone",
+      "zh": "宝石"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "prong_count": 0,
+        "prong_thickness_mm": 0,
+        "setting_type": "none",
+        "stone_count": 0,
+        "stone_size_mm": 0
+       },
+       "label": {
+        "en": "No stone",
+        "zh": "无石"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "stone_none",
+       "price_delta_bp": -800
+      },
+      {
+       "fact_changes": {
+        "prong_count": 4,
+        "prong_thickness_mm": 0.7,
+        "setting_type": "prong",
+        "stone_count": 1,
+        "stone_size_mm": 4.2
+       },
+       "label": {
+        "en": "4 mm centre stone",
+        "zh": "4 mm 主石"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "stone_4mm",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "prong_count": 0,
+        "prong_thickness_mm": 0,
+        "setting_type": "bezel",
+        "stone_count": 1,
+        "stone_size_mm": 9.0
+       },
+       "label": {
+        "en": "9 mm centre stone",
+        "zh": "9 mm 主石"
+       },
+       "lead_time_delta_days": 2,
+       "option_id": "stone_9mm",
+       "price_delta_bp": 3800
+      }
+     ]
+    },
+    {
+     "group_id": "engraving",
+     "label": {
+      "en": "Engraving",
+      "zh": "錾刻"
+     },
+     "options": [
+      {
+       "fact_changes": {
+        "engraving_depth_mm": 0
+       },
+       "label": {
+        "en": "No engraving",
+        "zh": "不錾刻"
+       },
+       "lead_time_delta_days": 0,
+       "option_id": "engraving_none",
+       "price_delta_bp": 0
+      },
+      {
+       "fact_changes": {
+        "engraving_depth_mm": 0.2
+       },
+       "label": {
+        "en": "Light engraving (0.2 mm)",
+        "zh": "浅錾（0.2 mm）"
+       },
+       "lead_time_delta_days": 1,
+       "option_id": "engraving_light",
+       "price_delta_bp": 500
+      },
+      {
+       "fact_changes": {
+        "engraving_depth_mm": 0.45
+       },
+       "label": {
+        "en": "Deep engraving (0.45 mm)",
+        "zh": "深錾（0.45 mm）"
+       },
+       "lead_time_delta_days": 2,
+       "option_id": "engraving_deep",
+       "price_delta_bp": 1400
+      }
+     ]
+    }
+   ],
+   "industry": "jewelry"
+  }
+ },
+ "counts": {
+  "choices_recorded": 1,
+  "conflicts": 3,
+  "groups": 7,
+  "industries": 2,
+  "options": 22
+ },
+ "preview": {
+  "base_concept_id": "DC-0001",
+  "choice": {
+   "amounts": {
+    "base_unit_price_cents": 24000,
+    "delta_cents": 4080,
+    "unit_price_cents": 28080
+   },
+   "base_concept_id": "DC-0001",
+   "confirmed_at": null,
+   "created_at": "2026-10-23T00:24:00Z",
+   "customization_id": "CUS-0001",
+   "feasibility": {
+    "assessment_id": null,
+    "blockers": [],
+    "ok": true
+   },
+   "industry": "jewelry",
+   "result_concept_id": null,
+   "selections": [
+    {
+     "fact_changes": {
+      "alloy": "22k_gold"
+     },
+     "group_id": "alloy",
+     "label": {
+      "en": "22K gold",
+      "zh": "22K 金"
+     },
+     "lead_time_delta_days": 0,
+     "option_id": "alloy_22k",
+     "price_delta_cents": 2880
+    },
+    {
+     "fact_changes": {
+      "engraving_depth_mm": 0.2
+     },
+     "group_id": "engraving",
+     "label": {
+      "en": "Light engraving (0.2 mm)",
+      "zh": "浅錾（0.2 mm）"
+     },
+     "lead_time_delta_days": 1,
+     "option_id": "engraving_light",
+     "price_delta_cents": 1200
+    }
+   ],
+   "status": "feasible"
+  },
+  "derived_concept_id": "DC-0022",
+  "quote": {
+   "alternatives": [],
+   "promised_delivery_at": "2026-11-03T18:00:00Z",
+   "verdict": "conditionally_manufacturable",
+   "working_minutes": 189,
+   "workshop_id": "WS-JW-A"
+  }
+ }
+}

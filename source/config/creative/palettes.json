@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "palettes": [
+    {
+      "palette_id": "coastal_brass",
+      "title": { "zh": "海岸黄铜", "en": "Coastal brass" },
+      "colors": ["#C9A227", "#1F2A44", "#F2EFE9", "#8C6A45", "#2E6F7E", "#E8E4DA"]
+    },
+    {
+      "palette_id": "harbour_ink",
+      "title": { "zh": "港墨", "en": "Harbour ink" },
+      "colors": ["#0F1A1F", "#2E6F7E", "#C9A227", "#D8DEE2", "#5B3A22", "#EFEAE1"]
+    },
+    {
+      "palette_id": "kiln_amber",
+      "title": { "zh": "窑珀", "en": "Kiln amber" },
+      "colors": ["#8C5A1E", "#E0B25C", "#F6EDE3", "#3E2A1A", "#A8794A", "#D9C9A6"]
+    },
+    {
+      "palette_id": "court_vermilion",
+      "title": { "zh": "宫朱", "en": "Court vermilion" },
+      "colors": ["#8C1C2B", "#C9A227", "#F6EDE3", "#2A1B10", "#B4553C", "#E7DAC6"]
+    },
+    {
+      "palette_id": "pine_shadow",
+      "title": { "zh": "松影", "en": "Pine shadow" },
+      "colors": ["#3B5D50", "#8FA98C", "#EFEAE1", "#1B2A2E", "#6B4A2C", "#D8C7A8"]
+    },
+    {
+      "palette_id": "river_silver",
+      "title": { "zh": "江银", "en": "River silver" },
+      "colors": ["#B9C2C7", "#5E6A72", "#F4F4F1", "#2A3439", "#9AA7AD", "#DDE2E4"]
+    },
+    {
+      "palette_id": "lacquer_black",
+      "title": { "zh": "漆黑", "en": "Lacquer black" },
+      "colors": ["#141414", "#C9A227", "#B3423A", "#3B3B3B", "#E8E4DA", "#6E5B3E"]
+    },
+    {
+      "palette_id": "oyster_cream",
+      "title": { "zh": "蚝白", "en": "Oyster cream" },
+      "colors": ["#F2EFE9", "#D9C9A6", "#A8794A", "#5B3A22", "#C9A227", "#8C6A45"]
+    }
+  ]
+}

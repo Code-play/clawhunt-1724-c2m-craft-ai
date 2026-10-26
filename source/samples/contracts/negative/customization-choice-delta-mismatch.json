@@ -1,0 +1,47 @@
+{
+ "amounts": {
+  "base_unit_price_cents": 24000,
+  "delta_cents": 4180,
+  "unit_price_cents": 28080
+ },
+ "base_concept_id": "DC-0001",
+ "confirmed_at": null,
+ "created_at": "2026-10-23T00:15:00Z",
+ "customization_id": "CUS-0001",
+ "feasibility": {
+  "assessment_id": null,
+  "blockers": [],
+  "ok": true
+ },
+ "industry": "jewelry",
+ "result_concept_id": null,
+ "selections": [
+  {
+   "fact_changes": {
+    "alloy": "22k_gold"
+   },
+   "group_id": "alloy",
+   "label": {
+    "en": "22K gold",
+    "zh": "22K 金"
+   },
+   "lead_time_delta_days": 0,
+   "option_id": "alloy_22k",
+   "price_delta_cents": 2880
+  },
+  {
+   "fact_changes": {
+    "engraving_depth_mm": 0.2
+   },
+   "group_id": "engraving",
+   "label": {
+    "en": "Light engraving (0.2 mm)",
+    "zh": "浅錾（0.2 mm）"
+   },
+   "lead_time_delta_days": 1,
+   "option_id": "engraving_light",
+   "price_delta_cents": 1200
+  }
+ ],
+ "status": "feasible"
+}

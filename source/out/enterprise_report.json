@@ -1,0 +1,1475 @@
+{
+ "fde": {
+  "blocking_open": [
+   "backup_restore_drill",
+   "operator_training"
+  ],
+  "checklist_version": "1.0.0",
+  "readiness": {
+   "EP-0001": {
+    "blocking_open": [
+     {
+      "item_id": "operator_training",
+      "owner": "FDE",
+      "title": {
+       "en": "Operator and administrator training tiers delivered",
+       "zh": "操作员与管理员分级培训完成"
+      }
+     },
+     {
+      "item_id": "backup_restore_drill",
+      "owner": "FDE + ops",
+      "title": {
+       "en": "Backup and restore drill recorded",
+       "zh": "备份与恢复演练留档"
+      }
+     }
+    ],
+    "client_checklist": [
+     "interview notes signed off by the client",
+     "craft rules reviewed by the workshop craftsperson",
+     "licence list attached to every asset",
+     "site pages and SEO audit accepted by the client",
+     "inquiry to CRM loop rehearsed with the export desk",
+     "order ledger reconciliation signed by finance",
+     "backup and restore drill recorded",
+     "operator and administrator training delivered"
+    ],
+    "items_done": 9,
+    "items_open": 3,
+    "items_total": 12,
+    "open_items": [
+     {
+      "blocking": true,
+      "evidence": "docs/fde-handbook.md#training-tiers",
+      "item_id": "operator_training",
+      "owner": "FDE",
+      "phase_id": "pilot",
+      "title": {
+       "en": "Operator and administrator training tiers delivered",
+       "zh": "操作员与管理员分级培训完成"
+      }
+     },
+     {
+      "blocking": true,
+      "evidence": "docs/fde-handbook.md#go-live",
+      "item_id": "backup_restore_drill",
+      "owner": "FDE + ops",
+      "phase_id": "go_live",
+      "title": {
+       "en": "Backup and restore drill recorded",
+       "zh": "备份与恢复演练留档"
+      }
+     },
+     {
+      "blocking": false,
+      "evidence": "docs/fde-handbook.md#handover",
+      "item_id": "handover_signed",
+      "owner": "FDE + client",
+      "phase_id": "go_live",
+      "title": {
+       "en": "Handover note and open issue list signed",
+       "zh": "交接单与遗留问题清单签署"
+      }
+     }
+    ],
+    "phases": [
+     {
+      "done": 3,
+      "phase_id": "discover",
+      "title": {
+       "en": "Discover and baseline",
+       "zh": "访谈与现状盘点"
+      },
+      "total": 3
+     },
+     {
+      "done": 3,
+      "phase_id": "configure",
+      "title": {
+       "en": "Configure components and generate the site",
+       "zh": "组件配置与站点生成"
+      },
+      "total": 3
+     },
+     {
+      "done": 2,
+      "phase_id": "pilot",
+      "title": {
+       "en": "Pilot and training",
+       "zh": "试运行与培训"
+      },
+      "total": 3
+     },
+     {
+      "done": 1,
+      "phase_id": "go_live",
+      "title": {
+       "en": "Go-live and handover",
+       "zh": "上线与交接"
+      },
+      "total": 3
+     }
+    ],
+    "readiness_bp": 7500,
+    "status": "pilot"
+   },
+   "EP-0002": {
+    "blocking_open": [
+     {
+      "item_id": "operator_training",
+      "owner": "FDE",
+      "title": {
+       "en": "Operator and administrator training tiers delivered",
+       "zh": "操作员与管理员分级培训完成"
+      }
+     },
+     {
+      "item_id": "backup_restore_drill",
+      "owner": "FDE + ops",
+      "title": {
+       "en": "Backup and restore drill recorded",
+       "zh": "备份与恢复演练留档"
+      }
+     }
+    ],
+    "client_checklist": [
+     "interview notes signed off by the cooperative",
+     "woodworking rules reviewed by the lead craftsperson",
+     "licence list attached to every pattern asset",
+     "inquiry to CRM loop rehearsed with the cooperative desk",
+     "operator training delivered in the local language"
+    ],
+    "items_done": 9,
+    "items_open": 3,
+    "items_total": 12,
+    "open_items": [
+     {
+      "blocking": true,
+      "evidence": "docs/fde-handbook.md#training-tiers",
+      "item_id": "operator_training",
+      "owner": "FDE",
+      "phase_id": "pilot",
+      "title": {
+       "en": "Operator and administrator training tiers delivered",
+       "zh": "操作员与管理员分级培训完成"
+      }
+     },
+     {
+      "blocking": true,
+      "evidence": "docs/fde-handbook.md#go-live",
+      "item_id": "backup_restore_drill",
+      "owner": "FDE + ops",
+      "phase_id": "go_live",
+      "title": {
+       "en": "Backup and restore drill recorded",
+       "zh": "备份与恢复演练留档"
+      }
+     },
+     {
+      "blocking": false,
+      "evidence": "docs/fde-handbook.md#handover",
+      "item_id": "handover_signed",
+      "owner": "FDE + client",
+      "phase_id": "go_live",
+      "title": {
+       "en": "Handover note and open issue list signed",
+       "zh": "交接单与遗留问题清单签署"
+      }
+     }
+    ],
+    "phases": [
+     {
+      "done": 3,
+      "phase_id": "discover",
+      "title": {
+       "en": "Discover and baseline",
+       "zh": "访谈与现状盘点"
+      },
+      "total": 3
+     },
+     {
+      "done": 3,
+      "phase_id": "configure",
+      "title": {
+       "en": "Configure components and generate the site",
+       "zh": "组件配置与站点生成"
+      },
+      "total": 3
+     },
+     {
+      "done": 2,
+      "phase_id": "pilot",
+      "title": {
+       "en": "Pilot and training",
+       "zh": "试运行与培训"
+      },
+      "total": 3
+     },
+     {
+      "done": 1,
+      "phase_id": "go_live",
+      "title": {
+       "en": "Go-live and handover",
+       "zh": "上线与交接"
+      },
+      "total": 3
+     }
+    ],
+    "readiness_bp": 7500,
+    "status": "pilot"
+   }
+  }
+ },
+ "profiles": [
+  {
+   "assembly": {
+    "capabilities": [
+     "capacity.plan",
+     "concept.explain",
+     "crm.follow_up",
+     "defect.classify",
+     "ip.character_bible",
+     "ip.short_drama",
+     "ip.visual_library",
+     "lead.route",
+     "lead.score",
+     "library.search",
+     "licence.document_set",
+     "merch.spec",
+     "order.dispatch",
+     "promise.commit",
+     "quality.inspect",
+     "quote.draft",
+     "rules.explain",
+     "seo.audit",
+     "seo.structured_data",
+     "site.compose",
+     "site.multilingual",
+     "work_order.issue"
+    ],
+    "component_detail": [
+     {
+      "capabilities": [
+       "quote.draft",
+       "concept.explain"
+      ],
+      "component_id": "agent_quote",
+      "config_ref": "config/commerce/pricing.json",
+      "enabled": true,
+      "kind": "agent",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "lead.score",
+       "lead.route",
+       "crm.follow_up"
+      ],
+      "component_id": "crm_leads",
+      "config_ref": "config/growth/crm.json",
+      "enabled": true,
+      "kind": "crm",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "licence.document_set",
+       "merch.spec"
+      ],
+      "component_id": "ip_licensing",
+      "config_ref": "config/ip/licensing.json",
+      "enabled": true,
+      "kind": "commerce",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "ip.character_bible",
+       "ip.visual_library",
+       "ip.short_drama"
+      ],
+      "component_id": "ip_studio",
+      "config_ref": "config/ip/characters.json",
+      "enabled": true,
+      "kind": "scenario_showcase",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "rules.explain",
+       "library.search"
+      ],
+      "component_id": "kb_craft",
+      "config_ref": "config/craft_rules",
+      "enabled": true,
+      "kind": "knowledge_base",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "seo.audit",
+       "seo.structured_data"
+      ],
+      "component_id": "seo_auditor",
+      "config_ref": "config/growth/copy.json",
+      "enabled": true,
+      "kind": "growth",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "site.compose",
+       "site.multilingual"
+      ],
+      "component_id": "site_composer",
+      "config_ref": "config/growth/site.json",
+      "enabled": true,
+      "kind": "growth",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "capacity.plan",
+       "promise.commit"
+      ],
+      "component_id": "wf_capacity",
+      "config_ref": "config/commerce/capacity.json",
+      "enabled": true,
+      "kind": "workflow",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "order.dispatch",
+       "work_order.issue"
+      ],
+      "component_id": "wf_dispatch",
+      "config_ref": "config/commerce/state_machine.json",
+      "enabled": true,
+      "kind": "workflow",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "quality.inspect",
+       "defect.classify"
+      ],
+      "component_id": "wf_quality",
+      "config_ref": "config/commerce/quality.json",
+      "enabled": true,
+      "kind": "workflow",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     }
+    ],
+    "components_available": 10,
+    "components_declined": [],
+    "components_enabled": 10,
+    "contracts": [
+     "c2m_order",
+     "character_bible",
+     "content_review",
+     "craft_work_order",
+     "design_concept",
+     "enterprise_profile",
+     "growth_site",
+     "inquiry_lead",
+     "ip_license",
+     "manufacturability_assessment",
+     "merch_spec",
+     "pattern_asset",
+     "production_schedule",
+     "qc_record",
+     "settlement",
+     "short_drama",
+     "visual_asset"
+    ],
+    "industry": "jewelry",
+    "issues": [],
+    "status": "ready"
+   },
+   "channels": {
+    "crm": true,
+    "seo": true,
+    "site": true
+   },
+   "data_boundaries": {
+    "cross_border": true,
+    "dpa_ref": "docs/fde-handbook.md#data-boundary-map",
+    "stores": [
+     {
+      "kind": "craft_rules",
+      "personal_data": false,
+      "region": "CN",
+      "store_id": "store_craft_rules"
+     },
+     {
+      "kind": "orders",
+      "personal_data": true,
+      "region": "CN",
+      "store_id": "store_orders"
+     },
+     {
+      "kind": "library",
+      "personal_data": false,
+      "region": "CN",
+      "store_id": "store_library"
+     },
+     {
+      "kind": "crm",
+      "personal_data": true,
+      "region": "CN",
+      "store_id": "store_crm"
+     },
+     {
+      "kind": "content",
+      "personal_data": false,
+      "region": "CN",
+      "store_id": "store_content"
+     }
+    ]
+   },
+   "deployment": {
+    "auth_gate": true,
+    "backup_policy": "nightly logical backup, 14 day retention, quarterly restore drill",
+    "mode": "on_prem",
+    "region": "CN"
+   },
+   "enterprise": {
+    "industry": "jewelry",
+    "name": "Harbour Jewellery Works (synthetic)",
+    "region": "East Asian coastal belt",
+    "size": "medium"
+   },
+   "fde": {
+    "fde_id": "FDE-JW-01",
+    "go_live_checklist": [
+     "interview notes signed off by the client",
+     "craft rules reviewed by the workshop craftsperson",
+     "licence list attached to every asset",
+     "site pages and SEO audit accepted by the client",
+     "inquiry to CRM loop rehearsed with the export desk",
+     "order ledger reconciliation signed by finance",
+     "backup and restore drill recorded",
+     "operator and administrator training delivered"
+    ],
+    "handbook_ref": "docs/fde-handbook.md#on-site-delivery",
+    "readiness": {
+     "blocking_open": [
+      {
+       "item_id": "operator_training",
+       "owner": "FDE",
+       "title": {
+        "en": "Operator and administrator training tiers delivered",
+        "zh": "操作员与管理员分级培训完成"
+       }
+      },
+      {
+       "item_id": "backup_restore_drill",
+       "owner": "FDE + ops",
+       "title": {
+        "en": "Backup and restore drill recorded",
+        "zh": "备份与恢复演练留档"
+       }
+      }
+     ],
+     "client_checklist": [
+      "interview notes signed off by the client",
+      "craft rules reviewed by the workshop craftsperson",
+      "licence list attached to every asset",
+      "site pages and SEO audit accepted by the client",
+      "inquiry to CRM loop rehearsed with the export desk",
+      "order ledger reconciliation signed by finance",
+      "backup and restore drill recorded",
+      "operator and administrator training delivered"
+     ],
+     "items_done": 9,
+     "items_open": 3,
+     "items_total": 12,
+     "open_items": [
+      {
+       "blocking": true,
+       "evidence": "docs/fde-handbook.md#training-tiers",
+       "item_id": "operator_training",
+       "owner": "FDE",
+       "phase_id": "pilot",
+       "title": {
+        "en": "Operator and administrator training tiers delivered",
+        "zh": "操作员与管理员分级培训完成"
+       }
+      },
+      {
+       "blocking": true,
+       "evidence": "docs/fde-handbook.md#go-live",
+       "item_id": "backup_restore_drill",
+       "owner": "FDE + ops",
+       "phase_id": "go_live",
+       "title": {
+        "en": "Backup and restore drill recorded",
+        "zh": "备份与恢复演练留档"
+       }
+      },
+      {
+       "blocking": false,
+       "evidence": "docs/fde-handbook.md#handover",
+       "item_id": "handover_signed",
+       "owner": "FDE + client",
+       "phase_id": "go_live",
+       "title": {
+        "en": "Handover note and open issue list signed",
+        "zh": "交接单与遗留问题清单签署"
+       }
+      }
+     ],
+     "phases": [
+      {
+       "done": 3,
+       "phase_id": "discover",
+       "title": {
+        "en": "Discover and baseline",
+        "zh": "访谈与现状盘点"
+       },
+       "total": 3
+      },
+      {
+       "done": 3,
+       "phase_id": "configure",
+       "title": {
+        "en": "Configure components and generate the site",
+        "zh": "组件配置与站点生成"
+       },
+       "total": 3
+      },
+      {
+       "done": 2,
+       "phase_id": "pilot",
+       "title": {
+        "en": "Pilot and training",
+        "zh": "试运行与培训"
+       },
+       "total": 3
+      },
+      {
+       "done": 1,
+       "phase_id": "go_live",
+       "title": {
+        "en": "Go-live and handover",
+        "zh": "上线与交接"
+       },
+       "total": 3
+      }
+     ],
+     "readiness_bp": 7500,
+     "status": "pilot"
+    }
+   },
+   "growth": {
+    "crm_pipeline": [
+     "new",
+     "qualified",
+     "contacted",
+     "quoted",
+     "won",
+     "lost"
+    ],
+    "languages": [
+     "en",
+     "zh",
+     "de"
+    ],
+    "site_id": "SITE-JW-01"
+   },
+   "industry": "jewelry",
+   "locale": {
+    "primary": "zh",
+    "secondary": [
+     "en"
+    ]
+   },
+   "profile_id": "EP-0001",
+   "sla": {
+    "delivery_days": 21,
+    "first_response_hours": 4
+   }
+  },
+  {
+   "assembly": {
+    "capabilities": [
+     "concept.explain",
+     "crm.follow_up",
+     "defect.classify",
+     "ip.character_bible",
+     "ip.short_drama",
+     "ip.visual_library",
+     "lead.route",
+     "lead.score",
+     "library.search",
+     "licence.document_set",
+     "merch.spec",
+     "order.dispatch",
+     "quality.inspect",
+     "quote.draft",
+     "rules.explain",
+     "seo.audit",
+     "seo.structured_data",
+     "site.compose",
+     "site.multilingual",
+     "work_order.issue"
+    ],
+    "component_detail": [
+     {
+      "capabilities": [
+       "quote.draft",
+       "concept.explain"
+      ],
+      "component_id": "agent_quote",
+      "config_ref": "config/commerce/pricing.json",
+      "enabled": true,
+      "kind": "agent",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "lead.score",
+       "lead.route",
+       "crm.follow_up"
+      ],
+      "component_id": "crm_leads",
+      "config_ref": "config/growth/crm.json",
+      "enabled": true,
+      "kind": "crm",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "licence.document_set",
+       "merch.spec"
+      ],
+      "component_id": "ip_licensing",
+      "config_ref": "config/ip/licensing.json",
+      "enabled": true,
+      "kind": "commerce",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "ip.character_bible",
+       "ip.visual_library",
+       "ip.short_drama"
+      ],
+      "component_id": "ip_studio",
+      "config_ref": "config/ip/characters.json",
+      "enabled": true,
+      "kind": "scenario_showcase",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "rules.explain",
+       "library.search"
+      ],
+      "component_id": "kb_craft",
+      "config_ref": "config/craft_rules",
+      "enabled": true,
+      "kind": "knowledge_base",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "seo.audit",
+       "seo.structured_data"
+      ],
+      "component_id": "seo_auditor",
+      "config_ref": "config/growth/copy.json",
+      "enabled": true,
+      "kind": "growth",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "site.compose",
+       "site.multilingual"
+      ],
+      "component_id": "site_composer",
+      "config_ref": "config/growth/site.json",
+      "enabled": true,
+      "kind": "growth",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "capacity.plan",
+       "promise.commit"
+      ],
+      "component_id": "wf_capacity",
+      "config_ref": "config/commerce/capacity.json",
+      "enabled": false,
+      "kind": "workflow",
+      "maturity": "configured",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "order.dispatch",
+       "work_order.issue"
+      ],
+      "component_id": "wf_dispatch",
+      "config_ref": "config/commerce/state_machine.json",
+      "enabled": true,
+      "kind": "workflow",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     },
+     {
+      "capabilities": [
+       "quality.inspect",
+       "defect.classify"
+      ],
+      "component_id": "wf_quality",
+      "config_ref": "config/commerce/quality.json",
+      "enabled": true,
+      "kind": "workflow",
+      "maturity": "verified",
+      "problems": [],
+      "status": "ok"
+     }
+    ],
+    "components_available": 10,
+    "components_declined": [
+     "wf_capacity"
+    ],
+    "components_enabled": 9,
+    "contracts": [
+     "c2m_order",
+     "character_bible",
+     "content_review",
+     "craft_work_order",
+     "design_concept",
+     "enterprise_profile",
+     "growth_site",
+     "inquiry_lead",
+     "ip_license",
+     "manufacturability_assessment",
+     "merch_spec",
+     "pattern_asset",
+     "qc_record",
+     "settlement",
+     "short_drama",
+     "visual_asset"
+    ],
+    "industry": "hardwood",
+    "issues": [],
+    "status": "ready"
+   },
+   "channels": {
+    "crm": true,
+    "seo": true,
+    "site": true
+   },
+   "data_boundaries": {
+    "cross_border": true,
+    "dpa_ref": "docs/fde-handbook.md#data-boundary-map",
+    "stores": [
+     {
+      "kind": "craft_rules",
+      "personal_data": false,
+      "region": "CN",
+      "store_id": "store_craft_rules"
+     },
+     {
+      "kind": "orders",
+      "personal_data": true,
+      "region": "CN",
+      "store_id": "store_orders"
+     },
+     {
+      "kind": "crm",
+      "personal_data": true,
+      "region": "CN",
+      "store_id": "store_crm"
+     },
+     {
+      "kind": "content",
+      "personal_data": false,
+      "region": "CN",
+      "store_id": "store_content"
+     }
+    ]
+   },
+   "deployment": {
+    "auth_gate": true,
+    "backup_policy": "weekly logical backup, 30 day retention, restore drill before go-live",
+    "mode": "private_cloud",
+    "region": "CN"
+   },
+   "enterprise": {
+    "industry": "hardwood",
+    "name": "Ridge Woodcraft Cooperative (synthetic)",
+    "region": "Inland mountain belt",
+    "size": "small"
+   },
+   "fde": {
+    "fde_id": "FDE-HW-02",
+    "go_live_checklist": [
+     "interview notes signed off by the cooperative",
+     "woodworking rules reviewed by the lead craftsperson",
+     "licence list attached to every pattern asset",
+     "inquiry to CRM loop rehearsed with the cooperative desk",
+     "operator training delivered in the local language"
+    ],
+    "handbook_ref": "docs/fde-handbook.md#on-site-delivery",
+    "readiness": {
+     "blocking_open": [
+      {
+       "item_id": "operator_training",
+       "owner": "FDE",
+       "title": {
+        "en": "Operator and administrator training tiers delivered",
+        "zh": "操作员与管理员分级培训完成"
+       }
+      },
+      {
+       "item_id": "backup_restore_drill",
+       "owner": "FDE + ops",
+       "title": {
+        "en": "Backup and restore drill recorded",
+        "zh": "备份与恢复演练留档"
+       }
+      }
+     ],
+     "client_checklist": [
+      "interview notes signed off by the cooperative",
+      "woodworking rules reviewed by the lead craftsperson",
+      "licence list attached to every pattern asset",
+      "inquiry to CRM loop rehearsed with the cooperative desk",
+      "operator training delivered in the local language"
+     ],
+     "items_done": 9,
+     "items_open": 3,
+     "items_total": 12,
+     "open_items": [
+      {
+       "blocking": true,
+       "evidence": "docs/fde-handbook.md#training-tiers",
+       "item_id": "operator_training",
+       "owner": "FDE",
+       "phase_id": "pilot",
+       "title": {
+        "en": "Operator and administrator training tiers delivered",
+        "zh": "操作员与管理员分级培训完成"
+       }
+      },
+      {
+       "blocking": true,
+       "evidence": "docs/fde-handbook.md#go-live",
+       "item_id": "backup_restore_drill",
+       "owner": "FDE + ops",
+       "phase_id": "go_live",
+       "title": {
+        "en": "Backup and restore drill recorded",
+        "zh": "备份与恢复演练留档"
+       }
+      },
+      {
+       "blocking": false,
+       "evidence": "docs/fde-handbook.md#handover",
+       "item_id": "handover_signed",
+       "owner": "FDE + client",
+       "phase_id": "go_live",
+       "title": {
+        "en": "Handover note and open issue list signed",
+        "zh": "交接单与遗留问题清单签署"
+       }
+      }
+     ],
+     "phases": [
+      {
+       "done": 3,
+       "phase_id": "discover",
+       "title": {
+        "en": "Discover and baseline",
+        "zh": "访谈与现状盘点"
+       },
+       "total": 3
+      },
+      {
+       "done": 3,
+       "phase_id": "configure",
+       "title": {
+        "en": "Configure components and generate the site",
+        "zh": "组件配置与站点生成"
+       },
+       "total": 3
+      },
+      {
+       "done": 2,
+       "phase_id": "pilot",
+       "title": {
+        "en": "Pilot and training",
+        "zh": "试运行与培训"
+       },
+       "total": 3
+      },
+      {
+       "done": 1,
+       "phase_id": "go_live",
+       "title": {
+        "en": "Go-live and handover",
+        "zh": "上线与交接"
+       },
+       "total": 3
+      }
+     ],
+     "readiness_bp": 7500,
+     "status": "pilot"
+    }
+   },
+   "growth": {
+    "crm_pipeline": [
+     "new",
+     "qualified",
+     "contacted",
+     "quoted",
+     "won",
+     "lost"
+    ],
+    "languages": [
+     "en",
+     "zh",
+     "de"
+    ],
+    "site_id": "SITE-HW-01"
+   },
+   "industry": "hardwood",
+   "locale": {
+    "primary": "en",
+    "secondary": [
+     "zh",
+     "de"
+    ]
+   },
+   "profile_id": "EP-0002",
+   "sla": {
+    "delivery_days": 35,
+    "first_response_hours": 12
+   }
+  }
+ ],
+ "registry": {
+  "components": [
+   {
+    "capabilities": [
+     "rules.explain",
+     "library.search"
+    ],
+    "component_id": "kb_craft",
+    "config_ref": "config/craft_rules",
+    "contracts": [
+     "manufacturability_assessment",
+     "pattern_asset"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "craft_rules",
+      "library"
+     ]
+    },
+    "depends_on": [],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "knowledge_base",
+    "maturity": "verified",
+    "name": {
+     "en": "Craft knowledge base",
+     "zh": "工艺知识库"
+    },
+    "summary": {
+     "en": "Searchable base of craft rules, workshop capability envelopes and licensed patterns for both industries; answers whether a design can be made, where it fails and what to change.",
+     "zh": "把珠宝与硬木两套工艺规则、设备能力包和已授权纹样库做成可检索的知识底座，回答“能不能做、哪里不能做、怎么改”。"
+    }
+   },
+   {
+    "capabilities": [
+     "quote.draft",
+     "concept.explain"
+    ],
+    "component_id": "agent_quote",
+    "config_ref": "config/commerce/pricing.json",
+    "contracts": [
+     "design_concept",
+     "settlement"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "orders"
+     ]
+    },
+    "depends_on": [
+     "kb_craft"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "agent",
+    "maturity": "configured",
+    "name": {
+     "en": "Quote and explanation agent",
+     "zh": "报价与解释智能体"
+    },
+    "summary": {
+     "en": "Turns concept facts, the manufacturability verdict and pricing policy into a traceable quote draft and explains where every amount comes from.",
+     "zh": "把概念事实、工艺判定与价格政策组合成可追溯的报价草稿，并给客户解释每一项金额的来源。"
+    }
+   },
+   {
+    "capabilities": [
+     "order.dispatch",
+     "work_order.issue"
+    ],
+    "component_id": "wf_dispatch",
+    "config_ref": "config/commerce/state_machine.json",
+    "contracts": [
+     "c2m_order",
+     "craft_work_order"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "orders"
+     ]
+    },
+    "depends_on": [
+     "agent_quote"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "workflow",
+    "maturity": "verified",
+    "name": {
+     "en": "Dispatch and work order workflow",
+     "zh": "派工与工艺单工作流"
+    },
+    "summary": {
+     "en": "Order to work order, bill of materials, process route and shipment state machine; every transition appends a hash chained ledger event.",
+     "zh": "订单到工艺单、BOM、工序路线与发货状态机，每个状态迁移落一条哈希链台账事件。"
+    }
+   },
+   {
+    "capabilities": [
+     "capacity.plan",
+     "promise.commit"
+    ],
+    "component_id": "wf_capacity",
+    "config_ref": "config/commerce/capacity.json",
+    "contracts": [
+     "production_schedule",
+     "c2m_order"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "orders"
+     ]
+    },
+    "depends_on": [
+     "wf_dispatch"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "workflow",
+    "maturity": "configured",
+    "name": {
+     "en": "Capacity calendar and delivery promise",
+     "zh": "产能日历与交期承诺"
+    },
+    "summary": {
+     "en": "Plans per workshop working day: committed work orders book backwards, new orders fill forwards, and every promise carries its slot and the rejected alternatives.",
+     "zh": "按车间工作日排产，已承诺工单向后占位、新订单向前填谷，给出交期、档期与被拒绝的备选。"
+    }
+   },
+   {
+    "capabilities": [
+     "quality.inspect",
+     "defect.classify"
+    ],
+    "component_id": "wf_quality",
+    "config_ref": "config/commerce/quality.json",
+    "contracts": [
+     "qc_record"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "orders",
+      "media"
+     ]
+    },
+    "depends_on": [
+     "wf_dispatch"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "workflow",
+    "maturity": "verified",
+    "name": {
+     "en": "Quality records and sampling plans",
+     "zh": "品控记录与抽样计划"
+    },
+    "summary": {
+     "en": "Defect taxonomy, measurement tolerance, sampling plans and the verdict invariant; a dispute can cite inspections recorded against its own work order.",
+     "zh": "缺陷分类、测量公差、抽样方案与判定不变量；争议可引用本工单的检验记录作为证据。"
+    }
+   },
+   {
+    "capabilities": [
+     "lead.score",
+     "lead.route",
+     "crm.follow_up"
+    ],
+    "component_id": "crm_leads",
+    "config_ref": "config/growth/crm.json",
+    "contracts": [
+     "inquiry_lead"
+    ],
+    "data_boundary": {
+     "cross_border": true,
+     "personal_data": true,
+     "retention_days": 730,
+     "stores": [
+      "crm"
+     ]
+    },
+    "depends_on": [
+     "agent_quote"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "crm",
+    "maturity": "configured",
+    "name": {
+     "en": "Inquiry to CRM leads",
+     "zh": "询盘与 CRM 线索"
+    },
+    "summary": {
+     "en": "Site inquiries become deterministically scored leads with an SLA clock, owner routing, follow-up tasks and a quote draft, forming a testable closed loop.",
+     "zh": "多语站点询盘进入后做确定性打分、SLA 计时、归属路由、跟进任务与报价草稿，形成可测试的闭环。"
+    }
+   },
+   {
+    "capabilities": [
+     "site.compose",
+     "site.multilingual"
+    ],
+    "component_id": "site_composer",
+    "config_ref": "config/growth/site.json",
+    "contracts": [
+     "growth_site",
+     "enterprise_profile"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "content",
+      "media"
+     ]
+    },
+    "depends_on": [
+     "kb_craft"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "growth",
+    "maturity": "verified",
+    "name": {
+     "en": "Multilingual site composer",
+     "zh": "多语独立站生成器"
+    },
+    "summary": {
+     "en": "Generates multilingual pages, canonical paths, hreflang alternates and JSON-LD from the site contract; pages are a projection of data, so copy changes are not code changes.",
+     "zh": "从站点合同生成多语页面、canonical、hreflang 与 JSON-LD；页面是数据的投影，改文案不改代码。"
+    }
+   },
+   {
+    "capabilities": [
+     "seo.audit",
+     "seo.structured_data"
+    ],
+    "component_id": "seo_auditor",
+    "config_ref": "config/growth/copy.json",
+    "contracts": [
+     "growth_site"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "content"
+     ]
+    },
+    "depends_on": [
+     "site_composer"
+    ],
+    "enabled_by_default": true,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "growth",
+    "maturity": "verified",
+    "name": {
+     "en": "SEO auditor",
+     "zh": "SEO 审计器"
+    },
+    "summary": {
+     "en": "Checks title and description length, a single H1, canonical paths, reciprocal hreflang and parseable structured data per page, then scores the site from 0 to 10000 bp.",
+     "zh": "逐页检查标题与描述长度、唯一 H1、canonical、hreflang 互指、结构化数据可解析，输出 0-10000 的分数与问题清单。"
+    }
+   },
+   {
+    "capabilities": [
+     "ip.character_bible",
+     "ip.visual_library",
+     "ip.short_drama"
+    ],
+    "component_id": "ip_studio",
+    "config_ref": "config/ip/characters.json",
+    "contracts": [
+     "character_bible",
+     "visual_asset",
+     "short_drama"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "content",
+      "media"
+     ]
+    },
+    "depends_on": [],
+    "enabled_by_default": false,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "scenario_showcase",
+    "maturity": "configured",
+    "name": {
+     "en": "Cultural IP studio",
+     "zh": "文化 IP 工坊"
+    },
+    "summary": {
+     "en": "Dual guardian bible, a recomputable visual asset library and a script to final cut short drama workflow, all expressed as data and rebuildable offline.",
+     "zh": "双守护角色设定、可复算的视觉资产库、脚本到成片的短剧工作流，全部以数据表达并可离线重建。"
+    }
+   },
+   {
+    "capabilities": [
+     "licence.document_set",
+     "merch.spec"
+    ],
+    "component_id": "ip_licensing",
+    "config_ref": "config/ip/licensing.json",
+    "contracts": [
+     "ip_license",
+     "merch_spec",
+     "content_review"
+    ],
+    "data_boundary": {
+     "cross_border": false,
+     "personal_data": false,
+     "retention_days": 0,
+     "stores": [
+      "content"
+     ]
+    },
+    "depends_on": [
+     "ip_studio"
+    ],
+    "enabled_by_default": false,
+    "industries": [
+     "jewelry",
+     "hardwood"
+    ],
+    "kind": "commerce",
+    "maturity": "configured",
+    "name": {
+     "en": "Derivative licensing and specs",
+     "zh": "衍生授权与衍生规格"
+    },
+    "summary": {
+     "en": "Licence document set, bills of materials and quality specifications for four derivative categories, sampling and labelling rules, plus content review and authenticity records.",
+     "zh": "授权文件集、四类衍生商品的材质与质量规格、抽样与标识要求，以及内容审核与真实性标注记录。"
+    }
+   }
+  ],
+  "counts": {
+   "by_kind": {
+    "agent": 1,
+    "commerce": 1,
+    "crm": 1,
+    "growth": 2,
+    "knowledge_base": 1,
+    "scenario_showcase": 1,
+    "workflow": 3
+   },
+   "components": 10
+  },
+  "version": "1.0.0"
+ },
+ "summary": {
+  "assemblies_ready": 2,
+  "capabilities": 22,
+  "components": 10,
+  "contracts": 17,
+  "fde_readiness_bp": 7500,
+  "industries": 2,
+  "profiles": 2
+ },
+ "switch": {
+  "capabilities_industry_specific": {
+   "hardwood": [],
+   "jewelry": [
+    "capacity.plan",
+    "promise.commit"
+   ]
+  },
+  "capabilities_shared": [
+   "concept.explain",
+   "crm.follow_up",
+   "defect.classify",
+   "ip.character_bible",
+   "ip.short_drama",
+   "ip.visual_library",
+   "lead.route",
+   "lead.score",
+   "library.search",
+   "licence.document_set",
+   "merch.spec",
+   "order.dispatch",
+   "quality.inspect",
+   "quote.draft",
+   "rules.explain",
+   "seo.audit",
+   "seo.structured_data",
+   "site.compose",
+   "site.multilingual",
+   "work_order.issue"
+  ],
+  "industries": [
+   "hardwood",
+   "jewelry"
+  ],
+  "proof": {
+   "code_changes_between_industries": 0,
+   "note": "Both rows are assembled by the same code from the same registry; only the profile and the industry configuration differ.",
+   "profiles": 2,
+   "registry_version": "1.0.0"
+  },
+  "rows": [
+   {
+    "capabilities": 20,
+    "components_enabled": 9,
+    "contracts": 16,
+    "deployment": "private_cloud",
+    "enterprise": "Ridge Woodcraft Cooperative (synthetic)",
+    "industry": "hardwood",
+    "languages": [
+     "en",
+     "zh",
+     "de"
+    ],
+    "profile_id": "EP-0002",
+    "status": "ready"
+   },
+   {
+    "capabilities": 22,
+    "components_enabled": 10,
+    "contracts": 17,
+    "deployment": "on_prem",
+    "enterprise": "Harbour Jewellery Works (synthetic)",
+    "industry": "jewelry",
+    "languages": [
+     "en",
+     "zh",
+     "de"
+    ],
+    "profile_id": "EP-0001",
+    "status": "ready"
+   }
+  ]
+ },
+ "version": "1.0.0"
+}

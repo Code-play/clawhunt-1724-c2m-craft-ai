@@ -1,0 +1,96 @@
+{
+ "contact": {
+  "channel": "site_form",
+  "company": "Nordlicht Retail (synthetic)",
+  "country": "DE",
+  "email": "anna.weber@nordlicht-retail.example",
+  "name": "Anna Weber"
+ },
+ "created_at": "2026-10-23T00:00:00Z",
+ "crm_events": [
+  {
+   "actor": "site",
+   "at": "2026-10-23T00:00:00Z",
+   "note": "inquiry received from SITE-JW-01",
+   "type": "received"
+  },
+  {
+   "actor": "crm_scorer",
+   "at": "2026-10-23T00:01:00Z",
+   "note": "score 68 from 5 factors",
+   "type": "scored"
+  },
+  {
+   "actor": "crm_router",
+   "at": "2026-10-23T00:02:00Z",
+   "note": "routed to OWNER-EXPORT-01",
+   "type": "routed"
+  }
+ ],
+ "follow_ups": [
+  {
+   "channel": "email",
+   "done_at": null,
+   "due_at": "2026-10-24T00:00:00Z",
+   "follow_up_id": "FU-0001",
+   "status": "scheduled",
+   "template_id": "quote_follow_up"
+  },
+  {
+   "channel": "phone",
+   "done_at": null,
+   "due_at": "2026-10-26T00:00:00Z",
+   "follow_up_id": "FU-0002",
+   "status": "scheduled",
+   "template_id": "call_back"
+  }
+ ],
+ "inquiry_id": "INQ-0001",
+ "intent": "bulk_quote",
+ "language": "en",
+ "lead": {
+  "first_response_at": null,
+  "lead_id": "LEAD-0001",
+  "owner": {
+   "name": "Export desk",
+   "owner_id": "OWNER-EXPORT-01"
+  },
+  "score": 78,
+  "score_breakdown": [
+   {
+    "evidence": "qualified inquiry baseline",
+    "factor": "base",
+    "points": 10
+   },
+   {
+    "evidence": "intent=bulk_quote",
+    "factor": "intent_weight",
+    "points": 25
+   },
+   {
+    "evidence": "country=DE",
+    "factor": "market_focus",
+    "points": 15
+   },
+   {
+    "evidence": "company=Nordlicht Retail (synthetic)",
+    "factor": "company_present",
+    "points": 8
+   },
+   {
+    "evidence": "message mentions pcs",
+    "factor": "message_specificity",
+    "points": 10
+   }
+  ],
+  "sla_due_at": "2026-10-23T04:00:00Z",
+  "stage": "qualified"
+ },
+ "message": "We need 500 pcs of the coastal pendant for the winter season.",
+ "product_interest": [
+  "coastal pendant"
+ ],
+ "quote": null,
+ "site_id": "SITE-JW-01",
+ "submitted_at": "2026-10-23T00:00:00Z"
+}

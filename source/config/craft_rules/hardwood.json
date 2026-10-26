@@ -1,0 +1,498 @@
+{
+  "industry": "hardwood",
+  "version": "1.0.0",
+  "as_of": "2026-10-23T00:00:00Z",
+  "facts_schema": {
+    "species": {
+      "type": "string", "required": true,
+      "enum": ["walnut", "oak", "elm", "pine", "teak"],
+      "description": { "zh": "材种", "en": "Species" }
+    },
+    "joint_types": {
+      "type": "array", "required": true,
+      "enum": ["mortise_tenon", "dovetail", "screw", "dowel"],
+      "description": { "zh": "结构连接方式", "en": "Joint types in the structure" }
+    },
+    "tolerance_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 3,
+      "description": { "zh": "榫卯配合公差", "en": "Joinery tolerance" }
+    },
+    "span_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 4000,
+      "description": { "zh": "最大无支撑跨度", "en": "Largest unsupported span" }
+    },
+    "load_kg": {
+      "type": "number", "required": true, "unit": "kg", "min": 0, "max": 500,
+      "description": { "zh": "设计载荷", "en": "Rated load" }
+    },
+    "carve_depth_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 40,
+      "description": { "zh": "最大雕刻深度", "en": "Maximum carve depth" }
+    },
+    "wood_moisture_pct": {
+      "type": "number", "required": true, "unit": "%", "min": 4, "max": 25,
+      "description": { "zh": "坯料含水率", "en": "Blank moisture content" }
+    },
+    "panel_thickness_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 3, "max": 80,
+      "description": { "zh": "主受力板厚", "en": "Primary panel thickness" }
+    },
+    "finish": {
+      "type": "string", "required": true,
+      "enum": ["oil", "wax", "lacquer", "high_gloss", "matte"],
+      "description": { "zh": "表面涂装", "en": "Finish" }
+    },
+    "humidity_zone": {
+      "type": "string", "required": true,
+      "enum": ["dry", "temperate", "coastal", "tropical"],
+      "description": { "zh": "使用环境湿度带", "en": "Service humidity zone" }
+    },
+    "curve_radius_mm": {
+      "type": "number", "required": true, "unit": "mm", "min": 0, "max": 2000,
+      "description": { "zh": "最小曲率半径，0 表示平面", "en": "Smallest curve radius, 0 for flat" }
+    },
+    "undercut": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否存在倒扣雕饰", "en": "Undercut carving present" }
+    },
+    "hardware_included": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否含承重五金", "en": "Load-rated hardware included" }
+    },
+    "leg_count": {
+      "type": "integer", "required": true, "min": 0, "max": 12,
+      "description": { "zh": "支撑腿数量", "en": "Leg count" }
+    },
+    "cantilever": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否悬臂结构", "en": "Cantilever structure" }
+    },
+    "outdoor": {
+      "type": "boolean", "required": true,
+      "description": { "zh": "是否户外使用", "en": "Outdoor use" }
+    }
+  },
+  "rules": [
+    {
+      "id": "HW-JOIN-001",
+      "industry": "hardwood",
+      "process": "joinery",
+      "severity": "cost",
+      "title": { "zh": "榫卯公差过大", "en": "Joinery tolerance too loose" },
+      "when": {
+        "all": [
+          { "fact": "joint_types", "op": "contains_any", "value": ["mortise_tenon"] },
+          { "fact": "tolerance_mm", "op": "gt", "value": 0.3 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "榫卯配合公差 {tolerance_mm} mm 超过 0.3 mm，需要加楔或补胶，长期会松榫。",
+        "en": "A {tolerance_mm} mm joinery tolerance exceeds 0.3 mm; it needs wedges or glue fill and will loosen over time."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "公差收紧到 0.2 mm，或改用可调节的连接件。", "en": "Tighten the tolerance to 0.2 mm, or use an adjustable connector." },
+          "suggested_change": { "tolerance_mm": 0.2 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-01", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#joinery"]
+    },
+    {
+      "id": "HW-JOIN-002",
+      "industry": "hardwood",
+      "process": "joinery",
+      "severity": "blocker",
+      "title": { "zh": "仅螺丝固定承载超限", "en": "Screw-only structure over the load limit" },
+      "when": {
+        "all": [
+          { "not": { "fact": "joint_types", "op": "contains_any", "value": ["mortise_tenon", "dovetail", "dowel"] } },
+          { "fact": "load_kg", "op": "gt", "value": 40 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "结构只有螺丝固定却按 {load_kg} kg 设计载荷，螺丝在木材里会逐年松动，静载测试过不了。",
+        "en": "The structure is screw-only yet rated at {load_kg} kg; screws creep in timber year on year and the static load test fails."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "关键节点改为榫卯或加定位销，或把载荷降到 40 kg 以下。", "en": "Convert the critical joints to mortise-and-tenon or dowels, or derate below 40 kg." },
+          "suggested_change": { "joint_types": ["mortise_tenon", "screw"] }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-01", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#joinery"]
+    },
+    {
+      "id": "HW-JOIN-003",
+      "industry": "hardwood",
+      "process": "joinery",
+      "severity": "blocker",
+      "title": { "zh": "大跨薄板会下挠", "en": "Long span on a thin panel sags" },
+      "when": {
+        "all": [
+          { "fact": "span_mm", "op": "gt", "value": 900 },
+          { "fact": "panel_thickness_mm", "op": "lt", "value": 18 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "{span_mm} mm 跨度配 {panel_thickness_mm} mm 板厚，跨中挠度会超过 2 mm，静载 1.5 倍测试必然失效。",
+        "en": "A {span_mm} mm span on a {panel_thickness_mm} mm panel deflects past 2 mm; the 1.5x static load test will fail."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "板厚加到 22 mm 以上，或增加中撑把跨度降到 900 mm 以内。", "en": "Take the panel to 22 mm or add a centre rail and cut the span below 900 mm." },
+          "suggested_change": { "panel_thickness_mm": 22 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-02", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#joinery"]
+    },
+    {
+      "id": "HW-JOIN-004",
+      "industry": "hardwood",
+      "process": "joinery",
+      "severity": "blocker",
+      "title": { "zh": "含水率偏高进榫卯", "en": "High moisture into a mortise joint" },
+      "when": {
+        "all": [
+          { "fact": "joint_types", "op": "contains_any", "value": ["mortise_tenon"] },
+          { "fact": "wood_moisture_pct", "op": "gt", "value": 12 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "含水率 {wood_moisture_pct}% 的坯料做榫卯，干燥收缩后榫头会缩、卯眼会裂。",
+        "en": "Mortise-and-tenon at {wood_moisture_pct}% moisture shrinks after drying: the tenon loosens and the mortise splits."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "二次干燥到 8-12% 再开榫，或改用螺栓连接。", "en": "Kiln to 8-12% before cutting the joint, or switch to a bolted connection." },
+          "suggested_change": { "wood_moisture_pct": 10 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-02", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#joinery"]
+    },
+    {
+      "id": "HW-JOIN-005",
+      "industry": "hardwood",
+      "process": "joinery",
+      "severity": "blocker",
+      "title": { "zh": "薄板开燕尾槽", "en": "Dovetail in a thin panel" },
+      "when": {
+        "all": [
+          { "fact": "joint_types", "op": "contains_any", "value": ["dovetail"] },
+          { "fact": "panel_thickness_mm", "op": "lt", "value": 14 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "{panel_thickness_mm} mm 板厚开燕尾槽后剩余料不足 8 mm，齿根会直接崩掉。",
+        "en": "Cutting dovetails into a {panel_thickness_mm} mm panel leaves under 8 mm of stock; the pins shear off."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "板厚加到 16 mm 以上，或改用直榫加销。", "en": "Take the panel to 16 mm, or use a straight tenon with pins." },
+          "suggested_change": { "panel_thickness_mm": 16 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-01", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#joinery"]
+    },
+    {
+      "id": "HW-CARVE-001",
+      "industry": "hardwood",
+      "process": "carving",
+      "severity": "cost",
+      "title": { "zh": "倒扣雕饰需翻面", "en": "Undercut carving needs a second setup" },
+      "when": {
+        "all": [
+          { "fact": "undercut", "op": "eq", "value": true },
+          { "fact": "carve_depth_mm", "op": "gt", "value": 8 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "倒扣加 {carve_depth_mm} mm 雕深必须翻面二次装夹，工时增加且对纹有风险。",
+        "en": "An undercut at {carve_depth_mm} mm requires a flip and a second setup, adding hours and risking a grain mismatch."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "把倒扣改为开放纹样，或接受二次装夹成本。", "en": "Open up the undercut, or accept the second-setup cost." },
+          "suggested_change": { "undercut": false }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-03", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#carving"]
+    },
+    {
+      "id": "HW-CARVE-002",
+      "industry": "hardwood",
+      "process": "carving",
+      "severity": "cost",
+      "title": { "zh": "小曲率深雕易崩边", "en": "Deep carve on a tight curve chips" },
+      "when": {
+        "all": [
+          { "fact": "curve_radius_mm", "op": "gt", "value": 0 },
+          { "fact": "curve_radius_mm", "op": "lt", "value": 60 },
+          { "fact": "carve_depth_mm", "op": "gt", "value": 8 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "曲率半径 {curve_radius_mm} mm 配 {carve_depth_mm} mm 雕深，刀路干涉导致崩边，需要手工修。",
+        "en": "A {curve_radius_mm} mm radius with {carve_depth_mm} mm of carve depth causes tool interference and chipping, needing hand repair."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "曲率放大到 70 mm 以上，或把该处雕深降到 6 mm。", "en": "Open the radius to 70 mm, or cut that area back to 6 mm deep." },
+          "suggested_change": { "curve_radius_mm": 70 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-03", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#carving"]
+    },
+    {
+      "id": "HW-SURF-001",
+      "industry": "hardwood",
+      "process": "surface",
+      "severity": "cost",
+      "title": { "zh": "沿海环境不建议高光", "en": "No high gloss in a coastal climate" },
+      "when": {
+        "all": [
+          { "fact": "finish", "op": "eq", "value": "high_gloss" },
+          { "fact": "humidity_zone", "op": "eq", "value": "coastal" }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "沿海高湿环境下高光漆面半年内会起雾失光，客户投诉率高。",
+        "en": "In coastal humidity a high-gloss film hazes and loses sheen within six months, driving complaints."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改哑光或硬蜡油，并在使用说明里写保养周期。", "en": "Switch to matte or hardwax oil and state the maintenance interval in the care note." },
+          "suggested_change": { "finish": "matte" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-04", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#surface"]
+    },
+    {
+      "id": "HW-SURF-002",
+      "industry": "hardwood",
+      "process": "surface",
+      "severity": "blocker",
+      "title": { "zh": "松木不能户外", "en": "Pine is not an outdoor species" },
+      "when": {
+        "all": [
+          { "fact": "outdoor", "op": "eq", "value": true },
+          { "fact": "species", "op": "eq", "value": "pine" }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "松木户外使用会在两个雨季内开裂腐朽，无论涂装多厚都不满足户外质保。",
+        "en": "Pine outdoors cracks and rots within two rainy seasons; no film thickness makes it meet an outdoor warranty."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用柚木或刺槐，并配户外级木蜡油。", "en": "Use teak or robinia with an outdoor-grade oil." },
+          "suggested_change": { "species": "teak" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-04", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#surface"]
+    },
+    {
+      "id": "HW-SURF-003",
+      "industry": "hardwood",
+      "process": "surface",
+      "severity": "cost",
+      "title": { "zh": "户外用漆需改油", "en": "Outdoor lacquer should be oil" },
+      "when": {
+        "all": [
+          { "fact": "finish", "op": "eq", "value": "lacquer" },
+          { "fact": "outdoor", "op": "eq", "value": true }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "漆膜户外会随木材涨缩开裂，需要每年打磨重涂，维护成本高于木蜡油。",
+        "en": "An outdoor lacquer film cracks as the timber moves; it needs annual sanding and recoating, costing more than oil."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用户外级木蜡油，并写明每 12 个月保养。", "en": "Switch to an outdoor hardwax oil and specify a twelve-month care cycle." },
+          "suggested_change": { "finish": "oil" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-04", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#surface"]
+    },
+    {
+      "id": "HW-FORM-001",
+      "industry": "hardwood",
+      "process": "forming",
+      "severity": "blocker",
+      "title": { "zh": "悬臂跨度超限", "en": "Cantilever span over the limit" },
+      "when": {
+        "all": [
+          { "fact": "cantilever", "op": "eq", "value": true },
+          { "fact": "span_mm", "op": "gt", "value": 1200 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "悬臂 {span_mm} mm 没有前支撑，端部下垂会随时间累积，必须加腿或斜撑。",
+        "en": "A {span_mm} mm cantilever has no front support; tip sag accumulates over time and needs a leg or brace."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "加一条前腿或斜撑，把有效跨度降到 1200 mm 以内。", "en": "Add a front leg or diagonal brace so the effective span drops below 1200 mm." },
+          "suggested_change": { "cantilever": false }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-02", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#forming"]
+    },
+    {
+      "id": "HW-FORM-002",
+      "industry": "hardwood",
+      "process": "forming",
+      "severity": "cost",
+      "title": { "zh": "板厚偏薄", "en": "Panel thinner than preferred" },
+      "when": {
+        "all": [
+          { "fact": "panel_thickness_mm", "op": "gt", "value": 0 },
+          { "fact": "panel_thickness_mm", "op": "lt", "value": 16 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "{panel_thickness_mm} mm 板厚低于 16 mm 的常规范围，需加边框或贴面稳定，工时上升。",
+        "en": "A {panel_thickness_mm} mm panel is under the 16 mm norm; it needs a frame or veneer build-up, adding hours."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "板厚加到 18 mm，或加边框约束。", "en": "Take the panel to 18 mm, or add a frame." },
+          "suggested_change": { "panel_thickness_mm": 18 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-01", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#forming"]
+    },
+    {
+      "id": "HW-MAT-001",
+      "industry": "hardwood",
+      "process": "material",
+      "severity": "cost",
+      "title": { "zh": "松木承载偏低", "en": "Pine carries less load" },
+      "when": {
+        "all": [
+          { "fact": "species", "op": "eq", "value": "pine" },
+          { "fact": "load_kg", "op": "gt", "value": 60 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "松木顺纹抗压强度低，{load_kg} kg 载荷下需要加大截面或改材种。",
+        "en": "Pine has low compression strength along the grain; at {load_kg} kg the section must grow or the species must change."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用胡桃木或橡木，或加大连接件截面。", "en": "Switch to walnut or oak, or increase the section at the joints." },
+          "suggested_change": { "species": "oak" }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-01", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#material"]
+    },
+    {
+      "id": "HW-MAT-002",
+      "industry": "hardwood",
+      "process": "material",
+      "severity": "blocker",
+      "title": { "zh": "高载荷缺少支撑", "en": "High load without enough supports" },
+      "when": {
+        "all": [
+          { "fact": "load_kg", "op": "gt", "value": 120 },
+          { "fact": "leg_count", "op": "lt", "value": 4 }
+        ]
+      },
+      "verdict": "not_manufacturable",
+      "reason": {
+        "zh": "{load_kg} kg 设计载荷只有 {leg_count} 条腿，稳定性测试会侧翻。",
+        "en": "A {load_kg} kg rating on {leg_count} legs tips over in the stability test."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "加到四条腿以上并加横撑，或把载荷降到 120 kg 以下。", "en": "Use four or more legs with stretchers, or derate below 120 kg." },
+          "suggested_change": { "leg_count": 4 }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-02", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "high", "client_confirmation_required": true },
+      "review": { "tier": "artisan", "trigger": "on_fail" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#material"]
+    },
+    {
+      "id": "HW-SAFE-001",
+      "industry": "hardwood",
+      "process": "assembly",
+      "severity": "cost",
+      "title": { "zh": "缺承重五金", "en": "Load-rated hardware missing" },
+      "when": {
+        "all": [
+          { "fact": "hardware_included", "op": "eq", "value": false },
+          { "fact": "load_kg", "op": "gt", "value": 60 }
+        ]
+      },
+      "verdict": "conditionally_manufacturable",
+      "reason": {
+        "zh": "设计载荷 {load_kg} kg 但未包含承重五金，现场安装方式不受控，售后风险高。",
+        "en": "The {load_kg} kg rating assumes hardware that is not included; on-site fixing is uncontrolled and aftersales risk is high."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "随机附带承重五金与安装说明。", "en": "Ship load-rated hardware and an installation sheet with the piece." },
+          "suggested_change": { "hardware_included": true }
+        }
+      ],
+      "evidence": { "source_type": "synthetic_baseline", "artisan_ref": "HW-ARTISAN-02", "captured_at": "2026-10-11T00:00:00Z", "reviewed_by": "pending", "confidence": "medium", "client_confirmation_required": true },
+      "review": { "tier": "auto", "trigger": "never" },
+      "version": "1.0.0",
+      "references": ["docs/rule-modeling-plan.md#assembly"]
+    }
+  ]
+}

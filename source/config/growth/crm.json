@@ -1,0 +1,45 @@
+{
+ "version": "1.0.0",
+ "note": "CRM policy for the growth stack: deterministic lead scoring, owner routing, follow-up cadence and the quote draft. The inquiry to lead loop is replayable because every step is a pure function of this file and the inquiry record.",
+ "sla_hours": 4,
+ "scoring": {
+  "base_points": 10,
+  "message_quantity_markers": ["pcs", "pieces", "units", "sets", "件", "个", "套", "stueck"],
+  "factors": [
+   {"factor": "intent_weight", "match": "intent", "points": {"sample_request": 12, "bulk_quote": 25, "oem": 22, "partnership": 18, "information": 4}, "default_points": 2, "evidence": "intent"},
+   {"factor": "market_focus", "match": "country", "points": {"DE": 15, "FR": 15, "IT": 12, "ES": 12, "NL": 15, "US": 12, "GB": 12, "JP": 10, "AE": 10, "CN": 8}, "default_points": 5, "evidence": "country"},
+   {"factor": "company_present", "match": "company", "points": 8, "evidence": "company"},
+   {"factor": "message_specificity", "match": "mentions_quantity", "points": 10, "evidence": "message"},
+   {"factor": "individual_buyer", "match": "not_company", "points": -5, "evidence": "company"}
+  ]
+ },
+ "routing": [
+  {"route_id": "route_export_bulk", "when_intent": ["bulk_quote", "oem"], "owner": {"owner_id": "OWNER-EXPORT-01", "name": "Export desk"}},
+  {"route_id": "route_studio_sample", "when_intent": ["sample_request"], "owner": {"owner_id": "OWNER-STUDIO-01", "name": "Studio desk"}},
+  {"route_id": "route_default", "when_intent": ["partnership", "information"], "owner": {"owner_id": "OWNER-GENERAL-01", "name": "General desk"}}
+ ],
+ "follow_ups": [
+  {"template_id": "ack_sample", "offset_hours": 2, "channel": "email", "when_intent": ["sample_request"]},
+  {"template_id": "information_reply", "offset_hours": 6, "channel": "email", "when_intent": ["sample_request", "information"]},
+  {"template_id": "quote_follow_up", "offset_hours": 24, "channel": "email", "when_intent": ["bulk_quote", "oem", "partnership"]},
+  {"template_id": "call_back", "offset_hours": 72, "channel": "phone", "when_intent": ["bulk_quote", "oem"]}
+ ],
+ "quote": {
+  "valid_days": 14,
+  "base_amount_cents": {"sample_request": 18000, "bulk_quote": 240000, "oem": 360000, "partnership": 120000, "information": 0},
+  "incoterm_by_country": {"US": "DDP", "DE": "CIF", "FR": "CIF", "NL": "CIF"},
+  "default_incoterm": "FOB"
+ },
+ "pipeline": {
+  "stages": ["new", "qualified", "contacted", "quoted", "won", "lost"],
+  "allowed_transitions": {
+   "new": ["qualified", "lost"],
+   "qualified": ["contacted", "lost"],
+   "contacted": ["quoted", "lost"],
+   "quoted": ["won", "lost"],
+   "won": [],
+   "lost": []
+  },
+  "stage_events": {"qualified": "routed", "contacted": "contacted", "quoted": "quoted", "won": "won", "lost": "lost"}
+ }
+}

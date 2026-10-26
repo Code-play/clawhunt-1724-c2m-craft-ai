@@ -1,0 +1,590 @@
+{
+ "brand": {
+  "en": "Harbour Jewellery Studio",
+  "zh": "海港首饰工坊"
+ },
+ "created_at": "2026-10-23T00:00:00Z",
+ "inquiry_form": {
+  "endpoint": "/api/growth/inquiry",
+  "fields": [
+   {
+    "label": {
+     "en": "Your name",
+     "zh": "您的姓名"
+    },
+    "name": "contact_name",
+    "required": true,
+    "type": "text"
+   },
+   {
+    "label": {
+     "en": "Work email",
+     "zh": "工作邮箱"
+    },
+    "name": "email",
+    "required": true,
+    "type": "email"
+   },
+   {
+    "label": {
+     "en": "Company",
+     "zh": "公司名称"
+    },
+    "name": "company",
+    "required": false,
+    "type": "text"
+   },
+   {
+    "label": {
+     "en": "Country code",
+     "zh": "国家代码"
+    },
+    "name": "country",
+    "required": true,
+    "type": "text"
+   },
+   {
+    "label": {
+     "en": "What do you need",
+     "zh": "您需要什么"
+    },
+    "name": "intent",
+    "required": true,
+    "type": "select"
+   },
+   {
+    "label": {
+     "en": "Tell us about the piece, quantity and market",
+     "zh": "请描述款式、数量与目标市场"
+    },
+    "name": "message",
+    "required": true,
+    "type": "textarea"
+   }
+  ],
+  "form_id": "FORM-JW-01"
+ },
+ "languages": [
+  "en",
+  "zh",
+  "de"
+ ],
+ "pages": [
+  {
+   "canonical_path": "/en",
+   "h1": "Craft-led jewellery, made to your brief",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh"
+    },
+    {
+     "lang": "de",
+     "path": "/de"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "description": "Custom jewellery made with licensed regional patterns and validated craft rules. Send a brief, receive a manufacturability verdict and a traceable quote.",
+    "inLanguage": "en",
+    "name": "Harbour Jewellery Studio",
+    "slogan": "Craft-led jewellery, made to your brief",
+    "url": "http://127.0.0.1:8412/en"
+   },
+   "keywords": [
+    "custom jewelry",
+    "licensed pattern",
+    "regional craft",
+    "manufacturable design"
+   ],
+   "language": "en",
+   "meta_description": "Custom jewellery made with licensed regional patterns and validated craft rules. Send a brief, receive a manufacturability verdict and a traceable quote.",
+   "page_id": "home",
+   "path": "/en",
+   "sections": [
+    {
+     "body": "Describe the piece you want. The studio turns the brief into concept candidates, checks them against workshop rules and tells you what can be made before anyone quotes.",
+     "heading": "From your brief to a makeable piece",
+     "section_id": "hero"
+    },
+    {
+     "body": "Every design is checked against casting, setting and chasing rules. When a detail cannot be made, you see the reason and the suggested change instead of a bare rejection.",
+     "heading": "Manufacturability first",
+     "section_id": "value"
+    },
+    {
+     "body": "Tell us the market, the quantity and the finish. The export desk answers within one working day with a sample plan or a quotation.",
+     "heading": "Request a sample or a quote",
+     "section_id": "inquiry"
+    }
+   ],
+   "status": "reviewed",
+   "title": "Harbour Jewellery Studio | Hand-finished custom pieces"
+  },
+  {
+   "canonical_path": "/zh",
+   "h1": "以工艺为本，按构想定制",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh"
+    },
+    {
+     "lang": "de",
+     "path": "/de"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "description": "以授权纹样与已校对的工艺规则做定制首饰。提交构想即可获得可制造性判定、可追溯报价与清晰的交期承诺。",
+    "inLanguage": "zh",
+    "name": "海港首饰工坊",
+    "slogan": "以工艺为本，按构想定制",
+    "url": "http://127.0.0.1:8412/zh"
+   },
+   "keywords": [
+    "定制首饰",
+    "纹样授权",
+    "地方工艺",
+    "可制造性判定"
+   ],
+   "language": "zh",
+   "meta_description": "以授权纹样与已校对的工艺规则做定制首饰。提交构想即可获得可制造性判定、可追溯报价与清晰的交期承诺。",
+   "page_id": "home",
+   "path": "/zh",
+   "sections": [
+    {
+     "body": "写下你想要的款式，工坊会生成概念候选，按车间工艺规则逐条校验，并在报价之前告诉你哪些能做、哪些需要改。",
+     "heading": "从构想到可制造的实物",
+     "section_id": "hero"
+    },
+    {
+     "body": "每件设计都会经过铸造、镶嵌与錾刻规则检查。做不了的细节会给出原因和修改建议，而不是一句拒绝。",
+     "heading": "先判可制造性，再谈价格",
+     "section_id": "value"
+    },
+    {
+     "body": "告诉我们目标市场、数量与表面处理要求，外贸同事将在一个工作日内回复样品方案或报价单。",
+     "heading": "索取样品或报价",
+     "section_id": "inquiry"
+    }
+   ],
+   "status": "reviewed",
+   "title": "海港首饰工坊｜按你的构想手工定制"
+  },
+  {
+   "canonical_path": "/de",
+   "h1": "Handwerklicher Schmuck nach Ihrem Konzept",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh"
+    },
+    {
+     "lang": "de",
+     "path": "/de"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "description": "Maßgefertigter Schmuck mit lizenzierten regionalen Mustern und geprüften Handwerksregeln. Konzept senden, Fertigbarkeitsprüfung und nachvollziehbares Angebot erhalten.",
+    "inLanguage": "de",
+    "name": "Harbour Jewellery Studio",
+    "slogan": "Handwerklicher Schmuck nach Ihrem Konzept",
+    "url": "http://127.0.0.1:8412/de"
+   },
+   "keywords": [
+    "Fertigungsschmuck",
+    "lizenziertes Muster",
+    "regionales Handwerk",
+    "Fertigbarkeit"
+   ],
+   "language": "de",
+   "meta_description": "Maßgefertigter Schmuck mit lizenzierten regionalen Mustern und geprüften Handwerksregeln. Konzept senden, Fertigbarkeitsprüfung und nachvollziehbares Angebot erhalten.",
+   "page_id": "home",
+   "path": "/de",
+   "sections": [
+    {
+     "body": "Beschreiben Sie das gewünschte Stück. Das Studio erzeugt Konzeptvarianten, prüft sie gegen die Werkstattregeln und zeigt vor jedem Angebot, was fertigbar ist.",
+     "heading": "Vom Konzept zum fertigbaren Stück",
+     "section_id": "hero"
+    },
+    {
+     "body": "Jedes Design wird gegen Guss-, Fass- und Ziselierregeln geprüft. Wenn ein Detail nicht fertigbar ist, sehen Sie den Grund und eine Änderungsidee statt einer pauschalen Absage.",
+     "heading": "Fertigbarkeit zuerst",
+     "section_id": "value"
+    },
+    {
+     "body": "Nennen Sie Markt, Menge und Oberfläche. Der Export-Desk antwortet innerhalb eines Werktags mit Musterplan oder Angebot.",
+     "heading": "Muster oder Angebot anfordern",
+     "section_id": "inquiry"
+    }
+   ],
+   "status": "reviewed",
+   "title": "Harbour Jewellery Studio | Maßgefertigter Schmuck"
+  },
+  {
+   "canonical_path": "/en/collection",
+   "h1": "The collection",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en/collection"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh/collection"
+    },
+    {
+     "lang": "de",
+     "path": "/de/collection"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "description": "Browse the collection range: regional craft motifs with a licence record on every pattern, and limited editions that are numbered, certified and traceable.",
+    "inLanguage": "en",
+    "isPartOf": "http://127.0.0.1:8412/en",
+    "name": "Harbour Jewellery Studio",
+    "url": "http://127.0.0.1:8412/en/collection"
+   },
+   "keywords": [
+    "limited edition",
+    "numbered certificate",
+    "pattern licence",
+    "gold pendant"
+   ],
+   "language": "en",
+   "meta_description": "Browse the collection range: regional craft motifs with a licence record on every pattern, and limited editions that are numbered, certified and traceable.",
+   "page_id": "collection",
+   "path": "/en/collection",
+   "sections": [
+    {
+     "body": "Coastal, courtyard and kiln families share a palette system, so a buyer can build a range without the pieces competing with each other.",
+     "heading": "Three families, one craft language",
+     "section_id": "range"
+    },
+    {
+     "body": "A pattern cannot enter the library without a licensing source, a usage scope and a review state. Heritage references stay non-exclusive by contract.",
+     "heading": "Every pattern carries its licence",
+     "section_id": "craft"
+    },
+    {
+     "body": "Limited editions reserve a number when the order is created and issue it on settlement; the certificate hash travels with the piece across ownership transfers.",
+     "heading": "Numbered, certified, transferable",
+     "section_id": "proof"
+    }
+   ],
+   "status": "reviewed",
+   "title": "Collection | Licensed patterns and numbered editions"
+  },
+  {
+   "canonical_path": "/zh/collection",
+   "h1": "作品系列",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en/collection"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh/collection"
+    },
+    {
+     "lang": "de",
+     "path": "/de/collection"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "description": "浏览作品系列：地方工艺纹样逐一附带授权记录，限量作品按编号发行、附证书，并可追溯流转历史。",
+    "inLanguage": "zh",
+    "isPartOf": "http://127.0.0.1:8412/zh",
+    "name": "海港首饰工坊",
+    "url": "http://127.0.0.1:8412/zh/collection"
+   },
+   "keywords": [
+    "限量编号",
+    "收藏证书",
+    "纹样授权",
+    "金饰吊坠"
+   ],
+   "language": "zh",
+   "meta_description": "浏览作品系列：地方工艺纹样逐一附带授权记录，限量作品按编号发行、附证书，并可追溯流转历史。",
+   "page_id": "collection",
+   "path": "/zh/collection",
+   "sections": [
+    {
+     "body": "海岸、庭院与窑火三个系列共用色板系统，买家可以在同一季里组合出产品线，而不必担心互相冲突。",
+     "heading": "三个系列，一套工艺语言",
+     "section_id": "range"
+    },
+    {
+     "body": "纹样没有授权来源、使用范围与审核状态就进不了资源库；传统原型的引用按合同保持非独占。",
+     "heading": "每个纹样都有授权记录",
+     "section_id": "craft"
+    },
+    {
+     "body": "限量作品在下单时预留编号、在结算时正式发行；证书哈希随作品流转，收藏链条保持连续。",
+     "heading": "编号、证书、可流转",
+     "section_id": "proof"
+    }
+   ],
+   "status": "reviewed",
+   "title": "作品系列｜授权纹样与限量编号"
+  },
+  {
+   "canonical_path": "/de/collection",
+   "h1": "Die Kollektion",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en/collection"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh/collection"
+    },
+    {
+     "lang": "de",
+     "path": "/de/collection"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "description": "Die Kollektion zeigt regionale Handwerksmotive mit Lizenznachweis je Muster sowie limitierte Editionen, die nummeriert, zertifiziert und nachvollziehbar sind.",
+    "inLanguage": "de",
+    "isPartOf": "http://127.0.0.1:8412/de",
+    "name": "Harbour Jewellery Studio",
+    "url": "http://127.0.0.1:8412/de/collection"
+   },
+   "keywords": [
+    "limitierte Edition",
+    "nummeriertes Zertifikat",
+    "Musterlizenz",
+    "Goldanhänger"
+   ],
+   "language": "de",
+   "meta_description": "Die Kollektion zeigt regionale Handwerksmotive mit Lizenznachweis je Muster sowie limitierte Editionen, die nummeriert, zertifiziert und nachvollziehbar sind.",
+   "page_id": "collection",
+   "path": "/de/collection",
+   "sections": [
+    {
+     "body": "Küste, Innenhof und Brennofen teilen ein Palettensystem, sodass Einkäufer eine Produktlinie aufbauen können, ohne dass die Stücke konkurrieren.",
+     "heading": "Drei Familien, eine Formsprache",
+     "section_id": "range"
+    },
+    {
+     "body": "Ohne Lizenzquelle, Nutzungsumfang und Prüfstatus kommt kein Muster in die Bibliothek; Bezüge auf traditionelle Vorbilder bleiben vertraglich nicht exklusiv.",
+     "heading": "Jedes Muster hat eine Lizenz",
+     "section_id": "craft"
+    },
+    {
+     "body": "Limitierte Editionen reservieren die Nummer bei Bestellung und geben sie bei Abrechnung aus; der Zertifikat-Hash wandert bei jedem Eigentümerwechsel mit.",
+     "heading": "Nummeriert, zertifiziert, übertragbar",
+     "section_id": "proof"
+    }
+   ],
+   "status": "reviewed",
+   "title": "Kollektion | Lizenzierte Muster und limitierte Editionen"
+  },
+  {
+   "canonical_path": "/en/studio",
+   "h1": "Inside the studio",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en/studio"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh/studio"
+    },
+    {
+     "lang": "de",
+     "path": "/de/studio"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "description": "Meet the designers and workshop partners behind the studio, read how quality is inspected, and book a studio visit or a video walkthrough with the export desk.",
+    "inLanguage": "en",
+    "name": "Harbour Jewellery Studio",
+    "url": "http://127.0.0.1:8412/en/studio"
+   },
+   "keywords": [
+    "jewellery studio",
+    "workshop partner",
+    "studio visit",
+    "quality inspection"
+   ],
+   "language": "en",
+   "meta_description": "Meet the designers and workshop partners behind the studio, read how quality is inspected, and book a studio visit or a video walkthrough with the export desk.",
+   "page_id": "studio",
+   "path": "/en/studio",
+   "sections": [
+    {
+     "body": "Design and fabrication sit in separate workshops. The same ruleset, the same quality plan and the same ledger run across both, so a small pilot order and a bulk run follow one process.",
+     "heading": "Two workshops, one standard",
+     "section_id": "story"
+    },
+    {
+     "body": "A design lead, a workshop craftsperson and an export coordinator own each order. The artisan review queue is shared, so a difficult detail gets a named reviewer.",
+     "heading": "People you will actually meet",
+     "section_id": "team"
+    },
+    {
+     "body": "Studio visits run on weekdays. If travel is not practical, the export desk can walk you through the workshop, the inspection station and the finishing bench on a call.",
+     "heading": "Visit, or walk through on video",
+     "section_id": "visit"
+    }
+   ],
+   "status": "reviewed",
+   "title": "Studio | Designers, workshops and visits"
+  },
+  {
+   "canonical_path": "/zh/studio",
+   "h1": "走进工坊",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en/studio"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh/studio"
+    },
+    {
+     "lang": "de",
+     "path": "/de/studio"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "description": "认识工坊的设计师与车间伙伴，了解品控如何抽样与判定，并预约到访或让外贸同事带你进行一次视频看厂。",
+    "inLanguage": "zh",
+    "name": "海港首饰工坊",
+    "url": "http://127.0.0.1:8412/zh/studio"
+   },
+   "keywords": [
+    "首饰工坊",
+    "车间伙伴",
+    "工坊参观",
+    "品控检验"
+   ],
+   "language": "zh",
+   "meta_description": "认识工坊的设计师与车间伙伴，了解品控如何抽样与判定，并预约到访或让外贸同事带你进行一次视频看厂。",
+   "page_id": "studio",
+   "path": "/zh/studio",
+   "sections": [
+    {
+     "body": "设计与制作分属不同车间，但共用同一套工艺规则、同一份品控计划与同一本台账，小批量试单与批量生产走同一条流程。",
+     "heading": "两个车间，一个标准",
+     "section_id": "story"
+    },
+    {
+     "body": "设计负责人、车间匠人与外贸协调人各自对订单负责；疑难细节进入匠人复核队列，由具名评审人给出结论。",
+     "heading": "你会见到的人",
+     "section_id": "team"
+    },
+    {
+     "body": "工作日可预约到访。若不便出行，外贸同事可在视频会议中带你依次看车间、检验台与后处理工位。",
+     "heading": "到访，或线上看厂",
+     "section_id": "visit"
+    }
+   ],
+   "status": "reviewed",
+   "title": "工坊｜设计师、车间与到访"
+  },
+  {
+   "canonical_path": "/de/studio",
+   "h1": "Im Studio",
+   "hreflang": [
+    {
+     "lang": "en",
+     "path": "/en/studio"
+    },
+    {
+     "lang": "zh",
+     "path": "/zh/studio"
+    },
+    {
+     "lang": "de",
+     "path": "/de/studio"
+    }
+   ],
+   "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "description": "Lernen Sie Designer und Werkstattpartner kennen, lesen Sie die Qualitätsprüfung und buchen Sie einen Studiobesuch oder eine Videoführung mit dem Export-Desk.",
+    "inLanguage": "de",
+    "name": "Harbour Jewellery Studio",
+    "url": "http://127.0.0.1:8412/de/studio"
+   },
+   "keywords": [
+    "Schmuckstudio",
+    "Werkstattpartner",
+    "Studiobesuch",
+    "Qualitätsprüfung"
+   ],
+   "language": "de",
+   "meta_description": "Lernen Sie Designer und Werkstattpartner kennen, lesen Sie die Qualitätsprüfung und buchen Sie einen Studiobesuch oder eine Videoführung mit dem Export-Desk.",
+   "page_id": "studio",
+   "path": "/de/studio",
+   "sections": [
+    {
+     "body": "Design und Fertigung liegen in getrennten Werkstätten. Dieselben Regeln, derselbe Qualitätsplan und dasselbe Journal gelten für Pilot- und Serienaufträge.",
+     "heading": "Zwei Werkstätten, ein Standard",
+     "section_id": "story"
+    },
+    {
+     "body": "Eine Designleitung, ein Handwerker und eine Exportkoordination verantworten jeden Auftrag; schwierige Details gehen an eine benannte Prüfperson.",
+     "heading": "Menschen, die Sie wirklich treffen",
+     "section_id": "team"
+    },
+    {
+     "body": "Studiobesuche finden an Werktagen statt. Wenn die Reise nicht möglich ist, führt der Export-Desk per Video durch Werkstatt, Prüfplatz und Finish.",
+     "heading": "Besuch oder Videorundgang",
+     "section_id": "visit"
+    }
+   ],
+   "status": "reviewed",
+   "title": "Studio | Designer, Werkstätten und Besuche"
+  }
+ ],
+ "primary_language": "en",
+ "profile_id": "EP-0001",
+ "seo": {
+  "audited": true,
+  "checked_at": "2026-10-23T00:00:00Z",
+  "issues": [],
+  "rules": {
+   "description_max": 200,
+   "description_min": 45,
+   "title_max": 70,
+   "title_min": 12
+  },
+  "score_bp": 10000
+ },
+ "site_id": "SITE-JW-01"
+}

@@ -1,0 +1,93 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0006",
+ "craft_facts": {
+  "cantilever": true,
+  "carve_depth_mm": 0,
+  "curve_radius_mm": 0,
+  "finish": "lacquer",
+  "hardware_included": false,
+  "humidity_zone": "dry",
+  "joint_types": [
+   "screw"
+  ],
+  "leg_count": 2,
+  "load_kg": 30,
+  "outdoor": false,
+  "panel_thickness_mm": 3,
+  "span_mm": 1500,
+  "species": "oak",
+  "tolerance_mm": 0.5,
+  "undercut": false,
+  "wood_moisture_pct": 9
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "table",
+  "dimensions_mm": {
+   "x": 1400,
+   "y": 800,
+   "z": 750
+  },
+  "variant": "console"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "hardwood",
+ "material": {
+  "finish": "lacquer",
+  "name": "oak"
+ },
+ "motif_ids": [
+  "MOT-HW-03"
+ ],
+ "palette": [
+  {
+   "hex": "#141414",
+   "weight": 55
+  },
+  {
+   "hex": "#C9A227",
+   "weight": 20
+  },
+  {
+   "hex": "#B3423A",
+   "weight": 12
+  },
+  {
+   "hex": "#3B3B3B",
+   "weight": 6
+  },
+  {
+   "hex": "#E8E4DA",
+   "weight": 4
+  },
+  {
+   "hex": "#6E5B3E",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 20,
+  "motif_style": "wave",
+  "texture": "carved"
+ },
+ "prompt": {
+  "en": "A display shelf with a 1500 mm cantilever and a 3 mm panel.",
+  "zh": "1500 mm 悬臂、3 mm 板厚的展示板概念。"
+ },
+ "seed": "bb27cfe664bd0cd5",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "workshop_raw"
+ },
+ "title": {
+  "en": "Three-millimetre cantilever shelf",
+  "zh": "三毫米悬臂板"
+ }
+}

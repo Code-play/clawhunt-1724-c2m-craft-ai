@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:artisan-review",
+  "title": "Artisan review queue item",
+  "description": "The second tier of the two-tier assessment. The engine decides first; when a rule asks for a human check the concept enters this queue. An override must carry a reason and must actually change the verdict.",
+  "type": "object",
+  "required": [
+    "queue_id",
+    "assessment_id",
+    "concept_id",
+    "rule_ids",
+    "requested_at",
+    "status",
+    "auto_verdict",
+    "reviewer",
+    "decision",
+    "sla_hours"
+  ],
+  "properties": {
+    "queue_id": { "type": "string", "pattern": "^AR-[0-9]{4}$" },
+    "assessment_id": { "type": "string", "pattern": "^MA-[0-9]{4}$" },
+    "concept_id": { "type": "string", "pattern": "^DC-[0-9]{4}$" },
+    "rule_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^(?:JW|HW)-[A-Z]+-[0-9]{3}$" }
+    },
+    "requested_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+    "status": { "type": "string", "enum": ["pending", "confirmed", "overridden"] },
+    "auto_verdict": {
+      "type": "string",
+      "enum": ["manufacturable", "conditionally_manufacturable", "not_manufacturable"]
+    },
+    "reviewer": {
+      "type": "object",
+      "required": ["artisan_id", "name"],
+      "properties": {
+        "artisan_id": { "type": "string", "pattern": "^ART-[A-Z]{2}-[0-9]{2}$" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 60 }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": ["object", "null"],
+      "required": ["verdict", "reason", "decided_at"],
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": ["manufacturable", "conditionally_manufacturable", "not_manufacturable"]
+        },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 400 },
+        "decided_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+      },
+      "additionalProperties": false
+    },
+    "sla_hours": { "type": "integer", "minimum": 1, "maximum": 240 }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-REVIEW-01"]
+}

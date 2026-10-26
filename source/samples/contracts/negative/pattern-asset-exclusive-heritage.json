@@ -1,0 +1,54 @@
+{
+ "asset_id": "PA-JW-0003",
+ "created_at": "2026-08-01T00:00:00Z",
+ "industries": [
+  "jewelry",
+  "carving",
+  "heritage"
+ ],
+ "license": {
+  "attribution_required": true,
+  "exclusive": true,
+  "license_id": "LIC-SYN-HER-01",
+  "licensor": "Public heritage registry (synthetic)",
+  "royalty_rate_bp": 0,
+  "source_type": "traditional_heritage",
+  "territory": [
+   "CN"
+  ],
+  "usage_scope": [
+   "commercial_product",
+   "derivative_work"
+  ],
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": "2030-01-01T00:00:00Z"
+ },
+ "medium": "pattern",
+ "palette": [
+  "#1F2A44",
+  "#C9A227",
+  "#E8E4DA"
+ ],
+ "preview": {
+  "gradient_angle_deg": 45,
+  "motif_style": "fret",
+  "texture": "carved"
+ },
+ "religious_site_names": [],
+ "review": {
+  "authenticity_label": "traditional_reference",
+  "reviewed_at": "2026-08-01T00:00:00Z",
+  "reviewed_by": "CR-02",
+  "status": "content_reviewed"
+ },
+ "tags": [
+  "traditional",
+  "fret",
+  "heritage"
+ ],
+ "title": {
+  "en": "Traditional cloud-thunder motif",
+  "zh": "传统云雷纹样"
+ },
+ "traditional_prototype": true
+}

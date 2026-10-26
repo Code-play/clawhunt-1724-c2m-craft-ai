@@ -1,0 +1,56 @@
+{
+ "version": "1.0.0",
+ "note": "Site structure for the multilingual growth stack. All copy, keywords and form labels live in config/growth/copy.json; this file declares the pages, their sections, the languages and the SEO bounds the auditor enforces.",
+ "sites": [
+  {
+   "site_id": "SITE-JW-01",
+   "profile_id": "EP-0001",
+   "brand": {"zh": "海港首饰工坊", "en": "Harbour Jewellery Studio", "de": "Harbour Jewellery Studio"},
+   "languages": ["en", "zh", "de"],
+   "primary_language": "en",
+   "pages": [
+    {"page_id": "home", "slug": "", "sections": ["hero", "value", "inquiry"]},
+    {"page_id": "collection", "slug": "collection", "sections": ["range", "craft", "proof"]},
+    {"page_id": "studio", "slug": "studio", "sections": ["story", "team", "visit"]}
+   ],
+   "seo": {"title_min": 12, "title_max": 70, "description_min": 45, "description_max": 200},
+   "inquiry_form": {
+    "form_id": "FORM-JW-01",
+    "endpoint": "/api/growth/inquiry",
+    "fields": [
+     {"name": "contact_name", "type": "text", "required": true, "label_key": "form.name"},
+     {"name": "email", "type": "email", "required": true, "label_key": "form.email"},
+     {"name": "company", "type": "text", "required": false, "label_key": "form.company"},
+     {"name": "country", "type": "text", "required": true, "label_key": "form.country"},
+     {"name": "intent", "type": "select", "required": true, "label_key": "form.intent", "options": ["sample_request", "bulk_quote", "oem", "partnership", "information"]},
+     {"name": "message", "type": "textarea", "required": true, "label_key": "form.message"}
+    ]
+   }
+  },
+  {
+   "site_id": "SITE-HW-01",
+   "profile_id": "EP-0002",
+   "brand": {"zh": "山脊木作社", "en": "Ridge Woodcraft Cooperative", "de": "Ridge Woodcraft Cooperative"},
+   "languages": ["en", "zh", "de"],
+   "primary_language": "en",
+   "pages": [
+    {"page_id": "home", "slug": "", "sections": ["hero", "value", "inquiry"]},
+    {"page_id": "collection", "slug": "collection", "sections": ["range", "craft", "proof"]},
+    {"page_id": "studio", "slug": "studio", "sections": ["story", "team", "visit"]}
+   ],
+   "seo": {"title_min": 12, "title_max": 70, "description_min": 45, "description_max": 200},
+   "inquiry_form": {
+    "form_id": "FORM-HW-01",
+    "endpoint": "/api/growth/inquiry",
+    "fields": [
+     {"name": "contact_name", "type": "text", "required": true, "label_key": "form.name"},
+     {"name": "email", "type": "email", "required": true, "label_key": "form.email"},
+     {"name": "company", "type": "text", "required": false, "label_key": "form.company"},
+     {"name": "country", "type": "text", "required": true, "label_key": "form.country"},
+     {"name": "intent", "type": "select", "required": true, "label_key": "form.intent", "options": ["sample_request", "bulk_quote", "oem", "partnership", "information"]},
+     {"name": "message", "type": "textarea", "required": true, "label_key": "form.message"}
+    ]
+   }
+  }
+ ]
+}

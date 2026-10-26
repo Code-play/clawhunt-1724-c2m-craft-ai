@@ -1,0 +1,835 @@
+{
+ "catalog": [
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "joinery",
+   "references": [
+    "docs/rule-modeling-plan.md#joinery"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-JOIN-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Joinery tolerance too loose",
+    "zh": "榫卯公差过大"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "hardwood",
+   "process": "joinery",
+   "references": [
+    "docs/rule-modeling-plan.md#joinery"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-JOIN-002",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Screw-only structure over the load limit",
+    "zh": "仅螺丝固定承载超限"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "hardwood",
+   "process": "joinery",
+   "references": [
+    "docs/rule-modeling-plan.md#joinery"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-JOIN-003",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Long span on a thin panel sags",
+    "zh": "大跨薄板会下挠"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "hardwood",
+   "process": "joinery",
+   "references": [
+    "docs/rule-modeling-plan.md#joinery"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-JOIN-004",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "High moisture into a mortise joint",
+    "zh": "含水率偏高进榫卯"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "joinery",
+   "references": [
+    "docs/rule-modeling-plan.md#joinery"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-JOIN-005",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Dovetail in a thin panel",
+    "zh": "薄板开燕尾槽"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "carving",
+   "references": [
+    "docs/rule-modeling-plan.md#carving"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-CARVE-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Undercut carving needs a second setup",
+    "zh": "倒扣雕饰需翻面"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "carving",
+   "references": [
+    "docs/rule-modeling-plan.md#carving"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-CARVE-002",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Deep carve on a tight curve chips",
+    "zh": "小曲率深雕易崩边"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "surface",
+   "references": [
+    "docs/rule-modeling-plan.md#surface"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-SURF-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "No high gloss in a coastal climate",
+    "zh": "沿海环境不建议高光"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "hardwood",
+   "process": "surface",
+   "references": [
+    "docs/rule-modeling-plan.md#surface"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-SURF-002",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Pine is not an outdoor species",
+    "zh": "松木不能户外"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "surface",
+   "references": [
+    "docs/rule-modeling-plan.md#surface"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-SURF-003",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Outdoor lacquer should be oil",
+    "zh": "户外用漆需改油"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "hardwood",
+   "process": "forming",
+   "references": [
+    "docs/rule-modeling-plan.md#forming"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-FORM-001",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Cantilever span over the limit",
+    "zh": "悬臂跨度超限"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "forming",
+   "references": [
+    "docs/rule-modeling-plan.md#forming"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-FORM-002",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Panel thinner than preferred",
+    "zh": "板厚偏薄"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "material",
+   "references": [
+    "docs/rule-modeling-plan.md#material"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-MAT-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Pine carries less load",
+    "zh": "松木承载偏低"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "hardwood",
+   "process": "material",
+   "references": [
+    "docs/rule-modeling-plan.md#material"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "HW-MAT-002",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "High load without enough supports",
+    "zh": "高载荷缺少支撑"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "hardwood",
+   "process": "assembly",
+   "references": [
+    "docs/rule-modeling-plan.md#assembly"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "HW-SAFE-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Load-rated hardware missing",
+    "zh": "缺承重五金"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "casting",
+   "references": [
+    "docs/rule-modeling-plan.md#casting"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-CAST-001",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Wall below the castable limit",
+    "zh": "壁厚低于可铸下限"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "casting",
+   "references": [
+    "docs/rule-modeling-plan.md#casting"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-CAST-002",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Thin wall on a hollow casting",
+    "zh": "空心铸造壁厚偏薄"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "setting",
+   "references": [
+    "docs/rule-modeling-plan.md#setting"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-SET-001",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Large stone without a setting",
+    "zh": "大石无镶口"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "setting",
+   "references": [
+    "docs/rule-modeling-plan.md#setting"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-SET-002",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Prong too thin",
+    "zh": "镶爪过细"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "setting",
+   "references": [
+    "docs/rule-modeling-plan.md#setting"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-SET-003",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Stone too small for pavé",
+    "zh": "碎钻过小无法密镶"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "chasing",
+   "references": [
+    "docs/rule-modeling-plan.md#chasing"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-CHASE-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Chasing deeper than one pass",
+    "zh": "錾刻深度超单次行程"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "chasing",
+   "references": [
+    "docs/rule-modeling-plan.md#chasing"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-CHASE-002",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Undercut needs a split mould",
+    "zh": "倒扣结构需分模"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "surface",
+   "references": [
+    "docs/rule-modeling-plan.md#surface"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-SURF-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Mirror polish cannot reach the recess",
+    "zh": "镜面处理无法进入凹面"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "surface",
+   "references": [
+    "docs/rule-modeling-plan.md#surface"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-SURF-002",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Enamel firing runs hot",
+    "zh": "珐琅烧成温度偏高"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "forming",
+   "references": [
+    "docs/rule-modeling-plan.md#forming"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-FORM-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Small ring size needs a custom mandrel",
+    "zh": "手寸偏小需定制撑圈"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "forming",
+   "references": [
+    "docs/rule-modeling-plan.md#forming"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-FORM-002",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Chain link too thin",
+    "zh": "链节过细"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "material",
+   "references": [
+    "docs/rule-modeling-plan.md#material"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-MAT-001",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Thin platinum is hard to form",
+    "zh": "铂金薄壁难成型"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "medium",
+   "industry": "jewelry",
+   "process": "material",
+   "references": [
+    "docs/rule-modeling-plan.md#material"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-MAT-002",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "High-karat prongs deform",
+    "zh": "高金合金爪易变形"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "assembly",
+   "references": [
+    "docs/rule-modeling-plan.md#assembly"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-ASM-001",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Channel setting needs thicker walls",
+    "zh": "槽镶需要更厚的侧壁"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "assembly",
+   "references": [
+    "docs/rule-modeling-plan.md#assembly"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-ASM-002",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Hollow body cannot take enamel",
+    "zh": "空心件无法上珐琅"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "low",
+   "industry": "jewelry",
+   "process": "setting",
+   "references": [
+    "docs/rule-modeling-plan.md#setting"
+   ],
+   "review_tier": "auto",
+   "review_trigger": "never",
+   "rule_id": "JW-SET-004",
+   "severity": "cost",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Stone count drives setting hours",
+    "zh": "密钉数量过多"
+   },
+   "version": "1.0.0"
+  },
+  {
+   "confidence": "high",
+   "industry": "jewelry",
+   "process": "setting",
+   "references": [
+    "docs/rule-modeling-plan.md#setting"
+   ],
+   "review_tier": "artisan",
+   "review_trigger": "on_fail",
+   "rule_id": "JW-SET-005",
+   "severity": "blocker",
+   "source_type": "synthetic_baseline",
+   "title": {
+    "en": "Too few prongs for the stone",
+    "zh": "爪数不足以固定大石"
+   },
+   "version": "1.0.0"
+  }
+ ],
+ "facts": {
+  "hardwood": {
+   "declared": 16,
+   "unused": [],
+   "used_by_rules": 16
+  },
+  "jewelry": {
+   "declared": 17,
+   "unused": [
+    "max_dimension_mm"
+   ],
+   "used_by_rules": 16
+  }
+ },
+ "lint": {
+  "findings": [
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-JOIN-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-JOIN-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-JOIN-003"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-JOIN-004"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-JOIN-005"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-CARVE-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-CARVE-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-SURF-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-SURF-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-SURF-003"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-FORM-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-FORM-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-MAT-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-MAT-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "HW-SAFE-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-CAST-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-CAST-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SET-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SET-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SET-003"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-CHASE-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-CHASE-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SURF-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SURF-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-FORM-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-FORM-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-MAT-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-MAT-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-ASM-001"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-ASM-002"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SET-004"
+   },
+   {
+    "code": "EVIDENCE_PENDING",
+    "message": "synthetic baseline awaiting client craftsperson confirmation",
+    "severity": "info",
+    "subject": "JW-SET-005"
+   }
+  ],
+  "industries": {
+   "hardwood": {
+    "coverage_bp": 10000,
+    "errors": 0,
+    "facts": 16,
+    "facts_used": 16,
+    "facts_used_all": 16,
+    "industry": "hardwood",
+    "infos": 15,
+    "required_facts": 16,
+    "rules": 15,
+    "version": "1.0.0",
+    "warnings": 0
+   },
+   "jewelry": {
+    "coverage_bp": 10000,
+    "errors": 0,
+    "facts": 17,
+    "facts_used": 17,
+    "facts_used_all": 17,
+    "industry": "jewelry",
+    "infos": 17,
+    "required_facts": 17,
+    "rules": 17,
+    "version": "1.0.0",
+    "warnings": 0
+   }
+  },
+  "ok": true,
+  "totals": {
+   "errors": 0,
+   "infos": 32,
+   "rules": 32,
+   "warnings": 0
+  }
+ },
+ "rule_versions": {
+  "hardwood": {
+   "as_of": "2026-10-23T00:00:00Z",
+   "version": "1.0.0"
+  },
+  "jewelry": {
+   "as_of": "2026-10-23T00:00:00Z",
+   "version": "1.0.0"
+  }
+ }
+}

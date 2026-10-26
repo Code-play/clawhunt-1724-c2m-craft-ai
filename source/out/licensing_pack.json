@@ -1,0 +1,573 @@
+{
+ "license": {
+  "characters": [
+   {
+    "name": {
+     "en": "A-Mu",
+     "zh": "阿木"
+    },
+    "role": "guardian of grain and timber",
+    "traits": [
+     "mortise-and-tenon lattice",
+     "rice ear",
+     "cloud scroll"
+    ]
+   },
+   {
+    "name": {
+     "en": "A-Huo",
+     "zh": "阿火"
+    },
+    "role": "guardian of kiln fire and glaze",
+    "traits": [
+     "crackle glaze",
+     "flame wave",
+     "peony roundel"
+    ]
+   }
+  ],
+  "content_review": {
+   "authenticity_label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are s",
+   "reviewer": "Content review desk",
+   "status": "approved"
+  },
+  "contract_template_ref": "docs/licensing-templates.md#template-set",
+  "created_at": "2026-10-20T00:00:00Z",
+  "documents": [
+   {
+    "checksum": "35ad18d7a61ba7a4a58f21eb28493e418158dd651647e51e6f4155cf370299ef",
+    "derivative_categories": [
+     "jewelry_pendant",
+     "apparel_collab",
+     "wood_carving_collectible",
+     "cultural_gift"
+    ],
+    "document_id": "LICDOC-0001",
+    "file_ref": "docs/licensing-templates.md#character-licence",
+    "kind": "character_licence",
+    "signatories": [
+     {
+      "name": "Craft Village IP Office (synthetic)",
+      "party": "licensor",
+      "signed_at": "2026-10-20T00:00:00Z"
+     },
+     {
+      "name": "Harbour Jewellery Works (synthetic)",
+      "party": "licensee",
+      "signed_at": "2026-10-20T01:00:00Z"
+     },
+     {
+      "name": "Regional craft association (synthetic)",
+      "party": "witness",
+      "signed_at": "2026-10-20T02:00:00Z"
+     }
+    ],
+    "status": "signed"
+   },
+   {
+    "checksum": "00e66dd0050f37cc09bdb64c3c10b8dbd9eab4cc74ddcce0f4f8f2d727fd3254",
+    "derivative_categories": [
+     "jewelry_pendant",
+     "apparel_collab",
+     "wood_carving_collectible",
+     "cultural_gift"
+    ],
+    "document_id": "LICDOC-0002",
+    "file_ref": "docs/licensing-templates.md#derivative-licence",
+    "kind": "derivative_licence",
+    "signatories": [
+     {
+      "name": "Craft Village IP Office (synthetic)",
+      "party": "licensor",
+      "signed_at": "2026-10-20T00:00:00Z"
+     },
+     {
+      "name": "Harbour Jewellery Works (synthetic)",
+      "party": "licensee",
+      "signed_at": "2026-10-20T01:00:00Z"
+     }
+    ],
+    "status": "signed"
+   },
+   {
+    "checksum": "07a43fbb4f7bdf1083d344a4df381015ee02ec09717da2867828497de648b793",
+    "derivative_categories": [
+     "jewelry_pendant",
+     "cultural_gift"
+    ],
+    "document_id": "LICDOC-0003",
+    "file_ref": "docs/licensing-templates.md#merchandising",
+    "kind": "merchandising",
+    "signatories": [
+     {
+      "name": "Craft Village IP Office (synthetic)",
+      "party": "licensor",
+      "signed_at": "2026-10-20T00:00:00Z"
+     },
+     {
+      "name": "Harbour Jewellery Works (synthetic)",
+      "party": "licensee",
+      "signed_at": "2026-10-21T00:00:00Z"
+     }
+    ],
+    "status": "signed"
+   },
+   {
+    "checksum": "843e3e2cbd46af4f6e4850ee9274842fead3297fa740c7a628ee16f0b81c65e6",
+    "derivative_categories": [
+     "apparel_collab",
+     "wood_carving_collectible"
+    ],
+    "document_id": "LICDOC-0004",
+    "file_ref": "docs/licensing-templates.md#territorial-addendum",
+    "kind": "territorial_addendum",
+    "signatories": [
+     {
+      "name": "Craft Village IP Office (synthetic)",
+      "party": "licensor",
+      "signed_at": "2026-10-20T00:00:00Z"
+     },
+     {
+      "name": "Harbour Jewellery Works (synthetic)",
+      "party": "licensee",
+      "signed_at": "2026-10-21T00:00:00Z"
+     }
+    ],
+    "status": "signed"
+   },
+   {
+    "checksum": "5127652aacc0bd17faf1ac4ec39f5035a7c3f45244643f1e50fbb4187e6df4e7",
+    "derivative_categories": [
+     "jewelry_pendant",
+     "apparel_collab",
+     "wood_carving_collectible",
+     "cultural_gift"
+    ],
+    "document_id": "LICDOC-0005",
+    "file_ref": "docs/licensing-templates.md#extended-markets",
+    "kind": "character_licence",
+    "signatories": [
+     {
+      "name": "Craft Village IP Office (synthetic)",
+      "party": "licensor",
+      "signed_at": "2026-10-22T00:00:00Z"
+     }
+    ],
+    "status": "draft"
+   }
+  ],
+  "license_id": "IPL-0001",
+  "merch_spec_refs": [
+   "MS-0001",
+   "MS-0002",
+   "MS-0003",
+   "MS-0004"
+  ],
+  "quality_spec": {
+   "inspection_points": [
+    "authenticity label present and legible",
+    "licence number matches the signed document",
+    "character motif matches the approved visual asset",
+    "finish matches the specification",
+    "packaging band matches the product"
+   ],
+   "material_standard": "Recycled precious metal, FSC certified hardwood and OEKO-TEX textiles; every material declares its sourcing class in the specification.",
+   "packaging": "Kraft or FSC card box with a paper band; the authenticity label and the licence number are printed on the band, never on the piece."
+  },
+  "traditional_prototype_refs": [
+   {
+    "exclusive_claimed": false,
+    "name": "regional mortise-and-tenon joinery technique"
+   },
+   {
+    "exclusive_claimed": false,
+    "name": "local kiln-fire glaze technique"
+   },
+   {
+    "exclusive_claimed": false,
+    "name": "peony roundel as a shared decorative motif"
+   }
+  ],
+  "usage": {
+   "derivative_categories": [
+    "jewelry_pendant",
+    "apparel_collab",
+    "wood_carving_collectible",
+    "cultural_gift"
+   ],
+   "exclusivity": false,
+   "royalty_rate_bp": 800,
+   "term_months": 36,
+   "territory": [
+    "CN",
+    "EU",
+    "US"
+   ]
+  }
+ },
+ "license_summary": {
+  "categories_covered": [
+   "apparel_collab",
+   "cultural_gift",
+   "jewelry_pendant",
+   "wood_carving_collectible"
+  ],
+  "categories_licensed": [
+   "apparel_collab",
+   "cultural_gift",
+   "jewelry_pendant",
+   "wood_carving_collectible"
+  ],
+  "documents": 5,
+  "draft": 1,
+  "exclusivity": false,
+  "royalty_rate_bp": 800,
+  "signed": 4,
+  "term_months": 36
+ },
+ "merch_specs": [
+  {
+   "category": "jewelry_pendant",
+   "character_ids": [
+    "CHR-MU",
+    "CHR-HUO"
+   ],
+   "content_review_ref": "CRV-0005",
+   "created_at": "2026-10-20T00:00:00Z",
+   "license_id": "IPL-0001",
+   "materials": [
+    {
+     "name": "18k recycled gold",
+     "sourcing": "certified",
+     "standard": "Au750, nickel free, certified recycled content"
+    },
+    {
+     "name": "paper certificate",
+     "sourcing": "certified",
+     "standard": "FSC mixed sources, 240 gsm"
+    }
+   ],
+   "packaging": {
+    "dimensions_mm": [
+     90,
+     70,
+     30
+    ],
+    "label_requirements": [
+     "authenticity label",
+     "licence number",
+     "craftsperson name",
+     "market language"
+    ],
+    "materials": "FSC kraft box with paper band"
+   },
+   "quality": {
+    "finish": "brushed face, polished motif recess, no visible tool marks",
+    "inspection_points": [
+     "authenticity label printed on the certificate band",
+     "motif depth matches the approved render",
+     "clasp closes under a 2 kg pull"
+    ],
+    "sampling": {
+     "aql": 1.5,
+     "level": "II"
+    },
+    "testing": [
+     "nickel release screening",
+     "48 hour tarnish test",
+     "clasp cycle test"
+    ],
+    "tolerances": [
+     {
+      "dimension": "pendant_width_mm",
+      "method": "caliper",
+      "nominal_mm": 18,
+      "tolerance_mm": 0.15
+     },
+     {
+      "dimension": "chain_length_mm",
+      "method": "tape measure",
+      "nominal_mm": 450,
+      "tolerance_mm": 2
+     }
+    ]
+   },
+   "rights": {
+    "exclusivity": false,
+    "royalty_rate_bp": 800,
+    "term_months": 36,
+    "territory": [
+     "CN",
+     "EU",
+     "US"
+    ]
+   },
+   "spec_id": "MS-0001",
+   "title": {
+    "en": "Two Guardians pendant",
+    "zh": "双守纹样吊坠"
+   }
+  },
+  {
+   "category": "apparel_collab",
+   "character_ids": [
+    "CHR-MU"
+   ],
+   "content_review_ref": "CRV-0006",
+   "created_at": "2026-10-20T00:00:00Z",
+   "license_id": "IPL-0001",
+   "materials": [
+    {
+     "name": "organic cotton canvas",
+     "sourcing": "certified",
+     "standard": "GOTS certified, 320 gsm"
+    },
+    {
+     "name": "water based ink",
+     "sourcing": "certified",
+     "standard": "OEKO-TEX ECO PASSPORT"
+    }
+   ],
+   "packaging": {
+    "dimensions_mm": [
+     420,
+     300,
+     20
+    ],
+    "label_requirements": [
+     "authenticity label",
+     "licence number",
+     "fibre composition",
+     "care instructions"
+    ],
+    "materials": "recycled paper sleeve with printed band"
+   },
+   "quality": {
+    "finish": "screen print with a matte hand feel, no cracking after wash",
+    "inspection_points": [
+     "authenticity label sewn into the inner seam",
+     "print registration within 1 mm",
+     "handle stitching bar tack present"
+    ],
+    "sampling": {
+     "aql": 2.5,
+     "level": "II"
+    },
+    "testing": [
+     "wash fastness 40C",
+     "print adhesion tape test"
+    ],
+    "tolerances": [
+     {
+      "dimension": "tote_width_mm",
+      "method": "tape measure",
+      "nominal_mm": 380,
+      "tolerance_mm": 4
+     },
+     {
+      "dimension": "handle_drop_mm",
+      "method": "tape measure",
+      "nominal_mm": 240,
+      "tolerance_mm": 5
+     }
+    ]
+   },
+   "rights": {
+    "exclusivity": false,
+    "royalty_rate_bp": 600,
+    "term_months": 24,
+    "territory": [
+     "CN",
+     "EU"
+    ]
+   },
+   "spec_id": "MS-0002",
+   "title": {
+    "en": "Two Guardians canvas tote",
+    "zh": "双守纹样帆布托特包"
+   }
+  },
+  {
+   "category": "wood_carving_collectible",
+   "character_ids": [
+    "CHR-MU",
+    "CHR-HUO"
+   ],
+   "content_review_ref": "CRV-0007",
+   "created_at": "2026-10-20T00:00:00Z",
+   "license_id": "IPL-0001",
+   "materials": [
+    {
+     "name": "black walnut",
+     "sourcing": "certified",
+     "standard": "FSC certified, moisture content 8 percent"
+    },
+    {
+     "name": "natural oil finish",
+     "sourcing": "licensed",
+     "standard": "food contact safe, solvent free"
+    }
+   ],
+   "packaging": {
+    "dimensions_mm": [
+     300,
+     260,
+     90
+    ],
+    "label_requirements": [
+     "authenticity label",
+     "licence number",
+     "wood species",
+     "care card"
+    ],
+    "materials": "moulded pulp insert inside a rigid card box"
+   },
+   "quality": {
+    "finish": "hand burnished, three oil coats, grain visible under the glaze band",
+    "inspection_points": [
+     "authenticity label on the base plate",
+     "glaze band matches the firing record",
+     "no crack longer than 0.3 mm outside the design line"
+    ],
+    "sampling": {
+     "aql": 2.5,
+     "level": "II"
+    },
+    "testing": [
+     "moisture meter check",
+     "drop test on a 300 mm corner"
+    ],
+    "tolerances": [
+     {
+      "dimension": "panel_height_mm",
+      "method": "caliper",
+      "nominal_mm": 240,
+      "tolerance_mm": 0.5
+     },
+     {
+      "dimension": "panel_thickness_mm",
+      "method": "caliper",
+      "nominal_mm": 18,
+      "tolerance_mm": 0.3
+     }
+    ]
+   },
+   "rights": {
+    "exclusivity": false,
+    "royalty_rate_bp": 1000,
+    "term_months": 36,
+    "territory": [
+     "CN",
+     "EU",
+     "US"
+    ]
+   },
+   "spec_id": "MS-0003",
+   "title": {
+    "en": "Waking the Kiln carved collectible",
+    "zh": "醒窑木作收藏件"
+   }
+  },
+  {
+   "category": "cultural_gift",
+   "character_ids": [
+    "CHR-MU",
+    "CHR-HUO"
+   ],
+   "content_review_ref": "CRV-0008",
+   "created_at": "2026-10-20T00:00:00Z",
+   "license_id": "IPL-0001",
+   "materials": [
+    {
+     "name": "brass book mark",
+     "sourcing": "licensed",
+     "standard": "H62 brass, lacquer sealed"
+    },
+    {
+     "name": "risograph postcard",
+     "sourcing": "certified",
+     "standard": "FSC paper, soy ink"
+    }
+   ],
+   "packaging": {
+    "dimensions_mm": [
+     180,
+     130,
+     12
+    ],
+    "label_requirements": [
+     "authenticity label",
+     "licence number",
+     "set contents",
+     "bilingual care note"
+    ],
+    "materials": "printed card sleeve with a paper belly band"
+   },
+   "quality": {
+    "finish": "lacquer sealed brass with etched motif, risograph registration within 1 mm",
+    "inspection_points": [
+     "authenticity label on the inner sleeve",
+     "licence number on the outer band",
+     "set composition matches the bill of materials"
+    ],
+    "sampling": {
+     "aql": 4.0,
+     "level": "I"
+    },
+    "testing": [
+     "lacquer adhesion",
+     "ink rub test"
+    ],
+    "tolerances": [
+     {
+      "dimension": "bookmark_length_mm",
+      "method": "caliper",
+      "nominal_mm": 120,
+      "tolerance_mm": 1
+     },
+     {
+      "dimension": "postcard_width_mm",
+      "method": "caliper",
+      "nominal_mm": 105,
+      "tolerance_mm": 1
+     }
+    ]
+   },
+   "rights": {
+    "exclusivity": false,
+    "royalty_rate_bp": 700,
+    "term_months": 24,
+    "territory": [
+     "CN",
+     "US"
+    ]
+   },
+   "spec_id": "MS-0004",
+   "title": {
+    "en": "Two Guardians gift set",
+    "zh": "双守文化礼品套装"
+   }
+  }
+ ],
+ "merch_summary": {
+  "aql": [
+   1.5,
+   2.5,
+   4.0
+  ],
+  "categories": [
+   "apparel_collab",
+   "cultural_gift",
+   "jewelry_pendant",
+   "wood_carving_collectible"
+  ],
+  "royalty_rates_bp": [
+   600,
+   700,
+   800,
+   1000
+  ],
+  "specs": 4
+ },
+ "version": "1.0.0"
+}

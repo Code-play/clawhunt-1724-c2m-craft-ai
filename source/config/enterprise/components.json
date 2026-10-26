@@ -1,0 +1,177 @@
+{
+ "version": "1.0.0",
+ "as_of": "2026-10-23T00:00:00Z",
+ "note": "Reusable components of the enterprise service layer. Selecting a subset here is what switching industry means: the same code assembles a different service from this registry plus an enterprise profile.",
+ "components": [
+  {
+   "component_id": "kb_craft",
+   "name": {"zh": "工艺知识库", "en": "Craft knowledge base"},
+   "kind": "knowledge_base",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["rules.explain", "library.search"],
+   "config_ref": "config/craft_rules",
+   "contracts": ["manufacturability_assessment", "pattern_asset"],
+   "depends_on": [],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["craft_rules", "library"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "verified",
+   "summary": {
+    "zh": "把珠宝与硬木两套工艺规则、设备能力包和已授权纹样库做成可检索的知识底座，回答“能不能做、哪里不能做、怎么改”。",
+    "en": "Searchable base of craft rules, workshop capability envelopes and licensed patterns for both industries; answers whether a design can be made, where it fails and what to change."
+   }
+  },
+  {
+   "component_id": "agent_quote",
+   "name": {"zh": "报价与解释智能体", "en": "Quote and explanation agent"},
+   "kind": "agent",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["quote.draft", "concept.explain"],
+   "config_ref": "config/commerce/pricing.json",
+   "contracts": ["design_concept", "settlement"],
+   "depends_on": ["kb_craft"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["orders"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "configured",
+   "summary": {
+    "zh": "把概念事实、工艺判定与价格政策组合成可追溯的报价草稿，并给客户解释每一项金额的来源。",
+    "en": "Turns concept facts, the manufacturability verdict and pricing policy into a traceable quote draft and explains where every amount comes from."
+   }
+  },
+  {
+   "component_id": "wf_dispatch",
+   "name": {"zh": "派工与工艺单工作流", "en": "Dispatch and work order workflow"},
+   "kind": "workflow",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["order.dispatch", "work_order.issue"],
+   "config_ref": "config/commerce/state_machine.json",
+   "contracts": ["c2m_order", "craft_work_order"],
+   "depends_on": ["agent_quote"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["orders"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "verified",
+   "summary": {
+    "zh": "订单到工艺单、BOM、工序路线与发货状态机，每个状态迁移落一条哈希链台账事件。",
+    "en": "Order to work order, bill of materials, process route and shipment state machine; every transition appends a hash chained ledger event."
+   }
+  },
+  {
+   "component_id": "wf_capacity",
+   "name": {"zh": "产能日历与交期承诺", "en": "Capacity calendar and delivery promise"},
+   "kind": "workflow",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["capacity.plan", "promise.commit"],
+   "config_ref": "config/commerce/capacity.json",
+   "contracts": ["production_schedule", "c2m_order"],
+   "depends_on": ["wf_dispatch"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["orders"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "configured",
+   "summary": {
+    "zh": "按车间工作日排产，已承诺工单向后占位、新订单向前填谷，给出交期、档期与被拒绝的备选。",
+    "en": "Plans per workshop working day: committed work orders book backwards, new orders fill forwards, and every promise carries its slot and the rejected alternatives."
+   }
+  },
+  {
+   "component_id": "wf_quality",
+   "name": {"zh": "品控记录与抽样计划", "en": "Quality records and sampling plans"},
+   "kind": "workflow",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["quality.inspect", "defect.classify"],
+   "config_ref": "config/commerce/quality.json",
+   "contracts": ["qc_record"],
+   "depends_on": ["wf_dispatch"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["orders", "media"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "verified",
+   "summary": {
+    "zh": "缺陷分类、测量公差、抽样方案与判定不变量；争议可引用本工单的检验记录作为证据。",
+    "en": "Defect taxonomy, measurement tolerance, sampling plans and the verdict invariant; a dispute can cite inspections recorded against its own work order."
+   }
+  },
+  {
+   "component_id": "crm_leads",
+   "name": {"zh": "询盘与 CRM 线索", "en": "Inquiry to CRM leads"},
+   "kind": "crm",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["lead.score", "lead.route", "crm.follow_up"],
+   "config_ref": "config/growth/crm.json",
+   "contracts": ["inquiry_lead"],
+   "depends_on": ["agent_quote"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["crm"], "personal_data": true, "retention_days": 730, "cross_border": true},
+   "maturity": "configured",
+   "summary": {
+    "zh": "多语站点询盘进入后做确定性打分、SLA 计时、归属路由、跟进任务与报价草稿，形成可测试的闭环。",
+    "en": "Site inquiries become deterministically scored leads with an SLA clock, owner routing, follow-up tasks and a quote draft, forming a testable closed loop."
+   }
+  },
+  {
+   "component_id": "site_composer",
+   "name": {"zh": "多语独立站生成器", "en": "Multilingual site composer"},
+   "kind": "growth",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["site.compose", "site.multilingual"],
+   "config_ref": "config/growth/site.json",
+   "contracts": ["growth_site", "enterprise_profile"],
+   "depends_on": ["kb_craft"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["content", "media"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "verified",
+   "summary": {
+    "zh": "从站点合同生成多语页面、canonical、hreflang 与 JSON-LD；页面是数据的投影，改文案不改代码。",
+    "en": "Generates multilingual pages, canonical paths, hreflang alternates and JSON-LD from the site contract; pages are a projection of data, so copy changes are not code changes."
+   }
+  },
+  {
+   "component_id": "seo_auditor",
+   "name": {"zh": "SEO 审计器", "en": "SEO auditor"},
+   "kind": "growth",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["seo.audit", "seo.structured_data"],
+   "config_ref": "config/growth/copy.json",
+   "contracts": ["growth_site"],
+   "depends_on": ["site_composer"],
+   "enabled_by_default": true,
+   "data_boundary": {"stores": ["content"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "verified",
+   "summary": {
+    "zh": "逐页检查标题与描述长度、唯一 H1、canonical、hreflang 互指、结构化数据可解析，输出 0-10000 的分数与问题清单。",
+    "en": "Checks title and description length, a single H1, canonical paths, reciprocal hreflang and parseable structured data per page, then scores the site from 0 to 10000 bp."
+   }
+  },
+  {
+   "component_id": "ip_studio",
+   "name": {"zh": "文化 IP 工坊", "en": "Cultural IP studio"},
+   "kind": "scenario_showcase",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["ip.character_bible", "ip.visual_library", "ip.short_drama"],
+   "config_ref": "config/ip/characters.json",
+   "contracts": ["character_bible", "visual_asset", "short_drama"],
+   "depends_on": [],
+   "enabled_by_default": false,
+   "data_boundary": {"stores": ["content", "media"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "configured",
+   "summary": {
+    "zh": "双守护角色设定、可复算的视觉资产库、脚本到成片的短剧工作流，全部以数据表达并可离线重建。",
+    "en": "Dual guardian bible, a recomputable visual asset library and a script to final cut short drama workflow, all expressed as data and rebuildable offline."
+   }
+  },
+  {
+   "component_id": "ip_licensing",
+   "name": {"zh": "衍生授权与衍生规格", "en": "Derivative licensing and specs"},
+   "kind": "commerce",
+   "industries": ["jewelry", "hardwood"],
+   "capabilities": ["licence.document_set", "merch.spec"],
+   "config_ref": "config/ip/licensing.json",
+   "contracts": ["ip_license", "merch_spec", "content_review"],
+   "depends_on": ["ip_studio"],
+   "enabled_by_default": false,
+   "data_boundary": {"stores": ["content"], "personal_data": false, "retention_days": 0, "cross_border": false},
+   "maturity": "configured",
+   "summary": {
+    "zh": "授权文件集、四类衍生商品的材质与质量规格、抽样与标识要求，以及内容审核与真实性标注记录。",
+    "en": "Licence document set, bills of materials and quality specifications for four derivative categories, sampling and labelling rules, plus content review and authenticity records."
+   }
+  }
+ ]
+}

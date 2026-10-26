@@ -1,0 +1,191 @@
+{
+ "samples": {
+  "character-bible-heritage-exclusive.json": {
+   "contract": "character_bible",
+   "error_count": 1,
+   "invariant": "INV-CHAR-01",
+   "path_prefix": "$"
+  },
+  "collector-chain-break.json": {
+   "contract": "collector_record",
+   "error_count": 1,
+   "invariant": "INV-EDITION-02",
+   "path_prefix": "$"
+  },
+  "content-review-approved-with-fail.json": {
+   "contract": "content_review",
+   "error_count": 1,
+   "invariant": "INV-CONTENT-01",
+   "path_prefix": "$"
+  },
+  "customization-choice-delta-mismatch.json": {
+   "contract": "customization_choice",
+   "error_count": 2,
+   "invariant": "INV-CUSTOM-01",
+   "path_prefix": "$"
+  },
+  "design-concept-bad-seed.json": {
+   "contract": "design_concept",
+   "error_count": 1,
+   "keyword": "pattern",
+   "path_prefix": "$.seed"
+  },
+  "design-concept-missing-facts.json": {
+   "contract": "design_concept",
+   "error_count": 1,
+   "keyword": "required",
+   "path_prefix": "$"
+  },
+  "edition-duplicate-number.json": {
+   "contract": "edition",
+   "error_count": 2,
+   "invariant": "INV-EDITION-01",
+   "path_prefix": "$"
+  },
+  "enterprise-profile-crm-channel-missing.json": {
+   "contract": "enterprise_profile",
+   "error_count": 1,
+   "invariant": "INV-ENT-01",
+   "path_prefix": "$"
+  },
+  "growth-site-hreflang-gap.json": {
+   "contract": "growth_site",
+   "error_count": 1,
+   "invariant": "INV-SEO-01",
+   "path_prefix": "$"
+  },
+  "growth-site-title-too-short.json": {
+   "contract": "growth_site",
+   "error_count": 1,
+   "invariant": "INV-SEO-01",
+   "path_prefix": "$"
+  },
+  "inquiry-lead-score-mismatch.json": {
+   "contract": "inquiry_lead",
+   "error_count": 1,
+   "invariant": "INV-LEAD-01",
+   "path_prefix": "$"
+  },
+  "ip-license-draft-only-coverage.json": {
+   "contract": "ip_license",
+   "error_count": 1,
+   "invariant": "INV-IP-02",
+   "path_prefix": "$"
+  },
+  "ip-license-exclusive-heritage.json": {
+   "contract": "ip_license",
+   "error_count": 1,
+   "invariant": "INV-IP-01",
+   "path_prefix": "$"
+  },
+  "merch-spec-missing-authenticity-label.json": {
+   "contract": "merch_spec",
+   "error_count": 1,
+   "invariant": "INV-MERCH-01",
+   "path_prefix": "$"
+  },
+  "order-dispute-resolved-without-note.json": {
+   "contract": "c2m_order",
+   "error_count": 1,
+   "invariant": "INV-DISPUTE-01",
+   "path_prefix": "$"
+  },
+  "order-negative-amount.json": {
+   "contract": "c2m_order",
+   "error_count": 1,
+   "keyword": "minimum",
+   "path_prefix": "$.amounts.platform_fee_cents"
+  },
+  "order-share-mismatch.json": {
+   "contract": "c2m_order",
+   "error_count": 1,
+   "invariant": "INV-ORDER-01",
+   "path_prefix": "$"
+  },
+  "pattern-asset-bad-hex.json": {
+   "contract": "pattern_asset",
+   "error_count": 1,
+   "keyword": "pattern",
+   "path_prefix": "$.palette[0]"
+  },
+  "pattern-asset-empty-scope.json": {
+   "contract": "pattern_asset",
+   "error_count": 1,
+   "invariant": "INV-LIC-02",
+   "path_prefix": "$"
+  },
+  "pattern-asset-exclusive-heritage.json": {
+   "contract": "pattern_asset",
+   "error_count": 1,
+   "invariant": "INV-LIC-03",
+   "path_prefix": "$"
+  },
+  "pattern-asset-inverted-window.json": {
+   "contract": "pattern_asset",
+   "error_count": 1,
+   "invariant": "INV-LIC-04",
+   "path_prefix": "$"
+  },
+  "pattern-asset-missing-source.json": {
+   "contract": "pattern_asset",
+   "error_count": 1,
+   "keyword": "required",
+   "path_prefix": "$.license"
+  },
+  "qc-pass-with-critical.json": {
+   "contract": "qc_record",
+   "error_count": 1,
+   "invariant": "INV-QC-01",
+   "path_prefix": "$"
+  },
+  "review-confirmed-contradiction.json": {
+   "contract": "artisan_review",
+   "error_count": 1,
+   "invariant": "INV-REVIEW-01",
+   "path_prefix": "$"
+  },
+  "review-override-no-reason.json": {
+   "contract": "artisan_review",
+   "error_count": 1,
+   "invariant": "INV-REVIEW-01",
+   "path_prefix": "$"
+  },
+  "service-component-self-dependency.json": {
+   "contract": "service_component",
+   "error_count": 1,
+   "invariant": "INV-COMP-01",
+   "path_prefix": "$"
+  },
+  "settlement-rate-mismatch.json": {
+   "contract": "settlement",
+   "error_count": 2,
+   "invariant": "INV-MONEY-01",
+   "path_prefix": "$"
+  },
+  "settlement-royalty-mismatch.json": {
+   "contract": "settlement",
+   "error_count": 2,
+   "invariant": "INV-ROYALTY-01",
+   "path_prefix": "$"
+  },
+  "short-drama-timecode-gap.json": {
+   "contract": "short_drama",
+   "error_count": 1,
+   "invariant": "INV-DRAMA-01",
+   "path_prefix": "$"
+  },
+  "visual-asset-checksum-mismatch.json": {
+   "contract": "visual_asset",
+   "error_count": 1,
+   "invariant": "INV-ASSET-01",
+   "path_prefix": "$"
+  },
+  "work-order-empty-bom.json": {
+   "contract": "craft_work_order",
+   "error_count": 1,
+   "keyword": "minItems",
+   "path_prefix": "$.bom"
+  }
+ },
+ "version": "1.0.0"
+}

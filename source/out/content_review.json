@@ -1,0 +1,566 @@
+{
+ "reviews": [
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "heritage_non_exclusive",
+     "note": "Mortise-and-tenon joinery and the cloud scroll are cited as shared regional techniques, never claimed as private property.",
+     "requirement": "Heritage references are cited without an exclusive claim",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "original_design",
+     "requirement": "Silhouette, palette and props are original combinations, not copies of a protected image",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "ai_disclosure",
+     "requirement": "AI assisted drafts carry an explicit authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "canon_consistency",
+     "requirement": "Motifs, taboos and props match the character record",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "no_ritual_object",
+     "requirement": "No protected ritual object is reproduced",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "craft_review",
+     "requirement": "A craft advisor signed the silhouette for manufacturability",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "Mortise-and-tenon joinery and the cloud scroll are cited as shared regional techniques, never claimed as private property.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0001",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "character_bible",
+    "ref": "CHR-MU"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "heritage_non_exclusive",
+     "note": "Kiln fire glaze and the peony roundel are cited as shared techniques; the crackle pattern is drawn from the synthetic test tile, not from a protected object.",
+     "requirement": "Heritage references are cited without an exclusive claim",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "original_design",
+     "requirement": "Silhouette, palette and props are original combinations, not copies of a protected image",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "ai_disclosure",
+     "requirement": "AI assisted drafts carry an explicit authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "canon_consistency",
+     "requirement": "Motifs, taboos and props match the character record",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "no_ritual_object",
+     "requirement": "No protected ritual object is reproduced",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "craft_review",
+     "requirement": "A craft advisor signed the silhouette for manufacturability",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "Kiln fire glaze and the peony roundel are cited as shared techniques; the crackle pattern is drawn from the synthetic test tile, not from a protected object.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0002",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "character_bible",
+    "ref": "CHR-HUO"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "script_structure",
+     "requirement": "Every scene has a beat that changes the relationship",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "dialogue_bilingual",
+     "requirement": "Every dialogue line carries both zh and en text",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "heritage_non_exclusive",
+     "note": "The drama references regional joinery and glaze techniques as setting, not as an origin claim.",
+     "requirement": "Heritage references are cited without an exclusive claim",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "subtitle_sync",
+     "requirement": "Subtitles stay inside the cut and never overlap",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "authenticity_label",
+     "requirement": "The reel carries an explicit AI assisted authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "no_ritual_object",
+     "requirement": "No protected ritual object is reproduced",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "The drama references regional joinery and glaze techniques as setting, not as an origin claim.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0003",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "short_drama",
+    "ref": "SDR-0001"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "document_set",
+     "requirement": "Every derivative category has a signed document",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "heritage_non_exclusive",
+     "note": "No exclusivity is granted over any heritage technique or motif.",
+     "requirement": "Heritage references stay non-exclusive",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "royalty_scope",
+     "requirement": "Royalty and term match the usage block",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "signatories",
+     "requirement": "Both licensor and licensee signed",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "territory",
+     "requirement": "Territory matches the negotiated markets",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "No exclusivity is granted over any heritage technique or motif.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0004",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "licence_document",
+    "ref": "IPL-0001"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "bom_licensed",
+     "requirement": "Every material declares its sourcing class",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "quality_spec",
+     "requirement": "Tolerances and the sampling plan are stated",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "authenticity_label",
+     "requirement": "Packaging carries the authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "licence_link",
+     "requirement": "The specification references the signed licence",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "category_fit",
+     "requirement": "The derivative category fits the licensed usage",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "Pendant motif is an original combination of the two character palettes.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0005",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "merch_spec",
+    "ref": "MS-0001"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "bom_licensed",
+     "requirement": "Every material declares its sourcing class",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "quality_spec",
+     "requirement": "Tolerances and the sampling plan are stated",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "authenticity_label",
+     "requirement": "Packaging carries the authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "licence_link",
+     "requirement": "The specification references the signed licence",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "category_fit",
+     "requirement": "The derivative category fits the licensed usage",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "The tote print uses the wood guardian lattice as a pattern, not as a sacred image.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0006",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "merch_spec",
+    "ref": "MS-0002"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "bom_licensed",
+     "requirement": "Every material declares its sourcing class",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "quality_spec",
+     "requirement": "Tolerances and the sampling plan are stated",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "authenticity_label",
+     "requirement": "Packaging carries the authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "licence_link",
+     "requirement": "The specification references the signed licence",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "category_fit",
+     "requirement": "The derivative category fits the licensed usage",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "The carved collectible cites the joinery technique without claiming it.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0007",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "merch_spec",
+    "ref": "MS-0003"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "bom_licensed",
+     "requirement": "Every material declares its sourcing class",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "quality_spec",
+     "requirement": "Tolerances and the sampling plan are stated",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "authenticity_label",
+     "requirement": "Packaging carries the authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "licence_link",
+     "requirement": "The specification references the signed licence",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "category_fit",
+     "requirement": "The derivative category fits the licensed usage",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "Gift set uses shared motifs; no ritual object is reproduced.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0008",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "merch_spec",
+    "ref": "MS-0004"
+   },
+   "verdict": "approved"
+  },
+  {
+   "authenticity": {
+    "ai_generated": true,
+    "disclosure_required": true,
+    "label": "AI-assisted concept and copy draft, reviewed and approved by a human content reviewer; all characters and settings are synthetic.",
+    "model_refs": [
+     "qwen-image-3.0 (offline stub in the repository)",
+     "qwen3.7-flash (offline stub in the repository)"
+    ]
+   },
+   "checklist": [
+    {
+     "item_id": "recipe_deterministic",
+     "requirement": "The drawing recipe is data and its checksum recomputes",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "character_match",
+     "requirement": "Palette and motifs match the character record",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "ai_disclosure",
+     "requirement": "AI assisted assets carry an authenticity label",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "licence_safe",
+     "requirement": "Sourcing class is self produced or licensed",
+     "verdict": "pass"
+    },
+    {
+     "item_id": "review_state",
+     "requirement": "The asset carries an approved review state",
+     "verdict": "pass"
+    }
+   ],
+   "heritage_check": {
+    "exclusive_claim": false,
+    "note": "The turnaround is an original procedural drawing; palette and motifs come from the bible record.",
+    "traditional_prototypes_referenced": [
+     "regional mortise-and-tenon joinery technique",
+     "local kiln-fire glaze technique",
+     "peony roundel as a shared decorative motif"
+    ]
+   },
+   "review_id": "CRV-0009",
+   "reviewed_at": "2026-10-20T00:00:00Z",
+   "reviewer": {
+    "name": "Content review desk",
+    "reviewer_id": "REV-IP-01",
+    "role": "content_reviewer"
+   },
+   "subject": {
+    "kind": "visual_asset",
+    "ref": "VA-MU-TURN-FRONT"
+   },
+   "verdict": "approved"
+  }
+ ],
+ "summary": {
+  "approved": 9,
+  "reviews": 9,
+  "subjects": [
+   "character_bible",
+   "licence_document",
+   "merch_spec",
+   "short_drama",
+   "visual_asset"
+  ]
+ },
+ "version": "1.0.0"
+}

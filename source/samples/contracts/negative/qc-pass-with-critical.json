@@ -1,0 +1,38 @@
+{
+ "at": "2026-10-23T00:19:00Z",
+ "checkpoint_id": "QC-01",
+ "defects": [
+  {
+   "code": "setting_loose",
+   "count": 1,
+   "note": "stone moves in the bezel",
+   "severity": "critical"
+  }
+ ],
+ "inspector": "ART-JW-01",
+ "measurements": [
+  {
+   "limit_max": 1.43,
+   "limit_min": 1.17,
+   "name": "wall_mm",
+   "ok": true,
+   "value": 1.3
+  },
+  {
+   "limit_max": 26.4,
+   "limit_min": 21.6,
+   "name": "dimension_mm",
+   "ok": true,
+   "value": 24.0
+  }
+ ],
+ "qc_id": "QCR-0001",
+ "sample_size": 5,
+ "sampling_plan": {
+  "aql": "2.5",
+  "critical": false,
+  "plan_id": "aql_2_5"
+ },
+ "verdict": "pass",
+ "work_order_id": "WO-0002"
+}

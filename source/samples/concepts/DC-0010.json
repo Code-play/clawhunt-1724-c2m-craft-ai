@@ -1,0 +1,92 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0010",
+ "craft_facts": {
+  "alloy": "18k_gold",
+  "chain_link_mm": 0,
+  "enamel": false,
+  "enamel_firing_c": 0,
+  "engraving_depth_mm": 0.2,
+  "hollow_cast": false,
+  "max_dimension_mm": 30,
+  "min_wall_thickness_mm": 0.8,
+  "prong_count": 0,
+  "prong_thickness_mm": 0,
+  "recessed_area": true,
+  "ring_size_mm": 0,
+  "setting_type": "bezel",
+  "stone_count": 3,
+  "stone_size_mm": 2.0,
+  "surface_finish": "mirror",
+  "undercut": false
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "pendant",
+  "dimensions_mm": {
+   "x": 26.25,
+   "y": 30.0,
+   "z": 2.06
+  },
+  "variant": "relief_disc"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "jewelry",
+ "material": {
+  "finish": "mirror",
+  "name": "18k_gold"
+ },
+ "motif_ids": [
+  "MOT-HW-04"
+ ],
+ "palette": [
+  {
+   "hex": "#B9C2C7",
+   "weight": 55
+  },
+  {
+   "hex": "#5E6A72",
+   "weight": 20
+  },
+  {
+   "hex": "#F4F4F1",
+   "weight": 12
+  },
+  {
+   "hex": "#2A3439",
+   "weight": 6
+  },
+  {
+   "hex": "#9AA7AD",
+   "weight": 4
+  },
+  {
+   "hex": "#DDE2E4",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 135,
+  "motif_style": "inlay",
+  "texture": "brushed"
+ },
+ "prompt": {
+  "en": "The same motif in metal: 0.8 mm wall, mirror finish, recessed field.",
+  "zh": "同一纹样的金属版本：0.8 mm 壁厚、镜面、深凹面。"
+ },
+ "seed": "ab0de8fff5eecc62",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "coastal_minimal"
+ },
+ "title": {
+  "en": "The pendant in metal",
+  "zh": "木质嵌坠的金属版本"
+ }
+}

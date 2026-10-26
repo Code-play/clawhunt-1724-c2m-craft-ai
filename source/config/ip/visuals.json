@@ -1,0 +1,55 @@
+{
+ "version": "1.0.0",
+ "note": "Visual asset plan for the two guardians. The library builder turns these blueprints into drawing recipes: three turnaround views, four expressions, two props and one costume per character, plus two shared scenes. Placeholders {p0}..{p4}, {accent}, {paper}, {ink}, {muted} are resolved from the character palette.",
+ "canvas": {"width": 768, "height": 1024},
+ "palette_tokens": {
+  "paper": "#F7F3EA",
+  "ink": "#1F2A44",
+  "muted": "#5B6478",
+  "gold": "#C9A227"
+ },
+ "kinds": {
+  "turnaround": {
+   "blueprint": "figure",
+   "variants": [
+    {"view_or_name": "front", "mirror": false, "face": true, "accent_x": 0},
+    {"view_or_name": "side", "mirror": true, "face": false, "accent_x": 18},
+    {"view_or_name": "back", "mirror": false, "face": false, "accent_x": -12}
+   ]
+  },
+  "expression": {
+   "blueprint": "figure",
+   "variants": [
+    {"view_or_name": "neutral", "mirror": false, "face": true, "eye_offset": 0, "mouth_offset": 0},
+    {"view_or_name": "warm", "mirror": false, "face": true, "eye_offset": 4, "mouth_offset": 8},
+    {"view_or_name": "alarmed", "mirror": false, "face": true, "eye_offset": -6, "mouth_offset": -14},
+    {"view_or_name": "determined", "mirror": false, "face": true, "eye_offset": 0, "mouth_offset": -6}
+   ]
+  },
+  "prop": {
+   "blueprint": "object",
+   "variants": [
+    {"view_or_name": "primary", "mirror": false, "motif_seed": 1},
+    {"view_or_name": "secondary", "mirror": false, "motif_seed": 2}
+   ]
+  },
+  "costume": {
+   "blueprint": "costume",
+   "variants": [
+    {"view_or_name": "robe", "mirror": false, "trim_bands": 3}
+   ]
+  },
+  "scene": {
+   "blueprint": "landscape",
+   "variants": [
+    {"view_or_name": "forest_edge", "sky": "#DCE6DA", "sun_x": 610, "hill": "#8C6A3F"},
+    {"view_or_name": "kiln_mouth", "sky": "#F3DFC4", "sun_x": 180, "hill": "#8E3B2F"}
+   ]
+  }
+ },
+ "review": {
+  "reviewer": "Content review desk",
+  "reviewed_at": "2026-10-18T00:00:00Z"
+ },
+ "created_at": "2026-10-18T00:00:00Z"
+}

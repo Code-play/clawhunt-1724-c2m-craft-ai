@@ -1,0 +1,194 @@
+{
+ "version": "1.0.0",
+ "note": "Copy pack for SITE-JW-01. The site generator composes every page from this file, so a copy edit is a data edit. Keep the description fields between 45 and 200 characters, because the SEO auditor measures them against the bounds in config/growth/site.json.",
+ "sites": {
+  "SITE-JW-01": {
+   "en": {
+    "nav": {"home": "Home", "collection": "Collection", "studio": "Studio", "contact": "Contact"},
+    "footer": "Harbour Jewellery Studio (synthetic demo). Regional craft, licensed patterns, traceable manufacturing.",
+    "form": {
+     "name": "Your name",
+     "email": "Work email",
+     "company": "Company",
+     "country": "Country code",
+     "intent": "What do you need",
+     "message": "Tell us about the piece, quantity and market",
+     "submit": "Send the inquiry",
+     "success": "Thank you. The export desk will answer within one working day.",
+     "intents": {
+      "sample_request": "Sample request",
+      "bulk_quote": "Bulk quote",
+      "oem": "OEM / white label",
+      "partnership": "Partnership",
+      "information": "General information"
+     }
+    },
+    "follow_ups": {
+     "ack_sample": {"subject": "Your sample request reached the studio", "body": "Thank you for the sample request. We are checking pattern availability and will confirm the sample lead time within one working day."},
+     "quote_follow_up": {"subject": "Follow-up on your quotation", "body": "Sharing the quotation again with the working-day assumptions and the delivery window. Tell us if the quantity or finish should change."},
+     "call_back": {"subject": "A short call about your order", "body": "We would like to confirm the delivery window and the inspection points on a short call this week."},
+     "information_reply": {"subject": "More information from the studio", "body": "Sharing the catalogue, the licence summary and the current lead time. Tell us if a sample would help before you decide."}
+    },
+    "pages": {
+     "home": {
+      "title": "Harbour Jewellery Studio | Hand-finished custom pieces",
+      "meta_description": "Custom jewellery made with licensed regional patterns and validated craft rules. Send a brief, receive a manufacturability verdict and a traceable quote.",
+      "keywords": ["custom jewelry", "licensed pattern", "regional craft", "manufacturable design"],
+      "h1": "Craft-led jewellery, made to your brief",
+      "sections": {
+       "hero": {"heading": "From your brief to a makeable piece", "body": "Describe the piece you want. The studio turns the brief into concept candidates, checks them against workshop rules and tells you what can be made before anyone quotes."},
+       "value": {"heading": "Manufacturability first", "body": "Every design is checked against casting, setting and chasing rules. When a detail cannot be made, you see the reason and the suggested change instead of a bare rejection."},
+       "inquiry": {"heading": "Request a sample or a quote", "body": "Tell us the market, the quantity and the finish. The export desk answers within one working day with a sample plan or a quotation."}
+      }
+     },
+     "collection": {
+      "title": "Collection | Licensed patterns and numbered editions",
+      "meta_description": "Browse the collection range: regional craft motifs with a licence record on every pattern, and limited editions that are numbered, certified and traceable.",
+      "keywords": ["limited edition", "numbered certificate", "pattern licence", "gold pendant"],
+      "h1": "The collection",
+      "sections": {
+       "range": {"heading": "Three families, one craft language", "body": "Coastal, courtyard and kiln families share a palette system, so a buyer can build a range without the pieces competing with each other."},
+       "craft": {"heading": "Every pattern carries its licence", "body": "A pattern cannot enter the library without a licensing source, a usage scope and a review state. Heritage references stay non-exclusive by contract."},
+       "proof": {"heading": "Numbered, certified, transferable", "body": "Limited editions reserve a number when the order is created and issue it on settlement; the certificate hash travels with the piece across ownership transfers."}
+      }
+     },
+     "studio": {
+      "title": "Studio | Designers, workshops and visits",
+      "meta_description": "Meet the designers and workshop partners behind the studio, read how quality is inspected, and book a studio visit or a video walkthrough with the export desk.",
+      "keywords": ["jewellery studio", "workshop partner", "studio visit", "quality inspection"],
+      "h1": "Inside the studio",
+      "sections": {
+       "story": {"heading": "Two workshops, one standard", "body": "Design and fabrication sit in separate workshops. The same ruleset, the same quality plan and the same ledger run across both, so a small pilot order and a bulk run follow one process."},
+       "team": {"heading": "People you will actually meet", "body": "A design lead, a workshop craftsperson and an export coordinator own each order. The artisan review queue is shared, so a difficult detail gets a named reviewer."},
+       "visit": {"heading": "Visit, or walk through on video", "body": "Studio visits run on weekdays. If travel is not practical, the export desk can walk you through the workshop, the inspection station and the finishing bench on a call."}
+      }
+     }
+    }
+   },
+   "zh": {
+    "nav": {"home": "首页", "collection": "作品系列", "studio": "工坊", "contact": "联系我们"},
+    "footer": "海港首饰工坊（合成演示数据）。地方工艺、授权纹样、可追溯制造。",
+    "form": {
+     "name": "您的姓名",
+     "email": "工作邮箱",
+     "company": "公司名称",
+     "country": "国家代码",
+     "intent": "您需要什么",
+     "message": "请描述款式、数量与目标市场",
+     "submit": "提交询盘",
+     "success": "已收到，外贸同事将在一个工作日内回复。",
+     "intents": {
+      "sample_request": "索取样品",
+      "bulk_quote": "批量报价",
+      "oem": "贴牌代工",
+      "partnership": "合作洽谈",
+      "information": "一般咨询"
+     }
+    },
+    "follow_ups": {
+     "ack_sample": {"subject": "您的样品需求已进入工坊", "body": "感谢索取样品。我们正在核对纹样授权与档期，将在一个工作日内确认样品交期。"},
+     "quote_follow_up": {"subject": "关于报价的跟进", "body": "这里再次附上报价，包含工作日假设与交期窗口。如果数量或表面处理需要调整，请直接告知。"},
+     "call_back": {"subject": "约一个简短的沟通", "body": "希望本周用一次短会确认交期窗口与检验要点。"},
+     "information_reply": {"subject": "工坊资料与授权说明", "body": "附上产品册、授权摘要与当前交期，如需要可以先寄样品再决定。"}
+    },
+    "pages": {
+     "home": {
+      "title": "海港首饰工坊｜按你的构想手工定制",
+      "meta_description": "以授权纹样与已校对的工艺规则做定制首饰。提交构想即可获得可制造性判定、可追溯报价与清晰的交期承诺。",
+      "keywords": ["定制首饰", "纹样授权", "地方工艺", "可制造性判定"],
+      "h1": "以工艺为本，按构想定制",
+      "sections": {
+       "hero": {"heading": "从构想到可制造的实物", "body": "写下你想要的款式，工坊会生成概念候选，按车间工艺规则逐条校验，并在报价之前告诉你哪些能做、哪些需要改。"},
+       "value": {"heading": "先判可制造性，再谈价格", "body": "每件设计都会经过铸造、镶嵌与錾刻规则检查。做不了的细节会给出原因和修改建议，而不是一句拒绝。"},
+       "inquiry": {"heading": "索取样品或报价", "body": "告诉我们目标市场、数量与表面处理要求，外贸同事将在一个工作日内回复样品方案或报价单。"}
+      }
+     },
+     "collection": {
+      "title": "作品系列｜授权纹样与限量编号",
+      "meta_description": "浏览作品系列：地方工艺纹样逐一附带授权记录，限量作品按编号发行、附证书，并可追溯流转历史。",
+      "keywords": ["限量编号", "收藏证书", "纹样授权", "金饰吊坠"],
+      "h1": "作品系列",
+      "sections": {
+       "range": {"heading": "三个系列，一套工艺语言", "body": "海岸、庭院与窑火三个系列共用色板系统，买家可以在同一季里组合出产品线，而不必担心互相冲突。"},
+       "craft": {"heading": "每个纹样都有授权记录", "body": "纹样没有授权来源、使用范围与审核状态就进不了资源库；传统原型的引用按合同保持非独占。"},
+       "proof": {"heading": "编号、证书、可流转", "body": "限量作品在下单时预留编号、在结算时正式发行；证书哈希随作品流转，收藏链条保持连续。"}
+      }
+     },
+     "studio": {
+      "title": "工坊｜设计师、车间与到访",
+      "meta_description": "认识工坊的设计师与车间伙伴，了解品控如何抽样与判定，并预约到访或让外贸同事带你进行一次视频看厂。",
+      "keywords": ["首饰工坊", "车间伙伴", "工坊参观", "品控检验"],
+      "h1": "走进工坊",
+      "sections": {
+       "story": {"heading": "两个车间，一个标准", "body": "设计与制作分属不同车间，但共用同一套工艺规则、同一份品控计划与同一本台账，小批量试单与批量生产走同一条流程。"},
+       "team": {"heading": "你会见到的人", "body": "设计负责人、车间匠人与外贸协调人各自对订单负责；疑难细节进入匠人复核队列，由具名评审人给出结论。"},
+       "visit": {"heading": "到访，或线上看厂", "body": "工作日可预约到访。若不便出行，外贸同事可在视频会议中带你依次看车间、检验台与后处理工位。"}
+      }
+     }
+    }
+   },
+   "de": {
+    "nav": {"home": "Start", "collection": "Kollektion", "studio": "Studio", "contact": "Kontakt"},
+    "footer": "Harbour Jewellery Studio (synthetische Demo). Regionales Handwerk, lizenzierte Muster, nachvollziehbare Fertigung.",
+    "form": {
+     "name": "Ihr Name",
+     "email": "Geschäftliche E-Mail",
+     "company": "Unternehmen",
+     "country": "Ländercode",
+     "intent": "Was benötigen Sie",
+     "message": "Stück, Menge und Zielmarkt beschreiben",
+     "submit": "Anfrage senden",
+     "success": "Vielen Dank. Der Export-Desk antwortet innerhalb eines Werktags.",
+     "intents": {
+      "sample_request": "Musteranfrage",
+      "bulk_quote": "Mengenangebot",
+      "oem": "OEM / Eigenmarke",
+      "partnership": "Partnerschaft",
+      "information": "Allgemeine Information"
+     }
+    },
+    "follow_ups": {
+     "ack_sample": {"subject": "Ihre Musteranfrage ist im Studio", "body": "Vielen Dank für die Musteranfrage. Wir prüfen Musterverfügbarkeit und bestätigen die Lieferzeit innerhalb eines Werktags."},
+     "quote_follow_up": {"subject": "Nachfrage zu Ihrem Angebot", "body": "Anbei das Angebot erneut mit den Arbeitsannahmen und dem Lieferfenster. Sagen Sie uns, wenn Menge oder Oberfläche angepasst werden sollen."},
+     "call_back": {"subject": "Kurzes Gespräch zu Ihrer Bestellung", "body": "Wir möchten Lieferfenster und Prüfpunkte diese Woche in einem kurzen Gespräch bestätigen."},
+     "information_reply": {"subject": "Weitere Informationen aus dem Studio", "body": "Anbei Katalog, Lizenzübersicht und aktuelle Lieferzeit. Sagen Sie uns, ob ein Muster vor der Entscheidung hilft."}
+    },
+    "pages": {
+     "home": {
+      "title": "Harbour Jewellery Studio | Maßgefertigter Schmuck",
+      "meta_description": "Maßgefertigter Schmuck mit lizenzierten regionalen Mustern und geprüften Handwerksregeln. Konzept senden, Fertigbarkeitsprüfung und nachvollziehbares Angebot erhalten.",
+      "keywords": ["Fertigungsschmuck", "lizenziertes Muster", "regionales Handwerk", "Fertigbarkeit"],
+      "h1": "Handwerklicher Schmuck nach Ihrem Konzept",
+      "sections": {
+       "hero": {"heading": "Vom Konzept zum fertigbaren Stück", "body": "Beschreiben Sie das gewünschte Stück. Das Studio erzeugt Konzeptvarianten, prüft sie gegen die Werkstattregeln und zeigt vor jedem Angebot, was fertigbar ist."},
+       "value": {"heading": "Fertigbarkeit zuerst", "body": "Jedes Design wird gegen Guss-, Fass- und Ziselierregeln geprüft. Wenn ein Detail nicht fertigbar ist, sehen Sie den Grund und eine Änderungsidee statt einer pauschalen Absage."},
+       "inquiry": {"heading": "Muster oder Angebot anfordern", "body": "Nennen Sie Markt, Menge und Oberfläche. Der Export-Desk antwortet innerhalb eines Werktags mit Musterplan oder Angebot."}
+      }
+     },
+     "collection": {
+      "title": "Kollektion | Lizenzierte Muster und limitierte Editionen",
+      "meta_description": "Die Kollektion zeigt regionale Handwerksmotive mit Lizenznachweis je Muster sowie limitierte Editionen, die nummeriert, zertifiziert und nachvollziehbar sind.",
+      "keywords": ["limitierte Edition", "nummeriertes Zertifikat", "Musterlizenz", "Goldanhänger"],
+      "h1": "Die Kollektion",
+      "sections": {
+       "range": {"heading": "Drei Familien, eine Formsprache", "body": "Küste, Innenhof und Brennofen teilen ein Palettensystem, sodass Einkäufer eine Produktlinie aufbauen können, ohne dass die Stücke konkurrieren."},
+       "craft": {"heading": "Jedes Muster hat eine Lizenz", "body": "Ohne Lizenzquelle, Nutzungsumfang und Prüfstatus kommt kein Muster in die Bibliothek; Bezüge auf traditionelle Vorbilder bleiben vertraglich nicht exklusiv."},
+       "proof": {"heading": "Nummeriert, zertifiziert, übertragbar", "body": "Limitierte Editionen reservieren die Nummer bei Bestellung und geben sie bei Abrechnung aus; der Zertifikat-Hash wandert bei jedem Eigentümerwechsel mit."}
+      }
+     },
+     "studio": {
+      "title": "Studio | Designer, Werkstätten und Besuche",
+      "meta_description": "Lernen Sie Designer und Werkstattpartner kennen, lesen Sie die Qualitätsprüfung und buchen Sie einen Studiobesuch oder eine Videoführung mit dem Export-Desk.",
+      "keywords": ["Schmuckstudio", "Werkstattpartner", "Studiobesuch", "Qualitätsprüfung"],
+      "h1": "Im Studio",
+      "sections": {
+       "story": {"heading": "Zwei Werkstätten, ein Standard", "body": "Design und Fertigung liegen in getrennten Werkstätten. Dieselben Regeln, derselbe Qualitätsplan und dasselbe Journal gelten für Pilot- und Serienaufträge."},
+       "team": {"heading": "Menschen, die Sie wirklich treffen", "body": "Eine Designleitung, ein Handwerker und eine Exportkoordination verantworten jeden Auftrag; schwierige Details gehen an eine benannte Prüfperson."},
+       "visit": {"heading": "Besuch oder Videorundgang", "body": "Studiobesuche finden an Werktagen statt. Wenn die Reise nicht möglich ist, führt der Export-Desk per Video durch Werkstatt, Prüfplatz und Finish."}
+      }
+     }
+    }
+   }
+  }
+ }
+}

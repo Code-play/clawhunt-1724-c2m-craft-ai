@@ -1,0 +1,75 @@
+{
+  "industry": "hardwood",
+  "version": "1.0.0",
+  "title": { "zh": "古典硬木家具", "en": "Classical hardwood furniture" },
+  "categories": ["chair", "table", "cabinet"],
+  "default_workshop": "WS-HW-A",
+  "material_pool": ["walnut", "oak", "elm", "pine", "teak"],
+  "finish_pool": ["oil", "wax", "lacquer", "high_gloss", "matte"],
+  "bom": [
+    {
+      "material": "kiln_dried_lumber",
+      "spec": "species-matched board, moisture verified at intake",
+      "unit": "m",
+      "base": 0.4,
+      "driver": "span_mm",
+      "driver_rate": 0.0022,
+      "unit_cost_cents": 1800
+    },
+    {
+      "material": "joinery_hardware",
+      "spec": "load rated hardware where joinery alone is not specified",
+      "unit": "piece",
+      "base": 0.0,
+      "driver": "leg_count",
+      "driver_rate": 1.0,
+      "unit_cost_cents": 450
+    },
+    {
+      "material": "finish_oil",
+      "spec": "hardwax oil, two coats",
+      "unit": "ml",
+      "base": 60.0,
+      "driver": "span_mm",
+      "driver_rate": 0.09,
+      "unit_cost_cents": 22
+    }
+  ],
+  "process_route": [
+    {
+      "process": "joinery",
+      "name": { "zh": "榫卯加工", "en": "Joinery" },
+      "est_minutes": 90,
+      "driver": "span_mm",
+      "driver_rate": 0.12
+    },
+    {
+      "process": "carving",
+      "name": { "zh": "雕刻", "en": "Carving" },
+      "est_minutes": 40,
+      "driver": "carve_depth_mm",
+      "driver_rate": 18
+    },
+    {
+      "process": "assembly",
+      "name": { "zh": "装配", "en": "Assembly" },
+      "est_minutes": 60,
+      "driver": "leg_count",
+      "driver_rate": 8
+    },
+    {
+      "process": "surface_treatment",
+      "name": { "zh": "表面处理", "en": "Surface treatment" },
+      "est_minutes": 50,
+      "driver": null,
+      "driver_rate": 0
+    },
+    {
+      "process": "quality_check",
+      "name": { "zh": "品控", "en": "Quality control" },
+      "est_minutes": 30,
+      "driver": null,
+      "driver_rate": 0
+    }
+  ]
+}

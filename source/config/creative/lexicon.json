@@ -1,0 +1,257 @@
+{
+  "version": "1.0.0",
+  "note": "Curated vocabulary for the offline deterministic concept adapter. No model call happens in M1: the adapter assembles a concept from these tables with a hash-seeded generator, and the UI labels the result as an offline stub.",
+  "titles": {
+    "zh": {
+      "prefix": ["海雾", "潮汐", "云雷", "远帆", "藤影", "月港"],
+      "jewelry": ["戒", "坠", "胸针"],
+      "hardwood": ["案", "椅", "柜"]
+    },
+    "en": {
+      "prefix": ["Sea mist", "Tide line", "Cloud fret", "Far sail", "Vine shadow", "Moon harbour"],
+      "jewelry": ["ring", "pendant", "brooch"],
+      "hardwood": ["console", "chair", "cabinet"]
+    }
+  },
+  "motifs": [
+    {
+      "motif_id": "MOT-JW-01",
+      "industries": ["jewelry"],
+      "title": { "zh": "缠枝纹", "en": "Interlace vine" },
+      "tags": ["floral", "interlace", "heritage"],
+      "pattern_style": "interlace",
+      "texture": "polished",
+      "palette_hint": ["#C9A227", "#1F2A44", "#F2EFE9"]
+    },
+    {
+      "motif_id": "MOT-JW-02",
+      "industries": ["jewelry"],
+      "title": { "zh": "云雷纹", "en": "Cloud-thunder fret" },
+      "tags": ["geometric", "fret", "coastal"],
+      "pattern_style": "fret",
+      "texture": "brushed",
+      "palette_hint": ["#1F2A44", "#C9A227", "#E8E4DA"]
+    },
+    {
+      "motif_id": "MOT-JW-03",
+      "industries": ["jewelry"],
+      "title": { "zh": "潮汐曲线", "en": "Tide curve" },
+      "tags": ["wave", "minimal", "coastal"],
+      "pattern_style": "wave",
+      "texture": "matte",
+      "palette_hint": ["#2E6F7E", "#D8DEE2", "#0F1A1F"]
+    },
+    {
+      "motif_id": "MOT-JW-04",
+      "industries": ["jewelry"],
+      "title": { "zh": "石榴籽", "en": "Pomegranate seed" },
+      "tags": ["organic", "granulation"],
+      "pattern_style": "granule",
+      "texture": "polished",
+      "palette_hint": ["#8C1C2B", "#C9A227", "#F6EDE3"]
+    },
+    {
+      "motif_id": "MOT-JW-05",
+      "industries": ["jewelry"],
+      "title": { "zh": "海风藤", "en": "Sea breeze vine" },
+      "tags": ["floral", "openwork"],
+      "pattern_style": "openwork",
+      "texture": "brushed",
+      "palette_hint": ["#3B5D50", "#C9A227", "#EFEAE1"]
+    },
+    {
+      "motif_id": "MOT-HW-01",
+      "industries": ["hardwood"],
+      "title": { "zh": "回纹牙板", "en": "Fret apron" },
+      "tags": ["geometric", "fret", "joinery"],
+      "pattern_style": "fret",
+      "texture": "carved",
+      "palette_hint": ["#5B3A22", "#C9A227", "#EADFCF"]
+    },
+    {
+      "motif_id": "MOT-HW-02",
+      "industries": ["hardwood"],
+      "title": { "zh": "缠枝挂落", "en": "Interlace spandrel" },
+      "tags": ["floral", "openwork", "heritage"],
+      "pattern_style": "interlace",
+      "texture": "carved",
+      "palette_hint": ["#4A2E1B", "#A8794A", "#EFE6D6"]
+    },
+    {
+      "motif_id": "MOT-HW-03",
+      "industries": ["hardwood"],
+      "title": { "zh": "云头线脚", "en": "Cloud moulding" },
+      "tags": ["organic", "moulding"],
+      "pattern_style": "wave",
+      "texture": "carved",
+      "palette_hint": ["#6B4A2C", "#D8C7A8", "#2A1B10"]
+    },
+    {
+      "motif_id": "MOT-HW-04",
+      "industries": ["hardwood"],
+      "title": { "zh": "潮线镶嵌", "en": "Tide inlay" },
+      "tags": ["geometric", "inlay", "coastal"],
+      "pattern_style": "inlay",
+      "texture": "polished",
+      "palette_hint": ["#2E6F7E", "#D9C9A6", "#1B2A2E"]
+    },
+    {
+      "motif_id": "MOT-HW-05",
+      "industries": ["hardwood"],
+      "title": { "zh": "藤影雕花", "en": "Vine shadow carving" },
+      "tags": ["floral", "relief", "heritage"],
+      "pattern_style": "relief",
+      "texture": "carved",
+      "palette_hint": ["#3E2A1A", "#8C6A45", "#E7DAC6"]
+    }
+  ],
+  "forms": [
+    {
+      "industry": "jewelry",
+      "category": "ring",
+      "variant": "solitaire",
+      "dimensions_mm": { "x": 24, "y": 24, "z": 1.9 },
+      "craft_facts": {
+        "min_wall_thickness_mm": 1.3,
+        "max_dimension_mm": 24,
+        "stone_count": 1,
+        "stone_size_mm": 4.2,
+        "setting_type": "prong",
+        "prong_count": 4,
+        "prong_thickness_mm": 0.7,
+        "undercut": false,
+        "hollow_cast": false,
+        "enamel": false,
+        "enamel_firing_c": 0,
+        "engraving_depth_mm": 0.15,
+        "surface_finish": "brushed",
+        "ring_size_mm": 54,
+        "alloy": "18k_gold",
+        "chain_link_mm": 0,
+        "recessed_area": false
+      }
+    },
+    {
+      "industry": "jewelry",
+      "category": "pendant",
+      "variant": "relief_disc",
+      "dimensions_mm": { "x": 28, "y": 32, "z": 2.2 },
+      "craft_facts": {
+        "min_wall_thickness_mm": 1.0,
+        "max_dimension_mm": 32,
+        "stone_count": 3,
+        "stone_size_mm": 2.5,
+        "setting_type": "bezel",
+        "prong_count": 0,
+        "prong_thickness_mm": 0,
+        "undercut": false,
+        "hollow_cast": false,
+        "enamel": false,
+        "enamel_firing_c": 0,
+        "engraving_depth_mm": 0.2,
+        "surface_finish": "polished",
+        "ring_size_mm": 0,
+        "alloy": "925_silver",
+        "chain_link_mm": 0,
+        "recessed_area": true
+      }
+    },
+    {
+      "industry": "jewelry",
+      "category": "brooch",
+      "variant": "openwork",
+      "dimensions_mm": { "x": 38, "y": 30, "z": 3.0 },
+      "craft_facts": {
+        "min_wall_thickness_mm": 1.5,
+        "max_dimension_mm": 38,
+        "stone_count": 6,
+        "stone_size_mm": 1.6,
+        "setting_type": "pave",
+        "prong_count": 0,
+        "prong_thickness_mm": 0,
+        "undercut": false,
+        "hollow_cast": false,
+        "enamel": false,
+        "enamel_firing_c": 0,
+        "engraving_depth_mm": 0.3,
+        "surface_finish": "polished",
+        "ring_size_mm": 0,
+        "alloy": "18k_gold",
+        "chain_link_mm": 0,
+        "recessed_area": false
+      }
+    },
+    {
+      "industry": "hardwood",
+      "category": "chair",
+      "variant": "armchair",
+      "dimensions_mm": { "x": 480, "y": 520, "z": 900 },
+      "craft_facts": {
+        "species": "walnut",
+        "joint_types": ["mortise_tenon", "dovetail"],
+        "tolerance_mm": 0.2,
+        "span_mm": 450,
+        "load_kg": 110,
+        "carve_depth_mm": 5,
+        "wood_moisture_pct": 10,
+        "panel_thickness_mm": 22,
+        "finish": "oil",
+        "humidity_zone": "temperate",
+        "curve_radius_mm": 0,
+        "undercut": false,
+        "hardware_included": true,
+        "leg_count": 4,
+        "cantilever": false,
+        "outdoor": false
+      }
+    },
+    {
+      "industry": "hardwood",
+      "category": "table",
+      "variant": "console",
+      "dimensions_mm": { "x": 1400, "y": 800, "z": 750 },
+      "craft_facts": {
+        "species": "oak",
+        "joint_types": ["mortise_tenon"],
+        "tolerance_mm": 0.2,
+        "span_mm": 1100,
+        "load_kg": 90,
+        "carve_depth_mm": 0,
+        "wood_moisture_pct": 9,
+        "panel_thickness_mm": 40,
+        "finish": "matte",
+        "humidity_zone": "temperate",
+        "curve_radius_mm": 0,
+        "undercut": false,
+        "hardware_included": true,
+        "leg_count": 4,
+        "cantilever": false,
+        "outdoor": false
+      }
+    },
+    {
+      "industry": "hardwood",
+      "category": "cabinet",
+      "variant": "two_door",
+      "dimensions_mm": { "x": 900, "y": 420, "z": 1800 },
+      "craft_facts": {
+        "species": "elm",
+        "joint_types": ["mortise_tenon", "dovetail"],
+        "tolerance_mm": 0.25,
+        "span_mm": 700,
+        "load_kg": 60,
+        "carve_depth_mm": 8,
+        "wood_moisture_pct": 11,
+        "panel_thickness_mm": 25,
+        "finish": "wax",
+        "humidity_zone": "temperate",
+        "curve_radius_mm": 0,
+        "undercut": false,
+        "hardware_included": true,
+        "leg_count": 4,
+        "cantilever": false,
+        "outdoor": false
+      }
+    }
+  ]
+}

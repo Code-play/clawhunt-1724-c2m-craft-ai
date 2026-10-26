@@ -1,0 +1,63 @@
+{
+ "capacity_per_day_minutes": 480,
+ "generated_at": "2026-10-23T00:15:00Z",
+ "horizon": {
+  "from": "2026-10-23T18:00:00Z",
+  "to": "2026-12-22T18:00:00Z"
+ },
+ "schedule_id": "SCH-0001",
+ "slots": [],
+ "utilization": [
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-10-23"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-10-26"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-10-27"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-10-28"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-10-29"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-10-30"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-11-02"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-11-03"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-11-04"
+  },
+  {
+   "booked_minutes": 0,
+   "capacity_minutes": 480,
+   "date": "2026-11-05"
+  }
+ ],
+ "workshop_id": "WS-HW-A"
+}

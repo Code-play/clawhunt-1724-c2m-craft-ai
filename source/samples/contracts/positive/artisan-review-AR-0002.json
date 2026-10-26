@@ -1,0 +1,22 @@
+{
+ "assessment_id": "MA-0003",
+ "auto_verdict": "not_manufacturable",
+ "concept_id": "DC-0002",
+ "decision": {
+  "decided_at": "2026-10-23T00:00:00Z",
+  "reason": "The reviewer accepts the thin wall only as a museum sample with a resin backing plate, re-inspection after casting, and no load-bearing use.",
+  "verdict": "conditionally_manufacturable"
+ },
+ "queue_id": "AR-0002",
+ "requested_at": "2026-10-23T00:00:00Z",
+ "reviewer": {
+  "artisan_id": "ART-JW-01",
+  "name": "Jewelry craft reviewer (synthetic)"
+ },
+ "rule_ids": [
+  "JW-CAST-001",
+  "JW-SET-001"
+ ],
+ "sla_hours": 24,
+ "status": "overridden"
+}

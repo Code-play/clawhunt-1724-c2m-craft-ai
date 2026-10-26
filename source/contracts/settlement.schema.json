@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:settlement",
+  "title": "Revenue-sharing settlement",
+  "description": "Settlement of one order across the designer, the factory, the platform and the IP licensor. Rates are basis points and must sum to 10000; the payout lines must add up to the settled total exactly, with the remainder made explicit.",
+  "type": "object",
+  "required": [
+    "settlement_id",
+    "order_id",
+    "split_policy",
+    "total_cents",
+    "currency",
+    "payout_lines",
+    "remainder_cents",
+    "status",
+    "created_at",
+    "posted_at",
+    "reversals",
+    "refunds",
+    "reconciliation"
+  ],
+  "properties": {
+    "settlement_id": { "type": "string", "pattern": "^ST-[0-9]{4}$" },
+    "order_id": { "type": "string", "pattern": "^ORD-[0-9]{4}$" },
+    "split_policy": {
+      "type": "object",
+      "required": ["policy_id", "lines"],
+      "properties": {
+        "policy_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+        "lines": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["party", "party_id", "rate_bp"],
+            "properties": {
+              "party": {
+                "type": "string",
+                "enum": ["designer", "factory", "platform", "ip_licensor"]
+              },
+              "party_id": { "type": "string", "minLength": 2, "maxLength": 40 },
+              "rate_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "total_cents": { "type": "integer", "minimum": 0 },
+    "currency": { "type": "string", "enum": ["USD"] },
+    "payout_lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["party", "party_id", "rate_bp", "amount_cents"],
+        "properties": {
+          "party": {
+            "type": "string",
+            "enum": ["designer", "factory", "platform", "ip_licensor"]
+          },
+          "party_id": { "type": "string", "minLength": 2, "maxLength": 40 },
+          "rate_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" },
+          "amount_cents": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "remainder_cents": { "type": "integer", "minimum": 0 },
+    "status": { "type": "string", "enum": ["draft", "posted", "reversed"] },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+    "posted_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+    "reversals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["amount_cents", "reason", "at"],
+        "properties": {
+          "amount_cents": { "type": "integer", "minimum": 0 },
+          "reason": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "refunds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["amount_cents", "kind", "milestone", "at"],
+        "properties": {
+          "amount_cents": { "type": "integer", "minimum": 0 },
+          "kind": { "type": "string", "enum": ["full", "partial"] },
+          "milestone": { "type": "string", "minLength": 1, "maxLength": 60 },
+          "at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "royalty_lines": {
+      "type": "array",
+      "description": "How the IP share is split across the licensed assets used by the order.",
+      "items": {
+        "type": "object",
+        "required": ["asset_id", "licensor", "rate_bp", "basis_cents", "amount_cents"],
+        "properties": {
+          "asset_id": { "type": "string", "pattern": "^PA-[A-Z]{2}-[0-9]{4}$" },
+          "licensor": { "type": "string", "minLength": 2, "maxLength": 120 },
+          "rate_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" },
+          "basis_cents": { "type": "integer", "minimum": 0 },
+          "amount_cents": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "required": ["sum_payouts_cents", "delta_cents"],
+      "properties": {
+        "sum_payouts_cents": { "type": "integer", "minimum": 0 },
+        "delta_cents": { "type": "integer" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-MONEY-01", "INV-ROYALTY-01"]
+}

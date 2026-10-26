@@ -1,0 +1,194 @@
+{
+ "cases": [
+  {
+   "expected_error_count": 1,
+   "expected_first_path": "$.license",
+   "name": "missing-source",
+   "payload": {
+    "asset_id": "PA-JW-0901",
+    "created_at": "2026-10-01T00:00:00Z",
+    "industries": [
+     "jewelry"
+    ],
+    "license": {
+     "usage_scope": [
+      "commercial_product"
+     ]
+    },
+    "medium": "pattern",
+    "religious_site_names": [],
+    "review": {
+     "status": "auto_checked"
+    },
+    "title": {
+     "en": "Missing source",
+     "zh": "缺来源"
+    },
+    "traditional_prototype": false
+   },
+   "reason": "licensing source is mandatory"
+  },
+  {
+   "expected_error_count": 2,
+   "expected_first_path": "$",
+   "name": "empty-usage-scope",
+   "payload": {
+    "asset_id": "PA-JW-0902",
+    "created_at": "2026-10-01T00:00:00Z",
+    "industries": [
+     "jewelry"
+    ],
+    "license": {
+     "source_type": "self_produced",
+     "usage_scope": []
+    },
+    "medium": "pattern",
+    "religious_site_names": [],
+    "review": {
+     "status": "auto_checked"
+    },
+    "title": {
+     "en": "Empty scope",
+     "zh": "空范围"
+    },
+    "traditional_prototype": false
+   },
+   "reason": "usage scope cannot be empty"
+  },
+  {
+   "expected_error_count": 1,
+   "expected_first_path": "$",
+   "name": "exclusive-heritage",
+   "payload": {
+    "asset_id": "PA-JW-0903",
+    "created_at": "2026-10-01T00:00:00Z",
+    "industries": [
+     "heritage"
+    ],
+    "license": {
+     "exclusive": true,
+     "license_id": "LIC-SYN-X1",
+     "licensor": "Heritage registry (synthetic)",
+     "source_type": "traditional_heritage",
+     "usage_scope": [
+      "commercial_product"
+     ],
+     "valid_from": "2026-01-01T00:00:00Z",
+     "valid_to": "2030-01-01T00:00:00Z"
+    },
+    "medium": "pattern",
+    "religious_site_names": [],
+    "review": {
+     "status": "content_reviewed"
+    },
+    "title": {
+     "en": "Exclusive heritage",
+     "zh": "独占传统"
+    },
+    "traditional_prototype": true
+   },
+   "reason": "a traditional prototype cannot be exclusive"
+  },
+  {
+   "expected_error_count": 1,
+   "expected_first_path": "$",
+   "name": "expired-license",
+   "payload": {
+    "asset_id": "PA-HW-0904",
+    "created_at": "2025-01-01T00:00:00Z",
+    "industries": [
+     "hardwood"
+    ],
+    "license": {
+     "exclusive": false,
+     "license_id": "LIC-SYN-X2",
+     "licensor": "Studio (synthetic)",
+     "source_type": "licensed",
+     "usage_scope": [
+      "commercial_product"
+     ],
+     "valid_from": "2025-01-01T00:00:00Z",
+     "valid_to": "2026-09-30T00:00:00Z"
+    },
+    "medium": "pattern",
+    "religious_site_names": [],
+    "review": {
+     "status": "auto_checked"
+    },
+    "title": {
+     "en": "Expired licence",
+     "zh": "过期授权"
+    },
+    "traditional_prototype": false
+   },
+   "reason": "the licence window has closed"
+  },
+  {
+   "expected_error_count": 1,
+   "expected_first_path": "$",
+   "name": "religious-exclusive",
+   "payload": {
+    "asset_id": "PA-JW-0905",
+    "created_at": "2026-10-01T00:00:00Z",
+    "industries": [
+     "heritage"
+    ],
+    "license": {
+     "exclusive": true,
+     "source_type": "public_domain",
+     "usage_scope": [
+      "derivative_work"
+     ],
+     "valid_from": "2026-01-01T00:00:00Z",
+     "valid_to": "2030-01-01T00:00:00Z"
+    },
+    "medium": "pattern",
+    "religious_site_names": [
+     "Mazu temple (synthetic name)"
+    ],
+    "review": {
+     "status": "auto_checked"
+    },
+    "title": {
+     "en": "Site exclusivity",
+     "zh": "场所独占"
+    },
+    "traditional_prototype": false
+   },
+   "reason": "assets that reference religious sites cannot be exclusive"
+  },
+  {
+   "expected_error_count": 1,
+   "expected_first_path": "$.palette[0]",
+   "name": "bad-hex",
+   "payload": {
+    "asset_id": "PA-JW-0906",
+    "created_at": "2026-10-01T00:00:00Z",
+    "industries": [
+     "jewelry"
+    ],
+    "license": {
+     "source_type": "self_produced",
+     "usage_scope": [
+      "internal_demo"
+     ]
+    },
+    "medium": "pattern",
+    "palette": [
+     "gold"
+    ],
+    "religious_site_names": [],
+    "review": {
+     "status": "auto_checked"
+    },
+    "title": {
+     "en": "Bad colour",
+     "zh": "色值错误"
+    },
+    "traditional_prototype": false
+   },
+   "reason": "palette colours must be uppercase hex"
+  }
+ ],
+ "version": "1.0.0"
+}

@@ -1,0 +1,411 @@
+{
+ "artisan": {
+  "decided_at": "2026-10-23T00:00:00Z",
+  "decision_verdict": "conditionally_manufacturable",
+  "notes": "The reviewer accepts the thin wall only as a museum sample with a resin backing plate, re-inspection after casting, and no load-bearing use.",
+  "queue_id": "AR-0002",
+  "required": true,
+  "reviewer": "ART-JW-01",
+  "status": "overridden"
+ },
+ "assessment_id": "MA-0003",
+ "auto": {
+  "blocking_rules": [
+   "CAP-JW-B-01",
+   "CAP-JW-B-02",
+   "JW-CAST-001",
+   "JW-SET-001"
+  ],
+  "evaluated_rules": 20,
+  "verdict": "not_manufacturable"
+ },
+ "blockers": [
+  "CAP-JW-B-01",
+  "CAP-JW-B-02",
+  "JW-CAST-001",
+  "JW-SET-001"
+ ],
+ "concept_id": "DC-0002",
+ "created_at": "2026-10-23T00:00:00Z",
+ "facts": {
+  "alloy": "18k_gold",
+  "chain_link_mm": 0,
+  "enamel": false,
+  "enamel_firing_c": 0,
+  "engraving_depth_mm": 0,
+  "hollow_cast": false,
+  "max_dimension_mm": 40,
+  "min_wall_thickness_mm": 0.3,
+  "prong_count": 0,
+  "prong_thickness_mm": 0,
+  "recessed_area": false,
+  "ring_size_mm": 0,
+  "setting_type": "none",
+  "stone_count": 1,
+  "stone_size_mm": 8.5,
+  "surface_finish": "polished",
+  "undercut": false
+ },
+ "final_verdict": "conditionally_manufacturable",
+ "fixes": [
+  {
+   "rule_id": "CAP-JW-B-01",
+   "suggested_change": {
+    "min_wall_thickness_mm": 1.0
+   },
+   "text": {
+    "en": "Thicken to 0.9 mm or route to the vacuum caster at WS-JW-A.",
+    "zh": "加厚到 0.9 mm 以上，或转一厂真空铸造。"
+   }
+  },
+  {
+   "rule_id": "CAP-JW-B-02",
+   "suggested_change": {
+    "max_dimension_mm": 30
+   },
+   "text": {
+    "en": "Reduce below 30 mm, or move to WS-JW-A.",
+    "zh": "缩到 30 mm 以内，或转一厂。"
+   }
+  },
+  {
+   "rule_id": "JW-CAST-001",
+   "suggested_change": {
+    "min_wall_thickness_mm": 0.8
+   },
+   "text": {
+    "en": "Thicken the thinnest section to 0.8 mm or turn it into an opening.",
+    "zh": "把最薄处加到 0.8 mm 以上，或把该处改为镂空。"
+   }
+  },
+  {
+   "rule_id": "JW-SET-001",
+   "suggested_change": {
+    "setting_type": "bezel"
+   },
+   "text": {
+    "en": "Add a bezel or four-prong setting and declare setting_type in craft_facts.",
+    "zh": "增加包镶或四爪镶口，并在 craft_facts 里声明 setting_type。"
+   }
+  }
+ ],
+ "industry": "jewelry",
+ "missing_facts": [],
+ "reproducibility": {
+  "facts_hash": "2fe8d918dc446982cb91eed80aa27146a9848b8ae381929d71dd8c311bd3eedd",
+  "rules_version": "1.0.0"
+ },
+ "rule_evaluations": [
+  {
+   "facts_used": [
+    "min_wall_thickness_mm"
+   ],
+   "reason": {
+    "en": "Centrifugal casting needs 0.9 mm; 0.3 mm will not fill.",
+    "zh": "二厂离心铸造最小壁厚 0.9 mm，来料 0.3 mm 无法充满。"
+   },
+   "rule_id": "CAP-JW-B-01",
+   "severity": "blocker",
+   "source": "capability",
+   "status": "fail"
+  },
+  {
+   "facts_used": [
+    "max_dimension_mm"
+   ],
+   "reason": {
+    "en": "The envelope is 30 mm; 40 mm needs another workshop.",
+    "zh": "二厂最大铸件尺寸 30 mm，来料 40 mm 需要转厂。"
+   },
+   "rule_id": "CAP-JW-B-02",
+   "severity": "blocker",
+   "source": "capability",
+   "status": "fail"
+  },
+  {
+   "facts_used": [
+    "alloy"
+   ],
+   "reason": {
+    "en": "Alloy not handled here",
+    "zh": "本厂不处理该合金"
+   },
+   "rule_id": "CAP-JW-B-03",
+   "severity": "blocker",
+   "source": "capability",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "ring_size_mm"
+   ],
+   "reason": {
+    "en": "Ring below the smallest mandrel",
+    "zh": "戒圈小于本厂最小手寸"
+   },
+   "rule_id": "CAP-JW-B-04",
+   "severity": "blocker",
+   "source": "capability",
+   "status": "na"
+  },
+  {
+   "facts_used": [
+    "ring_size_mm"
+   ],
+   "reason": {
+    "en": "Ring above the largest mandrel",
+    "zh": "戒圈大于本厂最大手寸"
+   },
+   "rule_id": "CAP-JW-B-05",
+   "severity": "blocker",
+   "source": "capability",
+   "status": "na"
+  },
+  {
+   "facts_used": [
+    "enamel",
+    "enamel_firing_c"
+   ],
+   "reason": {
+    "en": "Above this furnace's temperature",
+    "zh": "超出本厂珐琅炉温度"
+   },
+   "rule_id": "CAP-JW-B-06",
+   "severity": "blocker",
+   "source": "capability",
+   "status": "na"
+  },
+  {
+   "facts_used": [
+    "min_wall_thickness_mm"
+   ],
+   "reason": {
+    "en": "A 0.3 mm wall is below the 0.55 mm manual-casting limit; the melt freezes before the cavity fills.",
+    "zh": "最小壁厚 0.3 mm 低于手工铸造的 0.55 mm 下限，熔液会在薄壁处提前凝固。"
+   },
+   "rule_id": "JW-CAST-001",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "fail"
+  },
+  {
+   "facts_used": [
+    "hollow_cast",
+    "min_wall_thickness_mm"
+   ],
+   "reason": {
+    "en": "Thin wall on a hollow casting",
+    "zh": "空心铸造壁厚偏薄"
+   },
+   "rule_id": "JW-CAST-002",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "setting_type",
+    "stone_size_mm"
+   ],
+   "reason": {
+    "en": "A 8.5 mm stone has no declared setting; it cannot be fixed or pass a pull test.",
+    "zh": "8.5 mm 的石头没有声明镶口形式，无法固定也无法通过拉拔测试。"
+   },
+   "rule_id": "JW-SET-001",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "fail"
+  },
+  {
+   "facts_used": [
+    "prong_thickness_mm"
+   ],
+   "reason": {
+    "en": "Prong too thin",
+    "zh": "镶爪过细"
+   },
+   "rule_id": "JW-SET-002",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "setting_type",
+    "stone_size_mm"
+   ],
+   "reason": {
+    "en": "Stone too small for pavé",
+    "zh": "碎钻过小无法密镶"
+   },
+   "rule_id": "JW-SET-003",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "engraving_depth_mm"
+   ],
+   "reason": {
+    "en": "Chasing deeper than one pass",
+    "zh": "錾刻深度超单次行程"
+   },
+   "rule_id": "JW-CHASE-001",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "undercut"
+   ],
+   "reason": {
+    "en": "Undercut needs a split mould",
+    "zh": "倒扣结构需分模"
+   },
+   "rule_id": "JW-CHASE-002",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "recessed_area",
+    "surface_finish"
+   ],
+   "reason": {
+    "en": "Mirror polish cannot reach the recess",
+    "zh": "镜面处理无法进入凹面"
+   },
+   "rule_id": "JW-SURF-001",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "enamel",
+    "enamel_firing_c"
+   ],
+   "reason": {
+    "en": "Enamel firing runs hot",
+    "zh": "珐琅烧成温度偏高"
+   },
+   "rule_id": "JW-SURF-002",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "ring_size_mm"
+   ],
+   "reason": {
+    "en": "Small ring size needs a custom mandrel",
+    "zh": "手寸偏小需定制撑圈"
+   },
+   "rule_id": "JW-FORM-001",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "chain_link_mm"
+   ],
+   "reason": {
+    "en": "Chain link too thin",
+    "zh": "链节过细"
+   },
+   "rule_id": "JW-FORM-002",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "alloy",
+    "min_wall_thickness_mm"
+   ],
+   "reason": {
+    "en": "Thin platinum is hard to form",
+    "zh": "铂金薄壁难成型"
+   },
+   "rule_id": "JW-MAT-001",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "alloy",
+    "prong_thickness_mm"
+   ],
+   "reason": {
+    "en": "High-karat prongs deform",
+    "zh": "高金合金爪易变形"
+   },
+   "rule_id": "JW-MAT-002",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "min_wall_thickness_mm",
+    "setting_type"
+   ],
+   "reason": {
+    "en": "Channel setting needs thicker walls",
+    "zh": "槽镶需要更厚的侧壁"
+   },
+   "rule_id": "JW-ASM-001",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "enamel",
+    "hollow_cast"
+   ],
+   "reason": {
+    "en": "Hollow body cannot take enamel",
+    "zh": "空心件无法上珐琅"
+   },
+   "rule_id": "JW-ASM-002",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "stone_count"
+   ],
+   "reason": {
+    "en": "Stone count drives setting hours",
+    "zh": "密钉数量过多"
+   },
+   "rule_id": "JW-SET-004",
+   "severity": "cost",
+   "source": "rule",
+   "status": "pass"
+  },
+  {
+   "facts_used": [
+    "prong_count",
+    "stone_size_mm"
+   ],
+   "reason": {
+    "en": "Too few prongs for the stone",
+    "zh": "爪数不足以固定大石"
+   },
+   "rule_id": "JW-SET-005",
+   "severity": "blocker",
+   "source": "rule",
+   "status": "pass"
+  }
+ ],
+ "workshop_id": "WS-JW-B"
+}

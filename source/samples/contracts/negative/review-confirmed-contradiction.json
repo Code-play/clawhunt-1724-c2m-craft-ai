@@ -1,0 +1,22 @@
+{
+ "assessment_id": "MA-0002",
+ "auto_verdict": "conditionally_manufacturable",
+ "concept_id": "DC-0003",
+ "decision": {
+  "decided_at": "2026-10-23T00:00:00Z",
+  "reason": "confirmed as assessed but with a different verdict",
+  "verdict": "not_manufacturable"
+ },
+ "queue_id": "AR-0001",
+ "requested_at": "2026-10-23T00:00:00Z",
+ "reviewer": {
+  "artisan_id": "ART-JW-01",
+  "name": "Jewelry craft reviewer (synthetic)"
+ },
+ "rule_ids": [
+  "JW-CAST-002",
+  "JW-CHASE-002"
+ ],
+ "sla_hours": 24,
+ "status": "confirmed"
+}

@@ -1,0 +1,102 @@
+{
+ "bom": [],
+ "concept_id": "DC-0001",
+ "created_at": "2026-10-23T00:03:00Z",
+ "industry": "jewelry",
+ "order_id": "ORD-0001",
+ "process_steps": [
+  {
+   "constraints": [
+    "capacity slot SLOT-0001 reserved at WS-JW-A for 184 minutes"
+   ],
+   "equipment_id": "EQ-GENERIC-01",
+   "est_minutes": 30,
+   "name": {
+    "en": "Design review",
+    "zh": "设计评审"
+   },
+   "process": "design_review",
+   "step_id": "OP-01"
+  },
+  {
+   "constraints": [],
+   "equipment_id": "EQ-JW-CAST-A",
+   "est_minutes": 59,
+   "name": {
+    "en": "Casting",
+    "zh": "铸造"
+   },
+   "process": "casting",
+   "step_id": "OP-02"
+  },
+  {
+   "constraints": [],
+   "equipment_id": "EQ-JW-SET-A",
+   "est_minutes": 32,
+   "name": {
+    "en": "Stone setting",
+    "zh": "镶嵌"
+   },
+   "process": "setting",
+   "step_id": "OP-03"
+  },
+  {
+   "constraints": [],
+   "equipment_id": "EQ-JW-CHASE-A",
+   "est_minutes": 28,
+   "name": {
+    "en": "Chasing",
+    "zh": "錾刻"
+   },
+   "process": "chasing",
+   "step_id": "OP-04"
+  },
+  {
+   "constraints": [],
+   "equipment_id": "EQ-JW-POLISH-A",
+   "est_minutes": 35,
+   "name": {
+    "en": "Polishing",
+    "zh": "抛光"
+   },
+   "process": "polishing",
+   "step_id": "OP-05"
+  }
+ ],
+ "promised_delivery_at": "2026-11-02T18:00:00Z",
+ "qc_checkpoints": [
+  {
+   "checkpoint_id": "QC-01",
+   "method": "digital caliper, three points per axis",
+   "name": {
+    "en": "Dimension and wall check",
+    "zh": "尺寸与壁厚复核"
+   },
+   "pass_criteria": "all dimensions within 0.05 mm, minimum wall not below the assessed value",
+   "status": "passed"
+  },
+  {
+   "checkpoint_id": "QC-02",
+   "method": "manual pull test plus loupe inspection at 10x",
+   "name": {
+    "en": "Setting integrity",
+    "zh": "镶口牢固度"
+   },
+   "pass_criteria": "no stone movement, no prong gap above 0.02 mm",
+   "status": "passed"
+  },
+  {
+   "checkpoint_id": "QC-03",
+   "method": "visual inspection under daylight lamp, hallmark verification",
+   "name": {
+    "en": "Surface and hallmark",
+    "zh": "表面处理与印记"
+   },
+   "pass_criteria": "no polishing compound residue, hallmark and purity mark legible",
+   "status": "passed"
+  }
+ ],
+ "status": "completed",
+ "work_order_id": "WO-0001",
+ "workshop_id": "WS-JW-A"
+}

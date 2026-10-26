@@ -1,0 +1,1311 @@
+{
+ "acceptance": [
+  {
+   "coverage": "covered",
+   "evidence": "I1, E1, E3",
+   "id": "J0",
+   "m1_items": [
+    "E1",
+    "E3",
+    "I1"
+   ],
+   "text_en": "Both bidding and delivery include a runnable repository, documentation-only proposals are rejected",
+   "text_zh": "投标与交付都必须有可运行仓库，纯文档不接受"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "A1.1, A1.4, A2.1, A4.1",
+   "id": "J1",
+   "m1_items": [
+    "A1.1",
+    "A1.4",
+    "A2.1",
+    "A4.1"
+   ],
+   "text_en": "Four main workflows are fully navigable end to end after one-command launch",
+   "text_zh": "一键启动后四大工作流可端到端导航"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "A2.1, C7, E2",
+   "id": "J2",
+   "m1_items": [
+    "A2.1"
+   ],
+   "text_en": "Asset ingestion rejects missing licensing source or usage scope, with positive and negative cases",
+   "text_zh": "资产摄入拒绝缺失授权来源或使用范围，含正负样例"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "A5.1, A5.2, A5.3, A5.4",
+   "id": "J3",
+   "m1_items": [
+    "A5.1",
+    "A5.2",
+    "A5.3",
+    "A5.4",
+    "A5.5"
+   ],
+   "text_en": "At least ten concept inputs including three counterexamples, ten out of ten agree with the documented rules",
+   "text_zh": "至少 10 条概念输入含 3 条反例，10/10 与仓库规则文档一致"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "A3.1, A3.2, A3.3, A4.1, A4.2, A4.3, A4.4",
+   "id": "J4",
+   "m1_items": [
+    "A3.1",
+    "A3.2",
+    "A3.3",
+    "A4.1",
+    "A4.2",
+    "A4.3",
+    "A4.4"
+   ],
+   "text_en": "One custom order completes order, work order, dispatch, QC, shipment, revenue sharing with traceable amounts and refund paths",
+   "text_zh": "一条定制订单跑通下单、工艺单、派工、品控、发货、分成，金额可追溯且覆盖退款路径"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "B1, B2, B4, B5, I3",
+   "id": "J5",
+   "m1_items": [
+    "B1",
+    "B2",
+    "B4",
+    "B5",
+    "I3"
+   ],
+   "text_en": "Reusable components for at least two industries, industry switching by configuration, FDE manual and a populated profile",
+   "text_zh": "至少两个行业可复用组件，行业切换靠配置，含 FDE 手册与完整一企一档"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "B3, I3",
+   "id": "J6",
+   "m1_items": [
+    "B3",
+    "I3"
+   ],
+   "text_en": "Multilingual site generation, SEO metadata and inquiry-to-CRM closed loop, each with an end-to-end test",
+   "text_zh": "多语站点生成、SEO 元数据、询盘到 CRM 闭环，各有端到端测试"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "C1, C2, C3, C4, C5, C6, E4, I4",
+   "id": "J7",
+   "m1_items": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "E4",
+    "I4"
+   ],
+   "text_en": "Dual-character manual, visual asset library, one complete short-drama workflow with a sample clip, licensing templates and merchandise specs",
+   "text_zh": "双角色手册、视觉资产库、完整短剧流程与一条样片、授权模板与衍生规格"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "E3",
+   "id": "J8",
+   "m1_items": [
+    "E3",
+    "I1"
+   ],
+   "text_en": "Unit tests for licensing validation, manufacturability, order state machine and revenue sharing, passing with one command",
+   "text_zh": "授权字段、可制造性、订单状态机、分成计算四类单测一键通过"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "E3, A5.5",
+   "id": "J9",
+   "m1_items": [
+    "E3",
+    "A5.5"
+   ],
+   "text_en": "Every command and interface mentioned in the documentation actually exists",
+   "text_zh": "文档中提到的每条命令与接口真实存在"
+  },
+  {
+   "coverage": "covered",
+   "evidence": "C7, E4, E5",
+   "id": "J10",
+   "m1_items": [
+    "C7",
+    "E5"
+   ],
+   "text_en": "Synthetic or anonymised samples only, no real confidential data, no exclusive claim on traditional or religious heritage",
+   "text_zh": "仅用合成或脱敏样本，不含真实机密数据，不得主张传统或宗教遗产独占"
+  }
+ ],
+ "as_of": "2026-10-23T00:00:00Z",
+ "items": [
+  {
+   "ac_refs": [
+    "J1"
+   ],
+   "artifact_refs": [
+    "c2m_craft/creative/workstation.py",
+    "static/app.js",
+    "config/creative/lexicon.json"
+   ],
+   "contract_refs": [
+    "design_concept"
+   ],
+   "id": "A1.1",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Offline vocabulary adapter, four candidates per brief, hash-seeded; an optional model sidecar can render an AI effect shot for any candidate.",
+   "parent": "A1",
+   "status": "covered",
+   "title_en": "Text or reference image to form and pattern concept candidates",
+   "title_zh": "文本/参考图生成形态与纹样概念候选",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J1"
+   ],
+   "artifact_refs": [
+    "c2m_craft/creative/workstation.py",
+    "config/creative/styles.json",
+    "static/app.js",
+    "verify/records/model_calls.md"
+   ],
+   "contract_refs": [
+    "design_concept"
+   ],
+   "id": "A1.2",
+   "milestone": "M3",
+   "module": "A",
+   "note": "Style is carried by the concept parameters and rendered by a live model: qwen-image-3.0 renders the concept and qwen3.7-flash writes the bilingual copy (verified 2026-10-24, live=4 rows in verify/records/model_calls.md). Image-to-image transfer from a reference photo is not exposed yet.",
+   "parent": "A1",
+   "status": "covered",
+   "title_en": "Style transfer",
+   "title_zh": "风格迁移",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J1"
+   ],
+   "artifact_refs": [
+    "c2m_craft/creative/series.py",
+    "config/creative/series.json",
+    "config/creative/palettes.json"
+   ],
+   "contract_refs": [
+    "design_concept"
+   ],
+   "id": "A1.3",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Three SKUs with dimension, palette and price multipliers.",
+   "parent": "A1",
+   "status": "covered",
+   "title_en": "Palette and series expansion",
+   "title_zh": "色板与系列扩展",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J1"
+   ],
+   "artifact_refs": [
+    "static/app.js",
+    "c2m_craft/creative/workstation.py"
+   ],
+   "contract_refs": [
+    "design_concept"
+   ],
+   "id": "A1.4",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Procedural CSS/SVG preview driven by palette, motif style and texture; no binary assets.",
+   "parent": "A1",
+   "status": "covered",
+   "title_en": "Pattern and material effect preview",
+   "title_zh": "纹样与材质效果预览",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J2"
+   ],
+   "artifact_refs": [
+    "c2m_craft/library/assets.py",
+    "contracts/pattern-asset.schema.json",
+    "samples/library/rejected.json"
+   ],
+   "contract_refs": [
+    "pattern_asset"
+   ],
+   "id": "A2.1",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Structural validation plus four cross-field invariants; six committed rejection payloads.",
+   "parent": "A2",
+   "status": "covered",
+   "title_en": "Mandatory licensing source and usage scope with positive and negative cases",
+   "title_zh": "授权来源与使用范围强制字段（正负样例）",
+   "verify_group": "B"
+  },
+  {
+   "ac_refs": [
+    "J2"
+   ],
+   "artifact_refs": [
+    "c2m_craft/library/assets.py",
+    "out/library_snapshot.json",
+    "static/app.js"
+   ],
+   "contract_refs": [
+    "pattern_asset"
+   ],
+   "id": "A2.2",
+   "milestone": "M2",
+   "module": "A",
+   "note": "M2 adds a deterministic descriptor search over motif family, symmetry, line weight and density, plus filter-aware scoring in the UI. A true image embedding model stays out of scope while the build is offline.",
+   "parent": "A2",
+   "status": "partial",
+   "title_en": "Multimodal search over the asset library",
+   "title_zh": "资源库多模态检索",
+   "verify_group": "B"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "c2m_craft/commerce/orders.py",
+    "samples/contracts/positive/order-ORD-0001.json"
+   ],
+   "contract_refs": [
+    "c2m_order"
+   ],
+   "id": "A3.1",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Deposit, customisation fee and revenue split computed from configuration.",
+   "parent": "A3",
+   "status": "covered",
+   "title_en": "Designer original pre-sale transaction",
+   "title_zh": "设计师原创预售交易",
+   "verify_group": "D"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "contracts/customization-choice.schema.json",
+    "config/commerce/customization.json",
+    "c2m_craft/commerce/customization.py",
+    "out/customization_report.json"
+   ],
+   "contract_refs": [
+    "c2m_order",
+    "customization_choice"
+   ],
+   "id": "A3.2",
+   "milestone": "M2",
+   "module": "A",
+   "note": "Option catalogue with signed price deltas; the derived concept is gated again, and an incompatible pair is refused with the catalogue reason.",
+   "parent": "A3",
+   "status": "covered",
+   "title_en": "Consumer participatory customisation",
+   "title_zh": "消费者参与式定制",
+   "verify_group": "I"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "contracts/edition.schema.json",
+    "contracts/collector-record.schema.json",
+    "c2m_craft/commerce/editions.py",
+    "out/edition_archive.json"
+   ],
+   "contract_refs": [
+    "c2m_order",
+    "ip_license",
+    "edition",
+    "collector_record"
+   ],
+   "id": "A3.3",
+   "milestone": "M2",
+   "module": "A",
+   "note": "Numbers are reserved on the order and issued on settlement; the certificate hash covers the piece, so transfers append to the provenance chain.",
+   "parent": "A3",
+   "status": "covered",
+   "title_en": "Artist and manufacturer collaboration with limited edition numbering",
+   "title_zh": "艺术家与制造企业联名（限量编号与收藏档案）",
+   "verify_group": "I"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "c2m_craft/commerce/orders.py",
+    "c2m_craft/commerce/dispatch.py",
+    "c2m_craft/commerce/settlement.py"
+   ],
+   "contract_refs": [
+    "c2m_order",
+    "craft_work_order",
+    "settlement"
+   ],
+   "id": "A4.1",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Every transition appends a hash-chained ledger event; amounts reconcile in integer cents.",
+   "parent": "A4",
+   "status": "covered",
+   "title_en": "Order to work order to dispatch to QC to shipment to revenue sharing",
+   "title_zh": "订单到工艺单、派工、品控、发货、分成结算",
+   "verify_group": "D"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "config/commerce/capacity.json",
+    "c2m_craft/commerce/capacity.py",
+    "out/capacity_plan.json"
+   ],
+   "contract_refs": [
+    "craft_work_order",
+    "production_schedule",
+    "c2m_order"
+   ],
+   "id": "A4.2",
+   "milestone": "M2",
+   "module": "A",
+   "note": "A working-day capacity calendar books existing work orders backwards and fills the new order forwards; the promise, its slot and the alternatives are stored on the order.",
+   "parent": "A4",
+   "status": "covered",
+   "title_en": "Delivery timeline commitment for custom items",
+   "title_zh": "定制件交期承诺",
+   "verify_group": "I"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "c2m_craft/commerce/orders.py",
+    "config/commerce/pricing.json",
+    "out/quality_report.json"
+   ],
+   "contract_refs": [
+    "c2m_order",
+    "settlement"
+   ],
+   "id": "A4.3",
+   "milestone": "M2",
+   "module": "A",
+   "note": "Full, partial and split outcomes with tests; policy is configuration. Since M2 a dispute can cite the inspections recorded against its own work order, and the citation is part of the ledger payload.",
+   "parent": "A4",
+   "status": "covered",
+   "title_en": "Refund and dispute handling",
+   "title_zh": "退款与争议处理",
+   "verify_group": "D"
+  },
+  {
+   "ac_refs": [
+    "J4"
+   ],
+   "artifact_refs": [
+    "config/commerce/quality.json",
+    "contracts/qc-record.schema.json",
+    "c2m_craft/commerce/quality.py",
+    "out/quality_report.json"
+   ],
+   "contract_refs": [
+    "qc_record",
+    "craft_work_order"
+   ],
+   "id": "A4.4",
+   "milestone": "M2",
+   "module": "A",
+   "note": "Sampling plans, defect taxonomy with severities, measurements with derived limits and a verdict invariant: a pass cannot carry a major or critical defect.",
+   "parent": "A4",
+   "status": "covered",
+   "title_en": "Quality standards",
+   "title_zh": "质量标准",
+   "verify_group": "I"
+  },
+  {
+   "ac_refs": [
+    "J3"
+   ],
+   "artifact_refs": [
+    "config/craft_rules/jewelry.json",
+    "c2m_craft/craft/rules.py"
+   ],
+   "contract_refs": [
+    "manufacturability_assessment"
+   ],
+   "id": "A5.1",
+   "milestone": "M1",
+   "module": "A",
+   "note": "17 rules across casting, setting, chasing, surface, forming, material and assembly.",
+   "parent": "A5",
+   "status": "covered",
+   "title_en": "Jewelry craft rules: setting, casting, chasing",
+   "title_zh": "珠宝工艺规则（镶嵌/铸造/錾刻）",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J3"
+   ],
+   "artifact_refs": [
+    "config/craft_rules/hardwood.json",
+    "config/equipment/WS-HW-A.json",
+    "config/equipment/WS-HW-B.json"
+   ],
+   "contract_refs": [
+    "manufacturability_assessment"
+   ],
+   "id": "A5.2",
+   "milestone": "M1",
+   "module": "A",
+   "note": "15 rules plus four workshop capability envelopes; same concept can differ per workshop.",
+   "parent": "A5",
+   "status": "covered",
+   "title_en": "Hardwood rules: joinery, carving, surface, plus equipment capability",
+   "title_zh": "硬木规则（榫卯/雕刻/表面）与企业设备能力",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J3"
+   ],
+   "artifact_refs": [
+    "c2m_craft/craft/assessment.py",
+    "samples/concepts/expected.json"
+   ],
+   "contract_refs": [
+    "manufacturability_assessment"
+   ],
+   "id": "A5.3",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Ten concepts against two workshops each, compared with a hand-written expectation table.",
+   "parent": "A5",
+   "status": "covered",
+   "title_en": "Verdict: can it be made, where it cannot, what to change",
+   "title_zh": "判定：能不能做、哪里不能做、怎么改",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J3"
+   ],
+   "artifact_refs": [
+    "c2m_craft/craft/review.py",
+    "contracts/artisan-review.schema.json",
+    "static/app.js"
+   ],
+   "contract_refs": [
+    "artisan_review",
+    "manufacturability_assessment"
+   ],
+   "id": "A5.4",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Overrides need a written reason and must change the verdict; both tiers stay in the record.",
+   "parent": "A5",
+   "status": "covered",
+   "title_en": "Two-tier process: AI preliminary verdict plus craftsperson review",
+   "title_zh": "AI 初判与匠人复核两段式",
+   "verify_group": "C"
+  },
+  {
+   "ac_refs": [
+    "J3",
+    "J9"
+   ],
+   "artifact_refs": [
+    "c2m_craft/craft/lint.py",
+    "config/craft_rules/rule_file.schema.json",
+    "docs/rule-authoring-form.md"
+   ],
+   "contract_refs": [],
+   "id": "A5.5",
+   "milestone": "M1",
+   "module": "A",
+   "note": "Schema plus lint: unknown facts, type mismatches, placeholders, shadowed rules, unused facts.",
+   "parent": "A5",
+   "status": "covered",
+   "title_en": "Rules maintainable by non-programmers",
+   "title_zh": "规则非程序员可维护",
+   "verify_group": "A"
+  },
+  {
+   "ac_refs": [
+    "J5"
+   ],
+   "artifact_refs": [
+    "c2m_craft/enterprise/registry.py",
+    "c2m_craft/enterprise/runtime.py",
+    "config/enterprise/components.json",
+    "out/enterprise_report.json"
+   ],
+   "contract_refs": [
+    "service_component",
+    "enterprise_profile"
+   ],
+   "id": "B1",
+   "milestone": "M3",
+   "module": "B",
+   "note": "Ten reusable components registered as data; the runtime assembles them per enterprise profile and reports blockers.",
+   "parent": "B",
+   "status": "covered",
+   "title_en": "Componentised enterprise AI service layer",
+   "title_zh": "组件化企业 AI 服务层",
+   "verify_group": "J"
+  },
+  {
+   "ac_refs": [
+    "J5"
+   ],
+   "artifact_refs": [
+    "config/enterprise/profiles/EP-0001.json",
+    "config/enterprise/profiles/EP-0002.json",
+    "c2m_craft/enterprise/runtime.py",
+    "out/enterprise_report.json"
+   ],
+   "contract_refs": [
+    "enterprise_profile",
+    "service_component"
+   ],
+   "id": "B2",
+   "milestone": "M1",
+   "module": "B",
+   "note": "Two enterprises in two industries are assembled by the same code from the same registry; only the profile and the industry configuration differ.",
+   "parent": "B",
+   "status": "covered",
+   "title_en": "Industry switching by configuration, not duplicated code",
+   "title_zh": "行业切换靠配置而非复制代码",
+   "verify_group": "J"
+  },
+  {
+   "ac_refs": [
+    "J6"
+   ],
+   "artifact_refs": [
+    "config/growth/site.json",
+    "config/growth/copy.json",
+    "config/growth/crm.json",
+    "c2m_craft/enterprise/growth/",
+    "out/growth_report.json",
+    "out/site/en/index.html"
+   ],
+   "contract_refs": [
+    "growth_site",
+    "inquiry_lead",
+    "enterprise_profile"
+   ],
+   "id": "B3",
+   "milestone": "M3",
+   "module": "B",
+   "note": "Nine pages in three languages with per-page SEO metadata, nine-page sitemap and an inquiry to CRM loop with scoring, SLA, routing, follow-ups and a quote draft.",
+   "parent": "B",
+   "status": "covered",
+   "title_en": "Multilingual site, SEO, content, foreign-trade leads, CRM, inquiry follow-up",
+   "title_zh": "多语独立站、SEO、内容、外贸获客、CRM、询盘跟进",
+   "verify_group": "J"
+  },
+  {
+   "ac_refs": [
+    "J5"
+   ],
+   "artifact_refs": [
+    "docs/fde-handbook.md",
+    "config/enterprise/fde-checklist.json",
+    "out/enterprise_report.json"
+   ],
+   "contract_refs": [
+    "enterprise_profile"
+   ],
+   "id": "B4",
+   "milestone": "M3",
+   "module": "B",
+   "note": "FDE handbook with the four delivery phases, the data boundary map, the go-live checklist and three training tiers; readiness is computed, not asserted.",
+   "parent": "B",
+   "status": "covered",
+   "title_en": "FDE on-site delivery handbook",
+   "title_zh": "FDE 驻场交付手册",
+   "verify_group": "J"
+  },
+  {
+   "ac_refs": [
+    "J5"
+   ],
+   "artifact_refs": [
+    "samples/contracts/positive/enterprise-profile-EP-0001.json",
+    "config/enterprise/profiles/EP-0001.json"
+   ],
+   "contract_refs": [
+    "enterprise_profile"
+   ],
+   "id": "B5",
+   "milestone": "M1",
+   "module": "B",
+   "note": "The populated profile carries the component selection, growth stack, data boundaries, deployment posture and the client go-live list.",
+   "parent": "B",
+   "status": "covered",
+   "title_en": "One-enterprise-one-profile sample",
+   "title_zh": "一企一档样例",
+   "verify_group": "J"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "config/ip/licensing.json",
+    "c2m_craft/ip/licensing.py",
+    "out/licensing_pack.json",
+    "docs/licensing-templates.md"
+   ],
+   "contract_refs": [
+    "ip_license",
+    "content_review"
+   ],
+   "id": "C5",
+   "milestone": "M1",
+   "module": "C",
+   "note": "A signed document set (five documents, four signed) with per-document checksums, template clauses and a content review, built from the same record the licence contract validates.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "Licensing contract templates",
+   "title_zh": "授权合同模板",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "config/ip/licensing.json",
+    "c2m_craft/ip/licensing.py",
+    "out/licensing_pack.json",
+    "docs/licensing-templates.md"
+   ],
+   "contract_refs": [
+    "merch_spec",
+    "ip_license"
+   ],
+   "id": "C6",
+   "milestone": "M4",
+   "module": "C",
+   "note": "Four derivative categories with bill of materials, tolerances, AQL sampling, packaging, authenticity labelling and royalty terms.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "Derivative licensing and quality specification",
+   "title_zh": "衍生授权与质量标准",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J10"
+   ],
+   "artifact_refs": [
+    "c2m_craft/core/invariants.py",
+    "samples/library/assets.json"
+   ],
+   "contract_refs": [
+    "ip_license",
+    "pattern_asset"
+   ],
+   "id": "C7",
+   "milestone": "M1",
+   "module": "C",
+   "note": "Enforced by contract invariants and demonstrated by rejection cases.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "No exclusive claim over traditional prototypes or religious site names",
+   "title_zh": "不得主张传统原型与宗教场所名称独占",
+   "verify_group": "B"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "config/ip/characters.json",
+    "c2m_craft/ip/bible.py",
+    "out/character_bible.json",
+    "docs/character-bible.md"
+   ],
+   "contract_refs": [
+    "character_bible",
+    "content_review"
+   ],
+   "id": "C1",
+   "milestone": "M4",
+   "module": "C",
+   "note": "Dual guardian canon: world rules, two distinct elements, silhouette, palette, motifs, taboos, props, voice and arc beats, each citing a content review.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "Dual guardian character settings",
+   "title_zh": "双守护角色原创设定",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "config/ip/visuals.json",
+    "c2m_craft/ip/visuals.py",
+    "out/ip_asset_library.json"
+   ],
+   "contract_refs": [
+    "character_bible",
+    "visual_asset"
+   ],
+   "id": "C2",
+   "milestone": "M4",
+   "module": "C",
+   "note": "Twenty-two visual assets (turnarounds, expressions, props, costume, scenes) described as deterministic drawing recipes with a recomputable checksum.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "Character design manual and visual asset library",
+   "title_zh": "角色设定手册与视觉资产库",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "config/ip/drama.json",
+    "c2m_craft/ip/drama.py",
+    "out/short_drama_package.json",
+    "docs/short-drama-workflow.md"
+   ],
+   "contract_refs": [
+    "short_drama",
+    "content_review"
+   ],
+   "id": "C3",
+   "milestone": "M4",
+   "module": "C",
+   "note": "Script to storyboard to edit decision list to subtitles: 5 scenes, 10 beats, 10 frames, continuous timecodes and a 12 line subtitle track computed from the beats.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "Short-drama workflow from script to final cut",
+   "title_zh": "短剧工作流（脚本到成片）",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "out/sample_reel.html",
+    "out/content_review.json",
+    "verify/records/ui_smoke.log"
+   ],
+   "contract_refs": [
+    "short_drama",
+    "content_review"
+   ],
+   "id": "C4",
+   "milestone": "M4",
+   "module": "C",
+   "note": "One self-contained 67 second animatic rendered from the drama package, with the AI assisted authenticity label and the approved review record.",
+   "parent": "C",
+   "status": "covered",
+   "title_en": "One sample reel",
+   "title_zh": "一条样片",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [
+    "docs/competition-ops-pack.md"
+   ],
+   "contract_refs": [],
+   "id": "D1",
+   "milestone": "M4",
+   "module": "D",
+   "note": "Optional operations package kept as a synthetic document: categories, rubric, timeline, prize structure and IP terms; no brand or sponsor is named.",
+   "parent": "D",
+   "status": "covered",
+   "title_en": "Optional global design co-creation competition operations package",
+   "title_zh": "可选的全球设计共创大赛运营包",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J0",
+    "J1"
+   ],
+   "artifact_refs": [
+    "README.md",
+    "start.ps1",
+    "start.sh",
+    "c2m_craft/__main__.py"
+   ],
+   "contract_refs": [],
+   "id": "E1",
+   "milestone": "M1",
+   "module": "E",
+   "note": "Pure standard library, offline, no build step.",
+   "parent": "E",
+   "status": "covered",
+   "title_en": "Runnable repository with one-click launch",
+   "title_zh": "可运行仓库与一键启动",
+   "verify_group": "F"
+  },
+  {
+   "ac_refs": [
+    "J2",
+    "J3"
+   ],
+   "artifact_refs": [
+    "config/craft_rules/jewelry.json",
+    "config/equipment/WS-JW-A.json",
+    "contracts/pattern-asset.schema.json"
+   ],
+   "contract_refs": [
+    "pattern_asset"
+   ],
+   "id": "E2",
+   "milestone": "M1",
+   "module": "E",
+   "note": "Every rule, workshop limit and licence field is editable without Python.",
+   "parent": "E",
+   "status": "covered",
+   "title_en": "Craft rules, equipment capability and licensing fields stored as data",
+   "title_zh": "工艺规则、设备能力、授权字段以数据文件表达",
+   "verify_group": "A"
+  },
+  {
+   "ac_refs": [
+    "J0",
+    "J9"
+   ],
+   "artifact_refs": [
+    "verify/run_verification.py",
+    "verify/records/tests_output.txt",
+    "verify/records/verification_output.txt",
+    "out/hash_manifest.json"
+   ],
+   "contract_refs": [],
+   "id": "E3",
+   "milestone": "M1",
+   "module": "E",
+   "note": "Two runs compared byte for byte; records written under verify/records.",
+   "parent": "E",
+   "status": "covered",
+   "title_en": "Per-module verification records: commands, inputs, expected outputs",
+   "title_zh": "每模块验证记录：命令、输入、期望输出",
+   "verify_group": "F"
+  },
+  {
+   "ac_refs": [
+    "J10"
+   ],
+   "artifact_refs": [
+    "samples/library/assets.json",
+    "contracts/ip-license.schema.json",
+    "c2m_craft/ip/reviews.py",
+    "out/content_review.json"
+   ],
+   "contract_refs": [
+    "pattern_asset",
+    "ip_license",
+    "visual_asset",
+    "content_review"
+   ],
+   "id": "E4",
+   "milestone": "M1",
+   "module": "E",
+   "note": "Every cultural IP artefact cites a content review with the AIGC authenticity block; the verdict is checked against the checklist by an invariant.",
+   "parent": "E",
+   "status": "covered",
+   "title_en": "Licensed or self-produced assets with content review and authenticity labelling",
+   "title_zh": "资产须授权或自产，并做内容审核与真实性标注",
+   "verify_group": "K"
+  },
+  {
+   "ac_refs": [
+    "J10"
+   ],
+   "artifact_refs": [
+    "samples/concepts/DC-0001.json",
+    "config/site.json"
+   ],
+   "contract_refs": [
+    "common"
+   ],
+   "id": "E5",
+   "milestone": "M1",
+   "module": "E",
+   "note": "No real factory list or customer data; provenance recorded in config/site.json.",
+   "parent": "E",
+   "status": "covered",
+   "title_en": "Synthetic samples with interfaces defined against real field schemas",
+   "title_zh": "合成样本，接口按真实字段 schema 定义",
+   "verify_group": "G"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "F1",
+   "milestone": "M1",
+   "module": "F",
+   "note": "Explicitly out of scope in the brief.",
+   "parent": "F",
+   "status": "excluded",
+   "title_en": "Policy application materials",
+   "title_zh": "政策申报材料",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "F2",
+   "milestone": "M1",
+   "module": "F",
+   "note": "Explicitly out of scope in the brief.",
+   "parent": "F",
+   "status": "excluded",
+   "title_en": "Fiscal funding estimates",
+   "title_zh": "财政资金测算",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "F3",
+   "milestone": "M1",
+   "module": "F",
+   "note": "Explicitly out of scope; the health cluster is served by knowledge and workflow components only.",
+   "parent": "F",
+   "status": "excluded",
+   "title_en": "Real medical diagnosis or treatment",
+   "title_zh": "真实医疗诊疗功能",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "F4",
+   "milestone": "M1",
+   "module": "F",
+   "note": "Explicitly out of scope.",
+   "parent": "F",
+   "status": "excluded",
+   "title_en": "Offline space construction",
+   "title_zh": "线下空间建设",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "F5",
+   "milestone": "M1",
+   "module": "F",
+   "note": "Explicitly out of scope.",
+   "parent": "F",
+   "status": "excluded",
+   "title_en": "Licensed businesses requiring a locally qualified entity",
+   "title_zh": "需本地资质主体承接的授权类业务",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "G1",
+   "milestone": "M2",
+   "module": "G",
+   "note": "Client-provided after award; M1 uses a synthetic baseline and marks it as such.",
+   "parent": "G",
+   "status": "planned",
+   "title_en": "Business process interview material for the six industries",
+   "title_zh": "六行业业务流程访谈材料",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "G2",
+   "milestone": "M2",
+   "module": "G",
+   "note": "Replaces the synthetic baseline rule by rule; the evidence block already carries artisan_ref.",
+   "parent": "G",
+   "status": "planned",
+   "title_en": "Verbal craft rules with proofreading",
+   "title_zh": "口头工艺规则与校对",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [
+    "pattern_asset"
+   ],
+   "id": "G3",
+   "milestone": "M2",
+   "module": "G",
+   "note": "Supersedes the eight synthetic assets used in M1.",
+   "parent": "G",
+   "status": "planned",
+   "title_en": "Pattern asset licensing list",
+   "title_zh": "纹样资产授权清单",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "G4",
+   "milestone": "M2",
+   "module": "G",
+   "note": "Validates the capability envelope format against real workshop data.",
+   "parent": "G",
+   "status": "planned",
+   "title_en": "Craft constraint samples from one jewelry and one woodworking enterprise",
+   "title_zh": "1 家珠宝与 1 家木工的工艺约束样例",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "G5",
+   "milestone": "M2",
+   "module": "G",
+   "note": "Named reviewer joins the acceptance walkthrough for each milestone.",
+   "parent": "G",
+   "status": "planned",
+   "title_en": "Acceptance reviewer from the client",
+   "title_zh": "客户侧验收评审人",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "H1",
+   "milestone": "M2",
+   "module": "H",
+   "note": "Pricing is a commercial decision for the bid owner; the matrix carries an empty quote column.",
+   "parent": "H",
+   "status": "planned",
+   "title_en": "Quote broken down by module A, B, C and D",
+   "title_zh": "按 A/B/C/D 模块拆分报价",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "H2",
+   "milestone": "M2",
+   "module": "H",
+   "note": "M1 is priced against this verified deliverable.",
+   "parent": "H",
+   "status": "planned",
+   "title_en": "Quote broken down by milestone",
+   "title_zh": "按里程碑拆分报价",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "H3",
+   "milestone": "M2",
+   "module": "H",
+   "note": "Stack is documented in ARCHITECTURE.md; the timeline is a commercial commitment.",
+   "parent": "H",
+   "status": "planned",
+   "title_en": "Stack, open-source reuse and delivery timeline",
+   "title_zh": "技术栈、开源复用与交付周期",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [],
+   "artifact_refs": [],
+   "contract_refs": [],
+   "id": "H4",
+   "milestone": "M2",
+   "module": "H",
+   "note": "M1 runs offline at zero inference cost; M2 model cost is stated in the quote.",
+   "parent": "H",
+   "status": "planned",
+   "title_en": "Model and compute cost basis",
+   "title_zh": "模型与算力成本口径",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [
+    "J0",
+    "J1",
+    "J2",
+    "J3",
+    "J4",
+    "J8",
+    "J9",
+    "J10"
+   ],
+   "artifact_refs": [
+    "ARCHITECTURE.md",
+    "docs/data-contracts.md",
+    "docs/rule-modeling-plan.md",
+    "static/index.html"
+   ],
+   "contract_refs": [
+    "common",
+    "design_concept",
+    "manufacturability_assessment"
+   ],
+   "id": "I1",
+   "milestone": "M1",
+   "module": "I",
+   "note": "This milestone.",
+   "parent": "I",
+   "status": "covered",
+   "title_en": "M1: architecture and data contracts, rule modelling plan, clickable workstation prototype",
+   "title_zh": "M1：架构与数据契约、规则建模方案、可点击工作台原型",
+   "verify_group": "H"
+  },
+  {
+   "ac_refs": [
+    "J4",
+    "J2"
+   ],
+   "artifact_refs": [
+    "out/capacity_plan.json",
+    "out/customization_report.json",
+    "out/edition_archive.json",
+    "out/quality_report.json",
+    "out/settlement_report.md"
+   ],
+   "contract_refs": [
+    "c2m_order",
+    "pattern_asset",
+    "customization_choice",
+    "edition",
+    "collector_record",
+    "qc_record",
+    "production_schedule",
+    "settlement"
+   ],
+   "id": "I2",
+   "milestone": "M2",
+   "module": "I",
+   "note": "Adds the capacity calendar and promises, option pricing, edition numbering with the collector archive, descriptor search and per-asset royalty lines to what M1 already runs.",
+   "parent": "I",
+   "status": "covered",
+   "title_en": "M2: C2M pre-sale and manufacturing coordination pipeline plus pattern licensing library",
+   "title_zh": "M2：C2M 预售与制造协同链路、纹样授权资源库",
+   "verify_group": "I"
+  },
+  {
+   "ac_refs": [
+    "J5",
+    "J6"
+   ],
+   "artifact_refs": [
+    "out/enterprise_report.json",
+    "out/growth_report.json",
+    "docs/fde-handbook.md",
+    "docs/growth-playbook.md"
+   ],
+   "contract_refs": [
+    "enterprise_profile",
+    "service_component",
+    "growth_site",
+    "inquiry_lead"
+   ],
+   "id": "I3",
+   "milestone": "M3",
+   "module": "I",
+   "note": "M3 delivers the two-industry enterprise service layer, the FDE handbook and the multilingual site with the inquiry to CRM loop, all verified in group J.",
+   "parent": "I",
+   "status": "covered",
+   "title_en": "M3: enterprise AI service layer with two industry components plus the growth stack",
+   "title_zh": "M3：两个行业组件的企业 AI 服务层与增长栈",
+   "verify_group": "J"
+  },
+  {
+   "ac_refs": [
+    "J7"
+   ],
+   "artifact_refs": [
+    "out/character_bible.json",
+    "out/ip_asset_library.json",
+    "out/short_drama_package.json",
+    "out/sample_reel.html",
+    "out/licensing_pack.json",
+    "out/content_review.json"
+   ],
+   "contract_refs": [
+    "character_bible",
+    "visual_asset",
+    "short_drama",
+    "content_review",
+    "ip_license",
+    "merch_spec"
+   ],
+   "id": "I4",
+   "milestone": "M4",
+   "module": "I",
+   "note": "M4 closes the IP pipeline with the two guardians, the asset library, the short drama and sample reel, the licensing pack and the review records, verified in group K.",
+   "parent": "I",
+   "status": "covered",
+   "title_en": "M4: IP pipeline with one sample reel plus full verification records and delivery documentation",
+   "title_zh": "M4：IP 管线与一条样片、完整验证记录与交付文档",
+   "verify_group": "K"
+  }
+ ],
+ "source": {
+  "currency": "USD",
+  "milestones_in_brief": [
+   "M1",
+   "M2",
+   "M3",
+   "M4"
+  ],
+  "problem_id": 1724,
+  "reference_price_cents": 1000000,
+  "response_locale": "en",
+  "title": "Regional Specialty Industry AI Empowerment Phase 1"
+ },
+ "verify_groups": {
+  "A": "contracts and registry",
+  "B": "licensing ingestion gate",
+  "C": "manufacturability assessment",
+  "D": "C2M order pipeline",
+  "E": "four core unit-test areas",
+  "F": "documentation and implementation consistency",
+  "G": "compliance, determinism and offline guarantees",
+  "H": "requirement coverage",
+  "I": "milestone 2: customisation, capacity, editions, royalties, quality",
+  "J": "milestone 3: enterprise service layer, FDE handbook and growth stack",
+  "K": "milestone 4: cultural IP character bible, short drama, sample reel and licensing"
+ },
+ "version": "1.0.0"
+}

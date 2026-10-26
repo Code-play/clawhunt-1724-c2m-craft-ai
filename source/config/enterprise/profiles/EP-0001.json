@@ -1,0 +1,61 @@
+{
+ "profile_id": "EP-0001",
+ "enterprise": {
+  "name": "Harbour Jewellery Works (synthetic)",
+  "industry": "jewelry",
+  "size": "medium",
+  "region": "East Asian coastal belt"
+ },
+ "components": [
+  {"component_id": "kb_craft", "kind": "knowledge_base", "enabled": true, "config": {"collections": ["craft_rules", "licensing"], "language": "zh"}},
+  {"component_id": "agent_quote", "kind": "agent", "enabled": true, "config": {"max_turns": 6, "tools": ["rules.explain", "library.search"]}},
+  {"component_id": "wf_dispatch", "kind": "workflow", "enabled": true, "config": {"steps": ["assess", "issue_work_order", "notify"], "trigger": "order.paid"}},
+  {"component_id": "wf_capacity", "kind": "workflow", "enabled": true, "config": {"calendar": "workshop_daily", "promise_window_days": 45}},
+  {"component_id": "wf_quality", "kind": "workflow", "enabled": true, "config": {"sampling": "aql", "dispute_evidence": true}},
+  {"component_id": "crm_leads", "kind": "crm", "enabled": true, "config": {"mode": "production", "retention_days": 730}},
+  {"component_id": "site_composer", "kind": "growth", "enabled": true, "config": {"site_id": "SITE-JW-01", "languages": ["en", "zh", "de"]}},
+  {"component_id": "seo_auditor", "kind": "growth", "enabled": true, "config": {"min_score_bp": 8000, "check_structured_data": true}},
+  {"component_id": "ip_studio", "kind": "scenario_showcase", "enabled": true, "config": {"bible_id": "IPB-0001", "drama_id": "SDR-0001"}},
+  {"component_id": "ip_licensing", "kind": "commerce", "enabled": true, "config": {"license_id": "IPL-0001", "derivative_categories": 4}}
+ ],
+ "locale": {"primary": "zh", "secondary": ["en"]},
+ "channels": {"site": true, "seo": true, "crm": true},
+ "sla": {"first_response_hours": 4, "delivery_days": 21},
+ "fde": {
+  "fde_id": "FDE-JW-01",
+  "handbook_ref": "docs/fde-handbook.md#on-site-delivery",
+  "go_live_checklist": [
+   "interview notes signed off by the client",
+   "craft rules reviewed by the workshop craftsperson",
+   "licence list attached to every asset",
+   "site pages and SEO audit accepted by the client",
+   "inquiry to CRM loop rehearsed with the export desk",
+   "order ledger reconciliation signed by finance",
+   "backup and restore drill recorded",
+   "operator and administrator training delivered"
+  ]
+ },
+ "growth": {
+  "site_id": "SITE-JW-01",
+  "languages": ["en", "zh", "de"],
+  "crm_pipeline": ["new", "qualified", "contacted", "quoted", "won", "lost"]
+ },
+ "data_boundaries": {
+  "stores": [
+   {"store_id": "store_craft_rules", "kind": "craft_rules", "region": "CN", "personal_data": false},
+   {"store_id": "store_orders", "kind": "orders", "region": "CN", "personal_data": true},
+   {"store_id": "store_library", "kind": "library", "region": "CN", "personal_data": false},
+   {"store_id": "store_crm", "kind": "crm", "region": "CN", "personal_data": true},
+   {"store_id": "store_content", "kind": "content", "region": "CN", "personal_data": false}
+  ],
+  "cross_border": true,
+  "dpa_ref": "docs/fde-handbook.md#data-boundary-map"
+ },
+ "deployment": {
+  "mode": "on_prem",
+  "region": "CN",
+  "auth_gate": true,
+  "backup_policy": "nightly logical backup, 14 day retention, quarterly restore drill"
+ },
+ "created_at": "2026-10-20T00:00:00Z"
+}

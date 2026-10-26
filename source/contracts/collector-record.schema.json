@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:collector-record",
+  "title": "Collector record",
+  "description": "The certificate and ownership chain for one numbered piece. Provenance is an ordered chain: the first entry has no predecessor, each later entry starts where the previous ended, and the last entry must point at the current owner. The certificate hash covers the edition, the number and the concept so a certificate can be verified offline.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "edition_id",
+    "edition_number",
+    "certificate_id",
+    "certificate_hash",
+    "owner",
+    "provenance",
+    "created_at"
+  ],
+  "properties": {
+    "record_id": { "type": "string", "pattern": "^COL-[0-9]{4}$" },
+    "edition_id": { "type": "string", "pattern": "^ED-[0-9]{4}$" },
+    "edition_number": { "type": "integer", "minimum": 1, "maximum": 999 },
+    "certificate_id": { "type": "string", "minLength": 4, "maxLength": 60 },
+    "certificate_hash": { "$ref": "urn:c2m:contract:common#/$defs/sha256_hex" },
+    "owner": {
+      "type": "object",
+      "required": ["owner_id", "display_name"],
+      "properties": {
+        "owner_id": { "type": "string", "pattern": "^OWNER-[A-Z0-9-]{2,24}$" },
+        "display_name": { "type": "string", "minLength": 2, "maxLength": 80 }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["at", "from", "to", "kind", "note"],
+        "properties": {
+          "at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+          "from": { "type": ["string", "null"] },
+          "to": { "type": "string", "minLength": 2, "maxLength": 40 },
+          "kind": { "type": "string", "enum": ["issue", "transfer", "reissue"] },
+          "note": { "type": "string", "minLength": 1, "maxLength": 200 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-EDITION-02"]
+}

@@ -1,0 +1,78 @@
+{
+ "category": "jewelry_pendant",
+ "character_ids": [
+  "CHR-MU",
+  "CHR-HUO"
+ ],
+ "content_review_ref": "CRV-0005",
+ "created_at": "2026-10-20T00:00:00Z",
+ "license_id": "IPL-0001",
+ "materials": [
+  {
+   "name": "18k recycled gold",
+   "sourcing": "certified",
+   "standard": "Au750, nickel free, certified recycled content"
+  },
+  {
+   "name": "paper certificate",
+   "sourcing": "certified",
+   "standard": "FSC mixed sources, 240 gsm"
+  }
+ ],
+ "packaging": {
+  "dimensions_mm": [
+   90,
+   70,
+   30
+  ],
+  "label_requirements": [
+   "licence number"
+  ],
+  "materials": "FSC kraft box with paper band"
+ },
+ "quality": {
+  "finish": "brushed face, polished motif recess, no visible tool marks",
+  "inspection_points": [
+   "motif depth matches the render",
+   "packaging matches"
+  ],
+  "sampling": {
+   "aql": 1.5,
+   "level": "II"
+  },
+  "testing": [
+   "nickel release screening",
+   "48 hour tarnish test",
+   "clasp cycle test"
+  ],
+  "tolerances": [
+   {
+    "dimension": "pendant_width_mm",
+    "method": "caliper",
+    "nominal_mm": 18,
+    "tolerance_mm": 0.15
+   },
+   {
+    "dimension": "chain_length_mm",
+    "method": "tape measure",
+    "nominal_mm": 450,
+    "tolerance_mm": 2
+   }
+  ]
+ },
+ "rights": {
+  "exclusivity": false,
+  "royalty_rate_bp": 800,
+  "term_months": 36,
+  "territory": [
+   "CN",
+   "EU",
+   "US"
+  ]
+ },
+ "spec_id": "MS-0001",
+ "title": {
+  "en": "Two Guardians pendant",
+  "zh": "双守纹样吊坠"
+ }
+}

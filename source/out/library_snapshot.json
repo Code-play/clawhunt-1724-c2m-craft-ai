@@ -1,0 +1,409 @@
+{
+ "accepted_ingest": {
+  "asset_id": "PA-JW-0005",
+  "license": {
+   "asset_id": "PA-JW-0005",
+   "attribution_required": false,
+   "exclusive": false,
+   "ok": true,
+   "reasons": [],
+   "source_type": "self_produced",
+   "usage_scope": [
+    "internal_demo"
+   ],
+   "window": {
+    "from": "2026-01-01T00:00:00Z",
+    "to": "2030-01-01T00:00:00Z"
+   }
+  }
+ },
+ "assets": [
+  {
+   "asset_id": "PA-JW-0001",
+   "industries": [
+    "jewelry"
+   ],
+   "license": {
+    "asset_id": "PA-JW-0001",
+    "attribution_required": true,
+    "exclusive": false,
+    "ok": true,
+    "reasons": [],
+    "source_type": "licensed",
+    "usage_scope": [
+     "commercial_product",
+     "derivative_work"
+    ],
+    "window": {
+     "from": "2026-01-01T00:00:00Z",
+     "to": "2028-12-31T00:00:00Z"
+    }
+   },
+   "medium": "pattern",
+   "title": {
+    "en": "Licensed interlace pattern",
+    "zh": "缠枝授权纹样"
+   }
+  },
+  {
+   "asset_id": "PA-JW-0002",
+   "industries": [
+    "jewelry"
+   ],
+   "license": {
+    "asset_id": "PA-JW-0002",
+    "attribution_required": false,
+    "exclusive": true,
+    "ok": true,
+    "reasons": [],
+    "source_type": "self_produced",
+    "usage_scope": [
+     "commercial_product",
+     "advertising",
+     "export"
+    ],
+    "window": {
+     "from": "2026-06-01T00:00:00Z",
+     "to": "2031-06-01T00:00:00Z"
+    }
+   },
+   "medium": "form",
+   "title": {
+    "en": "In-house tide line",
+    "zh": "自研潮汐线"
+   }
+  },
+  {
+   "asset_id": "PA-JW-0003",
+   "industries": [
+    "jewelry",
+    "carving",
+    "heritage"
+   ],
+   "license": {
+    "asset_id": "PA-JW-0003",
+    "attribution_required": true,
+    "exclusive": false,
+    "ok": true,
+    "reasons": [],
+    "source_type": "traditional_heritage",
+    "usage_scope": [
+     "commercial_product",
+     "derivative_work"
+    ],
+    "window": {
+     "from": "2026-01-01T00:00:00Z",
+     "to": "2030-01-01T00:00:00Z"
+    }
+   },
+   "medium": "pattern",
+   "title": {
+    "en": "Traditional cloud-thunder motif",
+    "zh": "传统云雷纹样"
+   }
+  },
+  {
+   "asset_id": "PA-JW-0004",
+   "industries": [
+    "jewelry",
+    "heritage"
+   ],
+   "license": {
+    "asset_id": "PA-JW-0004",
+    "attribution_required": false,
+    "exclusive": false,
+    "ok": true,
+    "reasons": [],
+    "source_type": "public_domain",
+    "usage_scope": [
+     "internal_demo",
+     "derivative_work"
+    ],
+    "window": {
+     "from": "2026-01-01T00:00:00Z",
+     "to": "2036-01-01T00:00:00Z"
+    }
+   },
+   "medium": "pattern",
+   "title": {
+    "en": "Temple pattern reference",
+    "zh": "庙宇纹样参考"
+   }
+  },
+  {
+   "asset_id": "PA-HW-0001",
+   "industries": [
+    "hardwood"
+   ],
+   "license": {
+    "asset_id": "PA-HW-0001",
+    "attribution_required": false,
+    "exclusive": false,
+    "ok": true,
+    "reasons": [],
+    "source_type": "licensed",
+    "usage_scope": [
+     "commercial_product"
+    ],
+    "window": {
+     "from": "2025-06-01T00:00:00Z",
+     "to": "2027-06-01T00:00:00Z"
+    }
+   },
+   "medium": "form",
+   "title": {
+    "en": "Licensed fret apron",
+    "zh": "授权回纹牙板"
+   }
+  },
+  {
+   "asset_id": "PA-HW-0002",
+   "industries": [
+    "hardwood"
+   ],
+   "license": {
+    "asset_id": "PA-HW-0002",
+    "attribution_required": false,
+    "exclusive": false,
+    "ok": true,
+    "reasons": [],
+    "source_type": "public_domain",
+    "usage_scope": [
+     "commercial_product",
+     "advertising"
+    ],
+    "window": {
+     "from": "2020-01-01T00:00:00Z",
+     "to": "2040-01-01T00:00:00Z"
+    }
+   },
+   "medium": "pattern",
+   "title": {
+    "en": "Public-domain interlace spandrel",
+    "zh": "公版缠枝挂落"
+   }
+  },
+  {
+   "asset_id": "PA-HW-0003",
+   "industries": [
+    "hardwood"
+   ],
+   "license": {
+    "asset_id": "PA-HW-0003",
+    "attribution_required": false,
+    "exclusive": false,
+    "ok": false,
+    "reasons": [
+     "licence window 2025-01-01T00:00:00Z..2026-09-30T00:00:00Z does not cover 2026-10-23T00:00:00Z"
+    ],
+    "source_type": "licensed",
+    "usage_scope": [
+     "internal_demo"
+    ],
+    "window": {
+     "from": "2025-01-01T00:00:00Z",
+     "to": "2026-09-30T00:00:00Z"
+    }
+   },
+   "medium": "material",
+   "title": {
+    "en": "Expired licensed tide inlay",
+    "zh": "到期授权潮线嵌"
+   }
+  },
+  {
+   "asset_id": "PA-HW-0004",
+   "industries": [
+    "hardwood",
+    "carving"
+   ],
+   "license": {
+    "asset_id": "PA-HW-0004",
+    "attribution_required": false,
+    "exclusive": true,
+    "ok": true,
+    "reasons": [],
+    "source_type": "self_produced",
+    "usage_scope": [
+     "commercial_product",
+     "derivative_work",
+     "advertising"
+    ],
+    "window": {
+     "from": "2026-05-01T00:00:00Z",
+     "to": "2031-05-01T00:00:00Z"
+    }
+   },
+   "medium": "pattern",
+   "title": {
+    "en": "In-house vine shadow carving",
+    "zh": "自研藤影雕花"
+   }
+  }
+ ],
+ "counts": {
+  "assets": 8,
+  "rejections": 6,
+  "searches": 3
+ },
+ "rejection_summary": {
+  "rejected": 6,
+  "total": 6
+ },
+ "rejections": [
+  {
+   "errors": [
+    {
+     "keyword": "required",
+     "message": "missing required property 'source_type'",
+     "path": "$.license"
+    }
+   ],
+   "name": "missing-source",
+   "reason": "licensing source is mandatory",
+   "rejected": true
+  },
+  {
+   "errors": [
+    {
+     "invariant": "INV-LIC-02",
+     "keyword": "x-invariants",
+     "message": "license.usage_scope must list at least one permitted scope",
+     "path": "$"
+    },
+    {
+     "invariant": "INV-LIC-04",
+     "keyword": "x-invariants",
+     "message": "license.valid_from and license.valid_to are required",
+     "path": "$"
+    }
+   ],
+   "name": "empty-usage-scope",
+   "reason": "usage scope cannot be empty",
+   "rejected": true
+  },
+  {
+   "errors": [
+    {
+     "invariant": "INV-LIC-03",
+     "keyword": "x-invariants",
+     "message": "a traditional cultural prototype cannot be claimed as an exclusive right",
+     "path": "$"
+    }
+   ],
+   "name": "exclusive-heritage",
+   "reason": "a traditional prototype cannot be exclusive",
+   "rejected": true
+  },
+  {
+   "errors": [
+    {
+     "invariant": "INV-LIC-04",
+     "keyword": "x-invariants",
+     "message": "license window 2025-01-01T00:00:00Z..2026-09-30T00:00:00Z does not cover as_of 2026-10-23T00:00:00Z",
+     "path": "$"
+    }
+   ],
+   "name": "expired-license",
+   "reason": "the licence window has closed",
+   "rejected": true
+  },
+  {
+   "errors": [
+    {
+     "invariant": "INV-LIC-03",
+     "keyword": "x-invariants",
+     "message": "assets referencing religious sites cannot be licensed exclusively",
+     "path": "$"
+    }
+   ],
+   "name": "religious-exclusive",
+   "reason": "assets that reference religious sites cannot be exclusive",
+   "rejected": true
+  },
+  {
+   "errors": [
+    {
+     "keyword": "pattern",
+     "message": "does not match pattern ^#[0-9A-F]{6}$",
+     "path": "$.palette[0]"
+    }
+   ],
+   "name": "bad-hex",
+   "reason": "palette colours must be uppercase hex",
+   "rejected": true
+  }
+ ],
+ "searches": [
+  {
+   "query": {
+    "industry": null,
+    "palette": [],
+    "query": "interlace",
+    "tags": []
+   },
+   "results": [
+    {
+     "asset_id": "PA-HW-0002",
+     "license_ok": true,
+     "matched": [
+      "interlace"
+     ],
+     "score": 10,
+     "title": {
+      "en": "Public-domain interlace spandrel",
+      "zh": "公版缠枝挂落"
+     }
+    },
+    {
+     "asset_id": "PA-JW-0001",
+     "license_ok": true,
+     "matched": [
+      "interlace"
+     ],
+     "score": 10,
+     "title": {
+      "en": "Licensed interlace pattern",
+      "zh": "缠枝授权纹样"
+     }
+    }
+   ]
+  },
+  {
+   "query": {
+    "industry": null,
+    "palette": [],
+    "query": "",
+    "tags": [
+     "coastal"
+    ]
+   },
+   "results": [
+    {
+     "asset_id": "PA-HW-0003",
+     "license_ok": false,
+     "matched": [
+      "coastal"
+     ],
+     "score": 5,
+     "title": {
+      "en": "Expired licensed tide inlay",
+      "zh": "到期授权潮线嵌"
+     }
+    }
+   ]
+  },
+  {
+   "query": {
+    "industry": "hardwood",
+    "palette": [
+     "#C9A227",
+     "#1F2A44"
+    ],
+    "query": "carved",
+    "tags": []
+   },
+   "results": []
+  }
+ ]
+}

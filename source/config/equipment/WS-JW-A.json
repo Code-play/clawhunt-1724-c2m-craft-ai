@@ -1,0 +1,153 @@
+{
+  "workshop_id": "WS-JW-A",
+  "name": { "zh": "港区珠宝一厂", "en": "Harbour jewelry works A" },
+  "industry": "jewelry",
+  "version": "1.0.0",
+  "lead_time_days": 21,
+  "equipment": [
+    { "equipment_id": "EQ-JW-CAST-A", "name": { "zh": "真空铸造机", "en": "Vacuum caster" }, "process": "casting", "capacity_per_day": 40 },
+    { "equipment_id": "EQ-JW-SET-A", "name": { "zh": "镶嵌工作台", "en": "Setting bench" }, "process": "setting", "capacity_per_day": 60 },
+    { "equipment_id": "EQ-JW-CHASE-A", "name": { "zh": "錾刻台", "en": "Chasing bench" }, "process": "chasing", "capacity_per_day": 30 },
+    { "equipment_id": "EQ-JW-POLISH-A", "name": { "zh": "抛光轮", "en": "Polishing lathe" }, "process": "polishing", "capacity_per_day": 80 },
+    { "equipment_id": "EQ-JW-ENAMEL-A", "name": { "zh": "珐琅窑", "en": "Enamel kiln" }, "process": "enameling", "capacity_per_day": 20 }
+  ],
+  "capability_checks": [
+    {
+      "capability_id": "CAP-JW-A-01",
+      "fact": "min_wall_thickness_mm",
+      "op": "lt",
+      "value": 0.6,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "低于本厂可铸最小壁厚", "en": "Below this workshop's castable wall" },
+      "reason": {
+        "zh": "本厂铸造最小壁厚 0.6 mm，来料 {min_wall_thickness_mm} mm 无法充满型腔。",
+        "en": "This workshop casts down to 0.6 mm; the submitted {min_wall_thickness_mm} mm will not fill the mould."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "把最小壁厚提到 0.8 mm 以上，或改为空心铸造并加内支撑。", "en": "Raise the minimum wall to 0.8 mm or switch to hollow casting with internal supports." },
+          "suggested_change": { "min_wall_thickness_mm": 0.8 }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-JW-A-02",
+      "fact": "max_dimension_mm",
+      "op": "gt",
+      "value": 45,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "超出本厂铸造尺寸", "en": "Above this workshop's casting envelope" },
+      "reason": {
+        "zh": "本厂最大铸件尺寸 45 mm，来料 {max_dimension_mm} mm 需要分件或转厂。",
+        "en": "The casting envelope is 45 mm; {max_dimension_mm} mm needs splitting or another workshop."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "拆成可焊接的两个部件，或转 WS-JW-B 评估。", "en": "Split into two solderable parts, or re-assess at WS-JW-B." },
+          "suggested_change": { "max_dimension_mm": 45 }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-JW-A-03",
+      "fact": "alloy",
+      "op": "not_in",
+      "value": ["18k_gold", "22k_gold", "925_silver", "pt950"],
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "本厂不处理该合金", "en": "Alloy not handled here" },
+      "reason": {
+        "zh": "本厂排产合金为 18k/22k 金、925 银、pt950，来料 {alloy} 不在其中。",
+        "en": "This workshop schedules 18k/22k gold, 925 silver and pt950; {alloy} is not supported."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用本厂支持合金，或改派到具备该合金工艺的车间。", "en": "Switch to a supported alloy or route to a workshop that handles it." },
+          "suggested_change": { "alloy": "18k_gold" }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-JW-A-04",
+      "applies_when": { "fact": "ring_size_mm", "op": "gt", "value": 0 },
+      "fact": "ring_size_mm",
+      "op": "lt",
+      "value": 44,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "戒圈小于本厂最小手寸", "en": "Ring below the smallest mandrel" },
+      "reason": {
+        "zh": "本厂撑圈模具覆盖 44-62 mm 内周长，来料 {ring_size_mm} mm 无对应模具。",
+        "en": "Mandrels cover 44-62 mm inner circumference; {ring_size_mm} mm has no matching tool."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "调整到 46 mm 以上，或改做开口戒。", "en": "Adjust to at least 46 mm, or design an open band." },
+          "suggested_change": { "ring_size_mm": 46 }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-JW-A-05",
+      "applies_when": { "fact": "ring_size_mm", "op": "gt", "value": 0 },
+      "fact": "ring_size_mm",
+      "op": "gt",
+      "value": 62,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "戒圈大于本厂最大手寸", "en": "Ring above the largest mandrel" },
+      "reason": {
+        "zh": "本厂撑圈模具上限 62 mm，来料 {ring_size_mm} mm 超限。",
+        "en": "Mandrels stop at 62 mm; {ring_size_mm} mm exceeds the tooling."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "缩到 60 mm 以内，或改为可调节结构。", "en": "Reduce below 60 mm, or use an adjustable structure." },
+          "suggested_change": { "ring_size_mm": 60 }
+        }
+      ]
+    },
+    {
+      "capability_id": "CAP-JW-A-06",
+      "applies_when": { "fact": "enamel", "op": "eq", "value": true },
+      "fact": "enamel_firing_c",
+      "op": "gt",
+      "value": 820,
+      "severity": "blocker",
+      "verdict": "not_manufacturable",
+      "title": { "zh": "超出本厂珐琅窑温度", "en": "Above this kiln's temperature" },
+      "reason": {
+        "zh": "本厂珐琅窑上限 820 摄氏度，来料烧成温度 {enamel_firing_c} 摄氏度超限。",
+        "en": "The kiln tops out at 820 C; the submitted firing temperature is {enamel_firing_c} C."
+      },
+      "fixes": [
+        {
+          "text": { "zh": "改用低温珐琅（780 摄氏度以下），或改派到高温窑车间。", "en": "Use a low-fire enamel below 780 C, or route to a workshop with a hotter kiln." },
+          "suggested_change": { "enamel_firing_c": 760 }
+        }
+      ]
+    }
+  ],
+  "qc_checkpoints": [
+    {
+      "checkpoint_id": "QC-01",
+      "name": { "zh": "尺寸与壁厚复核", "en": "Dimension and wall check" },
+      "method": "digital caliper, three points per axis",
+      "pass_criteria": "all dimensions within 0.05 mm, minimum wall not below the assessed value"
+    },
+    {
+      "checkpoint_id": "QC-02",
+      "name": { "zh": "镶口牢固度", "en": "Setting integrity" },
+      "method": "manual pull test plus loupe inspection at 10x",
+      "pass_criteria": "no stone movement, no prong gap above 0.02 mm"
+    },
+    {
+      "checkpoint_id": "QC-03",
+      "name": { "zh": "表面处理与印记", "en": "Surface and hallmark" },
+      "method": "visual inspection under daylight lamp, hallmark verification",
+      "pass_criteria": "no polishing compound residue, hallmark and purity mark legible"
+    }
+  ]
+}

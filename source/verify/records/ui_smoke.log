@@ -1,0 +1,36 @@
+server ready on http://127.0.0.1:58688
+GET /api/health -> 200 ({"data": {"as_of": "2026-10-23T00:00:00Z", "status": "ok", ")
+GET /api/spec -> 200 ({"data": {"as_of": "2026-10-23T00:00:00Z", "client_materials)
+GET /api/i18n -> 200 ({"data": {"language": "en", "strings": {"en": {"app.asof": ")
+GET /api/industries -> 200 ({"data": {"industries": [{"categories": ["chair", "table", ")
+GET /api/rules -> 200 ({"data": {"count": 32, "rules": [{"has_fix": true, "industry)
+GET /api/rules/JW-CAST-001 -> 200 ({"data": {"condition": {"all": [{"fact": "min_wall_thickness)
+GET /api/library/search?q=interlace -> 200 ({"data": {"count": 2, "results": [{"asset": {"asset_id": "PA)
+GET /api/library/PA-JW-0001 -> 200 ({"data": {"asset": {"asset_id": "PA-JW-0001", "created_at": )
+GET /api/concepts -> 200 ({"data": {"concepts": [{"category": "ring", "concept_id": "D)
+GET /api/concepts/DC-0001 -> 200 ({"data": {"concept": {"asset_refs": [], "concept_id": "DC-00)
+GET /api/assessments -> 200 ({"data": {"assessments": [{"artisan": {"decided_at": null, ")
+GET /api/reviews/queue -> 200 ({"data": {"items": [{"assessment_id": "MA-0001", "auto_verdi)
+GET /api/orders -> 200 ({"data": {"orders": [{"amounts": {"customization_fee_cents":)
+GET /api/dispatch/board -> 200 ({"data": {"board": [{"concept_id": "DC-0001", "customization)
+GET /api/enterprise -> 200 ({"data": {"fde": {"blocking_open": [{"item_id": "operator_tr)
+GET /api/enterprise/switch -> 200 ({"data": {"capabilities_industry_specific": {"hardwood": [],)
+GET /api/growth/site -> 200 ({"data": {"site": {"brand": {"en": "Harbour Jewellery Studio)
+GET /api/growth/crm -> 200 ({"data": {"inquiries": [{"contact": {"channel": "site_form",)
+GET /api/ip -> 200 ({"data": {"asset_summary": {"ai_assisted": 22, "approved": 2)
+GET / -> 200
+POST /api/workstation/generate -> 200
+POST /api/assess -> 200
+POST /api/library/ingest (invalid) -> 422
+POST /api/growth/inquiry -> 200
+POST /api/growth/inquiries/INQ-0006/advance -> 200
+GET /en -> 200
+GET /zh/collection -> 200
+GET /reel -> 200
+GET /sitemap.xml -> 200
+POST /api/orders -> 200
+POST /api/orders/ORD-0006/advance presale_opened -> 200
+POST /api/orders/ORD-0006/advance payment_received -> 200
+POST /api/orders/ORD-0006/advance settled -> 409
+GET /api/orders/ORD-0006 -> 200
+server stopped

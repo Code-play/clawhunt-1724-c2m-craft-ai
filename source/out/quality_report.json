@@ -1,0 +1,202 @@
+{
+ "records": [
+  {
+   "at": "2026-10-23T00:20:00Z",
+   "checkpoint_id": "QC-03",
+   "defects": [
+    {
+     "code": "finish_defect",
+     "count": 2,
+     "note": "enamel fired two shades light",
+     "severity": "minor"
+    }
+   ],
+   "inspector": "ART-JW-01",
+   "measurements": [
+    {
+     "limit_max": 1.54,
+     "limit_min": 1.26,
+     "name": "wall_mm",
+     "ok": true,
+     "value": 1.4
+    },
+    {
+     "limit_max": 41.8,
+     "limit_min": 34.2,
+     "name": "dimension_mm",
+     "ok": true,
+     "value": 38.0
+    }
+   ],
+   "qc_id": "QCR-0001",
+   "sample_size": 5,
+   "sampling_plan": {
+    "aql": "2.5",
+    "critical": false,
+    "plan_id": "aql_2_5"
+   },
+   "verdict": "rework",
+   "work_order_id": "WO-0002"
+  },
+  {
+   "at": "2026-10-23T00:57:00Z",
+   "checkpoint_id": "QC-01",
+   "defects": [
+    {
+     "code": "surface_scratch",
+     "count": 1,
+     "note": "faint polish mark on the reverse",
+     "severity": "minor"
+    }
+   ],
+   "inspector": "ART-JW-01",
+   "measurements": [
+    {
+     "limit_max": 1.54,
+     "limit_min": 1.26,
+     "name": "wall_mm",
+     "ok": true,
+     "value": 1.4
+    },
+    {
+     "limit_max": 41.8,
+     "limit_min": 34.2,
+     "name": "dimension_mm",
+     "ok": true,
+     "value": 38.0
+    }
+   ],
+   "qc_id": "QCR-0002",
+   "sample_size": 5,
+   "sampling_plan": {
+    "aql": "2.5",
+    "critical": false,
+    "plan_id": "aql_2_5"
+   },
+   "verdict": "pass",
+   "work_order_id": "WO-0006"
+  },
+  {
+   "at": "2026-10-23T00:58:00Z",
+   "checkpoint_id": "QC-02",
+   "defects": [
+    {
+     "code": "setting_loose",
+     "count": 1,
+     "note": "stone moves 0.1 mm in the bezel",
+     "severity": "critical"
+    }
+   ],
+   "inspector": "ART-JW-01",
+   "measurements": [
+    {
+     "limit_max": 1.54,
+     "limit_min": 1.26,
+     "name": "wall_mm",
+     "ok": true,
+     "value": 1.4
+    },
+    {
+     "limit_max": 41.8,
+     "limit_min": 34.2,
+     "name": "dimension_mm",
+     "ok": true,
+     "value": 38.0
+    }
+   ],
+   "qc_id": "QCR-0003",
+   "sample_size": 5,
+   "sampling_plan": {
+    "aql": "0",
+    "critical": true,
+    "plan_id": "c_zero"
+   },
+   "verdict": "fail",
+   "work_order_id": "WO-0006"
+  }
+ ],
+ "sampling_plans": {
+  "critical": {
+   "aql": "0",
+   "critical": true,
+   "plan_id": "c_zero"
+  },
+  "default": {
+   "aql": "2.5",
+   "critical": false,
+   "plan_id": "aql_2_5"
+  }
+ },
+ "summary": {
+  "failed": 1,
+  "passed": 1,
+  "records": 3,
+  "rework": 1
+ },
+ "taxonomy": [
+  {
+   "code": "dim_out_of_tolerance",
+   "label": {
+    "en": "Dimension out of tolerance",
+    "zh": "尺寸超差"
+   },
+   "severity": "major"
+  },
+  {
+   "code": "wall_below_spec",
+   "label": {
+    "en": "Wall below specification",
+    "zh": "壁厚低于规格"
+   },
+   "severity": "critical"
+  },
+  {
+   "code": "surface_scratch",
+   "label": {
+    "en": "Surface scratch",
+    "zh": "表面划痕"
+   },
+   "severity": "minor"
+  },
+  {
+   "code": "setting_loose",
+   "label": {
+    "en": "Setting loose",
+    "zh": "镶口松动"
+   },
+   "severity": "critical"
+  },
+  {
+   "code": "joint_gap",
+   "label": {
+    "en": "Joint gap",
+    "zh": "榫缝过大"
+   },
+   "severity": "major"
+  },
+  {
+   "code": "moisture_out_of_range",
+   "label": {
+    "en": "Moisture out of range",
+    "zh": "含水率超标"
+   },
+   "severity": "major"
+  },
+  {
+   "code": "finish_defect",
+   "label": {
+    "en": "Finish defect",
+    "zh": "涂装缺陷"
+   },
+   "severity": "minor"
+  },
+  {
+   "code": "hallmark_missing",
+   "label": {
+    "en": "Hallmark missing",
+    "zh": "缺少印记"
+   },
+   "severity": "major"
+  }
+ ]
+}

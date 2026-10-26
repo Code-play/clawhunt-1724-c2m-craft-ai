@@ -1,0 +1,28 @@
+{
+ "certificate_hash": "7cc76c71383998e0e18de73438c54f09cfd67b5a6b8ac09d187805e6ea2367fe",
+ "certificate_id": "CERT-ED-0001-0001",
+ "created_at": "2026-10-23T00:15:00Z",
+ "edition_id": "ED-0001",
+ "edition_number": 1,
+ "owner": {
+  "display_name": "Collector Two",
+  "owner_id": "OWNER-C2"
+ },
+ "provenance": [
+  {
+   "at": "2026-10-23T00:15:00Z",
+   "from": null,
+   "kind": "issue",
+   "note": "issued with the settled order",
+   "to": "OWNER-C1"
+  },
+  {
+   "at": "2026-10-23T00:15:00Z",
+   "from": "OWNER-OTHER",
+   "kind": "transfer",
+   "note": "private sale with certificate hand-over",
+   "to": "OWNER-C2"
+  }
+ ],
+ "record_id": "COL-0001"
+}

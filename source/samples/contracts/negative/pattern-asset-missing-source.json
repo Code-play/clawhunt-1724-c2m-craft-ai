@@ -1,0 +1,52 @@
+{
+ "asset_id": "PA-JW-0001",
+ "created_at": "2026-09-30T00:00:00Z",
+ "industries": [
+  "jewelry"
+ ],
+ "license": {
+  "attribution_required": true,
+  "exclusive": false,
+  "license_id": "LIC-SYN-0007",
+  "licensor": "Regional Crafts Archive (synthetic)",
+  "royalty_rate_bp": 300,
+  "territory": [
+   "CN",
+   "global"
+  ],
+  "usage_scope": [
+   "commercial_product",
+   "derivative_work"
+  ],
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": "2028-12-31T00:00:00Z"
+ },
+ "medium": "pattern",
+ "palette": [
+  "#C9A227",
+  "#1F2A44",
+  "#F2EFE9"
+ ],
+ "preview": {
+  "gradient_angle_deg": 135,
+  "motif_style": "interlace",
+  "texture": "polished"
+ },
+ "religious_site_names": [],
+ "review": {
+  "authenticity_label": "derivative",
+  "reviewed_at": "2026-09-30T00:00:00Z",
+  "reviewed_by": "CR-01",
+  "status": "content_reviewed"
+ },
+ "tags": [
+  "floral",
+  "interlace",
+  "licensed"
+ ],
+ "title": {
+  "en": "Licensed interlace pattern",
+  "zh": "缠枝授权纹样"
+ },
+ "traditional_prototype": false
+}

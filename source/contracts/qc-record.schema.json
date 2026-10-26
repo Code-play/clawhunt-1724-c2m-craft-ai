@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:qc-record",
+  "title": "Quality control record",
+  "description": "One inspection against one work-order checkpoint: the sampling plan, the measurements with their limits, the defect counts by code and severity, and the verdict. A pass cannot carry a critical defect and a failure must name at least one defect.",
+  "type": "object",
+  "required": [
+    "qc_id",
+    "work_order_id",
+    "checkpoint_id",
+    "sample_size",
+    "defects",
+    "measurements",
+    "verdict",
+    "inspector",
+    "sampling_plan",
+    "at"
+  ],
+  "properties": {
+    "qc_id": { "type": "string", "pattern": "^QCR-[0-9]{4}$" },
+    "work_order_id": { "type": "string", "pattern": "^WO-[0-9]{4}$" },
+    "checkpoint_id": { "type": "string", "pattern": "^QC-[0-9]{2}$" },
+    "sample_size": { "type": "integer", "minimum": 1, "maximum": 50 },
+    "defects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "severity", "count", "note"],
+        "properties": {
+          "code": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+          "severity": { "type": "string", "enum": ["minor", "major", "critical"] },
+          "count": { "type": "integer", "minimum": 0, "maximum": 50 },
+          "note": { "type": "string", "minLength": 1, "maxLength": 200 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "measurements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "limit_min", "limit_max", "ok"],
+        "properties": {
+          "name": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+          "value": { "type": "number" },
+          "limit_min": { "type": "number" },
+          "limit_max": { "type": "number" },
+          "ok": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "verdict": { "type": "string", "enum": ["pass", "fail", "rework"] },
+    "inspector": { "type": "string", "minLength": 2, "maxLength": 40 },
+    "sampling_plan": {
+      "type": "object",
+      "required": ["plan_id", "aql", "critical"],
+      "properties": {
+        "plan_id": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+        "aql": { "type": "string", "minLength": 1, "maxLength": 12 },
+        "critical": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-QC-01"]
+}

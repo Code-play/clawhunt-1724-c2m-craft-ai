@@ -1,0 +1,93 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0007",
+ "craft_facts": {
+  "cantilever": false,
+  "carve_depth_mm": 10,
+  "curve_radius_mm": 50,
+  "finish": "high_gloss",
+  "hardware_included": true,
+  "humidity_zone": "coastal",
+  "joint_types": [
+   "dovetail"
+  ],
+  "leg_count": 4,
+  "load_kg": 20,
+  "outdoor": false,
+  "panel_thickness_mm": 25,
+  "span_mm": 600,
+  "species": "elm",
+  "tolerance_mm": 0.2,
+  "undercut": false,
+  "wood_moisture_pct": 10
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "cabinet",
+  "dimensions_mm": {
+   "x": 900,
+   "y": 420,
+   "z": 1800
+  },
+  "variant": "two_door"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "hardwood",
+ "material": {
+  "finish": "high_gloss",
+  "name": "elm"
+ },
+ "motif_ids": [
+  "MOT-HW-05"
+ ],
+ "palette": [
+  {
+   "hex": "#F2EFE9",
+   "weight": 55
+  },
+  {
+   "hex": "#D9C9A6",
+   "weight": 20
+  },
+  {
+   "hex": "#A8794A",
+   "weight": 12
+  },
+  {
+   "hex": "#5B3A22",
+   "weight": 6
+  },
+  {
+   "hex": "#C9A227",
+   "weight": 4
+  },
+  {
+   "hex": "#8C6A45",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 90,
+  "motif_style": "relief",
+  "texture": "matte"
+ },
+ "prompt": {
+  "en": "An elm cabinet for a coastal climate with a high-gloss finish and 10 mm carving.",
+  "zh": "沿海环境、高光涂装、10 mm 雕深的榆木柜。"
+ },
+ "seed": "a5207eb1656d81b6",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "kiln_earth"
+ },
+ "title": {
+  "en": "Coastal high-gloss carved cabinet",
+  "zh": "沿海高光深雕柜"
+ }
+}

@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:pattern-asset",
+  "title": "Pattern and form asset with licensing metadata",
+  "description": "Every creative asset in the library. Licensing source and usage scope are mandatory: an asset that cannot say where it came from and what it may be used for must be rejected at ingestion.",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "title",
+    "industries",
+    "medium",
+    "license",
+    "traditional_prototype",
+    "religious_site_names",
+    "review",
+    "created_at"
+  ],
+  "properties": {
+    "asset_id": { "type": "string", "pattern": "^PA-[A-Z]{2}-[0-9]{4}$" },
+    "title": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+    "industries": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "urn:c2m:contract:common#/$defs/industry" }
+    },
+    "medium": {
+      "type": "string",
+      "enum": ["pattern", "form", "material", "color_palette", "mixed"]
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 32 }
+    },
+    "palette": {
+      "type": "array",
+      "maxItems": 6,
+      "items": { "$ref": "urn:c2m:contract:common#/$defs/hex_color" }
+    },
+    "preview": {
+      "type": "object",
+      "required": ["motif_style", "texture", "gradient_angle_deg"],
+      "properties": {
+        "motif_style": { "$ref": "urn:c2m:contract:common#/$defs/slug" },
+        "texture": {
+          "type": "string",
+          "enum": ["matte", "brushed", "polished", "carved", "woven"]
+        },
+        "gradient_angle_deg": { "type": "integer", "minimum": 0, "maximum": 360 }
+      },
+      "additionalProperties": false
+    },
+    "descriptor": {
+      "type": "object",
+      "description": "Offline search descriptor: geometry and palette features that make multimodal search deterministic without an embedding model.",
+      "required": ["motif_family", "symmetry", "density_bp", "line_weight", "edge_complexity"],
+      "properties": {
+        "motif_family": {
+          "type": "string",
+          "enum": ["geometric", "floral", "wave", "organic", "inlay", "relief"]
+        },
+        "symmetry": { "type": "string", "enum": ["none", "bilateral", "radial", "translational"] },
+        "density_bp": { "type": "integer", "minimum": 0, "maximum": 10000 },
+        "line_weight": { "type": "string", "enum": ["fine", "medium", "bold"] },
+        "edge_complexity": { "type": "integer", "minimum": 1, "maximum": 10 }
+      },
+      "additionalProperties": false
+    },
+    "license": {
+      "type": "object",
+      "required": ["source_type", "usage_scope"],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": ["self_produced", "licensed", "public_domain", "traditional_heritage"]
+        },
+        "licensor": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "license_id": { "type": "string", "pattern": "^LIC-[A-Z0-9-]{3,32}$" },
+        "usage_scope": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "internal_demo",
+              "commercial_product",
+              "derivative_work",
+              "advertising",
+              "export"
+            ]
+          }
+        },
+        "territory": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["CN", "EU", "US", "JP", "global"] }
+        },
+        "valid_from": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+        "valid_to": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+        "royalty_rate_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" },
+        "attribution_required": { "type": "boolean" },
+        "exclusive": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "traditional_prototype": { "type": "boolean" },
+    "religious_site_names": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 80 }
+    },
+    "review": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["auto_checked", "artisan_reviewed", "content_reviewed"]
+        },
+        "reviewed_by": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "reviewed_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" },
+        "authenticity_label": {
+          "type": "string",
+          "enum": ["original_design", "derivative", "traditional_reference"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-LIC-01", "INV-LIC-02", "INV-LIC-03", "INV-LIC-04"]
+}

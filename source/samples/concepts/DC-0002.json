@@ -1,0 +1,92 @@
+{
+ "asset_refs": [],
+ "concept_id": "DC-0002",
+ "craft_facts": {
+  "alloy": "18k_gold",
+  "chain_link_mm": 0,
+  "enamel": false,
+  "enamel_firing_c": 0,
+  "engraving_depth_mm": 0,
+  "hollow_cast": false,
+  "max_dimension_mm": 40,
+  "min_wall_thickness_mm": 0.3,
+  "prong_count": 0,
+  "prong_thickness_mm": 0,
+  "recessed_area": false,
+  "ring_size_mm": 0,
+  "setting_type": "none",
+  "stone_count": 1,
+  "stone_size_mm": 8.5,
+  "surface_finish": "polished",
+  "undercut": false
+ },
+ "created_at": "2026-10-15T00:00:00Z",
+ "created_by": "designer-01",
+ "form": {
+  "category": "pendant",
+  "dimensions_mm": {
+   "x": 35.0,
+   "y": 40.0,
+   "z": 2.75
+  },
+  "variant": "relief_disc"
+ },
+ "generator": {
+  "adapter": "offline_lexicon",
+  "deterministic": true,
+  "version": "1.0.0"
+ },
+ "industry": "jewelry",
+ "material": {
+  "finish": "polished",
+  "name": "18k_gold"
+ },
+ "motif_ids": [
+  "MOT-JW-04"
+ ],
+ "palette": [
+  {
+   "hex": "#8C1C2B",
+   "weight": 55
+  },
+  {
+   "hex": "#C9A227",
+   "weight": 20
+  },
+  {
+   "hex": "#F6EDE3",
+   "weight": 12
+  },
+  {
+   "hex": "#2A1B10",
+   "weight": 6
+  },
+  {
+   "hex": "#B4553C",
+   "weight": 4
+  },
+  {
+   "hex": "#E7DAC6",
+   "weight": 3
+  }
+ ],
+ "preview": {
+  "gradient_angle_deg": 45,
+  "motif_style": "granule",
+  "texture": "polished"
+ },
+ "prompt": {
+  "en": "A 0.3 mm wall pendant with a single 8.5 mm stone and no declared setting.",
+  "zh": "0.3 mm 薄壁、8.5 mm 单石、无镶口的吊坠概念。"
+ },
+ "seed": "4ffcd7f489b4a407",
+ "source": "text",
+ "style": {
+  "intensity": 90,
+  "style_id": "heritage_ornate"
+ },
+ "title": {
+  "en": "Thin-wall large-stone pendant",
+  "zh": "薄壁大石吊坠"
+ }
+}

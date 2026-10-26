@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2m:contract:character-bible",
+  "title": "Dual guardian character bible",
+  "description": "Canonical setting for the cultural IP: the world rules and two guardian characters, each with a personality envelope, silhouette, palette, motifs, taboos, props, voice, relationship, story arc and licence-safe sourcing. Every character cites a content review, and heritage references stay non-exclusive. Artwork is described as data so the visual asset library and the short drama can be rebuilt deterministically.",
+  "type": "object",
+  "required": [
+    "bible_id",
+    "version",
+    "title",
+    "world",
+    "canon",
+    "heritage_refs",
+    "usage_plan",
+    "created_at"
+  ],
+  "properties": {
+    "bible_id": { "type": "string", "pattern": "^IPB-[0-9]{4}$" },
+    "version": { "$ref": "urn:c2m:contract:common#/$defs/semver" },
+    "title": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+    "world": {
+      "type": "object",
+      "required": ["premise", "setting", "era", "rules", "conflict", "resolution_theme"],
+      "properties": {
+        "premise": { "type": "string", "minLength": 20, "maxLength": 400 },
+        "setting": { "$ref": "urn:c2m:contract:common#/$defs/long_i18n_text" },
+        "era": { "type": "string", "enum": ["timeless", "contemporary", "near_future"] },
+        "rules": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string", "minLength": 10, "maxLength": 200 }
+        },
+        "conflict": { "type": "string", "minLength": 20, "maxLength": 300 },
+        "resolution_theme": { "type": "string", "minLength": 5, "maxLength": 120 }
+      },
+      "additionalProperties": false
+    },
+    "canon": {
+      "type": "object",
+      "required": ["characters"],
+      "properties": {
+        "characters": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "character_id",
+              "name",
+              "role",
+              "element",
+              "archetype",
+              "personality",
+              "silhouette",
+              "palette",
+              "motifs",
+              "taboos",
+              "props",
+              "voice",
+              "relationships",
+              "story_arc",
+              "licence_safe_sourcing",
+              "authenticity_label",
+              "content_review_ref"
+            ],
+            "properties": {
+              "character_id": { "type": "string", "pattern": "^CHR-[A-Z0-9-]{2,16}$" },
+              "name": { "$ref": "urn:c2m:contract:common#/$defs/i18n_text" },
+              "role": { "type": "string", "minLength": 2, "maxLength": 60 },
+              "element": { "type": "string", "enum": ["wood", "metal", "fire", "sea", "earth", "grain"] },
+              "archetype": { "type": "string", "minLength": 3, "maxLength": 80 },
+              "personality": {
+                "type": "object",
+                "required": ["axes"],
+                "properties": {
+                  "axes": {
+                    "type": "array",
+                    "minItems": 3,
+                    "items": {
+                      "type": "object",
+                      "required": ["axis", "value_bp"],
+                      "properties": {
+                        "axis": { "type": "string", "enum": ["warmth", "order", "energy", "candour"] },
+                        "value_bp": { "$ref": "urn:c2m:contract:common#/$defs/rate_bp" }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "additionalProperties": false
+              },
+              "silhouette": { "type": "string", "minLength": 10, "maxLength": 200 },
+              "palette": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 6,
+                "uniqueItems": true,
+                "items": { "$ref": "urn:c2m:contract:common#/$defs/hex_color" }
+              },
+              "motifs": {
+                "type": "array",
+                "minItems": 3,
+                "uniqueItems": true,
+                "items": { "type": "string", "minLength": 2, "maxLength": 40 }
+              },
+              "taboos": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 5, "maxLength": 120 }
+              },
+              "props": {
+                "type": "array",
+                "minItems": 2,
+                "uniqueItems": true,
+                "items": { "type": "string", "minLength": 2, "maxLength": 60 }
+              },
+              "voice": {
+                "type": "object",
+                "required": ["register", "pace", "signature_line"],
+                "properties": {
+                  "register": { "type": "string", "enum": ["warm", "formal", "crisp"] },
+                  "pace": { "type": "string", "enum": ["measured", "brisk", "lilting"] },
+                  "signature_line": { "type": "string", "minLength": 5, "maxLength": 160 }
+                },
+                "additionalProperties": false
+              },
+              "relationships": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["to_character_id", "kind", "note"],
+                  "properties": {
+                    "to_character_id": { "type": "string", "pattern": "^CHR-[A-Z0-9-]{2,16}$" },
+                    "kind": { "type": "string", "enum": ["sibling", "rival", "mentor", "companion"] },
+                    "note": { "type": "string", "minLength": 5, "maxLength": 160 }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "story_arc": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "object",
+                  "required": ["beat", "summary"],
+                  "properties": {
+                    "beat": { "type": "string", "minLength": 3, "maxLength": 60 },
+                    "summary": { "type": "string", "minLength": 20, "maxLength": 300 }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "licence_safe_sourcing": {
+                "type": "string",
+                "enum": ["self_produced", "commissioned", "licensed"]
+              },
+              "authenticity_label": { "type": "string", "minLength": 5, "maxLength": 160 },
+              "content_review_ref": { "type": "string", "pattern": "^CRV-[0-9]{4}$" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "heritage_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "exclusive_claimed"],
+        "properties": {
+          "name": { "type": "string", "minLength": 3, "maxLength": 120 },
+          "exclusive_claimed": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "usage_plan": {
+      "type": "object",
+      "required": ["formats", "territories"],
+      "properties": {
+        "formats": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["short_drama", "merchandise", "exhibition", "social"] }
+        },
+        "territories": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["CN", "EU", "US", "JP", "global"] }
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": { "$ref": "urn:c2m:contract:common#/$defs/timestamp" }
+  },
+  "additionalProperties": false,
+  "x-invariants": ["INV-CHAR-01"]
+}

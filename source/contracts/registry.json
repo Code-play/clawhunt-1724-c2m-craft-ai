@@ -1,0 +1,260 @@
+{
+  "version": "2.0.0",
+  "as_of": "2026-10-23T00:00:00Z",
+  "note": "Contract registry. IDs are stable; urns are the $id values used by $ref. Every schema file in this directory must be registered here, and every requirement id must exist in docs/requirements.json. Version 2.0.0 adds the M3 enterprise and growth contracts and the M4 cultural IP contracts.",
+  "contracts": [
+    {
+      "id": "common",
+      "urn": "urn:c2m:contract:common",
+      "file": "common.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": [],
+      "invariants": [],
+      "requirements": ["E5"],
+      "description": "Shared value objects: i18n text, money, timestamps, actors, identifiers."
+    },
+    {
+      "id": "pattern_asset",
+      "urn": "urn:c2m:contract:pattern-asset",
+      "file": "pattern-asset.schema.json",
+      "version": "1.1.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-LIC-01", "INV-LIC-02", "INV-LIC-03", "INV-LIC-04"],
+      "requirements": ["A2.1", "A2.2", "E2", "E4"],
+      "description": "Pattern/form asset with mandatory licensing, usage scope and an offline search descriptor."
+    },
+    {
+      "id": "design_concept",
+      "urn": "urn:c2m:contract:design-concept",
+      "file": "design-concept.schema.json",
+      "version": "1.1.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": [],
+      "requirements": ["A1.1", "A1.3", "A1.4", "A3.2", "E2"],
+      "description": "Generated design concept with a deterministic seed, craft facts and an optional customisation lineage."
+    },
+    {
+      "id": "manufacturability_assessment",
+      "urn": "urn:c2m:contract:manufacturability-assessment",
+      "file": "manufacturability-assessment.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": [],
+      "requirements": ["A5.3", "A5.4", "E3"],
+      "description": "Auto verdict, rule evaluations and the artisan review disposition."
+    },
+    {
+      "id": "craft_work_order",
+      "urn": "urn:c2m:contract:craft-work-order",
+      "file": "craft-work-order.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": [],
+      "requirements": ["A4.1", "A4.4"],
+      "description": "Bill of materials, process route, craft constraints, QC checkpoints."
+    },
+    {
+      "id": "c2m_order",
+      "urn": "urn:c2m:contract:c2m-order",
+      "file": "c2m-order.schema.json",
+      "version": "1.2.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-ORDER-01", "INV-PROMISE-01", "INV-DISPUTE-01"],
+      "requirements": ["A3.1", "A4.1", "A4.2", "A4.3", "A4.4"],
+      "description": "Pre-sale order with refund, dispute and delivery-promise sub-states, QC evidence for disputes, plus the ledger event."
+    },
+    {
+      "id": "settlement",
+      "urn": "urn:c2m:contract:settlement",
+      "file": "settlement.schema.json",
+      "version": "1.1.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-MONEY-01", "INV-ROYALTY-01"],
+      "requirements": ["A4.1", "A4.3", "A2.2"],
+      "description": "Revenue-sharing settlement with integer-cent reconciliation and per-asset royalties."
+    },
+    {
+      "id": "artisan_review",
+      "urn": "urn:c2m:contract:artisan-review",
+      "file": "artisan-review.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-REVIEW-01"],
+      "requirements": ["A5.4"],
+      "description": "Artisan review queue item and override rules."
+    },
+    {
+      "id": "enterprise_profile",
+      "urn": "urn:c2m:contract:enterprise-profile",
+      "file": "enterprise-profile.schema.json",
+      "version": "1.1.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-ENT-01"],
+      "requirements": ["B1", "B2", "B4", "B5", "I3"],
+      "description": "One-enterprise-one-profile configuration for the shared service layer, now with the data boundaries, deployment posture and growth stack of a populated profile."
+    },
+    {
+      "id": "ip_license",
+      "urn": "urn:c2m:contract:ip-license",
+      "file": "ip-license.schema.json",
+      "version": "1.1.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-IP-01", "INV-IP-02"],
+      "requirements": ["C5", "C6", "C7", "E4", "I4"],
+      "description": "Cultural IP licensing package with the signed document set, the merchandise specification references and no exclusive claim on heritage."
+    },
+    {
+      "id": "customization_choice",
+      "urn": "urn:c2m:contract:customization-choice",
+      "file": "customization-choice.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common", "design_concept"],
+      "invariants": ["INV-CUSTOM-01"],
+      "requirements": ["A3.2"],
+      "description": "Buyer option selections with resolved price deltas and the feasibility gate."
+    },
+    {
+      "id": "edition",
+      "urn": "urn:c2m:contract:edition",
+      "file": "edition.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-EDITION-01"],
+      "requirements": ["A3.3"],
+      "description": "Limited edition size, numbering policy and issued certificates."
+    },
+    {
+      "id": "collector_record",
+      "urn": "urn:c2m:contract:collector-record",
+      "file": "collector-record.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common", "edition"],
+      "invariants": ["INV-EDITION-02"],
+      "requirements": ["A3.3"],
+      "description": "Certificate hash and the ordered ownership chain for one numbered piece."
+    },
+    {
+      "id": "qc_record",
+      "urn": "urn:c2m:contract:qc-record",
+      "file": "qc-record.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common", "craft_work_order"],
+      "invariants": ["INV-QC-01"],
+      "requirements": ["A4.4"],
+      "description": "Sampling plan, measurements, defect taxonomy and verdict for one checkpoint."
+    },
+    {
+      "id": "production_schedule",
+      "urn": "urn:c2m:contract:production-schedule",
+      "file": "production-schedule.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": [],
+      "requirements": ["A4.2"],
+      "description": "Deterministic capacity plan behind a delivery promise."
+    },
+    {
+      "id": "service_component",
+      "urn": "urn:c2m:contract:service-component",
+      "file": "service-component.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-COMP-01"],
+      "requirements": ["B1", "B2", "I3"],
+      "description": "Component registry entry: industries, capabilities, contracts, dependencies and data boundary of one reusable service component."
+    },
+    {
+      "id": "growth_site",
+      "urn": "urn:c2m:contract:growth-site",
+      "file": "growth-site.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-SEO-01"],
+      "requirements": ["B3", "I3"],
+      "description": "Multilingual site with per-page SEO metadata, canonical paths, hreflang alternates, structured data and the inquiry form that feeds the CRM."
+    },
+    {
+      "id": "inquiry_lead",
+      "urn": "urn:c2m:contract:inquiry-lead",
+      "file": "inquiry-lead.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-LEAD-01"],
+      "requirements": ["B3", "I3"],
+      "description": "Inquiry to CRM closed loop: deterministic scoring, SLA, owner routing, follow-up tasks, quote draft and pipeline events."
+    },
+    {
+      "id": "character_bible",
+      "urn": "urn:c2m:contract:character-bible",
+      "file": "character-bible.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-CHAR-01"],
+      "requirements": ["C1", "C2", "I4"],
+      "description": "Dual guardian character bible: world rules, two characters with silhouette, palette, motifs, props, voice, arc and licence-safe sourcing."
+    },
+    {
+      "id": "visual_asset",
+      "urn": "urn:c2m:contract:visual-asset",
+      "file": "visual-asset.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-ASSET-01"],
+      "requirements": ["C2", "E4", "I4"],
+      "description": "Character visual asset described as a deterministic drawing recipe with provenance, review state and a recomputable checksum."
+    },
+    {
+      "id": "short_drama",
+      "urn": "urn:c2m:contract:short-drama",
+      "file": "short-drama.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-DRAMA-01"],
+      "requirements": ["C3", "C4", "I4"],
+      "description": "Short drama from script to final cut: scenes, beats, storyboard frames, edit decision list with continuous timecodes, subtitles and review."
+    },
+    {
+      "id": "content_review",
+      "urn": "urn:c2m:contract:content-review",
+      "file": "content-review.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-CONTENT-01"],
+      "requirements": ["C4", "E4", "I4"],
+      "description": "Content review record: checklist verdicts, reviewer role, authenticity block for AIGC labelling and the heritage check."
+    },
+    {
+      "id": "merch_spec",
+      "urn": "urn:c2m:contract:merch-spec",
+      "file": "merch-spec.schema.json",
+      "version": "1.0.0",
+      "status": "stable",
+      "deps": ["common"],
+      "invariants": ["INV-MERCH-01"],
+      "requirements": ["C6", "I4"],
+      "description": "Derivative merchandise specification: bill of materials, quality tolerances, sampling plan, packaging and rights for one licence category."
+    }
+  ]
+}
